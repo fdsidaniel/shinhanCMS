@@ -1,0 +1,8 @@
+import jQuery from 'jquery'
+// import 'jquery-ui/ui/widgets/datepicker'
+
+window.$ = window.jQuery = jQuery
+console.log(window.jQuery)
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.use(jQuery)
+})

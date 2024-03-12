@@ -1,0 +1,1 @@
+<template>공지사항 목록</template>

@@ -1,0 +1,1 @@
+<template>쪽지 등록</template>

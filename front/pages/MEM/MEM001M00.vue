@@ -1,0 +1,1 @@
+<template>일반 회원가입</template>

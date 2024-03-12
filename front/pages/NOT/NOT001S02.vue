@@ -1,0 +1,1 @@
+<template>공지사항 등록</template>

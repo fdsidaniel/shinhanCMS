@@ -1,0 +1,1 @@
+<template>보낸 쪽지 tab</template>
