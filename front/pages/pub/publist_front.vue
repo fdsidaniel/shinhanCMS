@@ -27,6 +27,10 @@
       </li>
 
       <li>
+        <span>CMS 프로젝트 - 퍼블 목록</span>
+      </li>
+
+      <li>
         <span>퍼블 가이드</span>
         <span></span>
         <span></span>
@@ -172,6 +176,10 @@
         <span></span>
         <span></span>
         <span></span>
+      </li>
+      
+      <li>
+        <span>AICMS 프로젝트 - 참고용 퍼블 목록(삭제 예정)</span>
       </li>
       
       <li>
