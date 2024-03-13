@@ -3102,122 +3102,133 @@ input.i_basics{
 
 // login
 .login_wrap{
-    position: relative;
+    position: absolute;
+    top:50%;
+    left:50%;
     width:1080px;
     height:644px;
-    margin:74px auto 120px;
-    padding-left:80px;
-    box-shadow: 5px 5px 30px 0px #00000014;
+    transform: translate(-50%, -50%);
     background: #fff;
     border-radius: 20px;
-    background-image: url('../images/ico_login.png'), url('../images/bg_login.svg');
-    background-size: 415px 377px, 540px 644px;
-    background-position: left 125px bottom 15px, left top;
+    background-image: url('../images/bg_login.png');
+    background-size: 300px 644px;
+    background-position: 0 0;
     background-repeat: no-repeat;
 
-    .stit{
-        padding-top:100px;
-        color:#21272A;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 28px;
-        letter-spacing: 0em;
-    }
-    h2{
-        margin-top:10px;
-        color: #21272A;
-        font-size: 30px;
-        font-weight: 700;
-        line-height: 44px;
-        letter-spacing: 0em;
-        text-align: left;
-    }
-    .login_form{
-        position: absolute;
-        top:50%;
-        right:90px;
-        transform: translateY(-50%);
-        width:360px;
-        h2{
+    .login_box{
+        position: relative;
+        display:flex;
+        height:100%;
+
+        .left{
+            width:300px;
+            padding-top:250px;
             text-align: center;
-            img{
-                vertical-align: bottom;
+            .stit{
+                margin-top:10px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                color:#331CBF;
+            }
+            h2{
+                font-size: 34px;
+                font-weight: 700;
+                line-height: 40px;
+                letter-spacing: 0em;
+                color:#331CBF;
             }
         }
-        .input_form{
-            margin-top:40px;
-            input.i_basics{
-                display: block;
-                width:100%;
-                height:64px;
-                padding: 0px;
-                color: #121619;
-                font-size:16px;
-                border-radius: 0;
-                background: #F8F9FC;
-            }
-            .i_basics{
-                .v-field__input{
-                    height:64px;
-                    padding: 0px;
-                    border-radius: 0;
-                    background: #fff;
-                    border-bottom: 1px solid #E1E6EC;
-                    &::placeholder {
-                        color: #B9C1C9;
-                    }
-                    &:hover,
-                    &:focus {
-                        outline:0 !important;
-                        border-color: #0471E9;
-                    }
-                }
+        .right{
+            flex:1;
+            padding-top:97px;
 
-                .v-input__details{
-                    display:none;
-                }
-
-                &.v-input--error{
-                    .v-field__input{
-                        border-color: #F63232;
-                        outline: 0 !important;
-                    }
-                    .v-input__details {
-                        display: block;
-                    }
-                }
+            h2{
+                text-align: center;
+                font-size: 34px;
+                font-weight: 700;
+                line-height: 40px;
+                letter-spacing: 0em;
+                color:#B9C1C9;
             }
-            .pwd_messages{
+            .txt{
                 margin-top:10px;
-                padding-left: 22px;
-                font-size: 14px;
-                color: #F63232;
-                line-height: 16px;
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23F63232'/%3E%3Crect width='2' height='5' x='7' y='4' fill='%23fff' rx='1'/%3E%3Crect width='2' height='2' x='7' y='10' fill='%23fff' rx='1'/%3E%3C/svg%3E");
-                background-size: 16px 16px;
-                background-position: 0 0;
-                background-repeat: no-repeat;
-            }
-            .idsave{
-                .v-label{margin-left:5px;font-size: 14px;}
-            }
-            .vbtn{
-                &.login{
-                    width:100%;
-                    height:64px !important;
-                    margin-top:10px;
-                }
-            }
-            .btn_util{
-                display:flex;
-                margin-top:10px;
-                justify-content: space-between;
-                align-items: center;
-                color:#565C63;
+                text-align: center;
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 22px;
                 letter-spacing: 0em;
+            }
+            
+            .login_form{
+                width:360px;
+                margin:20px auto 0;
+                
+                .i_basics{
+                    .v-field__input{
+                        height:64px;
+                        padding: 0px;
+                        border-radius: 0;
+                        background: #fff;
+                        border-bottom: 1px solid #E1E6EC;
+                        outline: 0;
+                        &::placeholder {
+                            color: #B9C1C9;
+                        }
+                        &:hover,
+                        &:focus {
+                            outline:0 !important;
+                            border-color: #5D47E5;
+                        }
+                    }
+
+                    .v-input__details{
+                        display:none;
+                    }
+
+                    &.v-input--error{
+                        .v-field__input{
+                            border-color: #F63232;
+                            outline: 0 !important;
+                        }
+                        .v-input__details {
+                            display: block;
+                        }
+                    }
+                }
+                .pwd_messages{
+                    margin-top:10px;
+                    padding-left: 22px;
+                    font-size: 14px;
+                    color: #F63232;
+                    line-height: 16px;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23F63232'/%3E%3Crect width='2' height='5' x='7' y='4' fill='%23fff' rx='1'/%3E%3Crect width='2' height='2' x='7' y='10' fill='%23fff' rx='1'/%3E%3C/svg%3E");
+                    background-size: 16px 16px;
+                    background-position: 0 0;
+                    background-repeat: no-repeat;
+                }
+                .idsave{
+                    .v-label{margin-left:5px;font-size: 14px;}
+                }
+                .vbtn{
+                    &.login{
+                        width:100%;
+                        height:64px !important;
+                        margin-top:10px;
+                    }
+                }
+                .btn_util{
+                    display:flex;
+                    margin-top:10px;
+                    justify-content: space-between;
+                    align-items: center;
+                    color:#565C63;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    letter-spacing: 0em;
+                }
             }
         }
     }
