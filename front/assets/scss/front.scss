@@ -1005,6 +1005,48 @@
         }
     }
 }
+.search_table{
+    margin-top:10px;
+    padding:20px 30px;
+    border-radius: 10px;
+    border: 1px solid #E1E6EC;
+
+    .row{
+        display:flex;
+        &+.row{
+            margin-top:15px;
+        }
+        .cell{
+            flex:1;
+            &+.cell{
+                margin-left:20px;
+            }
+            .col{
+                display:flex;
+                align-items:center;
+                .tit{
+                    width:60px;
+                    margin-right:10px;
+                    color:#121619;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 22px;
+                    letter-spacing: 0em;
+                    &.req{
+                        &:after{
+                            content:"*";
+                            font-weight: 700;
+                            color:#FF2C2C;
+                        }
+                    }
+                }
+                .con{
+                    flex:1;
+                }
+            }
+        }
+    }
+}
 
 // 비밀번호 팁 문구
 .txt_pwd{
