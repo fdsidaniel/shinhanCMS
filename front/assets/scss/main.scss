@@ -257,6 +257,7 @@ input[type="number"] { -moz-appearance: textfield; }
 .c_black{color:#121619 !important;}
 .p_re{position: relative;}
 .bt_none{border-top:0 !important;}
+.bar{width:17px;height:40px;text-align: center;line-height:40px;}
 
 /* layout */
 html{
@@ -947,32 +948,19 @@ body{
     flex: 1;
     margin-top:-90px;
     padding:130px 40px 0;
-    background:url("../images/bg_con.svg") center top no-repeat; //서브페이지 기본 bg skin
-
-    &.main{ // 로그인 전 메인 class
-        position: relative;
-        padding-top:160px;
-        color:#121619;
-        background: url("../images/bg_main_skin_01.svg") center top no-repeat; // 로그인 전 메인 기본 bg skin
-
-        &:before{
-            content:'';
-            position: absolute;
-            top:132px;
-            left:45%;
-            width:448px;
-            height:292px;
-            background: url("../images/ico_main_visu.png") left top no-repeat;
-            background-size: 448px 292px;
-        }
-        .content {
-            width: 1540px;
-            min-width:1540px;
-            margin: 0 auto;
-        }
-    }
+    background:url("../images/bg_con.svg") center top no-repeat;
+    
     &.login{
         background: url("../images/bg_login.png") center center no-repeat;
+    }
+    &.before{
+        margin-top:0;
+        padding-top:75px;
+
+        .conbody{
+            margin-top:74px;
+            height: calc(100% - 138px);
+        }
     }
 }
 
@@ -991,87 +979,28 @@ body{
 
 .footer {
     min-width:1280px;
-    margin:0 40px;
-    padding-bottom:40px;
+    margin:0 20px;
+    padding-bottom:10px;
     flex-shrink: 0;
 
     .footer_box{
         position: relative;
         max-width: 1840px;
-        height: 150px;
+        height: 57px;
         margin:0 auto;
-        text-align: left;
-        color: #fff;
-        line-height:1;
-        background: #565C63;
-        border-radius: 20px;
+        padding:20px;    
+        border-radius: 10px;
+        background: #EBEFF5;
 
-        .footer_con{
-            position: relative;
-            width:1280px;
-            margin:0 auto;
-            padding: 0 10px;
-        }
-
-        .footer_btn{
-            padding-top:50px;
-            a{
-                &+a{margin-left:30px;}
-                color:#E1E6EC;
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 19px;
-                letter-spacing: 0em;
-            }
-        }
         .copyright{
-            margin-top:18px;
+            text-align: center;
+            color:#808892;
             font-size: 14px;
             font-weight: 400;
             line-height: 17px;
             letter-spacing: 0em;
         }
-        .footer_slt{
-            position: absolute;
-            top: 49px;
-            right: 10px;
-            width: 256px;
-            .v-field{border-radius: 8px;}
-            .v-field__overlay{
-                background: #4A4E54 !important;
-            }
-            .v-field__field{
-                border-radius: 8px;
-                background:#4A4E54;
-
-                .v-field__input{
-                    height:51px;
-                }
-            }
-            .v-select__selection-text{
-                color:#E1E6EC;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 19px;
-                letter-spacing: 0em;
-            }
-            .v-field__append-inner {
-                .v-icon {
-
-                    &:before {
-                        content: "";
-                        width: 14px;
-                        height: 9px;
-                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' fill='none'%3E%3Cpath stroke='%23808892' stroke-linecap='round' stroke-width='1.5' d='m1 1.5 6 6 6-6'/%3E%3C/svg%3E");
-                        background-size: 14px 9px;
-                    }
-                }
-            }
-            .v-input__details{
-                display:none;
-            }
-        }
-    }
+    }    
 }
 
 // popup
@@ -1376,6 +1305,13 @@ body{
         }
     }
 }
+.msg_com{
+    color:#121619;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+}
 .ico_complete,
 .ico_caution,
 .ico_warning{
@@ -1593,7 +1529,7 @@ body{
 
         // btn size large
         &.v-btn--size-large {
-            min-width: 120px;
+            min-width: 160px;
             height: 56px !important;
             padding: 0 40px;
             font-size: 18px;

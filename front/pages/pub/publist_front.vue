@@ -55,17 +55,83 @@
       </li>
 
       <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="etc">메뉴코드 확인 필요</span>
+        <span class="etc">업무구분 확인 필요</span>
+        <span class="etc">파일ID 확인 필요</span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+
+      <li>
         <span>로그인</span>
         <span>로그인</span>
         <span></span>
-        <span>MLOG001</span>
+        <span></span>
         <span>LOG</span>
         <span><nuxt-link to="/pub/LOG/CMSLOG001M00" class="vlink blue line">CMSLOG001M00</nuxt-link></span>
         <span>로그인</span>
         <span>메인</span>
-        <span class="ok"></span>
-        <span>2024-30-13</span>
-        <span class="etc">작업예정</span>
+        <span class="ok">O</span>
+        <span>2024-03-13</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span>아이디 찾기</span>
+        <span></span>
+        <span></span>
+        <span>LOG</span>
+        <span><nuxt-link to="/pub/LOG/CMSLOG001M01" class="vlink blue line">CMSLOG001M01</nuxt-link></span>
+        <span>아이디 찾기</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-03-13</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span>LOG</span>
+        <span><nuxt-link to="/pub/LOG/CMSLOG001M02" class="vlink blue line">CMSLOG001M02</nuxt-link></span>
+        <span>아이디 찾기 결과</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-03-13</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span>비밀번호 재설정</span>
+        <span></span>
+        <span></span>
+        <span>LOG</span>
+        <span><nuxt-link to="/pub/LOG/CMSLOG001M03" class="vlink blue line">CMSLOG001M03</nuxt-link></span>
+        <span>비밀번호 재설정 인증</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2023-03-13</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span>LOG</span>
+        <span><nuxt-link to="/pub/LOG/CMSLOG001M04" class="vlink blue line">CMSLOG001M04</nuxt-link></span>
+        <span>비밀번호 재설정</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2023-03-13</span>
+        <span class="etc"></span>
       </li>
 
       <li>
