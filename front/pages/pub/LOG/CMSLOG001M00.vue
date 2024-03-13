@@ -23,7 +23,7 @@
                 
                 <div class="pwd_messages">
                     비밀번호 5회 초과 되었습니다.
-                    <nuxt-link to="/pub/LOG/LOG001M00" class="vlink blue line ml_5">비밀번호 재설정</nuxt-link>
+                    <nuxt-link to="/pub/LOG/CMSLOG001M00" class="vlink blue line ml_5">비밀번호 재설정</nuxt-link>
                 </div>
 
                 <v-btn class="vbtn login" size="large">로그인</v-btn>
