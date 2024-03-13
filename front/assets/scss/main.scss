@@ -972,7 +972,7 @@ body{
         }
     }
     &.login{
-        background: none;
+        background: url("../images/bg_login.png") center center no-repeat;
     }
 }
 
@@ -3110,7 +3110,7 @@ input.i_basics{
     transform: translate(-50%, -50%);
     background: #fff;
     border-radius: 20px;
-    background-image: url('../images/bg_login.png');
+    background-image: url('../images/bg_login_left.png');
     background-size: 300px 644px;
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -3228,6 +3228,25 @@ input.i_basics{
                     font-weight: 400;
                     line-height: 22px;
                     letter-spacing: 0em;
+                }
+            }
+            .btm{
+                position: absolute;
+                bottom:40px;
+                left:300px;
+                right:0;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 22px;
+                color:#B9C1C9;
+                letter-spacing: 0em;
+                text-align: center;
+                .vlink.basic{
+                    color:#808892;
+                    font-weight: 700;
+                    &:hover{
+                        color:#331CBF;
+                    }
                 }
             }
         }

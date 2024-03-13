@@ -12,9 +12,14 @@
 
             <div class="login_form">
                 <v-text-field label="아이디" v-model="userId" :rules="userIdRules" placeholder="아이디" class="i_basics"></v-text-field>
+
+                <!-- 보안툴 때문에 컴포넌트 말고 iframe 으로 변경 -->
                 <div class="ifm_keysec login">
                     <iframe src="/keyboard_security_pwd.html" frameborder="0" width="100%" height="100%"></iframe>
                 </div>
+
+                <!-- 보안툴 사용 안 할 경우 컴포넌트 사용  -->
+                <!-- <v-text-field label="비밀번호" v-model="password" :rules="passwordRules" type="password" placeholder="비밀번호" class="i_basics mt_10"></v-text-field> -->
                 
                 <div class="pwd_messages">
                     비밀번호 5회 초과 되었습니다.
@@ -26,13 +31,18 @@
                 <div class="btn_util">
                     <v-checkbox v-model="idSave" label="아이디 기억하기" class="idsave" />  
                     <div>
-                        <nuxt-link to="/pub/LOG/CMSLOG001M00" class="vlink basic pr_3">회원가입</nuxt-link>
-                        <span>/</span>
+                        <!-- <nuxt-link to="/pub/LOG/CMSLOG001M00" class="vlink basic pr_3">회원가입</nuxt-link>
+                        <span>/</span> -->
                         <nuxt-link to="/pub/LOG/CMSLOG001M00" class="vlink basic pl_3 pr_3">아이디 찾기</nuxt-link>
                         <span>/</span>
                         <nuxt-link to="/pub/LOG/CMSLOG001M00" class="vlink basic pl_3">비밀번호 재설정</nuxt-link>
                     </div>
                 </div>
+            </div>
+
+            <div class="btm">
+                <nuxt-link to="/pub/LOG/CMSLOG001M00" class="vlink basic">개인정보 취급방침</nuxt-link>
+                 · 서울특별시 중구 서소문동 21-1번지 연호빌딩 · copyright shinhan bank. all rights reserved.
             </div>
         </div>
     </div>
