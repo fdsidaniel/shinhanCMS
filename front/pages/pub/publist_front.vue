@@ -137,6 +137,19 @@
         <span>2023-03-13</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span>원화(펌뱅킹)</span>
+        <span>이체 정보 관리</span>
+        <span>당,타행 입금 이체</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS001M00" class="vlink blue line">CMS001M00</nuxt-link></span>
+        <span>당행 입금 이체</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2023-03-13</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>
@@ -177,7 +190,7 @@
         <span></span>
         <span></span>
       </li>
-      
+
       <li>
         <span>AICMS 프로젝트 - 참고용 퍼블 목록(삭제 예정)</span>
       </li>

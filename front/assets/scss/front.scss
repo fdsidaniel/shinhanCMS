@@ -288,6 +288,11 @@
                 }
             }
         }
+        &.add_type{
+            .v-slide-group__content{
+                padding-right:64px;
+            }
+        }
     }
 }
 .tab_con{
@@ -1061,6 +1066,17 @@
 }
 
 // 팁 문구
+.req_txt{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    &:before{
+        content:"*";
+        font-weight: 700;
+        color:#FF2C2C;
+    }
+}
 .tip_txt{
     position: relative;
     padding-left:15px;
@@ -6211,7 +6227,7 @@
         }
     }
     &.repwd{
-        
+
     }
 }
 
