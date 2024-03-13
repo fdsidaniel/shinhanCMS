@@ -1,6 +1,6 @@
 <template>
   <Header v-if="isShowHeader" />
-  <div class="container"><!-- 로그인 전 메인 class main / 스킨(기본 blue) class -  skin_violet , skin_green  -->
+  <div class="container"><!-- 로그인 페이지 class login 추가 / 아이디 찾기, 비밀번호 재설정 class before 추가 -->
     <!-- <Left v-if="isShowLeft" /> -->
     <div class="content">
       <!-- <template v-if="isShowNavigator"> 메뉴명 및 네이게이터 </template> -->
@@ -19,8 +19,10 @@ import Footer from '@/layouts/footer/Footer'
 import { menuStore } from '@/store/menuStore'
 import { useDialogStore } from '~/store/dialogStore'
 import LayerPopup from '@/components/common/LayerPopup'
-const isShowHeader = computed(() => menuStore().isShowHeader())
-const isShowFooter = computed(() => menuStore().isShowFooter())
+// const isShowHeader = computed(() => menuStore().isShowHeader())
+// const isShowFooter = computed(() => menuStore().isShowFooter())
+const isShowHeader = ref(true)
+const isShowFooter = ref(true)
 const isShowLeft = computed(() => menuStore().isShowLeft())
 const isShowNavigator = computed(() => menuStore().isShowNavigator())
 const dialogList = computed(() => useDialogStore().getDialogList())
