@@ -9,7 +9,7 @@
 
         <h3>비밀번호 재설정</h3>
         <!-- 보안툴 사용 안 할 경우 컴포넌트 사용  -->
-        <v-table class="vtable_view">
+        <!-- <v-table class="vtable_view">
             <tbody>
                 <tr>
                     <th>새 비밀번호</th>
@@ -30,12 +30,12 @@
                     </td>
                 </tr>
             </tbody>
-        </v-table>
+        </v-table> -->
 
         <!-- 보안툴 때문에 컴포넌트 말고 iframe 으로 변경 -->
-        <!-- <div class="ifm_keysec">
+        <div class="ifm_keysec repwd">
             <iframe src="/keyboard_security_repwd.html" frameborder="0" width="100%" height="100%"></iframe>
-        </div> -->
+        </div>
 
         <div class="btn_btm_wrap">
             <v-btn class="vbtn" size="large">비밀번호 재설정</v-btn>

@@ -463,6 +463,7 @@
                 padding:0;
                 border:0;
             }
+            &.pd_0{padding:0 !important;}
         }
         .v-input__details{display:none;}
 
@@ -6208,6 +6209,9 @@
         iframe{
             height:98px;
         }
+    }
+    &.repwd{
+        
     }
 }
 
