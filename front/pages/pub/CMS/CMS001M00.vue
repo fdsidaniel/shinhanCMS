@@ -60,6 +60,24 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="cell">
+                    <div class="col">
+                        <span class="tit req">계좌번호</span>
+                        <div class="con">
+                            <v-text-field label="계좌번호" v-model="accNum" :rules="accNumRules" required placeholder="“-”없이, 계좌번호 모두를 입력해주세요." class="i_basics none_details"></v-text-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="col">
+                        <span class="tit req">통장 메모</span>
+                        <div class="con">
+                            <v-text-field label="통장 메모" v-model="bankBookMemo" :rules="bankBookMemoRules" required placeholder="두 글자 이상 입력해주세요." class="i_basics none_details"></v-text-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
       </v-window-item>
@@ -98,6 +116,16 @@ const itemsRequestChannel = ref([
 
 const requestNum = ref('')
 const requestNumRules = [
+  
+]
+
+const acctNum = ref('')
+const accNumRules = [
+  
+]
+
+const bankBookMemo = ref('')
+const bankBookMemoRules = [
   
 ]
 
