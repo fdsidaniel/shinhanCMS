@@ -23,7 +23,7 @@
                 
                 <div class="pwd_messages">
                     비밀번호 5회 초과 되었습니다.
-                    <nuxt-link to="/pub/LOG/CMSLOG001M00" class="vlink blue line ml_5">비밀번호 재설정</nuxt-link>
+                    <nuxt-link to="/pub/CMS/CMSLOG001M00" class="vlink blue line ml_5">비밀번호 재설정</nuxt-link>
                 </div>
 
                 <v-btn class="vbtn login" size="large">로그인</v-btn>
@@ -31,17 +31,17 @@
                 <div class="btn_util">
                     <v-checkbox v-model="idSave" label="아이디 기억하기" class="idsave" />  
                     <div>
-                        <!-- <nuxt-link to="/pub/LOG/CMSLOG001M00" class="vlink basic pr_3">회원가입</nuxt-link>
+                        <!-- <nuxt-link to="/pub/CMS/CMSLOG001M00" class="vlink basic pr_3">회원가입</nuxt-link>
                         <span>/</span> -->
-                        <nuxt-link to="/pub/LOG/CMSLOG001M00" class="vlink basic pl_3 pr_3">아이디 찾기</nuxt-link>
+                        <nuxt-link to="/pub/CMS/CMSLOG001M00" class="vlink basic pl_3 pr_3">아이디 찾기</nuxt-link>
                         <span>/</span>
-                        <nuxt-link to="/pub/LOG/CMSLOG001M00" class="vlink basic pl_3">비밀번호 재설정</nuxt-link>
+                        <nuxt-link to="/pub/CMS/CMSLOG001M00" class="vlink basic pl_3">비밀번호 재설정</nuxt-link>
                     </div>
                 </div>
             </div>
 
             <div class="btm">
-                <nuxt-link to="/pub/LOG/CMSLOG001M00" class="vlink basic">개인정보 취급방침</nuxt-link>
+                <nuxt-link to="/pub/CMS/CMSLOG001M00" class="vlink basic">개인정보 취급방침</nuxt-link>
                  · 서울특별시 중구 서소문동 21-1번지 연호빌딩 · copyright shinhan bank. all rights reserved.
             </div>
         </div>
