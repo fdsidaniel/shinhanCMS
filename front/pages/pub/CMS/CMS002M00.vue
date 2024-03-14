@@ -31,7 +31,7 @@
                 </div>
             </td>
         </tr>
-        <tr>
+        <tr><!-- 보안툴 사용 안 할 경우 컴포넌트 사용  -->
             <th class="req">비밀번호</th>
             <td>
                 <div class="input_keypad w_300">
@@ -49,6 +49,13 @@
                     <v-btn class="vbtn" size="small">키패드</v-btn>
                 </div>
             </td>
+        </tr>
+        <tr><!-- 보안툴 때문에 컴포넌트 말고 iframe 으로 변경 -->
+          <th colspan="2">
+            <div class="ifm_keysec">
+              <iframe src="/keyboard_security.html" frameborder="0" width="100%" height="100%"></iframe>
+            </div>
+          </th>
         </tr>
         <tr>
             <th class="req">성명</th>
