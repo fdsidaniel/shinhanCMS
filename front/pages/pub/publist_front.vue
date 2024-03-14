@@ -78,7 +78,7 @@
         <span></span>
         <span></span>
         <span>LOG</span>
-        <span><nuxt-link to="/pub/LOG/CMSLOG001M00" class="vlink blue line">CMSLOG001M00</nuxt-link></span>
+        <span><nuxt-link to="/pub/CMS/CMSLOG001M00" class="vlink blue line">CMSLOG001M00</nuxt-link></span>
         <span>로그인</span>
         <span>메인</span>
         <span class="ok">O</span>
@@ -91,7 +91,7 @@
         <span></span>
         <span></span>
         <span>LOG</span>
-        <span><nuxt-link to="/pub/LOG/CMSLOG001M01" class="vlink blue line">CMSLOG001M01</nuxt-link></span>
+        <span><nuxt-link to="/pub/CMS/CMSLOG001M01" class="vlink blue line">CMSLOG001M01</nuxt-link></span>
         <span>아이디 찾기</span>
         <span>메인</span>
         <span class="ok">O</span>
@@ -104,7 +104,7 @@
         <span></span>
         <span></span>
         <span>LOG</span>
-        <span><nuxt-link to="/pub/LOG/CMSLOG001M02" class="vlink blue line">CMSLOG001M02</nuxt-link></span>
+        <span><nuxt-link to="/pub/CMS/CMSLOG001M02" class="vlink blue line">CMSLOG001M02</nuxt-link></span>
         <span>아이디 찾기 결과</span>
         <span>메인</span>
         <span class="ok">O</span>
@@ -117,7 +117,7 @@
         <span></span>
         <span></span>
         <span>LOG</span>
-        <span><nuxt-link to="/pub/LOG/CMSLOG001M03" class="vlink blue line">CMSLOG001M03</nuxt-link></span>
+        <span><nuxt-link to="/pub/CMS/CMSLOG001M03" class="vlink blue line">CMSLOG001M03</nuxt-link></span>
         <span>비밀번호 재설정 인증</span>
         <span>메인</span>
         <span class="ok">O</span>
@@ -130,7 +130,7 @@
         <span></span>
         <span></span>
         <span>LOG</span>
-        <span><nuxt-link to="/pub/LOG/CMSLOG001M04" class="vlink blue line">CMSLOG001M04</nuxt-link></span>
+        <span><nuxt-link to="/pub/CMS/CMSLOG001M04" class="vlink blue line">CMSLOG001M04</nuxt-link></span>
         <span>비밀번호 재설정</span>
         <span>메인</span>
         <span class="ok">O</span>
@@ -195,7 +195,7 @@
         <span></span>
         <span></span>
         <span></span>
-        <span><nuxt-link to="/pub/CMS/CMS001M02" class="vlink blue line">CMS001M02</nuxt-link></span>
+        <span><nuxt-link to="/pub/CMS/CMS001P02" class="vlink blue line">CMS001P02</nuxt-link></span>
         <span>타행이체결과 불능분 통지 팝업</span>
         <span>팝업</span>
         <span class="ok">O</span>
