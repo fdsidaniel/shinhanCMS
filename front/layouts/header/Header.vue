@@ -24,39 +24,63 @@
           </ul>
         </div>
         <div class="gnb_menu_box">
+          <p class="gnb_menu_tit">법인카드</p>
+          <ul class="gnb_menu_list">
+            <li><nuxt-link to="/pub/publist_front">법인카드 승인내역</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">법인카드 매입내역</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">법인카드 청구내역</nuxt-link></li>
+          </ul>
+        </div>
+        <div class="gnb_menu_box">
           <p class="gnb_menu_tit">제휴가상계좌</p>
           <ul class="gnb_menu_list">
-            <li><nuxt-link to="/pub/publist_front">공고 조회</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">제휴가상계좌 입금 승인정보</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">제휴가상계좌 입금 승인처리내역</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">제휴가상계좌 수취인정보</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">제휴가상계좌 수취인조회내역</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">제휴가상계좌 집계대사</nuxt-link></li>
           </ul>
         </div>
         <div class="gnb_menu_box">
           <p class="gnb_menu_tit">광과금/기타</p>
           <ul class="gnb_menu_list">
-            <li><nuxt-link to="/pub/publist_front">공고 조회</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">공과금</nuxt-link></li>
           </ul>
         </div>
         <div class="gnb_menu_box">
           <p class="gnb_menu_tit">오류관리</p>
           <ul class="gnb_menu_list">
-            <li><nuxt-link to="/pub/publist_front">공고 조회</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">오류 관리</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">오류 이력 조회</nuxt-link></li>
           </ul>
         </div>
         <div class="gnb_menu_box">
           <p class="gnb_menu_tit">서비스 현황</p>
           <ul class="gnb_menu_list">
-            <li><nuxt-link to="/pub/publist_front">공고 조회</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">일일 이체 현황</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">월간 이체 현황</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">일일 오류 발생 현황</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">월간 오루 발생 현황</nuxt-link></li>
           </ul>
         </div>
         <div class="gnb_menu_box">
           <p class="gnb_menu_tit">일괄 이체</p>
           <ul class="gnb_menu_list">
-            <li><nuxt-link to="/pub/publist_front">공고 조회</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">일괄이체 지급요청</nuxt-link></li>
           </ul>
         </div>
         <div class="gnb_menu_box">
           <p class="gnb_menu_tit">시스템 관리</p>
           <ul class="gnb_menu_list">
-            <li><nuxt-link to="/pub/publist_front">공고 조회</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">사용자 가입 신청/수정</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">사용자 가입 취소</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">서비스 시간 관리</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">서비스 오류 관리</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">전문 송/수신 이력 관리</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">법인카드 파일관리</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">일괄이체 파일관리</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">사용자 신규/변경</nuxt-link></li>
+            <li><nuxt-link to="/pub/publist_front">사용자 권한 제어</nuxt-link></li>
           </ul>
         </div>
       </div>
