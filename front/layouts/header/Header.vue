@@ -5,7 +5,7 @@
         <nuxt-link to="../MEM/MEM001M00">로고 이미지</nuxt-link>
       </h1>
 
-      <div class="gnb">
+      <div class="gnb" @click="handleClick">
         <div class="gnb_menu_box">
           <p class="gnb_menu_tit">원화(펌뱅킹)</p>
           <ul class="gnb_menu_list">
@@ -102,7 +102,17 @@
 
 <script setup>
 
-const myPageLayer = ref(false)
+const handleClick = (event) => {
+  // const clickedItem = event.target.innerText;
+  // console.log('Clicked item:', clickedItem);
+  
+  const liElements = document.querySelectorAll(".gnb_menu_list li a")
+  const lis = event.target.parentElement.parentElement.querySelector('.gnb_menu_list li a')
+  //console.log('Clicked item:', liElements);
+  console.log('Clicked item:', lis);
+  alert();
+}
+
 
 // 메뉴 클릭 시 GNB 하위 메뉴 hide
 const gnbView = ref(false)
