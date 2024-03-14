@@ -225,7 +225,7 @@ const columnDefsReceive = ref([
     headerName: '결과', field: 'result', width: 100, cellClass: params => {      
       if (params.value === '정상') {
           return 'ico_success'
-      }else if (params.value === '오류') {
+      }else if (params.value === '불능') {
           return 'ico_err'
       }
     }
@@ -260,7 +260,7 @@ const rowDataReceive = [
   {
     no: '2',
     orgName: '한마정보통신',
-    result: '오류',
+    result: '불능',
     requestChannel: 'RESERV',
     requestNum: '12345678900',
     transactionDate: '2024.02.15',
@@ -275,7 +275,7 @@ const rowDataReceive = [
   {
     no: '3',
     orgName: '한마정보통신',
-    result: '오류',
+    result: '불능',
     requestChannel: 'RESERV',
     requestNum: '12345678900',
     transactionDate: '2024.02.15',
@@ -290,7 +290,7 @@ const rowDataReceive = [
   {
     no: '4',
     orgName: '한마정보통신',
-    result: '오류',
+    result: '불능',
     requestChannel: 'RESERV',
     requestNum: '12345678900',
     transactionDate: '2024.02.15',
@@ -305,7 +305,7 @@ const rowDataReceive = [
   {
     no: '5',
     orgName: '한마정보통신',
-    result: '오류',
+    result: '불능',
     requestChannel: 'RESERV',
     requestNum: '12345678900',
     transactionDate: '2024.02.15',
@@ -320,7 +320,7 @@ const rowDataReceive = [
   {
     no: '6',
     orgName: '한마정보통신',
-    result: '오류',
+    result: '불능',
     requestChannel: 'RESERV',
     requestNum: '12345678900',
     transactionDate: '2024.02.15',
@@ -335,7 +335,7 @@ const rowDataReceive = [
   {
     no: '7',
     orgName: '한마정보통신',
-    result: '오류',
+    result: '불능',
     requestChannel: 'RESERV',
     requestNum: '12345678900',
     transactionDate: '2024.02.15',
@@ -350,7 +350,7 @@ const rowDataReceive = [
   {
     no: '8',
     orgName: '한마정보통신',
-    result: '오류',
+    result: '불능',
     requestChannel: 'RESERV',
     requestNum: '12345678900',
     transactionDate: '2024.02.15',
@@ -365,7 +365,7 @@ const rowDataReceive = [
   {
     no: '9',
     orgName: '한마정보통신',
-    result: '오류',
+    result: '불능',
     requestChannel: 'RESERV',
     requestNum: '12345678900',
     transactionDate: '2024.02.15',
@@ -380,7 +380,7 @@ const rowDataReceive = [
   {
     no: '10',
     orgName: '한마정보통신',
-    result: '오류',
+    result: '불능',
     requestChannel: 'RESERV',
     requestNum: '12345678900',
     transactionDate: '2024.02.15',
@@ -395,7 +395,7 @@ const rowDataReceive = [
   {
     no: '11',
     orgName: '한마정보통신',
-    result: '오류',
+    result: '불능',
     requestChannel: 'RESERV',
     requestNum: '12345678900',
     transactionDate: '2024.02.15',

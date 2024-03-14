@@ -1,55 +1,58 @@
 <template>
   
-  <!-- popup size width:500 height:500 -->
+  <!-- popup size width:500 height:632 -->
   <div class="popup_body">
-    <h2 class="poptit">기관 추가 <span>타이틀 화면 확인용-실제 팝업 구동시 타이틀 display:none 처리됨</span></h2>
+    <h2 class="poptit">타행이체결과 불능분 통지 <span>타이틀 화면 확인용-실제 팝업 구동시 타이틀 display:none 처리됨</span></h2>
     
-    <v-text-field label="기관명" v-model="orgName" :rules="orgNameRules" required placeholder="기관명을 입력해주세요." class="i_basics none_details"></v-text-field>
-
-    <v-table class="vtable_list none_vline inipt scroll mt_10 h_295">
+    <v-table class="vtable_view bg">
         <colgroup>
-            <col style="width:60px;"/>
-            <col style=""/>
+        <col style="width:;"/>
+        <col style="width:;"/>
         </colgroup>
-        <thead>
-            <tr>
-                <th></th>
-                <th>기관명</th>
-            </tr>
-        </thead>
         <tbody>
-            <tr>
-                <td class="center"><v-checkbox v-model="checkbox1" /></td>
-                <td>신한은행</td>
-            </tr>
-            <tr>
-                <td class="center"><v-checkbox v-model="checkbox2" /></td>
-                <td>한마정보통신</td>
-            </tr>
-            <tr>
-                <td class="center"><v-checkbox v-model="checkbox3" /></td>
-                <td>신한기관정부</td>
-            </tr>
-            <tr>
-                <td class="center"><v-checkbox v-model="checkbox4" /></td>
-                <td>그린모아</td>
-            </tr>
-            <tr>
-                <td class="center"><v-checkbox v-model="checkbox5" /></td>
-                <td>신한은행</td>
-            </tr>
-            <tr>
-                <td class="center"><v-checkbox v-model="checkbox6" /></td>
-                <td>한마정보통신</td>
-            </tr>
+        <tr>
+            <th>지급계좌 예금주</th>
+            <td>김몰리</td>
+        </tr>
+        <tr>
+            <th>지급계좌 계좌번호</th>
+            <td>110-019-876043</td>
+        </tr>
+        <tr>
+            <th>지급계좌 지급금액</th>
+            <td>10,000,000</td>
+        </tr>
+        <tr>
+            <th>입금 은행</th>
+            <td>10,000,000</td>
+        </tr>
+        <tr>
+            <th>입금계좌 계좌번호</th>
+            <td>391-910019-24008</td>
+        </tr>
+        <tr>
+            <th>불능 금액</th>
+            <td>10,000,000</td>
+        </tr>
+        <tr>
+            <th>생성일시</th>
+            <td>2024.03.15</td>
+        </tr>
+        <tr>
+            <th>응답코드</th>
+            <td>99</td>
+        </tr>
+        <tr>
+            <th>응답 메시지</th>
+            <td>에러에러에러에러에러</td>
+        </tr>
+        <tr>
+            <th>전문번호</th>
+            <td>전문번호</td>
+        </tr>
         </tbody>
     </v-table>
-
-    <p class="tip_txt mt_10">3개 기관까지 동시 선택이 가능합니다.</p>
-
-    <div class="btm_btn_wrap">
-      <v-btn class="vbtn">선택</v-btn>
-    </div>
+    
   </div>
 
 </template>
@@ -60,21 +63,5 @@
 
 <script setup >
 
-const orgName = ref('')
-const orgNameRules = [
-  
-]
-
-/* 체크박스 */
-const checkbox1 = ref(false)
-const checkbox2 = ref(false)
-const checkbox3 = ref(false)
-const checkbox4 = ref(false)
-const checkbox5 = ref(false)
-const checkbox6 = ref(false)
-const checkbox7 = ref(false)
-const checkbox8 = ref(false)
-const checkbox9 = ref(false)
-const checkbox10 = ref(false)
 
 </script> 
