@@ -11,139 +11,121 @@
 
   <div class="conbody">
 
-    <v-tabs v-model="tab" class="tab_basics add_type">
-      <v-tab value="orgAll">기관전체</v-tab>
-
-      <v-btn class="vbtn btn_org_add" size="small">기관추가</v-btn>
-    </v-tabs>
-    
-
-    <v-window v-model="tab" class="tab_con">
-      <v-window-item value="orgAll">
-        
-        <p class="req_txt mb_10 t_right">표시는 필수 입력 항목 입니다.</p>
-        <!-- 검색 -->
-        <div class="search_table">
-            <div class="row">
-                <div class="cell">
-                    <div class="col vtop">
-                        <span class="tit req">거래일시</span>
-                        <div class="con">
-                            <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
-                            <div class="i_calender mt_10" v-show="calDateValue === '05'">
-                                <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
-                                <span>~</span>
-                                <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cell">
-                    <div class="col">
-                        <span class="tit">처리 결과</span>
-                        <div class="con">
-                            <ComSelectBox groupCode="01" v-model="comboProcessResult" :items="itemsProcessResult" :isAll="true"  class="s_basics none_details" />
+    <p class="req_txt mb_10 t_right">표시는 필수 입력 항목 입니다.</p>
+    <!-- 검색 -->
+    <div class="search_table">
+        <div class="row">
+            <div class="cell">
+                <div class="col vtop">
+                    <span class="tit req">거래일시</span>
+                    <div class="con">
+                        <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
+                        <div class="i_calender mt_10" v-show="calDateValue === '05'">
+                            <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
+                            <span>~</span>
+                            <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="cell">
-                    <div class="col">
-                        <span class="tit req">요청 채널</span>
-                        <div class="con">
-                            <ComSelectBox groupCode="01" v-model="comboRequestChannel" :items="itemsRequestChannel" :isAll="true"  class="s_basics none_details" />
-                        </div>
+            <div class="cell">
+                <div class="col">
+                    <span class="tit">처리 결과</span>
+                    <div class="con">
+                        <ComSelectBox groupCode="01" v-model="comboProcessResult" :items="itemsProcessResult" :isAll="true"  class="s_basics none_details" />
                     </div>
                 </div>
-                <div class="cell">
-                    <div class="col">
-                        <span class="tit req">요청 번호</span>
-                        <div class="con">
-                            <v-text-field label="요청 번호" v-model="requestNum" :rules="requestNumRules" required placeholder="요청번호 모두를 입력해주세요." class="i_basics none_details"></v-text-field>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="cell">
-                    <div class="col">
-                        <span class="tit">계좌번호</span>
-                        <div class="con">
-                            <v-text-field label="계좌번호" v-model="accNum" :rules="accNumRules" required placeholder="“-”없이, 계좌번호 모두를 입력해주세요." class="i_basics none_details"></v-text-field>
-                        </div>
-                    </div>
-                </div>
-                <div class="cell">
-                    <div class="col">
-                        <span class="tit">통장 메모</span>
-                        <div class="con">
-                            <v-text-field label="통장 메모" v-model="bankBookMemo" :rules="bankBookMemoRules" required placeholder="두 글자 이상 입력해주세요." class="i_basics none_details"></v-text-field>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="btn">
-                <v-btn class="vbtn line search" size="small">조회</v-btn>
             </div>
         </div>
-        <!-- //검색 -->
-
-        <div class="table_top">
-            <div>
-                <ComSelectBox groupCode="01" v-model="ogrSelect" :items="itemsOgrSelect" :isAll="true"  class="s_basics none_details" />
+        <div class="row">
+            <div class="cell">
+                <div class="col">
+                    <span class="tit req">요청 채널</span>
+                    <div class="con">
+                        <ComSelectBox groupCode="01" v-model="comboRequestChannel" :items="itemsRequestChannel" :isAll="true"  class="s_basics none_details" />
+                    </div>
+                </div>
             </div>
-            <div>
-                <p class="txt">기준일시 : 2024.02.15 14:12:56 (단위:원)</p>
-            </div>
-        </div>
-        <v-table class="vtable_list">
-            <colgroup>
-            <col style="width:25%;"/>
-            <col style="width:25%;"/>
-            <col style="width:25%;"/>
-            <col style="width:25%;"/>
-            </colgroup>
-            <thead>
-            <tr>
-                <th>총 정상이체건수</th>
-                <th>총 이체금액</th>
-                <th>총 오류금액</th>
-                <th>총 수수료</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>159건</td>
-                <td>1,590,000,000원</td>
-                <td>0원</td>
-                <td>0원</td>
-            </tr>
-            </tbody>
-        </v-table>
-
-        <div class="tit_cnt_btn mt_40">
-            <p class="tit_cnt">총 <b>100</b>건</p>
-            <div>
-                <v-btn class="vbtn white line sort new" size="small" :class="{ 'old': sort }" @click="btnSort">{{ message }}</v-btn>
-                <ComSelectBox groupCode="01" v-model="comboCnt" :items="itemsCnt" class="s_basics none_details w_120" />
+            <div class="cell">
+                <div class="col">
+                    <span class="tit req">요청 번호</span>
+                    <div class="con">
+                        <v-text-field label="요청 번호" v-model="requestNum" :rules="requestNumRules" required placeholder="요청번호 모두를 입력해주세요." class="i_basics none_details"></v-text-field>
+                    </div>
+                </div>
             </div>
         </div>
-        <ComAgGrid
-            ref="agrid"
-            :columnDefs="columnDefsReceive"
-            style="height: 570px"
-            class="grid"
-            :rowData="rowDataReceive"
-            :defaultColDef="defaultColDefReceive"
-            :rowHeight="51"
-            :tooltipShowDelay="0"
-            :tooltipHideDelay="9000"
-        />        
-        <v-btn class="vbtn btn_grid_more" size="small">더보기(1/10)</v-btn>
+        <div class="row">
+            <div class="cell">
+                <div class="col">
+                    <span class="tit">계좌번호</span>
+                    <div class="con">
+                        <v-text-field label="계좌번호" v-model="accNum" :rules="accNumRules" required placeholder="“-”없이, 계좌번호 모두를 입력해주세요." class="i_basics none_details"></v-text-field>
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
+                <div class="col">
+                    <span class="tit">통장 메모</span>
+                    <div class="con">
+                        <v-text-field label="통장 메모" v-model="bankBookMemo" :rules="bankBookMemoRules" required placeholder="두 글자 이상 입력해주세요." class="i_basics none_details"></v-text-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <v-btn class="vbtn line search" size="small">조회</v-btn>
+        </div>
+    </div>
+    <!-- //검색 -->
 
-      </v-window-item>
-    </v-window>
+    <div class="table_top right">
+        <p class="txt">기준일시 : 2024.02.15 14:12:56 (단위:원)</p>
+    </div>
+    <v-table class="vtable_list">
+        <colgroup>
+        <col style="width:25%;"/>
+        <col style="width:25%;"/>
+        <col style="width:25%;"/>
+        <col style="width:25%;"/>
+        </colgroup>
+        <thead>
+        <tr>
+            <th>총 정상이체건수</th>
+            <th>총 이체금액</th>
+            <th>총 오류금액</th>
+            <th>총 수수료</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>159건</td>
+            <td>1,590,000,000원</td>
+            <td>0원</td>
+            <td>0원</td>
+        </tr>
+        </tbody>
+    </v-table>
+
+    <div class="tit_cnt_btn mt_40">
+        <p class="tit_cnt">총 <b>100</b>건</p>
+        <div>
+            <v-btn class="vbtn white line sort new" size="small" :class="{ 'old': sort }" @click="btnSort">{{ message }}</v-btn>
+            <ComSelectBox groupCode="01" v-model="comboCnt" :items="itemsCnt" class="s_basics none_details w_120" />
+        </div>
+    </div>
+    <ComAgGrid
+        ref="agrid"
+        :columnDefs="columnDefsReceive"
+        style="height: 570px"
+        class="grid"
+        :rowData="rowDataReceive"
+        :defaultColDef="defaultColDefReceive"
+        :rowHeight="51"
+        :tooltipShowDelay="0"
+        :tooltipHideDelay="9000"
+    />
+    <v-btn class="vbtn btn_grid_more" size="small">더보기(1/10)</v-btn>
 
   </div>
 
@@ -159,8 +141,6 @@ import ComRadioButton from '@/components/common/ComRadioButton.vue'
 import ComSelectBox from '@/components/common/ComSelectBox.vue'
 import ComAgGrid from '~/components/common/ComAgGrid.vue'
 import ComDatePicker from '@/components/common/ComDatePicker.vue'
-
-const tab = ref('')
 
 const calDateValue = ref('05')
 const calDate = [
@@ -240,7 +220,7 @@ const btnSort = () => {
 
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
-  { headerName: '기관 명', field: 'orgName', width: 200 },
+//   { headerName: '기관 명', field: 'orgName', width: 200 },
   {
     headerName: '결과', field: 'result', width: 100, cellClass: params => {      
       if (params.value === '정상') {
@@ -250,8 +230,8 @@ const columnDefsReceive = ref([
       }
     }
   },
-  { headerName: '요청 채널', field: 'requestChannel', width: 110 },
-  { headerName: '요청 번호', field: 'requestNum', width: 160 },
+//   { headerName: '요청 채널', field: 'requestChannel', width: 110 },
+//   { headerName: '요청 번호', field: 'requestNum', width: 160 },
   { headerName: '거래일시', field: 'transactionDate', width: 120 },
   { headerName: '출금계좌', field: 'withdrawAcc', width: 200 },
   { headerName: '입금계좌', field: 'depositAcc', width: 200 },

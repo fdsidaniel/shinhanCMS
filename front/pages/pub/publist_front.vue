@@ -144,10 +144,49 @@
         <span></span>
         <span></span>
         <span><nuxt-link to="/pub/CMS/CMS001M00" class="vlink blue line">CMS001M00</nuxt-link></span>
-        <span>당행 입금 이체</span>
+        <span>기관 전체<br>(시스템 관리자)</span>
         <span>메인</span>
         <span class="ok">O</span>
-        <span>2023-03-13</span>
+        <span>2023-03-14</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS001P01" class="vlink blue line">CMS001P01</nuxt-link></span>
+        <span>기관 추가 팝업<br>(시스템 관리자)</span>
+        <span>팝업</span>
+        <span class="ok">O</span>
+        <span>2023-03-14</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS001M01" class="vlink blue line">CMS001M01</nuxt-link></span>
+        <span>기관별<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2023-03-14</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS001M02" class="vlink blue line">CMS001M02</nuxt-link></span>
+        <span>당,타행 입금 이체<br>(기관 담당자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2023-03-14</span>
         <span class="etc"></span>
       </li>
 

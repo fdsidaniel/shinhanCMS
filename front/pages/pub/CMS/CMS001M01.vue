@@ -13,13 +13,27 @@
 
     <v-tabs v-model="tab" class="tab_basics add_type">
       <v-tab value="orgAll">기관전체</v-tab>
+      <div class="tab_box">
+        <v-tab value="org01">한마정보통신</v-tab>
+        <v-btn class="vbtn btn_tab_del" size="small" @click="btnOrgDel">기관삭제</v-btn>
+      </div>
+      <div class="tab_box">
+        <v-tab value="org02">신한은행</v-tab>
+        <v-btn class="vbtn btn_tab_del" size="small" @click="btnOrgDel">기관삭제</v-btn>
+      </div>
 
-      <v-btn class="vbtn btn_org_add" size="small">기관추가</v-btn>
+      <v-btn class="vbtn btn_org_add" size="small" @click="btnOrgAdd">기관추가</v-btn>
     </v-tabs>
     
 
     <v-window v-model="tab" class="tab_con">
       <v-window-item value="orgAll">
+        
+        기관 전체(CMS001M00)
+
+      </v-window-item>
+
+      <v-window-item value="org01">
         
         <p class="req_txt mb_10 t_right">표시는 필수 입력 항목 입니다.</p>
         <!-- 검색 -->
@@ -27,7 +41,7 @@
             <div class="row">
                 <div class="cell">
                     <div class="col vtop">
-                        <span class="tit req">거래일시</span>
+                        <span class="tit req">요청일</span>
                         <div class="con">
                             <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
                             <div class="i_calender mt_10" v-show="calDateValue === '05'">
@@ -89,13 +103,8 @@
         </div>
         <!-- //검색 -->
 
-        <div class="table_top">
-            <div>
-                <ComSelectBox groupCode="01" v-model="ogrSelect" :items="itemsOgrSelect" :isAll="true"  class="s_basics none_details" />
-            </div>
-            <div>
-                <p class="txt">기준일시 : 2024.02.15 14:12:56 (단위:원)</p>
-            </div>
+        <div class="table_top right">
+            <p class="txt">기준일시 : 2024.02.15 14:12:56 (단위:원)</p>
         </div>
         <v-table class="vtable_list">
             <colgroup>
@@ -143,6 +152,13 @@
         <v-btn class="vbtn btn_grid_more" size="small">더보기(1/10)</v-btn>
 
       </v-window-item>
+
+      <v-window-item value="org02">
+        
+        콘텐츠 동일
+
+      </v-window-item>
+
     </v-window>
 
   </div>
@@ -160,7 +176,14 @@ import ComSelectBox from '@/components/common/ComSelectBox.vue'
 import ComAgGrid from '~/components/common/ComAgGrid.vue'
 import ComDatePicker from '@/components/common/ComDatePicker.vue'
 
-const tab = ref('')
+const tab = ref('org01')
+
+const btnOrgDel = () => {
+    alert('기관 삭제')
+};
+const btnOrgAdd = () => {
+    alert('기관 추가')
+};
 
 const calDateValue = ref('05')
 const calDate = [
@@ -240,7 +263,7 @@ const btnSort = () => {
 
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
-  { headerName: '기관 명', field: 'orgName', width: 200 },
+//   { headerName: '기관 명', field: 'orgName', width: 200 },
   {
     headerName: '결과', field: 'result', width: 100, cellClass: params => {      
       if (params.value === '정상') {
