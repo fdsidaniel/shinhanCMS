@@ -1,5 +1,5 @@
 <template>
-  <div class="header" :class="{ 'close': gnbView }">
+  <div class="header">
     <div class="gnb_box">
       <h1 class=""><!-- logo class logo_발주기관코드 -->
         <nuxt-link to="../MEM/MEM001M00">로고 이미지</nuxt-link>
@@ -103,14 +103,11 @@
 <script setup>
 
 const handleClick = (event) => {
-  // const clickedItem = event.target.innerText;
-  // console.log('Clicked item:', clickedItem);
-  
-  const liElements = document.querySelectorAll(".gnb_menu_list li a")
-  const lis = event.target.parentElement.parentElement.querySelector('.gnb_menu_list li a')
-  //console.log('Clicked item:', liElements);
-  console.log('Clicked item:', lis);
-  alert();
+
+  if(event.target.tagName === 'A') {
+    const liElements = document.querySelectorAll(".gnb_menu_list")
+    console.log(liElements)
+  }
 }
 
 
