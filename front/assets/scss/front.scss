@@ -297,6 +297,9 @@
 }
 .tab_con{
     padding-top:40px;
+    .table_top{
+        padding:0 1px;
+    }
 }
 
 // 하단 버튼
@@ -403,6 +406,19 @@
 }
 
 // table
+.table_top{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom:10px;
+
+    .txt{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+    }
+}
 .v-table{
     th{
         user-select: auto !important;
@@ -1006,7 +1022,7 @@
     }
 }
 .search_table{
-    margin-top:10px;
+    margin-bottom:40px;
     padding:20px 30px;
     border-radius: 10px;
     border: 1px solid #E1E6EC;
@@ -1038,13 +1054,19 @@
                             font-weight: 700;
                             color:#FF2C2C;
                         }
-                    }
+                    }                    
                 }
                 .con{
                     flex:1;
 
                     .i_calender>span{
                         width:31px;
+                    }
+                }
+                &.vtop{                    
+                    align-items: flex-start;
+                    .tit{
+                        padding-top:10px;
                     }
                 }
             }
@@ -1608,7 +1630,7 @@
 .tit_cnt_btn {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     &.right{
         justify-content: flex-end;
     }
@@ -1626,14 +1648,14 @@
                 &.v-btn--size-small {
                     &.line {
                         border: 0;
-                        background: #D7E8FB;
+                        background-color: #D7E8FB;
 
                         .v-btn__content {
                             color: #1150C5;
                         }
 
                         &:hover {
-                            background: #cfe0f2;
+                            background-color: #cfe0f2;
                             box-shadow: 0px 8px 12px 0px #1150C533;
                         }
                     }
@@ -1762,8 +1784,9 @@
             &.ico_fail,
             &.ico_calculate,
             &.ico_end,
-            &.ico_request{
-                position: relative;
+            &.ico_request,
+            &.ico_err{
+                //position: relative;
                 &:before{
                     content: '';
                     position: absolute;
@@ -1777,6 +1800,12 @@
                     text-align: center;
                     border-radius: 32px;
                     z-index:-1;
+                }
+            }
+            &.ico_err{
+                color:#F63232;
+                &:before{
+                    background: #FFE8E8;
                 }
             }
             &.ico_ing{
