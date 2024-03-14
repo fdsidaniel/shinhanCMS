@@ -1042,9 +1042,17 @@
                 }
                 .con{
                     flex:1;
+
+                    .i_calender>span{
+                        width:31px;
+                    }
                 }
             }
         }
+    }
+    .btn{
+        margin-top:15px;
+        text-align: right;
     }
 }
 

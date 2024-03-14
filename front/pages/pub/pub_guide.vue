@@ -62,6 +62,7 @@
             <div><ComRadioButton :options="radioOptions" v-model="selectedValue" :isInline="true" /></div>
             <div><ComRadioButton :options="radioOptions" v-model="selectedValue" disabled /></div>
             <div><ComRadioButton :options="transfer" v-model="transferValue" :isInline="true" class="type_chk_big" /></div>
+            <div><ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" /></div>
           </div>
 
           <h3>체크박스</h3>
@@ -3102,6 +3103,15 @@ const transferValue = ref(null)
 const transfer = [
   { label: '예', value: '01' },
   { label: '아니오', value: '02' },
+]
+
+const calDateValue = ref(null)
+const calDate = [
+  { label: '당일', value: '01' },
+  { label: '1개월', value: '02' },
+  { label: '3개월', value: '03' },
+  { label: '6개월', value: '04' },
+  { label: '직접입력', value: '05' },
 ]
 
 const selectedOrgChannel = ref(null)
