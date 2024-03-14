@@ -496,6 +496,14 @@
             width:120px;
             color:#565C63;
             font-size:16px;
+            &.req{
+                &:after{
+                    content:"*";
+                    margin-left:3px;
+                    font-weight: 700;
+                    color:#FF2C2C;
+                }
+            }
         }
 
         td {
