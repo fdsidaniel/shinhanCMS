@@ -34,7 +34,7 @@
         <tr><!-- 보안툴 사용 안 할 경우 컴포넌트 사용  -->
             <th class="req">비밀번호</th>
             <td>
-                <div class="input_keypad w_300">
+                <div class="input_keypad w_334">
                     <v-text-field label="비밀번호" v-model="password" :rules="passwordRules" type="password" placeholder="" class="i_basics pwd_chk"></v-text-field>
                     <v-btn class="vbtn" size="small">키패드</v-btn>
                 </div>
@@ -44,7 +44,7 @@
         <tr>
             <th class="req">비밀번호 확인</th>
             <td>
-                <div class="input_keypad w_300">
+                <div class="input_keypad w_334">
                     <v-text-field label="비밀번호 확인" v-model="passwordRe" :rules="passwordReRules" type="password" placeholder="" class="i_basics pwd_chk"></v-text-field>
                     <v-btn class="vbtn" size="small">키패드</v-btn>
                 </div>
