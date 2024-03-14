@@ -189,6 +189,19 @@
         <span>2023-03-14</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS001M02" class="vlink blue line">CMS001M02</nuxt-link></span>
+        <span>타행이체결과 불능분 통지 팝업</span>
+        <span>팝업</span>
+        <span class="ok">O</span>
+        <span>2023-03-14</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>
