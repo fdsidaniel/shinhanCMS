@@ -32,7 +32,23 @@
             </td>
         </tr>
         <tr>
-            <th colspan="2">비밀번호</th>
+            <th class="req">비밀번호</th>
+            <td>
+                <div class="input_keypad w_300">
+                    <v-text-field label="비밀번호" v-model="password" :rules="passwordRules" type="password" placeholder="" class="i_basics pwd_chk"></v-text-field>
+                    <v-btn class="vbtn" size="small">키패드</v-btn>
+                </div>
+                <p class="txt_pwd">※ 영문/숫자/특수문자 2가지 이상 조합, 동일한 문자/숫자 3가지 이상 연속 사용 불가합니다.</p>
+            </td>
+        </tr>
+        <tr>
+            <th class="req">비밀번호 확인</th>
+            <td>
+                <div class="input_keypad w_300">
+                    <v-text-field label="비밀번호 확인" v-model="passwordRe" :rules="passwordReRules" type="password" placeholder="" class="i_basics pwd_chk"></v-text-field>
+                    <v-btn class="vbtn" size="small">키패드</v-btn>
+                </div>
+            </td>
         </tr>
         <tr>
             <th class="req">성명</th>
@@ -89,6 +105,19 @@ const userIdRules = [
   (v) => !!v || '사용이 불가능합니다. 다시 입력해주세요.',
   (v) => (v && v.length >= 16) || '아이디 설정 방법이 맞지 않습니다. 다시 입력해주세요.',
 ]
+
+const password = ref('')
+const passwordRules = [
+  (v) => !!v || '비밀번호 설정 방법이 맞지 않습니다. 다시 입력해주세요.',
+  // (v) => (v && v.length >= 3) || '3자리 수 이상 입력하세요',
+]
+
+const passwordRe = ref('')
+const passwordReRules = [
+  (v) => !!v || '비밀번호와 비밀번호 확인 값이 불일치 합니다. 다시 입력해주세요.',
+  // (v) => (v && v.length >= 16) || '영문, 숫자 대소문자 구분없이 6~16 자리',
+]
+
 
 const userName = ref('')
 const userNameRules = [
