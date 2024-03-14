@@ -199,6 +199,10 @@ table {
         width: $size;
     }
 
+    .minw_#{$i} {
+        min-width: $size;
+    }
+
     .h_#{$i} {
         height: $size;
         

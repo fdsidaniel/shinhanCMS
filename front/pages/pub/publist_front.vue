@@ -215,6 +215,19 @@
         <span>2023-03-14</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span>사용자 신규/변경</span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS002M01" class="vlink blue line">CMS002M01</nuxt-link></span>
+        <span>사용자 신규/변경<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2023-03-14</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>
