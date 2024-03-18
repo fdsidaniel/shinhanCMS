@@ -107,7 +107,6 @@ const gnbView = ref(false)
 const handleClick = (event) => {
   if(event.target.tagName === 'A') {    
     gnbView.value = true
-    console.log(event.target)
   }  
 }
 const gnbClose = () => {
