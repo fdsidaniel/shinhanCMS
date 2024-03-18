@@ -373,6 +373,15 @@ body{
             align-items: center;
             justify-content: space-around;
             flex-shrink: 0;
+            &.close{
+                .gnb_menu_box{
+                    &:hover{
+                        .gnb_menu_list{
+                            display:none;
+                        }
+                    }
+                }
+            }
 
             .gnb_menu_box{
                 position: relative;
@@ -398,68 +407,67 @@ body{
                         display:block;                        
                     }
                 }
-            }
-
-            .gnb_menu_tit{
-                position: relative;
-                height:70px;
-                padding-top:23px;
-                color:#121619;
-                font-size: 18px;
-                font-weight: 600;
-                line-height: 21px;
-                letter-spacing: 0em;
-                text-align: center;
-                cursor: default;
-            }
-            .gnb_menu_list{
-                display:none;
-                position:absolute;
-                top:80px;
-                left:50%;                
-                min-width:225px;
-                padding:20px 30px;
-                background: #fff;
-                border-radius: 12px;
-                transform: translateX(-50%);
-                box-shadow: 5px 5px 30px 0px #00000014;
-
-                &:before{
-                    content: '';
-                    display: inline-block;
-                    position: absolute;
-                    top:-8px;
-                    left:50%;
-                    width:18px;
-                    height:18px;
-                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='16' fill='none'%3E%3Cpath fill='%23fff' d='M7.268 1c.77-1.333 2.694-1.333 3.464 0l6.928 12c.77 1.333-.192 3-1.732 3H2.072C.532 16-.43 14.333.34 13L7.268 1Z'/%3E%3C/svg%3E");
-                    background-size: 18px 18px;
-                    background-position: top center;
-                    background-repeat: no-repeat;
-                    transform: translateX(-50%);
-                }
-
-                li{
+                .gnb_menu_tit{
+                    position: relative;
+                    height:70px;
+                    padding-top:23px;
+                    color:#121619;
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                    letter-spacing: 0em;
                     text-align: center;
-                    &+li{
-                        margin-top:6px;
+                    cursor: default;
+                }
+                .gnb_menu_list{
+                    display:none;
+                    position:absolute;
+                    top:80px;
+                    left:50%;
+                    min-width:225px;
+                    padding:20px 30px;
+                    background: #fff;
+                    border-radius: 12px;
+                    transform: translateX(-50%);
+                    box-shadow: 5px 5px 30px 0px #00000014;
+    
+                    &:before{
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        top:-8px;
+                        left:50%;
+                        width:18px;
+                        height:18px;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='16' fill='none'%3E%3Cpath fill='%23fff' d='M7.268 1c.77-1.333 2.694-1.333 3.464 0l6.928 12c.77 1.333-.192 3-1.732 3H2.072C.532 16-.43 14.333.34 13L7.268 1Z'/%3E%3C/svg%3E");
+                        background-size: 18px 18px;
+                        background-position: top center;
+                        background-repeat: no-repeat;
+                        transform: translateX(-50%);
                     }
-                    &.active a,
-                    &:hover a {
-                        color: #331CBF;
-                        font-weight: 700;
-                    }
-                    a{                        
-                        display:inline-block;
-                        color:#121619;
-                        font-size: 16px;
-                        font-weight: 400;
-                        line-height: 24px;
-                        letter-spacing: 0em;
-                        white-space: nowrap;
+    
+                    li{
+                        text-align: center;
+                        &+li{
+                            margin-top:6px;
+                        }
+                        &.active a,
+                        &:hover a {
+                            color: #331CBF;
+                            font-weight: 700;
+                        }
+                        a{                        
+                            display:inline-block;
+                            color:#121619;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            letter-spacing: 0em;
+                            white-space: nowrap;
+                        }
                     }
                 }
-            }
+            }            
         }
 
         .gnb_right{

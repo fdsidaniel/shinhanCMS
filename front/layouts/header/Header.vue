@@ -5,7 +5,7 @@
         <nuxt-link to="../MEM/MEM001M00">로고 이미지</nuxt-link>
       </h1>
 
-      <div class="gnb" @click="handleClick">
+      <div class="gnb" :class="{ 'close': gnbView }" @click="handleClick" @mouseenter="gnbMouseOver">
         <div class="gnb_menu_box">
           <p class="gnb_menu_tit">원화(펌뱅킹)</p>
           <ul class="gnb_menu_list">
@@ -102,20 +102,17 @@
 
 <script setup>
 
-const handleClick = (event) => {
-
-  if(event.target.tagName === 'A') {
-    const liElements = document.querySelectorAll(".gnb_menu_list")
-    console.log(liElements)
-  }
-}
-
-
 // 메뉴 클릭 시 GNB 하위 메뉴 hide
 const gnbView = ref(false)
+const handleClick = (event) => {
+  if(event.target.tagName === 'A') {    
+    gnbView.value = true
+    console.log(event.target)
+  }  
+}
 const gnbClose = () => {
   gnbView.value = true
-};
+}
 const gnbMouseOver = () => {
   gnbView.value = false
 }
