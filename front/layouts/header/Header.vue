@@ -107,6 +107,7 @@ const gnbView = ref(false)
 const handleClick = (event) => {
   if(event.target.tagName === 'A') {    
     gnbView.value = true
+    console.log('gnb sub menu close')
   }  
 }
 const gnbClose = () => {
