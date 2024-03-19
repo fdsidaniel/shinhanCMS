@@ -6442,7 +6442,13 @@
     position: relative;
 
     .btn_prev,
-    .btn_next{position: absolute;top:50%;transform: translateY(-50%);}
+    .btn_next{
+        position: absolute;top:50%;transform: translateY(-50%);
+        &.off{
+            pointer-events: none;
+            opacity: 0.3;
+        }
+    }
     .btn_prev{}
     .btn_next{right:0;}
 

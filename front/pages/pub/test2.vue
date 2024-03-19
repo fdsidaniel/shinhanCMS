@@ -45,7 +45,8 @@
 
     <h3>Slide</h3>
     <div class="slide_wrap">        
-        <v-btn class="vbtn line btn_prev" size="small" @click="btnPrev" v-if="btnPrevView">이전</v-btn>
+        <!-- <v-btn class="vbtn line btn_prev" size="small" @click="btnPrev" v-if="btnPrevView">이전</v-btn> -->
+        <v-btn class="vbtn line btn_prev" :class="{ 'off' : btnPrevView }" size="small" @click="btnPrev">이전</v-btn>
         <div class="slide_box">
             <!-- <ul class="slide_list" :style="{width: `${liItemWidthTot}`+ 'px', transform: translateX(`${move}` + 'px') , marginLeft: `${move}`+ 'px'}"> -->
             <ul class="slide_list" :style="{ width: liItemWidthTot + 'px', transform: 'translateX(' + move + 'px)' }">
@@ -121,7 +122,8 @@
                 </li>
             </ul>
         </div>
-        <v-btn class="vbtn line btn_next" size="small" @click="btnNext" v-if="btnNextView">다음</v-btn>
+        <v-btn class="vbtn line btn_next" :class="{ 'off' : btnNextView }" size="small" @click="btnNext">다음</v-btn>
+        <!-- <v-btn class="vbtn line btn_next" size="small" @click="btnNext" v-if="btnNextView">다음</v-btn> -->
     </div>
 
   </div>
@@ -213,24 +215,25 @@ const ulWidth = () => {
 };
 
 // 이전 다음 버튼
-const btnPrevView = ref(false)
-const btnNextView = ref(false)
+const btnPrevView = ref(true)
+const btnNextView = ref(true)
 const btnPrevNextView = () => {
     if(slidesPerViewMove.value < liItemCnt){
-        btnNextView.value = true
+        btnNextView.value = false
         console.log('다음 버튼 show/hide', slidesPerViewMove.value + "/" + liItemCnt)
     }
     if(slidesPerViewMove.value === 0){
-        btnNextView.value = false;
+        btnNextView.value = true;
         console.log('다음 버튼 show/hide---', slidesPerViewMove.value)
     }
     if(slidesPerViewMove.value < liItemCnt - slidesPerView){
-        btnPrevView.value = true;
+        btnPrevView.value = false;
         console.log('이전 버튼 show/hide', slidesPerViewMove.value + "/" + (liItemCnt - slidesPerView))
     }else if(slidesPerViewMove.value === liItemCnt - slidesPerView){
-        btnPrevView.value = false;
+        btnPrevView.value = true;
         console.log('이전 버튼 show/hide---', slidesPerViewMove.value + "/" + (liItemCnt - slidesPerView))
     }
+
     // 확장 닫기
     const lielements = document.querySelectorAll('.slide_list li')
     lielements.forEach(element => {
