@@ -39,6 +39,28 @@
         </v-window-item>
     </v-window>
 
+    <h3>숫자 카운팅</h3>
+    <div class="d_flex">
+        <div class="">
+            <p class="mb_10">프레임 나눠서 카운트 업</p>
+            <v-text-field label="타이틀" v-model="maxNum1" :rules="maxNum1Rules" placeholder="숫자를 입력해주세요" class="i_basics none_details"></v-text-field>            
+            <div class="count_up number1">0</div>
+            <v-btn class="vbtn line" size="small" @click="countingType1">카운팅</v-btn>
+        </div>
+        <div class="ml_20 mr_20">
+            <p class="mb_10">한자리씩 순서대로 카운트 업</p>
+            <v-text-field label="타이틀" v-model="maxNum2" :rules="maxNum2Rules" placeholder="숫자를 입력해주세요" class="i_basics none_details"></v-text-field>
+            <div class="count_up number2">0</div>
+            <v-btn class="vbtn line" size="small" @click="countingType2">카운팅</v-btn>
+        </div>
+        <div class="">
+            <p class="mb_10">각자리별 따로 카운트업</p>
+            <v-text-field label="타이틀" v-model="maxNum3" :rules="maxNum3Rules" placeholder="숫자를 입력해주세요" class="i_basics none_details"></v-text-field>
+            <div class="count_up number3">0</div>
+            <v-btn class="vbtn line" size="small" @click="countingType3">카운팅</v-btn>
+        </div>
+    </div>
+
     <h3>클래스 분기 처리</h3>
     <p :class="{ 'color_black': tempData1 > 0 }"> {{ tempData1 }} </p>
     <p :class="{ 'color_black': tempData2 > 0 }"> {{ tempData2 }} - "0 보다 크면 color_black addClass"</p>
@@ -131,6 +153,7 @@
 </template>
 
 <style scoped>
+.count_up{padding:10px;}
   .color_black{color:#000;font-weight:600;}
 </style>
 
@@ -144,6 +167,99 @@ const addTab = () => {
 const delTab = () => {
   tabCount.value--
 }
+
+const maxNum1 = ref('1234')
+const maxNum1Rules = [
+]
+//let maxNum1 = 1234
+const maxNum2 = ref('549876')
+const maxNum2Rules = [
+]
+const maxNum3 = ref('759214')
+const maxNum3Rules = [
+]
+
+/* 33번으로 나눠서 카운트 업 */
+const countingType1 = () => {
+    const element = document.querySelector('.number1')
+    let speed = 500
+    let fps = 100
+    setTimeout(() => {
+        if(maxNum1.value == 0){
+            element.innerHTML = '0'
+        } else {
+            /* 입력한 숫자를 33번에 걸쳐 0부터 올림. */
+            const each = Math.ceil(maxNum1.value/fps)
+            let time = 0
+            
+            for(let i=0; i<=maxNum1.value; i+=each){
+                setTimeout(() => {
+                    element.innerHTML = i
+                }, 20*time);
+                /* 딱 떨어지지 않는 숫자를 마지막에 그 숫자로 만들어주기 위함 */
+                if(i+each>maxNum1.value){
+                    setTimeout(() => {
+                        element.innerHTML = maxNum1.value
+                    }, 20*(time+1))
+                }
+                time++;
+            }
+        }
+    }, speed)
+};
+/* 한자리씩 순서대로 카운트업 */
+const countingType2 = () =>{
+    const element = document.querySelector('.number2')
+
+    /* 각자리로 나누어 올리기 위해 쪼개려는 것 */
+    let current = new Array(maxNum2.value.length).fill(0);
+    let arrayNum = String(maxNum2.value).split('').reverse();
+    
+    /* 올라갈 때 걸리는 시간 균등하게 하기위해. 단, 최대 0.06초씩은 되도록 */
+    let fps = 100
+    const total = arrayNum.reduce((pre, cur)=>Number(pre)+Number(cur));
+    const eachTime = Math.min(1000/total, fps);
+
+    let speed = 500
+    setTimeout(() => {
+        let time = 0
+        for(let j=0; j<arrayNum.length; j++){
+            for(let i = 0; i<=arrayNum[j]; i++){
+                setTimeout(()=>{
+                current[arrayNum.length-j-1]=i;
+                element.innerHTML = current.join('');
+                }, eachTime*(time + i))
+            }
+            time += arrayNum[j]-1;
+        }
+    }, speed)
+};
+const countingType3 = () =>{
+    const element = document.querySelector('.number3')
+
+    /* 각자리로 나누어 올리기 위해 쪼개려는 것 */
+    let current = [];
+    let arrayNum = String(maxNum3.value).split('');
+
+    let speed = 500
+    let fps = 100
+    setTimeout(() => {
+        for(let i = 0; i<10; i++){
+            setTimeout(()=>{
+                for(let j = 0; j<arrayNum.length; j++){
+                if(i<=arrayNum[j]){
+                    current.push(i);
+                } else{
+                    current.push(arrayNum[j]);
+                }
+                }
+                element.innerHTML = current.join('');
+                current = [];
+            }, fps*i)
+        }
+    }, speed)
+};
+
 
 const tempData1 = ref(0)
 const tempData2 = ref(9)
@@ -322,6 +438,8 @@ onMounted(() => {
     btnPrevNextView()
 
     slideView()
+
+    //countingType1()
 
     
     
