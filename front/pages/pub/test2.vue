@@ -39,10 +39,10 @@
         </v-window-item>
     </v-window>
 
-    <h3>숫자 카운팅</h3>
+    <h3>숫자 카운팅 - 프레임 : 100fps / 딜레이 : 0.5s</h3>
     <div class="d_flex">
         <div class="">
-            <p class="mb_10">프레임 나눠서 카운트 업</p>
+            <p class="mb_10">기본 카운트 업</p>
             <v-text-field label="타이틀" v-model="maxNum1" :rules="maxNum1Rules" placeholder="숫자를 입력해주세요" class="i_basics none_details"></v-text-field>            
             <div class="count_up number1">0</div>
             <v-btn class="vbtn line" size="small" @click="countingType1">카운팅</v-btn>
@@ -182,7 +182,7 @@ const maxNum3Rules = [
 /* 33번으로 나눠서 카운트 업 */
 const countingType1 = () => {
     const element = document.querySelector('.number1')
-    let speed = 500
+    let delay = 500
     let fps = 100
     setTimeout(() => {
         if(maxNum1.value == 0){
@@ -205,7 +205,7 @@ const countingType1 = () => {
                 time++;
             }
         }
-    }, speed)
+    }, delay)
 };
 /* 한자리씩 순서대로 카운트업 */
 const countingType2 = () =>{
@@ -220,7 +220,7 @@ const countingType2 = () =>{
     const total = arrayNum.reduce((pre, cur)=>Number(pre)+Number(cur));
     const eachTime = Math.min(1000/total, fps);
 
-    let speed = 500
+    let delay = 500
     setTimeout(() => {
         let time = 0
         for(let j=0; j<arrayNum.length; j++){
@@ -232,7 +232,7 @@ const countingType2 = () =>{
             }
             time += arrayNum[j]-1;
         }
-    }, speed)
+    }, delay)
 };
 const countingType3 = () =>{
     const element = document.querySelector('.number3')
@@ -241,7 +241,7 @@ const countingType3 = () =>{
     let current = [];
     let arrayNum = String(maxNum3.value).split('');
 
-    let speed = 500
+    let delay = 500
     let fps = 100
     setTimeout(() => {
         for(let i = 0; i<10; i++){
@@ -257,7 +257,7 @@ const countingType3 = () =>{
                 current = [];
             }, fps*i)
         }
-    }, speed)
+    }, delay)
 };
 
 
