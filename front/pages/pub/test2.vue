@@ -39,6 +39,9 @@
         </v-window-item>
     </v-window>
 
+    <h3>클래스 분기 처리</h3>
+    <p :class="{ 'color_black': tempData1 > 0 }"> {{ tempData1 }} </p>
+    <p :class="{ 'color_black': tempData2 > 0 }"> {{ tempData2 }} - "0 보다 크면 color_black addClass"</p>
 
     <h3>Slide</h3>
     <div class="slide_wrap">        
@@ -126,7 +129,7 @@
 </template>
 
 <style scoped>
-  
+  .color_black{color:#000;font-weight:600;}
 </style>
 
 <script setup >
@@ -139,6 +142,9 @@ const addTab = () => {
 const delTab = () => {
   tabCount.value--
 }
+
+const tempData1 = ref(0)
+const tempData2 = ref(9)
 
 // 확장 버튼
 const idx = ref()
