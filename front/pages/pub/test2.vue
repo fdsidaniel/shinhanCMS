@@ -188,7 +188,7 @@ const countingType1 = () => {
         if(maxNum1.value == 0){
             element.innerHTML = '0'
         } else {
-            /* 입력한 숫자를 33번에 걸쳐 0부터 올림. */
+            /* 입력한 숫자를 fps에 걸쳐 0부터 올림. */
             const each = Math.ceil(maxNum1.value/fps)
             let time = 0
             
@@ -217,8 +217,8 @@ const countingType2 = () =>{
     
     /* 올라갈 때 걸리는 시간 균등하게 하기위해. 단, 최대 0.06초씩은 되도록 */
     let fps = 100
-    const total = arrayNum.reduce((pre, cur)=>Number(pre)+Number(cur));
-    const eachTime = Math.min(1000/total, fps);
+    const total = arrayNum.reduce((pre, cur)=>Number(pre)+Number(cur))
+    const eachTime = Math.min(1000/total, fps) // Math.min(1000/total, 60)
 
     let delay = 500
     setTimeout(() => {
@@ -226,11 +226,11 @@ const countingType2 = () =>{
         for(let j=0; j<arrayNum.length; j++){
             for(let i = 0; i<=arrayNum[j]; i++){
                 setTimeout(()=>{
-                current[arrayNum.length-j-1]=i;
-                element.innerHTML = current.join('');
+                current[arrayNum.length-j-1]=i
+                element.innerHTML = current.join('')
                 }, eachTime*(time + i))
             }
-            time += arrayNum[j]-1;
+            time += arrayNum[j]-1
         }
     }, delay)
 };
@@ -239,7 +239,7 @@ const countingType3 = () =>{
 
     /* 각자리로 나누어 올리기 위해 쪼개려는 것 */
     let current = [];
-    let arrayNum = String(maxNum3.value).split('');
+    let arrayNum = String(maxNum3.value).split('')
 
     let delay = 500
     let fps = 100
@@ -248,14 +248,14 @@ const countingType3 = () =>{
             setTimeout(()=>{
                 for(let j = 0; j<arrayNum.length; j++){
                 if(i<=arrayNum[j]){
-                    current.push(i);
+                    current.push(i)
                 } else{
-                    current.push(arrayNum[j]);
+                    current.push(arrayNum[j])
                 }
                 }
-                element.innerHTML = current.join('');
-                current = [];
-            }, fps*i)
+                element.innerHTML = current.join('')
+                current = []
+            }, fps*i) // 80*i
         }
     }, delay)
 };
