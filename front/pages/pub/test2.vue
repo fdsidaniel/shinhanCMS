@@ -225,6 +225,11 @@ const btnPrevNextView = () => {
         btnPrevView.value = false;
         console.log('이전 버튼 show/hide---', slidesPerViewMove.value + "/" + (liItemCnt - slidesPerView))
     }
+    // 확장 닫기
+    const lielements = document.querySelectorAll('.slide_list li')
+    lielements.forEach(element => {
+        element.classList.remove('open')
+    })
 };
 
 const move = ref(0);
@@ -268,7 +273,7 @@ const slideView = () => {
     })
 
     lielements[slideViewLast].classList.add('last')
-    console.log(slideViewLast)
+    console.log('-', slideViewLast)
     
 
     //document.querySelectorAll(".slide_con").classList.contains('open')
