@@ -2661,7 +2661,7 @@
         <div class="pub_guide_con">
 
           <h3>Chart</h3>
-          <BarChart :chartData="testData" style="width:500px;height:500px;" />
+          <DoughnutChart :chartData="testData" style="width:500px;height:500px;" />
 
           <h3>left step</h3>
           <div class="component">
@@ -3825,7 +3825,14 @@ const consoleClear = () => {
 };
 
 import { defineComponent } from 'vue';
-import { BarChart } from 'vue-chart-3';
+// import { BarChart } from 'vue-chart-3';
+import { DoughnutChart } from 'vue-chart-3';
+// import { LineChart } from 'vue-chart-3';
+// import { PieChart } from 'vue-chart-3';
+// import { PolarAreaChart } from 'vue-chart-3';
+// import { RadarChart } from 'vue-chart-3';
+// import { BubbleChart } from 'vue-chart-3';
+// import { ScatterChart } from 'vue-chart-3';
 import { Chart, registerables } from "chart.js";
 
 Chart.register(...registerables);

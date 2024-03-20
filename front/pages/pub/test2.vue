@@ -74,7 +74,12 @@
             <ul class="slide_list" :style="{ width: liItemWidthTot + 'px', transform: 'translateX(' + move + 'px)' }">
                 <li>
                     <div class="box">
-                        <div class="before">내용111</div>
+                        <div class="before">
+                            <p class="tit">신한은행</p>
+                            <div>
+                                내용111
+                            </div>
+                        </div>
                         <div class="after">
                         확장내용 111
                         </div>
@@ -84,7 +89,12 @@
                 </li>
                 <li>
                     <div class="box">
-                        <div class="before">내용222</div>
+                        <div class="before">
+                            <p class="tit">한마정보통신</p>
+                            <div>
+                                내용222
+                            </div>
+                        </div>
                         <div class="after">
                         확장내용 222
                         </div>
@@ -94,7 +104,12 @@
                 </li>
                 <li>
                     <div class="box">
-                        <div class="before">내용333</div>
+                        <div class="before">
+                            <p class="tit">신한기관정부</p>
+                            <div>
+                                내용333
+                            </div>
+                        </div>
                         <div class="after">
                         확장내용 333
                         </div>
@@ -104,7 +119,12 @@
                 </li>
                 <li>
                     <div class="box">
-                        <div class="before">내용444</div>
+                        <div class="before">
+                            <p class="tit">신한은행</p>
+                            <div>
+                                내용444
+                            </div>
+                        </div>
                         <div class="after">
                         확장내용 444
                         </div>
@@ -114,7 +134,12 @@
                 </li>
                 <li>
                     <div class="box">
-                        <div class="before">내용555</div>
+                        <div class="before">
+                            <p class="tit">신한은행</p>
+                            <div>
+                                내용555
+                            </div>
+                        </div>
                         <div class="after">
                         확장내용 555
                         </div>
@@ -124,7 +149,12 @@
                 </li>
                 <li>
                     <div class="box">
-                        <div class="before">내용666</div>
+                        <div class="before">
+                            <p class="tit">신한은행</p>
+                            <div>
+                                내용666
+                            </div>
+                        </div>
                         <div class="after">
                         확장내용 666
                         </div>
@@ -134,7 +164,12 @@
                 </li>
                 <li>
                     <div class="box">
-                        <div class="before">내용777</div>
+                        <div class="before">
+                            <p class="tit">신한은행</p>
+                            <div>
+                                내용777
+                            </div>
+                        </div>
                         <div class="after">
                         확장내용 777
                         </div>
