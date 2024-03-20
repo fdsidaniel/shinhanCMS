@@ -74,8 +74,8 @@
             <ul class="slide_list" :style="{ width: liItemWidthTot + 'px', transform: 'translateX(' + move + 'px)' }">
                 <li>
                     <div class="box">
-                        <div class="before">
-                            <p class="tit">신한은행</p>
+                        <p class="tit">신한은행</p>
+                        <div class="before">                            
                             <div>
                                 내용111
                             </div>
@@ -89,8 +89,8 @@
                 </li>
                 <li>
                     <div class="box">
-                        <div class="before">
-                            <p class="tit">한마정보통신</p>
+                        <p class="tit">한마정보통신</p>
+                        <div class="before">                            
                             <div>
                                 내용222
                             </div>
@@ -104,8 +104,8 @@
                 </li>
                 <li>
                     <div class="box">
-                        <div class="before">
-                            <p class="tit">신한기관정부</p>
+                        <p class="tit">신한기관정부</p>
+                        <div class="before">                            
                             <div>
                                 내용333
                             </div>
@@ -119,8 +119,8 @@
                 </li>
                 <li>
                     <div class="box">
-                        <div class="before">
-                            <p class="tit">신한은행</p>
+                        <p class="tit">신한은행</p>
+                        <div class="before">                            
                             <div>
                                 내용444
                             </div>
@@ -134,8 +134,8 @@
                 </li>
                 <li>
                     <div class="box">
-                        <div class="before">
-                            <p class="tit">신한은행</p>
+                        <p class="tit">신한은행</p>
+                        <div class="before">                            
                             <div>
                                 내용555
                             </div>
@@ -149,8 +149,8 @@
                 </li>
                 <li>
                     <div class="box">
-                        <div class="before">
-                            <p class="tit">신한은행</p>
+                        <p class="tit">신한은행</p>
+                        <div class="before">                            
                             <div>
                                 내용666
                             </div>
@@ -164,8 +164,8 @@
                 </li>
                 <li>
                     <div class="box">
-                        <div class="before">
-                            <p class="tit">신한은행</p>
+                        <p class="tit">신한은행</p>
+                        <div class="before">                            
                             <div>
                                 내용777
                             </div>

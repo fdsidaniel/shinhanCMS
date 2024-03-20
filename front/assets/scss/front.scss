@@ -6469,16 +6469,17 @@
                 }
                 .box{
                     height:300px;
+                    padding-top:50px;
+                    background-color: #d1e2f5;
+                    
+                    .tit{
+                        position: absolute;
+                        top:0;
+                        left:0;
+                    }
                     .before{
                         width:220px;
-                        height:100%;
-                        padding-top:50px;
-                        background-color: #d1e2f5;
-
-                        .tit{
-                            position: absolute;
-                            top:10px;
-                        }
+                        height:100%;                        
                     }
                     .after{
                         display:none;
@@ -6502,11 +6503,8 @@
                     .box{
                         // .before{display:none;}
                         // .after{display:block;}
-
-                        .before{
-                            .tit{
-                                z-index:10;
-                            }
+                        .tit{
+                            z-index:10;
                         }
                         .after{
                             display:block;
@@ -6518,13 +6516,11 @@
                 }
                 &.last{
                     &.open{
+                        .tit{
+                            left:-240px;
+                        }
                         .btn_extend{
                             right:0px;
-                        }
-                        .before{
-                            .tit{
-                                left:-240px;
-                            }
                         }
                         .after{
                             left:auto;
