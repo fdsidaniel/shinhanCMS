@@ -4289,7 +4289,85 @@ input.i_basics{
 // CMS 메인
 .cms_main_wrap{
     .main_top{
-        
+        .state_tot{
+            h2{
+                position: relative;
+                display:inline-block;
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 36px;
+                letter-spacing: -0.05em;
+                background: linear-gradient(92.98deg, #4E3EB1 -6.9%, #543CE7 39.34%, #9B4CFF 122.04%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                &:after{                    
+                    content: '';
+                    display: inline-block;
+                    width:32px;
+                    height:32px;
+                    margin-left:10px;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none'%3E%3Crect width='4' height='10' x='3' y='21' fill='%235D47E5' rx='2'/%3E%3Crect width='4' height='13' x='17' y='18' fill='%235D47E5' rx='2'/%3E%3Crect width='4' height='20' x='24' y='11' fill='%235D47E5' rx='2'/%3E%3Crect width='4' height='18' x='10' y='13' fill='%235D47E5' rx='2'/%3E%3Cpath stroke='%235D47E5' stroke-width='2' d='m5 16 7-9 7 6 7.5-8'/%3E%3Ccircle cx='5' cy='16' r='2' fill='%23fff' stroke='%235D47E5' stroke-width='2'/%3E%3Ccircle cx='12' cy='7' r='2' fill='%23fff' stroke='%235D47E5' stroke-width='2'/%3E%3Ccircle cx='19' cy='13' r='2' fill='%23fff' stroke='%235D47E5' stroke-width='2'/%3E%3Ccircle cx='26' cy='5' r='2' fill='%23fff' stroke='%235D47E5' stroke-width='2'/%3E%3C/svg%3E");
+                    background-size: 32px 32px;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        .config{
+            display:flex;
+            align-items: center;
+            width:212px;
+            height:44px;
+            margin-top:38px;
+            padding:10px;
+            color:#fff;
+            justify-content: center;
+            border-radius: 8px;
+            background: linear-gradient(270.55deg, #5350F6 -9.42%, #A35BFF 104.51%);
+
+            .org_cnt{                
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                text-align: right;
+                &:after{
+                    content: '';
+                    display: inline-block;
+                    width:1px;
+                    height:12px;
+                    margin-left:15px;
+                    background: #BFAAFD;
+                }
+            }
+            .btn_org_cfg{
+                margin-left:15px;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;                
+                &:after{
+                    content: '';
+                    display: inline-block;
+                    width:14px;
+                    height:14px;
+                    margin:0 0 -1px 5px;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M14 5.883v2.23h-1.752a5.323 5.323 0 0 1-.75 1.805l1.244 1.245-1.576 1.576-1.245-1.244c-.55.36-1.162.614-1.805.75V14h-2.23v-1.753a5.34 5.34 0 0 1-1.806-.751L2.836 12.74l-1.577-1.577 1.245-1.245a5.326 5.326 0 0 1-.75-1.805H0v-2.23h1.752a5.323 5.323 0 0 1 .751-1.804L1.259 2.833l1.576-1.577L4.08 2.502a5.341 5.341 0 0 1 1.805-.75V-.003h2.23v1.753a5.338 5.338 0 0 1 1.805.75l1.245-1.244 1.577 1.577-1.245 1.244c.36.55.613 1.162.75 1.805H14ZM8.837 7a1.836 1.836 0 1 1-3.671 0 1.836 1.836 0 0 1 3.671 0Z' clip-rule='evenodd'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h14.001v14H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+                    background-size:14px 14px;
+                    background-position: right center;
+                    background-repeat: no-repeat;
+                    transition: 0s;
+                }
+                &:hover{
+                    text-decoration: underline;
+                    text-decoration-color: #fff;
+                    text-underline-position: under;
+                    &:after{
+                        transform: rotate(90deg);
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
     }
 }
 
