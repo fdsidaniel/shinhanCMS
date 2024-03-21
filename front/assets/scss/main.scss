@@ -293,6 +293,7 @@ body{
     height: 100%;
 }
 
+// CMS
 .header {
     min-width:1280px;
     height: 70px;
@@ -589,12 +590,29 @@ body{
     }
 }
 
+// CMS
 .container {
     display: flex;
     flex: 1;
     margin-top:-90px;
     padding:130px 40px 0;
     background:url("../images/bg_con.svg") center top no-repeat;
+
+    &.main{        
+        padding-top:160px;
+        color:#121619;
+        background: url("../images/bg_main.svg") center top no-repeat;
+        &:after{
+            content: '';
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            background-color: #F3F6FB;
+            z-index:-1;
+        }
+    }
     
     &.login{
         background: url("../images/bg_login.png") center center no-repeat;
@@ -2763,7 +2781,7 @@ input.i_basics{
     }
 }
 
-// login
+// CMS login
 .login_wrap{
     position: absolute;
     top:50%;
@@ -4265,6 +4283,13 @@ input.i_basics{
                 }
             }
         }
+    }
+}
+
+// CMS 메인
+.cms_main_wrap{
+    .main_top{
+        
     }
 }
 

@@ -121,9 +121,9 @@
         <span>비밀번호 재설정 인증</span>
         <span>메인</span>
         <span class="ok">O</span>
-        <span>2023-03-13</span>
+        <span>2024-03-13</span>
         <span class="etc"></span>
-      </li>
+      </li>      
       <li>
         <span></span>
         <span></span>
@@ -138,6 +138,19 @@
         <span class="etc"></span>
       </li>
       <li>
+        <span>홈</span>
+        <span>메인</span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMSHOM001M00" class="vlink blue line">CMSHOM001M00</nuxt-link></span>
+        <span>메인</span>
+        <span>메인</span>
+        <span class="ok"></span>
+        <span>2024-03-21</span>
+        <span class="etc">작업중</span>
+      </li>
+      <li>
         <span>원화(펌뱅킹)</span>
         <span>이체 정보 관리</span>
         <span>당,타행 입금 이체</span>
@@ -147,7 +160,7 @@
         <span>기관 전체<br>(시스템 관리자)</span>
         <span>메인</span>
         <span class="ok">O</span>
-        <span>2023-03-14</span>
+        <span>2024-03-14</span>
         <span class="etc"></span>
       </li>
       <li>
@@ -160,7 +173,7 @@
         <span>기관 추가 팝업<br>(시스템 관리자)</span>
         <span>팝업</span>
         <span class="ok">O</span>
-        <span>2023-03-14</span>
+        <span>2024-03-14</span>
         <span class="etc"></span>
       </li>
       <li>
@@ -173,7 +186,7 @@
         <span>기관별<br>(시스템 관리자)</span>
         <span>메인</span>
         <span class="ok">O</span>
-        <span>2023-03-14</span>
+        <span>2024-03-14</span>
         <span class="etc"></span>
       </li>
       <li>
@@ -186,7 +199,7 @@
         <span>당,타행 입금 이체<br>(기관 담당자)</span>
         <span>메인</span>
         <span class="ok">O</span>
-        <span>2023-03-14</span>
+        <span>2024-03-14</span>
         <span class="etc"></span>
       </li>
       <li>
@@ -199,7 +212,7 @@
         <span>타행이체결과 불능분 통지 팝업</span>
         <span>팝업</span>
         <span class="ok">O</span>
-        <span>2023-03-14</span>
+        <span>2024-03-14</span>
         <span class="etc"></span>
       </li>
       <li>
@@ -212,7 +225,7 @@
         <span>사용자 가입 신청<br>(기관 담당자)</span>
         <span>메인</span>
         <span class="ok">O</span>
-        <span>2023-03-14</span>
+        <span>2024-03-14</span>
         <span class="etc"></span>
       </li>
       <li>
@@ -225,7 +238,7 @@
         <span>사용자 신규/변경<br>(시스템 관리자)</span>
         <span>메인</span>
         <span class="ok">O</span>
-        <span>2023-03-14</span>
+        <span>2024-03-14</span>
         <span class="etc"></span>
       </li>
 
