@@ -397,7 +397,8 @@ const btnPrev = () => {
     if(slidesPerViewMove.value < liItemCnt - slidesPerView){
         slidesPerViewMove.value +=1
         move.value += liItemWidth;
-        slideViewLast -= 1
+        slideViewLastLeft -= 1
+        slideViewLastRight -= 1
 
         console.log('li +=이동 :', liItemWidth)
         console.log('slidesPerViewMove Next :', slidesPerViewMove.value)
@@ -412,7 +413,8 @@ const btnNext = () => {
     if(slidesPerViewMove.value > 0){
         slidesPerViewMove.value -=1
         move.value -= liItemWidth;
-        slideViewLast += 1
+        slideViewLastLeft += 1
+        slideViewLastRight += 1
 
         console.log('li -=이동 :',liItemWidth)
         console.log('slidesPerViewMove Next :', slidesPerViewMove.value)
@@ -424,7 +426,8 @@ const btnNext = () => {
     slideView()
 };
 
-let slideViewLast = slidesPerView - 1 // slide view last li
+let slideViewLastLeft = slidesPerView - 2 // slide view last left li
+let slideViewLastRight = slidesPerView - 1 // slide view last right li
 const slideView = () => {
 
     const lielements = document.querySelectorAll('.slide_list li');
@@ -432,8 +435,9 @@ const slideView = () => {
         element.classList.remove('last')
     })
 
-    lielements[slideViewLast].classList.add('last')
-    console.log('-', slideViewLast)
+    lielements[slideViewLastLeft].classList.add('last')
+    lielements[slideViewLastRight].classList.add('last')
+    console.log('-', slideViewLastLeft + "/" + slideViewLastRight)
     
 
     //document.querySelectorAll(".slide_con").classList.contains('open')
