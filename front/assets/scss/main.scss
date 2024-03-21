@@ -4289,28 +4289,81 @@ input.i_basics{
 // CMS 메인
 .cms_main_wrap{
     .main_top{
-        .state_tot{
-            h2{
-                position: relative;
-                display:inline-block;
-                font-size: 40px;
-                font-weight: 700;
-                line-height: 36px;
-                letter-spacing: -0.05em;
-                background: linear-gradient(92.98deg, #4E3EB1 -6.9%, #543CE7 39.34%, #9B4CFF 122.04%);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                &:after{                    
-                    content: '';
-                    display: inline-block;
-                    width:32px;
-                    height:32px;
-                    margin-left:10px;
-                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none'%3E%3Crect width='4' height='10' x='3' y='21' fill='%235D47E5' rx='2'/%3E%3Crect width='4' height='13' x='17' y='18' fill='%235D47E5' rx='2'/%3E%3Crect width='4' height='20' x='24' y='11' fill='%235D47E5' rx='2'/%3E%3Crect width='4' height='18' x='10' y='13' fill='%235D47E5' rx='2'/%3E%3Cpath stroke='%235D47E5' stroke-width='2' d='m5 16 7-9 7 6 7.5-8'/%3E%3Ccircle cx='5' cy='16' r='2' fill='%23fff' stroke='%235D47E5' stroke-width='2'/%3E%3Ccircle cx='12' cy='7' r='2' fill='%23fff' stroke='%235D47E5' stroke-width='2'/%3E%3Ccircle cx='19' cy='13' r='2' fill='%23fff' stroke='%235D47E5' stroke-width='2'/%3E%3Ccircle cx='26' cy='5' r='2' fill='%23fff' stroke='%235D47E5' stroke-width='2'/%3E%3C/svg%3E");
-                    background-size: 32px 32px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
+        .state_org_box{
+            display: flex;
+            .left{
+                h2{
+                    position: relative;
+                    display:inline-block;
+                    font-size: 40px;
+                    font-weight: 700;
+                    line-height: 36px;
+                    letter-spacing: -0.05em;
+                    background: linear-gradient(92.98deg, #4E3EB1 -6.9%, #543CE7 39.34%, #9B4CFF 122.04%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    &:after{
+                        content: '';
+                        display: inline-block;
+                        width:32px;
+                        height:32px;
+                        margin-left:10px;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none'%3E%3Crect width='4' height='10' x='3' y='21' fill='%235D47E5' rx='2'/%3E%3Crect width='4' height='13' x='17' y='18' fill='%235D47E5' rx='2'/%3E%3Crect width='4' height='20' x='24' y='11' fill='%235D47E5' rx='2'/%3E%3Crect width='4' height='18' x='10' y='13' fill='%235D47E5' rx='2'/%3E%3Cpath stroke='%235D47E5' stroke-width='2' d='m5 16 7-9 7 6 7.5-8'/%3E%3Ccircle cx='5' cy='16' r='2' fill='%23fff' stroke='%235D47E5' stroke-width='2'/%3E%3Ccircle cx='12' cy='7' r='2' fill='%23fff' stroke='%235D47E5' stroke-width='2'/%3E%3Ccircle cx='19' cy='13' r='2' fill='%23fff' stroke='%235D47E5' stroke-width='2'/%3E%3Ccircle cx='26' cy='5' r='2' fill='%23fff' stroke='%235D47E5' stroke-width='2'/%3E%3C/svg%3E");
+                        background-size: 32px 32px;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+            .right{
+                flex:1;
+                margin-left:113px;
+                .state_tot{
+                    display: flex;
+                    height:118px;
+                    text-align: center;
+                    li{
+                        //카운팅 샘풀 버튼 용
+                        position: relative;
+                        .sample{
+                            position: absolute;
+                            top:0;
+                            right:0;
+                        }
+                        
+                        flex:1;
+                        >p{ 
+                            padding:45px 0 5px;
+                            color:#565C63;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 28px;
+                            background-size: 41px 40px;
+                            background-position: center top;
+                            background-repeat: no-repeat;
+                        }
+                        >strong{
+                            font-size: 46px;
+                            font-weight: 700;
+                            line-height: 40px;
+                        }
+                        &.tot{
+                            >p{
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='41' height='40' fill='none'%3E%3Cpath fill='%235D47E5' d='M25.166 13.75a11.876 11.876 0 1 0 0 23.751 11.876 11.876 0 0 0 0-23.751Z'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m21.309 22.5.944 2.915 1.08 3.335 1.812-5.596 1.707 5.596 2.055-6.25'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='bevel' stroke-width='2' d='M19.541 25.796h2.411M28.38 25.796h2.411'/%3E%3Cg filter='url(%23a)'%3E%3Cpath fill='%23AA9AFF' d='M15.166 3.75a11.875 11.875 0 1 0 0 23.75 11.875 11.875 0 0 0 0-23.75Z'/%3E%3C/g%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m11.309 12.5.944 2.915 1.08 3.335 1.812-5.596 1.707 5.596 2.055-6.25'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='bevel' stroke-width='2' d='M9.541 15.796h2.411M18.38 15.796h2.411'/%3E%3Cpath fill='%23AA9AFF' d='M8.167 33.314a8.978 8.978 0 0 1-3.002-3.118 8.858 8.858 0 0 1-1.179-4.145.253.253 0 0 0-.076-.175.259.259 0 0 0-.179-.073H1.675a.261.261 0 0 0-.24.16.253.253 0 0 0-.018.1c.051 2.02.641 3.992 1.71 5.715a11.561 11.561 0 0 0 4.377 4.098l-.337 1.306a.251.251 0 0 0 .07.244.258.258 0 0 0 .248.063l5.065-1.403a.258.258 0 0 0 .18-.182.251.251 0 0 0-.07-.245L8.9 32.024a.258.258 0 0 0-.429.119l-.303 1.171ZM32.166 7.935a8.98 8.98 0 0 1 3.002 3.118 8.86 8.86 0 0 1 1.178 4.144.259.259 0 0 0 .255.249h2.057a.261.261 0 0 0 .24-.16.253.253 0 0 0 .018-.1 11.39 11.39 0 0 0-1.71-5.715 11.562 11.562 0 0 0-4.378-4.098l.338-1.306a.25.25 0 0 0-.07-.245.258.258 0 0 0-.248-.063l-5.065 1.404a.257.257 0 0 0-.18.182.25.25 0 0 0 .07.244l3.761 3.636a.258.258 0 0 0 .429-.119l.303-1.171Z'/%3E%3Cdefs%3E%3Cfilter id='a' width='31.75' height='31.75' x='-.708' y='-.25' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeGaussianBlur in='BackgroundImageFix' stdDeviation='2'/%3E%3CfeComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_5218_13847'/%3E%3CfeBlend in='SourceGraphic' in2='effect1_backgroundBlur_5218_13847' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+                            }
+                        }
+                        &.normal{
+                            >p{
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='41' height='40' fill='none'%3E%3Cpath fill='%230471E9' d='M20.5 7a13 13 0 1 0 0 26 13 13 0 0 0 0-26Z'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m15.5 19.649 4 4 6-7'/%3E%3Cpath fill='%2354A6FF' d='M8.5 33.314a8.979 8.979 0 0 1-3.002-3.118A8.859 8.859 0 0 1 4.32 26.05a.252.252 0 0 0-.077-.175.259.259 0 0 0-.178-.073H2.009a.261.261 0 0 0-.24.16.253.253 0 0 0-.019.1c.052 2.02.642 3.992 1.71 5.715a11.561 11.561 0 0 0 4.378 4.098l-.337 1.306a.251.251 0 0 0 .069.244.258.258 0 0 0 .249.063l5.064-1.403a.258.258 0 0 0 .18-.182.251.251 0 0 0-.07-.245l-3.76-3.635a.258.258 0 0 0-.43.119L8.5 33.314ZM32.5 7.935a8.98 8.98 0 0 1 3.002 3.118 8.86 8.86 0 0 1 1.178 4.144.259.259 0 0 0 .255.249h2.056a.261.261 0 0 0 .24-.16.253.253 0 0 0 .019-.1 11.39 11.39 0 0 0-1.71-5.715 11.562 11.562 0 0 0-4.378-4.098l.337-1.306a.25.25 0 0 0-.069-.245.259.259 0 0 0-.249-.063l-5.064 1.404a.257.257 0 0 0-.18.182.251.251 0 0 0 .07.244l3.76 3.636a.258.258 0 0 0 .43-.119l.303-1.171Z'/%3E%3C/svg%3E");
+                            }
+                        }
+                        &.error{
+                            >p{
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='41' height='40' fill='none'%3E%3Cpath fill='%23F63232' d='M20.833 7a13 13 0 1 0 0 26 13 13 0 0 0 0-26Z'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-width='2' d='m16.833 16 7.998 7.998M24.833 16l-7.998 7.998'/%3E%3Cpath fill='%23FF8080' d='M8.833 33.314a8.978 8.978 0 0 1-3.001-3.118 8.858 8.858 0 0 1-1.179-4.145.253.253 0 0 0-.076-.175.259.259 0 0 0-.179-.073H2.342a.261.261 0 0 0-.24.16.253.253 0 0 0-.019.1c.052 2.02.642 3.992 1.71 5.715a11.561 11.561 0 0 0 4.378 4.098l-.337 1.306a.251.251 0 0 0 .07.244.258.258 0 0 0 .248.063l5.064-1.403a.258.258 0 0 0 .18-.182.251.251 0 0 0-.07-.245l-3.76-3.635a.258.258 0 0 0-.43.119l-.303 1.171ZM32.833 7.935a8.978 8.978 0 0 1 3.002 3.118 8.858 8.858 0 0 1 1.178 4.144.258.258 0 0 0 .255.249h2.056a.262.262 0 0 0 .24-.16.253.253 0 0 0 .02-.1 11.392 11.392 0 0 0-1.711-5.715 11.563 11.563 0 0 0-4.378-4.098l.338-1.306a.25.25 0 0 0-.07-.245.258.258 0 0 0-.248-.063L28.45 5.163a.258.258 0 0 0-.18.182.251.251 0 0 0 .07.244L32.1 9.225a.257.257 0 0 0 .364-.004.254.254 0 0 0 .065-.115l.303-1.171Z'/%3E%3C/svg%3E");
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -4326,7 +4379,7 @@ input.i_basics{
             border-radius: 8px;
             background: linear-gradient(270.55deg, #5350F6 -9.42%, #A35BFF 104.51%);
 
-            .org_cnt{                
+            .org_cnt{
                 font-size: 16px;
                 font-weight: 500;
                 line-height: 24px;
@@ -4344,7 +4397,7 @@ input.i_basics{
                 margin-left:15px;
                 font-size: 16px;
                 font-weight: 700;
-                line-height: 24px;                
+                line-height: 24px;
                 &:after{
                     content: '';
                     display: inline-block;

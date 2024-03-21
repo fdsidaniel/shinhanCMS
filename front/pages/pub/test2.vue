@@ -214,7 +214,7 @@ const maxNum3 = ref('759214')
 const maxNum3Rules = [
 ]
 
-/* 33번으로 나눠서 카운트 업 */
+/* 프레임 나눠서 카운트 업 */
 const countingType1 = () => {
     const element = document.querySelector('.number1')
     let delay = 500
