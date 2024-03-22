@@ -66,7 +66,7 @@
     <p :class="{ 'color_black': tempData2 > 0 }"> {{ tempData2 }} - "0 보다 크면 color_black addClass"</p>
 
     <h3>Slide</h3>
-    <div class="slide_wrap">        
+    <div class="slide_wrap">
         <!-- <v-btn class="vbtn line btn_prev" size="small" @click="btnPrev" v-if="btnPrevView">이전</v-btn> -->
         <v-btn class="vbtn line btn_prev" :class="{ 'off' : btnPrevView }" size="small" @click="btnPrev">이전</v-btn>
         <div class="slide_box">
@@ -75,7 +75,7 @@
                 <li>
                     <div class="box">
                         <p class="tit">신한은행</p>
-                        <div class="before">                            
+                        <div class="before">
                             <div>
                                 내용111
                             </div>
@@ -90,7 +90,7 @@
                 <li>
                     <div class="box">
                         <p class="tit">한마정보통신</p>
-                        <div class="before">                            
+                        <div class="before">
                             <div>
                                 내용222
                             </div>
@@ -105,7 +105,7 @@
                 <li>
                     <div class="box">
                         <p class="tit">신한기관정부</p>
-                        <div class="before">                            
+                        <div class="before">
                             <div>
                                 내용333
                             </div>
@@ -120,7 +120,7 @@
                 <li>
                     <div class="box">
                         <p class="tit">신한은행</p>
-                        <div class="before">                            
+                        <div class="before">
                             <div>
                                 내용444
                             </div>
@@ -135,7 +135,7 @@
                 <li>
                     <div class="box">
                         <p class="tit">신한은행</p>
-                        <div class="before">                            
+                        <div class="before">
                             <div>
                                 내용555
                             </div>
@@ -150,7 +150,7 @@
                 <li>
                     <div class="box">
                         <p class="tit">신한은행</p>
-                        <div class="before">                            
+                        <div class="before">
                             <div>
                                 내용666
                             </div>
@@ -165,7 +165,7 @@
                 <li>
                     <div class="box">
                         <p class="tit">신한은행</p>
-                        <div class="before">                            
+                        <div class="before">
                             <div>
                                 내용777
                             </div>
