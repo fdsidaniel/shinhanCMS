@@ -38,10 +38,8 @@
         <div class="state_org_err_box">
             <h3>기관별 오류 현황</h3>
             <div class="slide_wrap">
-                <!-- <v-btn class="vbtn line btn_prev" size="small" @click="btnPrev" v-if="btnPrevView">이전</v-btn> -->
                 <v-btn class="vbtn line btn_prev" :class="{ 'off' : btnPrevView }" size="small" @click="btnPrev">이전</v-btn>
                 <div class="slide_box">
-                    <!-- <ul class="slide_list" :style="{width: `${liItemWidthTot}`+ 'px', transform: translateX(`${move}` + 'px') , marginLeft: `${move}`+ 'px'}"> -->
                     <ul class="slide_list" :style="{ width: liItemWidthTot + 'px', transform: 'translateX(' + move + 'px)' }">
                         <li>
                             <div class="box">
@@ -54,7 +52,6 @@
                                 <div class="after">
                                 확장내용 111
                                 </div>
-                                <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
                             </div>
                             <p class="btn_extend" @click="viewExtend">버튼</p>
                         </li>
@@ -69,7 +66,6 @@
                                 <div class="after">
                                 확장내용 222
                                 </div>
-                                <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
                             </div>
                             <p class="btn_extend" @click="viewExtend">버튼</p>
                         </li>
@@ -84,7 +80,6 @@
                                 <div class="after">
                                 확장내용 333
                                 </div>
-                                <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
                             </div>
                             <p class="btn_extend" @click="viewExtend">버튼</p>
                         </li>
@@ -99,7 +94,6 @@
                                 <div class="after">
                                 확장내용 444
                                 </div>
-                                <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
                             </div>
                             <p class="btn_extend" @click="viewExtend">버튼</p>
                         </li>
@@ -114,7 +108,6 @@
                                 <div class="after">
                                 확장내용 555
                                 </div>
-                                <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
                             </div>
                             <p class="btn_extend" @click="viewExtend">버튼</p>
                         </li>
@@ -129,7 +122,6 @@
                                 <div class="after">
                                 확장내용 666
                                 </div>
-                                <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
                             </div>
                             <p class="btn_extend" @click="viewExtend">버튼</p>
                         </li>
@@ -144,14 +136,12 @@
                                 <div class="after">
                                 확장내용 777
                                 </div>
-                                <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
                             </div>
                             <p class="btn_extend" @click="viewExtend">버튼</p>
                         </li>
                     </ul>
                 </div>
                 <v-btn class="vbtn line btn_next" :class="{ 'off' : btnNextView }" size="small" @click="btnNext">다음</v-btn>
-                <!-- <v-btn class="vbtn line btn_next" size="small" @click="btnNext" v-if="btnNextView">다음</v-btn> -->
             </div>
         </div>
         <!-- //기관별 오류 현황 -->

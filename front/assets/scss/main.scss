@@ -4495,23 +4495,49 @@ input.i_basics{
 
                 .btn_prev,
                 .btn_next{
-                    position: absolute;top:50%;transform: translateY(-50%);
+                    position: absolute;
+                    top:50%;
+                    min-width:40px !important;
+                    width:40px;
+                    height:40px !important;
+                    padding:0;
+                    transform: translateY(-50%);
+                    border:0;
+                    border-radius: 20px;
+                    background-color: transparent;                    
+                    .v-btn__content{
+                        width:40px;
+                        height:40px;
+                        font-size:0;
+                        background-size: 40px 40px;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                    }
                     &.off{
-                        pointer-events: none;
-                        opacity: 0.3;
+                        pointer-events: none;                        
+                        opacity: 0.5;
                     }
                 }
-                .btn_prev{}
-                .btn_next{right:0;}
+                .btn_prev{
+                    left:-60px;
+                    .v-btn__content{
+                        transform: rotate(180deg);
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='none'%3E%3Crect width='40' height='40' fill='%23fff' rx='20'/%3E%3Cpath stroke='%23121619' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m18 25 5-5-5-5'/%3E%3C/svg%3E");
+                    }
+                }
+                .btn_next{
+                    right:-60px;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='none'%3E%3Crect width='40' height='40' fill='%23fff' rx='20'/%3E%3Cpath stroke='%23121619' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m18 25 5-5-5-5'/%3E%3C/svg%3E");
+                }
 
                 .slide_box{
                     overflow: hidden;
-                    width:940px;
-                    height:300px;
+                    width:1280px;
+                    height:250px;
                     margin:0 auto;
                     .slide_list{
                         overflow: hidden;
-                        max-width:10000px;
+                        //max-width:10000px;
                         transition: 0.1s;
                         li{
                             position: relative;
@@ -4520,7 +4546,7 @@ input.i_basics{
                                 margin-left:20px;
                             }
                             .box{
-                                height:300px;
+                                height:250px;
                                 padding-top:50px;
                                 background-color: #d1e2f5;
                                 
@@ -4530,8 +4556,7 @@ input.i_basics{
                                     left:0;
                                 }
                                 .before{
-                                    width:220px;
-                                    height:100%;                        
+                                    width:305px;
                                 }
                                 .after{
                                     display:none;
@@ -4553,8 +4578,6 @@ input.i_basics{
                                     z-index:1;
                                 }
                                 .box{
-                                    // .before{display:none;}
-                                    // .after{display:block;}
                                     .tit{
                                         z-index:10;
                                     }

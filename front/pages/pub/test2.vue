@@ -9,178 +9,181 @@
 
   <div class="conbody">
 
-    <!-- <v-tabs v-model="tab" class="tab_basics">
-        <v-tab value="tab1">tab1</v-tab>
-        <v-tab value="tab2">tab2</v-tab>
-    </v-tabs>
+    <div class="sample_wrap">
 
-    <v-window v-model="tab" class="tab_con">
-        <v-window-item value="tab1">
-            tab1
-        </v-window-item>
+        <!-- <v-tabs v-model="tab" class="tab_basics">
+            <v-tab value="tab1">tab1</v-tab>
+            <v-tab value="tab2">tab2</v-tab>
+        </v-tabs>
 
-        <v-window-item value="tab2">
-            tab2
-        </v-window-item>
-    </v-window> -->
+        <v-window v-model="tab" class="tab_con">
+            <v-window-item value="tab1">
+                tab1
+            </v-window-item>
 
-    <v-tabs v-model="tab" class="">
-        <v-tab v-for="(tab, index) in tabCount" :key="index" :value="'tab' + (index + 1)">
-            기관{{ index + 1 }}
-        </v-tab>        
-    </v-tabs>
-    <v-btn @click="addTab">기관 추가</v-btn>
-    <v-btn @click="delTab">기관 삭제</v-btn>
-    
+            <v-window-item value="tab2">
+                tab2
+            </v-window-item>
+        </v-window> -->
 
-    <v-window v-model="tab" class="tab_con">
-        <v-window-item v-for="(tab, index) in tabCount" :key="index" :value="'tab' + (index + 1)">
-            내용{{ index + 1 }} content
-        </v-window-item>
-    </v-window>
+        <v-tabs v-model="tab" class="">
+            <v-tab v-for="(tab, index) in tabCount" :key="index" :value="'tab' + (index + 1)">
+                기관{{ index + 1 }}
+            </v-tab>        
+        </v-tabs>
+        <v-btn @click="addTab">기관 추가</v-btn>
+        <v-btn @click="delTab">기관 삭제</v-btn>
+        
 
-    <h3>숫자 카운팅 - 프레임 : 100fps / 딜레이 : 0.5s</h3>
-    <div class="d_flex">
-        <div class="">
-            <p class="mb_10">기본 카운트 업</p>
-            <v-text-field label="타이틀" v-model="maxNum1" :rules="maxNum1Rules" placeholder="숫자를 입력해주세요" class="i_basics none_details"></v-text-field>            
-            <div class="count_up number1">0</div>
-            <v-btn class="vbtn line" size="small" @click="countingType1">카운팅</v-btn>
+        <v-window v-model="tab" class="tab_con">
+            <v-window-item v-for="(tab, index) in tabCount" :key="index" :value="'tab' + (index + 1)">
+                내용{{ index + 1 }} content
+            </v-window-item>
+        </v-window>
+
+        <h3>숫자 카운팅 - 프레임 : 100fps / 딜레이 : 0.5s</h3>
+        <div class="d_flex">
+            <div class="">
+                <p class="mb_10">기본 카운트 업</p>
+                <v-text-field label="타이틀" v-model="maxNum1" :rules="maxNum1Rules" placeholder="숫자를 입력해주세요" class="i_basics none_details"></v-text-field>            
+                <div class="count_up number1">0</div>
+                <v-btn class="vbtn line" size="small" @click="countingType1">카운팅</v-btn>
+            </div>
+            <div class="ml_20 mr_20">
+                <p class="mb_10">한자리씩 순서대로 카운트 업</p>
+                <v-text-field label="타이틀" v-model="maxNum2" :rules="maxNum2Rules" placeholder="숫자를 입력해주세요" class="i_basics none_details"></v-text-field>
+                <div class="count_up number2">0</div>
+                <v-btn class="vbtn line" size="small" @click="countingType2">카운팅</v-btn>
+            </div>
+            <div class="">
+                <p class="mb_10">각자리별 따로 카운트업</p>
+                <v-text-field label="타이틀" v-model="maxNum3" :rules="maxNum3Rules" placeholder="숫자를 입력해주세요" class="i_basics none_details"></v-text-field>
+                <div class="count_up number3">0</div>
+                <v-btn class="vbtn line" size="small" @click="countingType3">카운팅</v-btn>
+            </div>
         </div>
-        <div class="ml_20 mr_20">
-            <p class="mb_10">한자리씩 순서대로 카운트 업</p>
-            <v-text-field label="타이틀" v-model="maxNum2" :rules="maxNum2Rules" placeholder="숫자를 입력해주세요" class="i_basics none_details"></v-text-field>
-            <div class="count_up number2">0</div>
-            <v-btn class="vbtn line" size="small" @click="countingType2">카운팅</v-btn>
-        </div>
-        <div class="">
-            <p class="mb_10">각자리별 따로 카운트업</p>
-            <v-text-field label="타이틀" v-model="maxNum3" :rules="maxNum3Rules" placeholder="숫자를 입력해주세요" class="i_basics none_details"></v-text-field>
-            <div class="count_up number3">0</div>
-            <v-btn class="vbtn line" size="small" @click="countingType3">카운팅</v-btn>
-        </div>
-    </div>
 
-    <h3>클래스 분기 처리</h3>
-    <p :class="{ 'color_black': tempData1 > 0 }"> {{ tempData1 }} </p>
-    <p :class="{ 'color_black': tempData2 > 0 }"> {{ tempData2 }} - "0 보다 크면 color_black addClass"</p>
+        <h3>클래스 분기 처리</h3>
+        <p :class="{ 'color_black': tempData1 > 0 }"> {{ tempData1 }} </p>
+        <p :class="{ 'color_black': tempData2 > 0 }"> {{ tempData2 }} - "0 보다 크면 color_black addClass"</p>
 
-    <h3>Slide</h3>
-    <div class="slide_wrap">
-        <!-- <v-btn class="vbtn line btn_prev" size="small" @click="btnPrev" v-if="btnPrevView">이전</v-btn> -->
-        <v-btn class="vbtn line btn_prev" :class="{ 'off' : btnPrevView }" size="small" @click="btnPrev">이전</v-btn>
-        <div class="slide_box">
-            <!-- <ul class="slide_list" :style="{width: `${liItemWidthTot}`+ 'px', transform: translateX(`${move}` + 'px') , marginLeft: `${move}`+ 'px'}"> -->
-            <ul class="slide_list" :style="{ width: liItemWidthTot + 'px', transform: 'translateX(' + move + 'px)' }">
-                <li>
-                    <div class="box">
-                        <p class="tit">신한은행</p>
-                        <div class="before">
-                            <div>
-                                내용111
+        <h3>Slide</h3>
+        <div class="slide_wrap">
+            <!-- <v-btn class="vbtn line btn_prev" size="small" @click="btnPrev" v-if="btnPrevView">이전</v-btn> -->
+            <v-btn class="vbtn line btn_prev" :class="{ 'off' : btnPrevView }" size="small" @click="btnPrev">이전</v-btn>
+            <div class="slide_box">
+                <!-- <ul class="slide_list" :style="{width: `${liItemWidthTot}`+ 'px', transform: translateX(`${move}` + 'px') , marginLeft: `${move}`+ 'px'}"> -->
+                <ul class="slide_list" :style="{ width: liItemWidthTot + 'px', transform: 'translateX(' + move + 'px)' }">
+                    <li>
+                        <div class="box">
+                            <p class="tit">신한은행</p>
+                            <div class="before">
+                                <div>
+                                    내용111
+                                </div>
                             </div>
-                        </div>
-                        <div class="after">
-                        확장내용 111
-                        </div>
-                        <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
-                    </div>
-                    <p class="btn_extend" @click="viewExtend">버튼</p>
-                </li>
-                <li>
-                    <div class="box">
-                        <p class="tit">한마정보통신</p>
-                        <div class="before">
-                            <div>
-                                내용222
+                            <div class="after">
+                            확장내용 111
                             </div>
+                            <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
                         </div>
-                        <div class="after">
-                        확장내용 222
-                        </div>
-                        <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
-                    </div>
-                    <p class="btn_extend" @click="viewExtend">버튼</p>
-                </li>
-                <li>
-                    <div class="box">
-                        <p class="tit">신한기관정부</p>
-                        <div class="before">
-                            <div>
-                                내용333
+                        <p class="btn_extend" @click="viewExtend">버튼</p>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <p class="tit">한마정보통신</p>
+                            <div class="before">
+                                <div>
+                                    내용222
+                                </div>
                             </div>
-                        </div>
-                        <div class="after">
-                        확장내용 333
-                        </div>
-                        <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
-                    </div>
-                    <p class="btn_extend" @click="viewExtend">버튼</p>
-                </li>
-                <li>
-                    <div class="box">
-                        <p class="tit">신한은행</p>
-                        <div class="before">
-                            <div>
-                                내용444
+                            <div class="after">
+                            확장내용 222
                             </div>
+                            <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
                         </div>
-                        <div class="after">
-                        확장내용 444
-                        </div>
-                        <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
-                    </div>
-                    <p class="btn_extend" @click="viewExtend">버튼</p>
-                </li>
-                <li>
-                    <div class="box">
-                        <p class="tit">신한은행</p>
-                        <div class="before">
-                            <div>
-                                내용555
+                        <p class="btn_extend" @click="viewExtend">버튼</p>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <p class="tit">신한기관정부</p>
+                            <div class="before">
+                                <div>
+                                    내용333
+                                </div>
                             </div>
-                        </div>
-                        <div class="after">
-                        확장내용 555
-                        </div>
-                        <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
-                    </div>
-                    <p class="btn_extend" @click="viewExtend">버튼</p>
-                </li>
-                <li>
-                    <div class="box">
-                        <p class="tit">신한은행</p>
-                        <div class="before">
-                            <div>
-                                내용666
+                            <div class="after">
+                            확장내용 333
                             </div>
+                            <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
                         </div>
-                        <div class="after">
-                        확장내용 666
-                        </div>
-                        <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
-                    </div>
-                    <p class="btn_extend" @click="viewExtend">버튼</p>
-                </li>
-                <li>
-                    <div class="box">
-                        <p class="tit">신한은행</p>
-                        <div class="before">
-                            <div>
-                                내용777
+                        <p class="btn_extend" @click="viewExtend">버튼</p>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <p class="tit">신한은행</p>
+                            <div class="before">
+                                <div>
+                                    내용444
+                                </div>
                             </div>
+                            <div class="after">
+                            확장내용 444
+                            </div>
+                            <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
                         </div>
-                        <div class="after">
-                        확장내용 777
+                        <p class="btn_extend" @click="viewExtend">버튼</p>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <p class="tit">신한은행</p>
+                            <div class="before">
+                                <div>
+                                    내용555
+                                </div>
+                            </div>
+                            <div class="after">
+                            확장내용 555
+                            </div>
+                            <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
                         </div>
-                        <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
-                    </div>
-                    <p class="btn_extend" @click="viewExtend">버튼</p>
-                </li>
-            </ul>
+                        <p class="btn_extend" @click="viewExtend">버튼</p>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <p class="tit">신한은행</p>
+                            <div class="before">
+                                <div>
+                                    내용666
+                                </div>
+                            </div>
+                            <div class="after">
+                            확장내용 666
+                            </div>
+                            <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
+                        </div>
+                        <p class="btn_extend" @click="viewExtend">버튼</p>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <p class="tit">신한은행</p>
+                            <div class="before">
+                                <div>
+                                    내용777
+                                </div>
+                            </div>
+                            <div class="after">
+                            확장내용 777
+                            </div>
+                            <!-- <v-btn class="vbtn line btn_extend" size="small" @click="viewExtend">버튼</v-btn> -->
+                        </div>
+                        <p class="btn_extend" @click="viewExtend">버튼</p>
+                    </li>
+                </ul>
+            </div>
+            <v-btn class="vbtn line btn_next" :class="{ 'off' : btnNextView }" size="small" @click="btnNext">다음</v-btn>
+            <!-- <v-btn class="vbtn line btn_next" size="small" @click="btnNext" v-if="btnNextView">다음</v-btn> -->
         </div>
-        <v-btn class="vbtn line btn_next" :class="{ 'off' : btnNextView }" size="small" @click="btnNext">다음</v-btn>
-        <!-- <v-btn class="vbtn line btn_next" size="small" @click="btnNext" v-if="btnNextView">다음</v-btn> -->
     </div>
 
   </div>

@@ -6439,94 +6439,97 @@
     z-index:900;
 }
 
-// slide
-.slide_wrap{
-    position: relative;
+// 가이드 샘플
+.sample_wrap{
+    // slide
+    .slide_wrap{
+        position: relative;
 
-    .btn_prev,
-    .btn_next{
-        position: absolute;top:50%;transform: translateY(-50%);
-        &.off{
-            pointer-events: none;
-            opacity: 0.3;
+        .btn_prev,
+        .btn_next{
+            position: absolute;top:50%;transform: translateY(-50%);
+            &.off{
+                pointer-events: none;
+                opacity: 0.3;
+            }
         }
-    }
-    .btn_prev{}
-    .btn_next{right:0;}
+        .btn_prev{}
+        .btn_next{right:0;}
 
-    .slide_box{
-        overflow: hidden;
-        width:940px;
-        height:300px;
-        margin:0 auto;
-        .slide_list{
+        .slide_box{
             overflow: hidden;
-            max-width:10000px;
-            transition: 0.1s;
-            li{
-                position: relative;
-                float:left;
-                &+li{
-                    margin-left:20px;
-                }
-                .box{
-                    height:300px;
-                    padding-top:50px;
-                    background-color: #d1e2f5;
-                    
-                    .tit{
-                        position: absolute;
-                        top:0;
-                        left:0;
-                    }
-                    .before{
-                        width:220px;
-                        height:100%;
-                    }
-                    .after{
-                        display:none;
-                        width:460px;
-                        height:100%;
-                        padding-top:50px;
-                        background-color: #99a8b9;
-                        z-index:1;
-                    }
-                }
-                .btn_extend{
-                    position: absolute;
-                    bottom:0;
-                    right:0;
-                }
-                &.open{
-                    .btn_extend{
-                        right:-240px;
-                        z-index:1;
+            width:940px;
+            height:300px;
+            margin:0 auto;
+            .slide_list{
+                overflow: hidden;
+                max-width:10000px;
+                transition: 0.1s;
+                li{
+                    position: relative;
+                    float:left;
+                    &+li{
+                        margin-left:20px;
                     }
                     .box{
-                        // .before{display:none;}
-                        // .after{display:block;}
+                        height:300px;
+                        padding-top:50px;
+                        background-color: #d1e2f5;
+                        
                         .tit{
-                            z-index:10;
-                        }
-                        .after{
-                            display:block;
                             position: absolute;
                             top:0;
                             left:0;
                         }
-                    }
-                }
-                &.last{
-                    &.open{
-                        .tit{
-                            left:-240px;
-                        }
-                        .btn_extend{
-                            right:0px;
+                        .before{
+                            width:220px;
+                            height:100%;
                         }
                         .after{
-                            left:auto;
-                            right:0;
+                            display:none;
+                            width:460px;
+                            height:100%;
+                            padding-top:50px;
+                            background-color: #99a8b9;
+                            z-index:1;
+                        }
+                    }
+                    .btn_extend{
+                        position: absolute;
+                        bottom:0;
+                        right:0;
+                    }
+                    &.open{
+                        .btn_extend{
+                            right:-240px;
+                            z-index:1;
+                        }
+                        .box{
+                            // .before{display:none;}
+                            // .after{display:block;}
+                            .tit{
+                                z-index:10;
+                            }
+                            .after{
+                                display:block;
+                                position: absolute;
+                                top:0;
+                                left:0;
+                            }
+                        }
+                    }
+                    &.last{
+                        &.open{
+                            .tit{
+                                left:-240px;
+                            }
+                            .btn_extend{
+                                right:0px;
+                            }
+                            .after{
+                                left:auto;
+                                right:0;
+                            }
                         }
                     }
                 }
@@ -6534,6 +6537,7 @@
         }
     }
 }
+
 
 // svg 아이콘 모음
 .icon_list{
