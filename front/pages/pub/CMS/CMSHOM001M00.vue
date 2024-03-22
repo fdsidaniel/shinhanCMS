@@ -69,7 +69,43 @@
                                     </ul>
                                 </div>
                                 <div class="after">
-                                확장내용 111
+                                    <div class="err_box">
+                                        <div class="left">
+                                            <ul class="err_list">
+                                                <li class="all">
+                                                    <span>전체</span>
+                                                    <strong>999</strong>
+                                                </li>
+                                                <li class="time_out">
+                                                    <span>타임아웃</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="impossible">
+                                                    <span>타행불능</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="network_err">
+                                                    <span>네트워크 오류</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="process_err">
+                                                    <span>처리 오류</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <div class="scroll">
+                                                <ul class="err_detail_list">
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타행불능 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다. 처리오류 오류 1건 발생하였습니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <p class="btn_extend" @click="viewExtend">확장</p>
