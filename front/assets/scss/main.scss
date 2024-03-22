@@ -4540,7 +4540,7 @@ input.i_basics{
                         //overflow: hidden;
                         //max-width:10000px;
                         transition: 0.1s;
-                        li{
+                        >li{
                             position: relative;
                             float:left;
                             border-radius: 20px;
@@ -4612,6 +4612,37 @@ input.i_basics{
                                     width:305px;
                                     height:100%;
                                     padding:0 30px;
+                                    .err_list{
+                                        li{
+                                            display:flex;
+                                            height:32px;
+                                            justify-content: space-between;
+                                            color:#565C63;
+                                            font-size: 16px;
+                                            font-weight: 400;
+                                            line-height: 24px;
+                                            &+li{
+                                                margin-top:8px;
+                                            }
+                                            &:hover{
+                                                .btn_link{
+                                                    color: #331CBF !important;
+                                                    text-decoration: underline;
+                                                    text-decoration-color: #331CBF;
+                                                    text-underline-position: under;
+                                                }
+                                            }
+                                            .btn_link{
+                                                font-size: 20px;
+                                                font-weight: 700;
+                                                line-height: 32px;
+                                                color:#B9C1C9;
+                                                &.black{
+                                                    color:#121619;
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                                 .after{
                                     display:none;
