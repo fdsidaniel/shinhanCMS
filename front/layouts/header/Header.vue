@@ -110,18 +110,9 @@ const handleClick = (event) => {
     console.log('gnb sub menu close')
   }  
 }
-const gnbClose = () => {
-  gnbView.value = true
-}
 const gnbMouseOver = () => {
   gnbView.value = false
 }
-
-// 헤더 메뉴 클릭 시 닫기
-const headerClose = () => {
-  gnbView.value = true
-}
-
 
 </script>
 
