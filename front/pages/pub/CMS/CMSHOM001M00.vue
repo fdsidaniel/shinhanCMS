@@ -270,13 +270,13 @@ const transferErrorType = () => {
 // 기관 노출
 const btnViewCfgIdx = ref()
 const btnViewCfg = (event) => {
-    const lis = event.target.parentElement.parentElement.parentElement.parentElement.querySelectorAll('.btn_view_cfg')
-    const index = Array.from(lis).indexOf(event.target)
+    const elements = event.target.parentElement.parentElement.parentElement.parentElement.querySelectorAll('.btn_view_cfg')
+    const index = Array.from(elements).indexOf(event.target)
     btnViewCfgIdx.value = index
-    if(lis[btnViewCfgIdx.value].classList.contains("on")){
-        lis[btnViewCfgIdx.value].classList.remove("on")
+    if(elements[btnViewCfgIdx.value].classList.contains("on")){
+        elements[btnViewCfgIdx.value].classList.remove("on")
     }else{
-        lis[btnViewCfgIdx.value].classList.add("on")
+        elements[btnViewCfgIdx.value].classList.add("on")
     }
 };
 
