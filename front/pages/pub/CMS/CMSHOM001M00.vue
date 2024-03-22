@@ -43,7 +43,7 @@
                     <ul class="slide_list" :style="{ width: liItemWidthTot + 'px', transform: 'translateX(' + move + 'px)' }">
                         <li>
                             <div class="box">
-                                <p class="tit">신한은행</p>
+                                <div class="tit">신한은행</div>
                                 <div class="before">
                                     <div>
                                         내용111
@@ -53,11 +53,11 @@
                                 확장내용 111
                                 </div>
                             </div>
-                            <p class="btn_extend" @click="viewExtend">버튼</p>
+                            <p class="btn_extend" @click="viewExtend">확장</p>
                         </li>
                         <li>
                             <div class="box">
-                                <p class="tit">한마정보통신</p>
+                                <div class="tit">한마정보통신</div>
                                 <div class="before">
                                     <div>
                                         내용222
@@ -67,11 +67,11 @@
                                 확장내용 222
                                 </div>
                             </div>
-                            <p class="btn_extend" @click="viewExtend">버튼</p>
+                            <p class="btn_extend" @click="viewExtend">확장</p>
                         </li>
                         <li>
                             <div class="box">
-                                <p class="tit">신한기관정부</p>
+                                <div class="tit">신한기관정부</div>
                                 <div class="before">
                                     <div>
                                         내용333
@@ -81,11 +81,11 @@
                                 확장내용 333
                                 </div>
                             </div>
-                            <p class="btn_extend" @click="viewExtend">버튼</p>
+                            <p class="btn_extend" @click="viewExtend">확장</p>
                         </li>
                         <li>
                             <div class="box">
-                                <p class="tit">신한은행</p>
+                                <div class="tit">신한은행</div>
                                 <div class="before">
                                     <div>
                                         내용444
@@ -95,11 +95,11 @@
                                 확장내용 444
                                 </div>
                             </div>
-                            <p class="btn_extend" @click="viewExtend">버튼</p>
+                            <p class="btn_extend" @click="viewExtend">확장</p>
                         </li>
                         <li>
                             <div class="box">
-                                <p class="tit">신한은행</p>
+                                <div class="tit">신한은행</div>
                                 <div class="before">
                                     <div>
                                         내용555
@@ -109,11 +109,11 @@
                                 확장내용 555
                                 </div>
                             </div>
-                            <p class="btn_extend" @click="viewExtend">버튼</p>
+                            <p class="btn_extend" @click="viewExtend">확장</p>
                         </li>
                         <li>
                             <div class="box">
-                                <p class="tit">신한은행</p>
+                                <div class="tit">신한은행</div>
                                 <div class="before">
                                     <div>
                                         내용666
@@ -123,11 +123,11 @@
                                 확장내용 666
                                 </div>
                             </div>
-                            <p class="btn_extend" @click="viewExtend">버튼</p>
+                            <p class="btn_extend" @click="viewExtend">확장</p>
                         </li>
                         <li>
                             <div class="box">
-                                <p class="tit">신한은행</p>
+                                <div class="tit">신한은행</div>
                                 <div class="before">
                                     <div>
                                         내용777
@@ -137,7 +137,7 @@
                                 확장내용 777
                                 </div>
                             </div>
-                            <p class="btn_extend" @click="viewExtend">버튼</p>
+                            <p class="btn_extend" @click="viewExtend">확장</p>
                         </li>
                     </ul>
                 </div>
@@ -251,11 +251,14 @@ const viewExtend = (event) => {
 
     if (lis[btnIdx.value].parentElement.classList.contains('open')) {
         lis[btnIdx.value].parentElement.classList.remove('open')
+        lis[btnIdx.value].innerHTML = '확장'
+        
     } else {
         liElements.forEach((li) => {
             li.parentElement.classList.remove('open')
         });
         lis[btnIdx.value].parentElement.classList.add("open")
+        lis[btnIdx.value].innerHTML = '축소'
     }
 };
 // slide li width
