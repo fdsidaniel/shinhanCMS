@@ -49,9 +49,24 @@
                                     <v-btn class="vbtn btn_view_cfg on" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
                                 </div>
                                 <div class="before">
-                                    <div>
-                                        내용111
-                                    </div>
+                                    <ul class="err_list">
+                                        <li>
+                                            <span>타임아웃</span>
+                                            <nuxt-link to="" class="btn_link" :class="{ 'black': timeOut > 0 }">{{ timeOut }}</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>타행불능</span>
+                                            <nuxt-link to="" class="btn_link" :class="{ 'black': impossible > 0 }">{{ impossible }}</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>네트워크 오류</span>
+                                            <nuxt-link to="" class="btn_link" :class="{ 'black': networkErr > 0 }">{{ networkErr }}</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>처리 오류</span>
+                                            <nuxt-link to="" class="btn_link" :class="{ 'black': processErr > 0 }">{{ processErr }}</nuxt-link>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <div class="after">
                                 확장내용 111
@@ -67,9 +82,24 @@
                                     <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
                                 </div>
                                 <div class="before">
-                                    <div>
-                                        내용222
-                                    </div>
+                                    <ul class="err_list">
+                                        <li>
+                                            <span>타임아웃</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>타행불능</span>
+                                            <nuxt-link to="" class="btn_link black">123</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>네트워크 오류</span>
+                                            <nuxt-link to="" class="btn_link black">1</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>처리 오류</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <div class="after">
                                 확장내용 222
@@ -279,6 +309,15 @@ const btnViewCfg = (event) => {
         elements[btnViewCfgIdx.value].classList.add("on")
     }
 };
+
+// 타임아웃 color
+const timeOut = ref(0)
+// 타행불능
+const impossible = ref(1)
+// 네트워크 오류
+const networkErr = ref(3)
+// 처리 오류
+const processErr = ref(0)
 
 // 확장 버튼
 const btnIdx = ref()
