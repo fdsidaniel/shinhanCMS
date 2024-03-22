@@ -43,7 +43,11 @@
                     <ul class="slide_list" :style="{ width: liItemWidthTot + 'px', transform: 'translateX(' + move + 'px)' }">
                         <li>
                             <div class="box">
-                                <div class="tit">신한은행</div>
+                                <div class="tit">
+                                    <span>신한은행</span>
+                                    <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
+                                    <v-btn class="vbtn btn_view_cfg on" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
+                                </div>
                                 <div class="before">
                                     <div>
                                         내용111
@@ -57,7 +61,11 @@
                         </li>
                         <li>
                             <div class="box">
-                                <div class="tit">한마정보통신</div>
+                                <div class="tit">
+                                    <span>한마정보통신</span>
+                                    <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
+                                    <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
+                                </div>
                                 <div class="before">
                                     <div>
                                         내용222
@@ -71,7 +79,11 @@
                         </li>
                         <li>
                             <div class="box">
-                                <div class="tit">신한기관정부</div>
+                                <div class="tit">
+                                    <span>신한기관정부</span>
+                                    <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
+                                    <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
+                                </div>
                                 <div class="before">
                                     <div>
                                         내용333
@@ -85,7 +97,11 @@
                         </li>
                         <li>
                             <div class="box">
-                                <div class="tit">신한은행</div>
+                                <div class="tit">
+                                    <span>신한은행2</span>
+                                    <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
+                                    <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
+                                </div>
                                 <div class="before">
                                     <div>
                                         내용444
@@ -99,7 +115,11 @@
                         </li>
                         <li>
                             <div class="box">
-                                <div class="tit">신한은행</div>
+                                <div class="tit">
+                                    <span>신한은행3</span>
+                                    <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
+                                    <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
+                                </div>
                                 <div class="before">
                                     <div>
                                         내용555
@@ -113,7 +133,11 @@
                         </li>
                         <li>
                             <div class="box">
-                                <div class="tit">신한은행</div>
+                                <div class="tit">
+                                    <span>신한기관정부</span>
+                                    <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
+                                    <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
+                                </div>
                                 <div class="before">
                                     <div>
                                         내용666
@@ -127,7 +151,11 @@
                         </li>
                         <li>
                             <div class="box">
-                                <div class="tit">신한은행</div>
+                                <div class="tit">
+                                    <span>신한기관정부2</span>
+                                    <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
+                                    <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
+                                </div>
                                 <div class="before">
                                     <div>
                                         내용777
@@ -237,6 +265,19 @@ const transferErrorType = () => {
             }
         }
     }, delay)
+};
+
+// 기관 노출
+const btnViewCfgIdx = ref()
+const btnViewCfg = (event) => {
+    const lis = event.target.parentElement.parentElement.parentElement.parentElement.querySelectorAll('.btn_view_cfg')
+    const index = Array.from(lis).indexOf(event.target)
+    btnViewCfgIdx.value = index
+    if(lis[btnViewCfgIdx.value].classList.contains("on")){
+        lis[btnViewCfgIdx.value].classList.remove("on")
+    }else{
+        lis[btnViewCfgIdx.value].classList.add("on")
+    }
 };
 
 // 확장 버튼
