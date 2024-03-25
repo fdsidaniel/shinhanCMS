@@ -317,9 +317,62 @@
                 </div>
             </div>
             <div class="box">
-                <ul class="state_list">
-                    <li></li>
-                </ul>
+                <div class="state_list_box">
+                    <!-- 상태 -->
+                    <div class="state_list">
+                        <p class="tit">펌</p>
+                        <ul class="list">
+                            <li>어플리케이션<span class="error">상태</span></li>
+                            <li>DB 커넥션<span class="normal">상태</span></li>
+                            <li>게시전문<span class="normal">상태</span></li>
+                        </ul>
+                    </div>
+                    <!-- //상태 -->
+
+                    <!-- 상태 -->
+                    <div class="state_list">
+                        <p class="tit">제휴 가상 계좌</p>
+                        <ul class="list">
+                            <li>어플리케이션<span class="error">상태</span></li>
+                            <li>DB 커넥션<span class="normal">상태</span></li>
+                            <li>게시전문<span class="normal">상태</span></li>
+                        </ul>
+                    </div>
+                    <!-- //상태 -->
+
+                    <!-- 상태 -->
+                    <div class="state_list">
+                        <p class="tit">법인카드</p>
+                        <ul class="list">
+                            <li>어플리케이션<span class="error">상태</span></li>
+                            <li>DB 커넥션<span class="normal">상태</span></li>
+                            <li>게시전문<span class="normal">상태</span></li>
+                        </ul>
+                    </div>
+                    <!-- //상태 -->
+
+                    <!-- 상태 -->
+                    <div class="state_list">
+                        <p class="tit">일괄 이체</p>
+                        <ul class="list">
+                            <li>어플리케이션<span class="error">상태</span></li>
+                            <li>DB 커넥션<span class="normal">상태</span></li>
+                            <li>게시전문<span class="normal">상태</span></li>
+                        </ul>
+                    </div>
+                    <!-- //상태 -->
+
+                    <!-- 상태 -->
+                    <div class="state_list">
+                        <p class="tit">컨버터</p>
+                        <ul class="list">
+                            <li>어플리케이션<span class="error">상태</span></li>
+                            <li>DB 커넥션<span class="normal">상태</span></li>
+                            <li>게시전문<span class="normal">상태</span></li>
+                        </ul>
+                    </div>
+                    <!-- //상태 -->                    
+                </div>
             </div>
         </div>
         <!-- //실시간 진행 상황 -->
