@@ -306,6 +306,23 @@
             <!-- //chart img sample -->
         </div>
         <!-- //서버 자원 현황 -->
+
+        <!-- 실시간 진행 상황 -->
+        <div class="row">
+            <div class="tit_box">
+                <h3> 실시간 진행 상황</h3>
+                <div>
+                    <!-- <ComSelectBox groupCode="01" v-model="org" :items="orgItems" :isDefault="false" class="s_basics none_details" /> -->
+                    <v-btn class="vbtn line btn_orgall" size="small">기관전체</v-btn>
+                </div>
+            </div>
+            <div class="box">
+                <ul class="state_list">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <!-- //실시간 진행 상황 -->
     </div>
 
   </div>
@@ -587,6 +604,15 @@ const diskData = {
     },
   ],
 };
+
+// 실시간 진행 상황
+import ComSelectBox from '@/components/common/ComSelectBox.vue'
+
+const org = ref('001')
+const orgItems = ref([
+  { title: '기관전체', value: '001' },
+  { title: '기관명기관명기관명', value: '002' },
+])
 
 
 </script>
