@@ -738,7 +738,7 @@ const tranData = {
 
       //indexAxis: 'y',
     },
-  ],  
+  ],
 };
 
 // 일괄 이체 현황 조회
