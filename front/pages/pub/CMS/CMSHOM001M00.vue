@@ -317,61 +317,79 @@
                 </div>
             </div>
             <div class="box">
-                <div class="state_list_box">
-                    <!-- 상태 -->
-                    <div class="state_list">
-                        <p class="tit">펌</p>
-                        <ul class="list">
-                            <li>어플리케이션<span class="error">상태</span></li>
-                            <li>DB 커넥션<span class="normal">상태</span></li>
-                            <li>게시전문<span class="normal">상태</span></li>
-                        </ul>
-                    </div>
-                    <!-- //상태 -->
+                <div class="state_info">
+                    <!-- 상태 목록 -->
+                    <div class="state_list_box">
+                        <!-- 상태 -->
+                        <div class="state_list">
+                            <p class="tit">펌</p>
+                            <ul class="list">
+                                <li>어플리케이션<span class="error">상태</span></li>
+                                <li>DB 커넥션<span class="normal">상태</span></li>
+                                <li>게시전문<span class="normal">상태</span></li>
+                            </ul>
+                        </div>
+                        <!-- //상태 -->
 
-                    <!-- 상태 -->
-                    <div class="state_list">
-                        <p class="tit">제휴 가상 계좌</p>
-                        <ul class="list">
-                            <li>어플리케이션<span class="error">상태</span></li>
-                            <li>DB 커넥션<span class="normal">상태</span></li>
-                            <li>게시전문<span class="normal">상태</span></li>
-                        </ul>
-                    </div>
-                    <!-- //상태 -->
+                        <!-- 상태 -->
+                        <div class="state_list">
+                            <p class="tit">제휴 가상 계좌</p>
+                            <ul class="list">
+                                <li>어플리케이션<span class="error">상태</span></li>
+                                <li>DB 커넥션<span class="normal">상태</span></li>
+                                <li>게시전문<span class="normal">상태</span></li>
+                            </ul>
+                        </div>
+                        <!-- //상태 -->
 
-                    <!-- 상태 -->
-                    <div class="state_list">
-                        <p class="tit">법인카드</p>
-                        <ul class="list">
-                            <li>어플리케이션<span class="error">상태</span></li>
-                            <li>DB 커넥션<span class="normal">상태</span></li>
-                            <li>게시전문<span class="normal">상태</span></li>
-                        </ul>
-                    </div>
-                    <!-- //상태 -->
+                        <!-- 상태 -->
+                        <div class="state_list">
+                            <p class="tit">법인카드</p>
+                            <ul class="list">
+                                <li>어플리케이션<span class="error">상태</span></li>
+                                <li>DB 커넥션<span class="normal">상태</span></li>
+                                <li>게시전문<span class="normal">상태</span></li>
+                            </ul>
+                        </div>
+                        <!-- //상태 -->
 
-                    <!-- 상태 -->
-                    <div class="state_list">
-                        <p class="tit">일괄 이체</p>
-                        <ul class="list">
-                            <li>어플리케이션<span class="error">상태</span></li>
-                            <li>DB 커넥션<span class="normal">상태</span></li>
-                            <li>게시전문<span class="normal">상태</span></li>
-                        </ul>
-                    </div>
-                    <!-- //상태 -->
+                        <!-- 상태 -->
+                        <div class="state_list">
+                            <p class="tit">일괄 이체</p>
+                            <ul class="list">
+                                <li>어플리케이션<span class="error">상태</span></li>
+                                <li>DB 커넥션<span class="normal">상태</span></li>
+                                <li>게시전문<span class="normal">상태</span></li>
+                            </ul>
+                        </div>
+                        <!-- //상태 -->
 
-                    <!-- 상태 -->
-                    <div class="state_list">
-                        <p class="tit">컨버터</p>
-                        <ul class="list">
-                            <li>어플리케이션<span class="error">상태</span></li>
-                            <li>DB 커넥션<span class="normal">상태</span></li>
-                            <li>게시전문<span class="normal">상태</span></li>
-                        </ul>
+                        <!-- 상태 -->
+                        <div class="state_list">
+                            <p class="tit">컨버터</p>
+                            <ul class="list">
+                                <li>어플리케이션<span class="error">상태</span></li>
+                                <li>DB 커넥션<span class="normal">상태</span></li>
+                                <li>게시전문<span class="normal">상태</span></li>
+                            </ul>
+                        </div>
+                        <!-- //상태 -->
                     </div>
-                    <!-- //상태 -->                    
+                    <!-- //상태 목록 -->
+
+                    <!-- 상태 내용 -->
+                    <div class="state_list_info">
+                        <div class="scroll">
+                            <ul class="list">
+                                <li><b>[오류발생]</b>[어플리케이션] 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다.</li>
+                                <li><b>[오류발생]</b>[어플리케이션] 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다.</li>
+                                <li><b>[오류발생]</b>[어플리케이션] 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다. 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다. 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다. 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다.</li>
+                                <li><b>[오류발생]</b>[어플리케이션] 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다.</li>
+                                <li><b>[오류발생]</b>[어플리케이션] 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 상태 내용 -->
                 </div>
             </div>
         </div>
