@@ -402,8 +402,8 @@
             <div class="box">
                 <div class="chart_box">
                     <p class="tit">당 타행 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
-                    <!-- <DoughnutChart :chartData="tranData" class="chart" /> -->
-                    <BarChart :chartData="tranData" class="chart" />
+                    <DoughnutChart :chartData="tranData" class="chart" />
+                    <!-- <BarChart :chartData="tranData" class="chart" /> -->
                 </div>
                 <div class="chart_box">
                     <p class="tit">일괄 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
@@ -732,13 +732,12 @@ const tranData = {
   labels: ['당행 출금', '당행 입금', '타행 출금', '타행 입금'],
   datasets: [
     {
-      label: '당행 출금',
-      data: [40, 20, 30, 20],
+      data: [40, 20, 30, 20],      
       backgroundColor: ['#5D47E5', '#FF6363', '#ECE8FF', '#FEB03D'],
 
-      //indexAxis: 'y',
+      indexAxis: 'y',
     },
-  ],  
+  ],
 };
 
 // 일괄 이체 현황 조회

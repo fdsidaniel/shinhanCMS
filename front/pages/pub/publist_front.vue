@@ -144,7 +144,20 @@
         <span></span>
         <span></span>
         <span><nuxt-link to="/pub/CMS/CMSHOM001M00" class="vlink blue line">CMSHOM001M00</nuxt-link></span>
+        <span>메인<br>(시스템 관리자)</span>
         <span>메인</span>
+        <span class="ok"></span>
+        <span>2024-03-21</span>
+        <span class="etc">작업중</span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMSHOM002M00" class="vlink blue line">CMSHOM002M00</nuxt-link></span>
+        <span>메인<br>(기관 담당자)</span>
         <span>메인</span>
         <span class="ok"></span>
         <span>2024-03-21</span>
