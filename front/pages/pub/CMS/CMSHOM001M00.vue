@@ -98,10 +98,13 @@
                                             <div class="scroll">
                                                 <ul class="err_detail_list">
                                                     <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 1건 발생하였습니다.</li>
-                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 1건 발생하였습니다.</li>
-                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타행불능 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 2건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타행불능 3건 발생하였습니다.</li>
                                                     <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 1건 발생하였습니다.</li>
                                                     <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다. 처리오류 오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 2건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 3건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 4건 발생하였습니다.</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -239,6 +242,23 @@
             </div>
         </div>
         <!-- //기관별 오류 현황 -->
+    </div>
+
+    <!-- Today 승인 내역 -->
+    <div class="main_mid">
+        <div class="today">
+            <strong>Today 승인 내역</strong> 사용자 승인 요청 건 이 5건 있습니다.
+        </div>
+    </div>
+    <!-- //Today 승인 내역 -->
+
+    <div class="main_btm">
+        <!-- 서버 자원 현황 -->
+        <div class="row">
+            <h3>서버 자원 현황</h3>
+            <div class="chart_box"></div>
+        </div>
+        <!-- //서버 자원 현황 -->
     </div>
 
   </div>
@@ -382,7 +402,7 @@ let liMarginLeft = 20 // li margin-left
 let liItem // li
 let liItemWidth // li width
 const liWidth = () => {
-    liItem = document.querySelector('.slide_list li')
+    liItem = document.querySelector('.slide_list > li')
     liItemWidth = liItem.offsetWidth + liMarginLeft
 }
 // slide ul width
@@ -393,7 +413,7 @@ const slidesPerViewMove = ref(0)
 //let liItemWidthTot
 const liItemWidthTot = ref(0); // li all width
 const ulWidth = () => {
-    liItemAll =  document.querySelectorAll(".slide_list li")
+    liItemAll =  document.querySelectorAll(".slide_list > li")
     liItemCnt = liItemAll.length
     liItemWidthTot.value = liItemCnt * liItemWidth - liMarginLeft
     slidesPerViewMove.value = liItemCnt - slidesPerView
@@ -415,7 +435,7 @@ const btnPrevNextView = () => {
         btnPrevView.value = true
     }
     // 확장 닫기
-    const lielements = document.querySelectorAll('.slide_list li')
+    const lielements = document.querySelectorAll('.slide_list > li')
     lielements.forEach(element => {
         element.classList.remove('open')
     })
@@ -451,13 +471,14 @@ const btnNext = () => {
 let slideViewLastLeft = slidesPerView - 2 // slide view last left li
 let slideViewLastRight = slidesPerView - 1 // slide view last right li
 const slideView = () => {
-    const lielements = document.querySelectorAll('.slide_list li');
+    const lielements = document.querySelectorAll('.slide_list > li');
     lielements.forEach(element => {
         element.classList.remove('last')
     })
 
     lielements[slideViewLastLeft].classList.add('last')
     lielements[slideViewLastRight].classList.add('last')
+    console.log(lielements)
 }
 
 onMounted(() => {
@@ -476,4 +497,4 @@ onBeforeUnmount(() => {
 })
 
 
-</script> 
+</script>
