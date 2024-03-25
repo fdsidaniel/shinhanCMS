@@ -745,7 +745,7 @@ import { PieChart } from 'vue-chart-3';
 let totTranSucc = 20 // DISK 사용
 let totTranfail = 10 // DISK 미사용
 const totTranData = {
-  labels: ['실패 건 수', '성공 건 수'],
+  labels: ['성공 건 수', '실패 건 수'],
   datasets: [
     {
       data: [totTranSucc, totTranfail],      
