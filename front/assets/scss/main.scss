@@ -4892,13 +4892,32 @@ input.i_basics{
 
                     .tit{
                         height:38px;
+                        color:#000;
                         font-size: 18px;
                         font-weight: 700;
                         line-height: 28px;
                         text-align: left;
                     }
+
+                    .use_data{
+                        position: absolute;
+                        top:50%;
+                        left:50%;
+                        color:#000;
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 40px;
+                        transform: translateX(-50%);
+                    }
+
                     .chart_img{
                         margin-top:4px;
+                    }
+
+                    .chart{
+                        width:223px;
+                        height:229px;
+                        margin:0 auto;
                     }
                     .remark{
                         position: absolute;

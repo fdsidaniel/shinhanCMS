@@ -256,7 +256,28 @@
         <!-- 서버 자원 현황 -->
         <div class="row">
             <h3>서버 자원 현황</h3>
+            <!-- chart -->
             <div class="box mt_22">
+                <div class="chart_box">
+                    <p class="tit">CPU</p>
+                    <DoughnutChart :chartData="cpuData" class="chart" />
+                    <span class="use_data">{{ cpuUse }}%</span>
+                </div>
+                <div class="chart_box">
+                    <p class="tit">메모리</p>
+                    <DoughnutChart :chartData="memoryData" class="chart" />
+                    <span class="use_data">{{ memoryUse }}%</span>
+                </div>
+                <div class="chart_box">
+                    <p class="tit">디스크 현황</p>
+                    <DoughnutChart :chartData="diskData" class="chart" />
+                    <span class="use_data">{{ diskUse }}%</span>
+                </div>
+            </div>
+            <!-- chart -->
+
+            <!-- chart img sample 개발 시 삭제 -->
+            <div class="box mt_22">                
                 <div class="chart_box">
                     <p class="tit">CPU</p>
                     <img src="../../../assets/images/chart_1.png" alt="차트 이미지" class="chart_img">
@@ -276,12 +297,13 @@
                 <div class="chart_box">
                     <p class="tit">디스크 현황</p>
                     <img src="../../../assets/images/chart_3.png" alt="차트 이미지" class="chart_img">
-                    <ul class="remark cpu">
+                    <ul class="remark disk">
                         <li class="use">사용</li>
                         <li class="unused">미사용</li>
                     </ul>
-                </div>
-            </div>            
+                </div>                
+            </div>
+            <!-- //chart img sample -->
         </div>
         <!-- //서버 자원 현황 -->
     </div>
@@ -520,6 +542,50 @@ onMounted(() => {
 onBeforeUnmount(() => {
   
 })
+
+import { DoughnutChart } from 'vue-chart-3';
+import { Chart, registerables } from "chart.js";
+
+Chart.register(...registerables);
+let cpuUse = 86 // CPU 사용
+let cpuUnused = 14 // CPU 미사용
+const cpuData = {
+  labels: ['미사용', '사용'],
+  datasets: [
+    {
+      data: [cpuUnused, cpuUse],
+      backgroundColor: ['#FF6D40', '#5D47E5'],
+
+      indexAxis: 'y',
+    },
+  ],
+};
+let memoryUse = 70 // MEMORY 사용
+let memoryUnused = 30 // MEMORY 미사용
+const memoryData = {
+  labels: ['미사용', '사용'],
+  datasets: [
+    {
+      data: [memoryUnused, memoryUse],      
+      backgroundColor: ['#FF6D40', '#29C986'],
+
+      indexAxis: 'y',
+    },
+  ],
+};
+let diskUse = 50 // DISK 사용
+let diskUnused = 50 // DISK 미사용
+const diskData = {
+  labels: ['미사용', '사용'],
+  datasets: [
+    {
+      data: [diskUnused, diskUse],      
+      backgroundColor: ['#FF6D40', '#FACB2C'],
+
+      indexAxis: 'y',
+    },
+  ],
+};
 
 
 </script>
