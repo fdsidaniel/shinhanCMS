@@ -278,7 +278,7 @@
 
             <!-- chart img sample 개발 시 삭제 -->
             <div class="box mt_22">                
-                <div class="chart_box">
+                <div class="chart_box sample">
                     <p class="tit">CPU</p>
                     <img src="../../../assets/images/chart_1.png" alt="차트 이미지" class="chart_img">
                     <ul class="remark cpu">
@@ -286,7 +286,7 @@
                         <li class="unused">미사용</li>
                     </ul>
                 </div>
-                <div class="chart_box">
+                <div class="chart_box sample">
                     <p class="tit">메모리</p>
                     <img src="../../../assets/images/chart_2.png" alt="차트 이미지" class="chart_img">
                     <ul class="remark memory">
@@ -294,7 +294,7 @@
                         <li class="unused">미사용</li>
                     </ul>
                 </div>
-                <div class="chart_box">
+                <div class="chart_box sample">
                     <p class="tit">디스크 현황</p>
                     <img src="../../../assets/images/chart_3.png" alt="차트 이미지" class="chart_img">
                     <ul class="remark disk">
@@ -402,7 +402,8 @@
             <div class="box">
                 <div class="chart_box">
                     <p class="tit">당 타행 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
-                    <BarChart :chartData="tranData" class="chart" />
+                    <DoughnutChart :chartData="tranData" class="chart" />
+                    <!-- <BarChart :chartData="tranData" class="chart" /> -->
                 </div>
                 <div class="chart_box">
                     <p class="tit">일괄 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
@@ -413,7 +414,7 @@
 
             <!-- chart img sample 개발 시 삭제 -->
             <div class="box">
-                <div class="chart_box">
+                <div class="chart_box sample">
                     <p class="tit">당 타행 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
                     <div class="mt_23">
                         <img src="../../../assets/images/chart_4.png" alt="차트 이미지" class="chart_img">
@@ -424,7 +425,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="chart_box other">
+                <div class="chart_box sample other">
                     <p class="tit">일괄 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
                     <div class="chart_img_box">
                         <img src="../../../assets/images/chart_6.png" alt="차트 이미지" class="chart_img">
@@ -728,11 +729,11 @@ const stateListOver = (event) => {
 // 당 타행 이체 현황 조회
 import { BarChart } from 'vue-chart-3';
 const tranData = {
-  labels: ['실패 건 수', '성공 건 수'],
+  labels: ['당행 출금', '당행 입금', '타행 출금', '타행 입금'],
   datasets: [
     {
-      data: [10, 20],      
-      backgroundColor: ['#5D47E5', '#FF6363'],
+      data: [40, 20, 30, 20],      
+      backgroundColor: ['#5D47E5', '#FF6363', '#ECE8FF', '#FEB03D'],
 
       indexAxis: 'y',
     },

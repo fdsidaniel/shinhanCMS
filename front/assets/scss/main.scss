@@ -4985,7 +4985,20 @@ input.i_basics{
                         line-height: 40px;
                         transform: translateX(-50%);
                     }
-
+                    &.sample{
+                        &:after{
+                            content: "차트 이미지 샘플";
+                            position: absolute;
+                            top:0px;
+                            left:50%;
+                            transform: translateX(-50%);
+                            padding:10px;
+                            color:#fff;
+                            font-weight:700;
+                            border-radius: 10px;
+                            background-color: #000;
+                        }
+                    }
                     &.other{// 차트 이미지 샘플 확인용
                         .chart_img_box{
                             position: relative;
@@ -5020,7 +5033,7 @@ input.i_basics{
                     }
 
                     .chart{
-                        width:223px;
+                        min-width:223px;
                         height:229px;
                         margin:0 auto;
                     }
