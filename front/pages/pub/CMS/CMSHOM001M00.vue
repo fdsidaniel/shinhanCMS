@@ -417,21 +417,25 @@
             <div class="box">
                 <div class="chart_box">
                     <p class="tit">당 타행 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
-                    <img src="../../../assets/images/chart_4.png" alt="차트 이미지" class="chart_img">
-                    <img src="../../../assets/images/chart_5.png" alt="차트 이미지" class="chart_img">
-                    <ul class="remark cpu">
-                        <li class="use">사용</li>
-                        <li class="unused">미사용</li>
-                    </ul>
+                    <div class="mt_23">
+                        <img src="../../../assets/images/chart_4.png" alt="차트 이미지" class="chart_img">
+                        <img src="../../../assets/images/chart_5.png" alt="차트 이미지" class="chart_img ml_126">
+                        <div class="txt">
+                            <span>출금 <b>10,000</b>만원</span>
+                            <span>입금 <b>1,000</b>만원</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="chart_box other">
                     <p class="tit">일괄 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
-                    <img src="../../../assets/images/chart_6.png" alt="차트 이미지" class="chart_img other">
-                    <img src="../../../assets/images/chart_7.png" alt="차트 이미지" class="chart_img">
-                    <ul class="remark memory">
-                        <li class="use">사용</li>
-                        <li class="unused">미사용</li>
-                    </ul>
+                    <div class="chart_img_box">
+                        <img src="../../../assets/images/chart_6.png" alt="차트 이미지" class="chart_img">
+                        <img src="../../../assets/images/chart_7.png" alt="차트 이미지" class="chart_img">
+                        <ul class="remark tot_tran">
+                            <li class="succ">성공 건 수 20건</li>
+                            <li class="fail">실패 건 수 10건</li>
+                        </ul>
+                    </div>                    
                 </div>
             </div>
             <!-- //chart img sample -->

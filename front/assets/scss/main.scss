@@ -4932,7 +4932,7 @@ input.i_basics{
                     }
                     position: relative;
                     flex:1;
-                    height:330px;
+                    min-height:330px;
                     padding:20px 30px;
                     text-align: center;
                     border-radius: 20px;
@@ -4957,6 +4957,23 @@ input.i_basics{
                             background-position: right 6px;
                         }
                     }
+                    .txt{
+                        padding:20px 0;
+                        span{
+                            &+span{
+                                margin-left:50px;
+                            }
+                            color:#565C63;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 22px;
+                            b{
+                                font-size: 20px;
+                                font-weight: 700;
+                                line-height: 30px;
+                            }
+                        }
+                    }
 
                     .use_data{
                         position: absolute;
@@ -4970,9 +4987,30 @@ input.i_basics{
                     }
 
                     &.other{// 차트 이미지 샘플 확인용
-                        .chart_img{
-                            &.other{
-                                position: absolute;
+                        .chart_img_box{
+                            position: relative;
+                            padding:34px 0 0 116px;
+                            text-align: left;
+                            .chart_img{
+                                &:first-child{
+                                    position: absolute;
+                                }
+                            }
+                            .tot_tran{
+                                bottom:73px;
+                                right:116px;
+                                li{
+                                    color:#21272A;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 22px;
+                                    &.succ:before{
+                                        background: #5D47E5;
+                                    }
+                                    &.fail:before{
+                                        background: #FF6363;
+                                    }
+                                }                                
                             }
                         }
                     }
@@ -4998,13 +5036,14 @@ input.i_basics{
                                 display: inline-block;
                                 width:12px;
                                 height:12px;
-                                margin-right:6px;
+                                margin:0 6px -1px 0;
                                 border-radius: 12px;
                             }
                             &+li{
                                 margin-top:2px;
                             }
                             position: relative;
+                            color:#21272A;
                             font-size: 14px;
                             font-weight: 400;
                             line-height: 22px;
