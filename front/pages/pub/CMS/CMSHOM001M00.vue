@@ -659,7 +659,6 @@ const slideView = () => {
 
     lielements[slideViewLastLeft].classList.add('last')
     lielements[slideViewLastRight].classList.add('last')
-    console.log(lielements)
 }
 
 // 차트
