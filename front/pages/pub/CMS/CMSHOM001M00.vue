@@ -401,14 +401,12 @@
             <!-- chart -->
             <div class="box">
                 <div class="chart_box">
-                    <p class="tit">당 타행 이체 현황 조회</p>
-                    <DoughnutChart :chartData="cpuData" class="chart" />
-                    <span class="use_data">{{ cpuUse }}%</span>
+                    <p class="tit">당 타행 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
+                    <BarChart :chartData="tranData" class="chart" />
                 </div>
                 <div class="chart_box">
-                    <p class="tit">일괄 이체 현황 조회</p>
-                    <DoughnutChart :chartData="memoryData" class="chart" />
-                    <span class="use_data">{{ memoryUse }}%</span>
+                    <p class="tit">일괄 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
+                    <PieChart :chartData="totTranData" class="chart" />
                 </div>
             </div>
             <!-- chart -->
@@ -726,6 +724,36 @@ const stateListOver = (event) => {
     })
     states[statesIdx].classList.add('active')
 }
+
+// 당 타행 이체 현황 조회
+import { BarChart } from 'vue-chart-3';
+const tranData = {
+  labels: ['실패 건 수', '성공 건 수'],
+  datasets: [
+    {
+      data: [10, 20],      
+      backgroundColor: ['#5D47E5', '#FF6363'],
+
+      indexAxis: 'y',
+    },
+  ],
+};
+
+// 일괄 이체 현황 조회
+import { PieChart } from 'vue-chart-3';
+let totTranSucc = 20 // DISK 사용
+let totTranfail = 10 // DISK 미사용
+const totTranData = {
+  labels: ['실패 건 수', '성공 건 수'],
+  datasets: [
+    {
+      data: [totTranSucc, totTranfail],      
+      backgroundColor: ['#5D47E5', '#FF6363'],
+
+      indexAxis: 'y',
+    },
+  ],
+};
 
 onMounted(() => {
     transferTotType() // 이체현황 총
