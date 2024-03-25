@@ -256,7 +256,32 @@
         <!-- 서버 자원 현황 -->
         <div class="row">
             <h3>서버 자원 현황</h3>
-            <div class="chart_box"></div>
+            <div class="box mt_22">
+                <div class="chart_box">
+                    <p class="tit">CPU</p>
+                    <img src="../../../assets/images/chart_1.png" alt="차트 이미지" class="chart_img">
+                    <ul class="remark cpu">
+                        <li class="use">사용</li>
+                        <li class="unused">미사용</li>
+                    </ul>
+                </div>
+                <div class="chart_box">
+                    <p class="tit">메모리</p>
+                    <img src="../../../assets/images/chart_2.png" alt="차트 이미지" class="chart_img">
+                    <ul class="remark memory">
+                        <li class="use">사용</li>
+                        <li class="unused">미사용</li>
+                    </ul>
+                </div>
+                <div class="chart_box">
+                    <p class="tit">디스크 현황</p>
+                    <img src="../../../assets/images/chart_3.png" alt="차트 이미지" class="chart_img">
+                    <ul class="remark cpu">
+                        <li class="use">사용</li>
+                        <li class="unused">미사용</li>
+                    </ul>
+                </div>
+            </div>            
         </div>
         <!-- //서버 자원 현황 -->
     </div>

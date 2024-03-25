@@ -4874,6 +4874,87 @@ input.i_basics{
                 font-weight: 700;
                 line-height: 32px;
             }
+            .box{
+                display: flex;
+                margin-top:15px;
+
+                .chart_box{
+                    &+.chart_box{
+                        margin-left:20px;
+                    }
+                    position: relative;
+                    flex:1;
+                    height:330px;
+                    padding:20px 30px;
+                    text-align: center;
+                    border-radius: 20px;
+                    background: #fff;
+
+                    .tit{
+                        height:38px;
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 28px;
+                        text-align: left;
+                    }
+                    .chart_img{
+                        margin-top:4px;
+                    }
+                    .remark{
+                        position: absolute;
+                        bottom:40px;
+                        right:30px;
+                        text-align: left;
+                        li{
+                            &:before{
+                                content: '';
+                                display: inline-block;
+                                width:12px;
+                                height:12px;
+                                margin-right:6px;
+                                border-radius: 12px;
+                            }
+                            &+li{
+                                margin-top:2px;
+                            }
+                            position: relative;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 22px;
+                        }
+                        &.cpu{
+                            li{
+                                &.use:before{
+                                    background: #5D47E5;
+                                }
+                                &.unused:before{
+                                    background: #FF6D40;
+                                }
+                            }
+                        }
+                        &.memory{
+                            li{
+                                &.use:before{
+                                    background: #29C986;
+                                }
+                                &.unused:before{
+                                    background: #FF6D40;
+                                }
+                            }
+                        }
+                        &.disk{
+                            li{
+                                &.use:before{
+                                    background: #FACB2C;
+                                }
+                                &.unused:before{
+                                    background: #FF6D40;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
