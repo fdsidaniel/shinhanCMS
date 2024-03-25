@@ -301,7 +301,7 @@
                         <li class="use">사용</li>
                         <li class="unused">미사용</li>
                     </ul>
-                </div>                
+                </div>
             </div>
             <!-- //chart img sample -->
         </div>
@@ -394,6 +394,49 @@
             </div>
         </div>
         <!-- //실시간 진행 상황 -->
+
+        <!-- 이체 별 현황 -->
+        <div class="row">
+            <h3>이체 별 현황</h3>
+            <!-- chart -->
+            <div class="box">
+                <div class="chart_box">
+                    <p class="tit">당 타행 이체 현황 조회</p>
+                    <DoughnutChart :chartData="cpuData" class="chart" />
+                    <span class="use_data">{{ cpuUse }}%</span>
+                </div>
+                <div class="chart_box">
+                    <p class="tit">일괄 이체 현황 조회</p>
+                    <DoughnutChart :chartData="memoryData" class="chart" />
+                    <span class="use_data">{{ memoryUse }}%</span>
+                </div>
+            </div>
+            <!-- chart -->
+
+            <!-- chart img sample 개발 시 삭제 -->
+            <div class="box">
+                <div class="chart_box">
+                    <p class="tit">당 타행 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
+                    <img src="../../../assets/images/chart_4.png" alt="차트 이미지" class="chart_img">
+                    <img src="../../../assets/images/chart_5.png" alt="차트 이미지" class="chart_img">
+                    <ul class="remark cpu">
+                        <li class="use">사용</li>
+                        <li class="unused">미사용</li>
+                    </ul>
+                </div>
+                <div class="chart_box other">
+                    <p class="tit">일괄 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
+                    <img src="../../../assets/images/chart_6.png" alt="차트 이미지" class="chart_img other">
+                    <img src="../../../assets/images/chart_7.png" alt="차트 이미지" class="chart_img">
+                    <ul class="remark memory">
+                        <li class="use">사용</li>
+                        <li class="unused">미사용</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //chart img sample -->
+        </div>
+        <!-- //이체 별 현황 -->
     </div>
 
   </div>

@@ -4939,12 +4939,23 @@ input.i_basics{
                     background: #fff;
 
                     .tit{
+                        position: relative;
                         height:38px;
                         color:#000;
                         font-size: 18px;
                         font-weight: 700;
                         line-height: 28px;
                         text-align: left;
+                        .btn_more{
+                            position: absolute;
+                            top:0;
+                            right:0;
+                            color:#565C63;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 22px;
+                            background-position: right 6px;
+                        }
                     }
 
                     .use_data{
@@ -4958,7 +4969,15 @@ input.i_basics{
                         transform: translateX(-50%);
                     }
 
-                    .chart_img{
+                    &.other{// 차트 이미지 샘플 확인용
+                        .chart_img{
+                            &.other{
+                                position: absolute;
+                            }
+                        }
+                    }
+
+                    .chart_img{// 차트 이미지 샘플 확인용
                         margin-top:4px;
                     }
 
@@ -4967,6 +4986,7 @@ input.i_basics{
                         height:229px;
                         margin:0 auto;
                     }
+
                     .remark{
                         position: absolute;
                         bottom:40px;
