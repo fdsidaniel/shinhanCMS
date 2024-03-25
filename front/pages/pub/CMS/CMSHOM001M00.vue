@@ -321,7 +321,7 @@
                     <!-- 상태 목록 -->
                     <div class="state_list_box">
                         <!-- 상태 -->
-                        <div class="state_list">
+                        <div class="state_list active" @mouseenter="stateListOver">
                             <p class="tit">펌</p>
                             <ul class="list">
                                 <li>어플리케이션<span class="error">상태</span></li>
@@ -332,7 +332,7 @@
                         <!-- //상태 -->
 
                         <!-- 상태 -->
-                        <div class="state_list">
+                        <div class="state_list" @mouseenter="stateListOver">
                             <p class="tit">제휴 가상 계좌</p>
                             <ul class="list">
                                 <li>어플리케이션<span class="error">상태</span></li>
@@ -343,7 +343,7 @@
                         <!-- //상태 -->
 
                         <!-- 상태 -->
-                        <div class="state_list">
+                        <div class="state_list" @mouseenter="stateListOver">
                             <p class="tit">법인카드</p>
                             <ul class="list">
                                 <li>어플리케이션<span class="error">상태</span></li>
@@ -354,7 +354,7 @@
                         <!-- //상태 -->
 
                         <!-- 상태 -->
-                        <div class="state_list">
+                        <div class="state_list" @mouseenter="stateListOver">
                             <p class="tit">일괄 이체</p>
                             <ul class="list">
                                 <li>어플리케이션<span class="error">상태</span></li>
@@ -365,7 +365,7 @@
                         <!-- //상태 -->
 
                         <!-- 상태 -->
-                        <div class="state_list">
+                        <div class="state_list" @mouseenter="stateListOver">
                             <p class="tit">컨버터</p>
                             <ul class="list">
                                 <li>어플리케이션<span class="error">상태</span></li>
@@ -616,21 +616,6 @@ const slideView = () => {
     console.log(lielements)
 }
 
-onMounted(() => {
-    transferTotType() // 이체현황 총
-    transferNormalType() // 이체 정상
-    transferErrorType() // 이체 오류
-
-    liWidth() //slide li width
-    ulWidth() //slide ul width
-    btnPrevNextView() // 이전 다음 버튼
-    slideView() // slideView last li
-})
-
-onBeforeUnmount(() => {
-  
-})
-
 // 차트
 import { DoughnutChart } from 'vue-chart-3';
 import { Chart, registerables } from "chart.js";
@@ -685,5 +670,29 @@ const orgItems = ref([
   { title: '기관명기관명기관명', value: '002' },
 ])
 
+const stateListOver = (event) => {
+    const states = document.querySelectorAll('.state_list');
+    const index = Array.from(states).indexOf(event.target)
+    const statesIdx = index
+    states.forEach(element => {
+        element.classList.remove('active')
+    })
+    states[statesIdx].classList.add('active')
+}
+
+onMounted(() => {
+    transferTotType() // 이체현황 총
+    transferNormalType() // 이체 정상
+    transferErrorType() // 이체 오류
+
+    liWidth() //slide li width
+    ulWidth() //slide ul width
+    btnPrevNextView() // 이전 다음 버튼
+    slideView() // slideView last li
+})
+
+onBeforeUnmount(() => {
+  
+})
 
 </script>

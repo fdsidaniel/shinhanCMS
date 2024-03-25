@@ -5035,6 +5035,7 @@ input.i_basics{
                             padding:20px 30px;
                             border-radius: 20px;
                             background-color: #fff;
+                            &.active,
                             &:hover{
                                 outline: 1px solid #5D47E5;
                                 &:after{
