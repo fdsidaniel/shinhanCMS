@@ -4849,6 +4849,16 @@ input.i_basics{
                                     }
                                 }
                             }
+                            &:has(+ .last.open){
+                                .btn_extend{
+                                    display: none;
+                                }
+                            }
+                            &:has(+ li + .last.open){
+                                .btn_extend{
+                                    display: none;
+                                }
+                            }
                         }
                     }
                 }
