@@ -451,6 +451,7 @@
 
 // 이체현황 총
 const transferTot = ref('160')
+// 이체현황 총 숫자 카운팅 효과
 const transferTotType = () => {
     const element = document.querySelector('.transfer_tot')
     let delay = 500 // 딜레이
@@ -478,6 +479,7 @@ const transferTotType = () => {
 };
 // 이체 정상
 const transferNormal = ref('20')
+// 이체 정상 숫자 카운팅 효과
 const transferNormalType = () => {
     const element = document.querySelector('.transfer_normal')
     let delay = 1000 // 딜레이
@@ -505,6 +507,7 @@ const transferNormalType = () => {
 };
 // 이체 오류
 const transferError = ref('0')
+// 이체 오류 숫자 카운팅 효과
 const transferErrorType = () => {
     const element = document.querySelector('.transfer_error')
     let delay = 1500 // 딜레이
