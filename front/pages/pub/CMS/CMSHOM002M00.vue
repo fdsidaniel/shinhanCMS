@@ -246,8 +246,20 @@
             <div class="box">
                 <div class="chart_box">
                     <p class="tit">당 타행 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
-                    <div>
+                    <div class="inbox">
                         <DoughnutChart :chartData="tranData" class="chart" />
+                        <div class="info">
+                            <ul class="list withdraw">
+                                <li>출금 <strong>10,000</strong>만원</li>
+                                <li>당행 <b>40,000</b>만원</li>
+                                <li>타행 <b>60,000</b>만원</li>
+                            </ul>
+                            <ul class="list deposit">
+                                <li>입금 <strong>999,999,000</strong>만원</li>
+                                <li>당행 <b>999,999,000</b>만원</li>
+                                <li>타행 <b>60,000</b>만원</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="chart_box">
