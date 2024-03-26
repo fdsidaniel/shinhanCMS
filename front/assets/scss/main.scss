@@ -5383,6 +5383,11 @@ input.i_basics{
                             }
                         }
                     }
+                    &.batch{
+                        .chart{
+                            height:268px;
+                        }
+                    }
                 }
 
                 .state_info{

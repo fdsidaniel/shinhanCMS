@@ -233,7 +233,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="chart_box">
+                <div class="chart_box batch">
                     <p class="tit">일괄 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
                     <PieChart :chartData="totTranData" class="chart" />
                 </div>

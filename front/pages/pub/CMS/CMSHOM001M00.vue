@@ -704,8 +704,12 @@
                     <p class="tit">당 타행 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
                     <!-- <DoughnutChart :chartData="tranData" class="chart" /> -->
                     <BarChart :chartData="tranData" class="chart" />
+                    <div class="txt">
+                        <span>출금 <b>10,000</b>만원</span>
+                        <span>입금 <b>1,000</b>만원</span>
+                    </div>
                 </div>
-                <div class="chart_box">
+                <div class="chart_box batch">
                     <p class="tit">일괄 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
                     <PieChart :chartData="totTranData" class="chart" />
                 </div>
