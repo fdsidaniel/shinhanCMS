@@ -147,7 +147,7 @@
         <span>메인<br>(시스템 관리자)</span>
         <span>메인</span>
         <span class="ok"></span>
-        <span>2024-03-21</span>
+        <span>2024-03-22</span>
         <span class="etc">작업중</span>
       </li>
       <li>
@@ -160,8 +160,21 @@
         <span>메인<br>(기관 담당자)</span>
         <span>메인</span>
         <span class="ok"></span>
-        <span>2024-03-21</span>
+        <span>2024-03-22</span>
         <span class="etc">작업중</span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMSHOM001P01" class="vlink blue line">CMSHOM001P01</nuxt-link></span>
+        <span>기관 설정 선택 팝업</span>
+        <span>팝업</span>
+        <span class="ok">O</span>
+        <span>2024-03-26</span>
+        <span class="etc"></span>
       </li>
       <li>
         <span>원화(펌뱅킹)</span>
