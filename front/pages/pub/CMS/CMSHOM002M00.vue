@@ -99,7 +99,7 @@
     <!-- Today 승인 내역 -->
     <div class="main_mid org">
         <div class="today">
-            <strong>Today 승인 내역</strong> 사용자 승인 요청 건 이 <strong>5</strong>건 있습니다.
+            <strong>Today 승인 내역</strong> 사용자 승인 요청 건 이 <nuxt-link to="" class="btn_link">5</nuxt-link>건 있습니다.
         </div>
     </div>
     <!-- //Today 승인 내역 -->
