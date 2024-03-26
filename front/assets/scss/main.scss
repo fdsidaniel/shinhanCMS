@@ -5086,6 +5086,14 @@ input.i_basics{
             background-size: 25px 24px;
             background-position: left center;
             background-repeat: no-repeat;
+            .btn_link{
+                font-weight: 600;
+                &:hover{
+                    text-decoration: underline;
+                    text-decoration-color: #fff;
+                    text-underline-position: under;
+                }
+            }
         }
         &.org{
             margin-top:90px;
