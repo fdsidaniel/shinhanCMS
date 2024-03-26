@@ -4820,20 +4820,19 @@ input.i_basics{
                                         box-shadow: 0px 10px 12px 0px #0000001A;
                                     }
                                 }
-
-                                // &+li,
-                                // &+li+li{
-                                //     .btn_extend{
-                                //         display:none;
-                                //     }
-                                // }
-                                // &.last{
-                                //     &+li{
-                                //         .btn_extend{
-                                //             display:block;
-                                //         }
-                                //     }
-                                // }
+                                &+li,
+                                &+li+li{
+                                    .btn_extend{
+                                        display:none;
+                                    }
+                                }
+                                &.last{
+                                    &+li{
+                                        .btn_extend{
+                                            display:block;
+                                        }
+                                    }
+                                }
                             }
                             &.last{
                                 &.open{
@@ -4849,11 +4848,6 @@ input.i_basics{
                                         right:0;
                                     }
                                 }
-                            }                            
-                        }
-                        &:not(.open){
-                            .btn_extend{
-                                //display:none;
                             }
                         }
                     }
