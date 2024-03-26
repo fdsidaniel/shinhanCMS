@@ -127,35 +127,6 @@
                 </div>
             </div>
             <!-- chart -->
-
-            <!-- chart img sample 개발 시 삭제 -->
-            <div class="box mt_22">                
-                <div class="chart_box sample">
-                    <p class="tit">CPU</p>
-                    <img src="../../../assets/images/chart_1.png" alt="차트 이미지" class="chart_img">
-                    <ul class="remark cpu">
-                        <li class="use">사용</li>
-                        <li class="unused">미사용</li>
-                    </ul>
-                </div>
-                <div class="chart_box sample">
-                    <p class="tit">메모리</p>
-                    <img src="../../../assets/images/chart_2.png" alt="차트 이미지" class="chart_img">
-                    <ul class="remark memory">
-                        <li class="use">사용</li>
-                        <li class="unused">미사용</li>
-                    </ul>
-                </div>
-                <div class="chart_box sample">
-                    <p class="tit">디스크 현황</p>
-                    <img src="../../../assets/images/chart_3.png" alt="차트 이미지" class="chart_img">
-                    <ul class="remark disk">
-                        <li class="use">사용</li>
-                        <li class="unused">미사용</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- //chart img sample -->
         </div>
         <!-- //서버 자원 현황 -->
 
