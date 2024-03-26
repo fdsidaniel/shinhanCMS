@@ -4,13 +4,10 @@
     
     <div class="main_top">
         <!-- 기관현황 -->
-        <div class="state_org_box">
+        <div class="state_org_box org">
             <div class="left">
-                <h2>기관현황</h2>
-                <div class="config">
-                    <span class="org_cnt">999개 기관</span>
-                    <nuxt-link to="" class="btn_org_cfg">기관 설정</nuxt-link>
-                </div>
+                <h2>군인공제회<br>기관 담당자님</h2>
+                <p class="txt">표준 펌뱅킹 시스템 방문을 환영합니다.</p>
             </div>
             <div class="right">
                 <ul class="state_tot">
@@ -31,220 +28,78 @@
         </div>
         <!-- //기관현황 -->
 
-        <!-- 기관별 오류 현황 -->
-        <div class="state_org_err_box">
-            <h3>기관별 오류 현황</h3>
-            <div class="slide_wrap">
-                <v-btn class="vbtn line btn_prev" :class="{ 'off' : btnPrevView }" size="small" @click="btnPrev">이전</v-btn>
-                <div class="slide_box">
-                    <ul class="slide_list" :style="{ width: liItemWidthTot + 'px', transform: 'translateX(' + move + 'px)' }">
-                        <li>
-                            <div class="box">
-                                <div class="tit">
-                                    <span>신한은행</span>
-                                    <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
-                                    <v-btn class="vbtn btn_view_cfg on" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
-                                </div>
-                                <div class="before">
-                                    <ul class="err_list">
-                                        <li>
-                                            <span>타임아웃</span>
-                                            <nuxt-link to="" class="btn_link" :class="{ 'black': timeOut > 0 }">{{ timeOut }}</nuxt-link>
-                                        </li>
-                                        <li>
-                                            <span>타행불능</span>
-                                            <nuxt-link to="" class="btn_link" :class="{ 'black': impossible > 0 }">{{ impossible }}</nuxt-link>
-                                        </li>
-                                        <li>
-                                            <span>네트워크 오류</span>
-                                            <nuxt-link to="" class="btn_link" :class="{ 'black': networkErr > 0 }">{{ networkErr }}</nuxt-link>
-                                        </li>
-                                        <li>
-                                            <span>처리 오류</span>
-                                            <nuxt-link to="" class="btn_link" :class="{ 'black': processErr > 0 }">{{ processErr }}</nuxt-link>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="after">
-                                    <div class="err_box">
-                                        <div class="left">
-                                            <ul class="err_list">
-                                                <li class="all">
-                                                    <span>전체</span>
-                                                    <strong>999</strong>
-                                                </li>
-                                                <li class="time_out">
-                                                    <span>타임아웃</span>
-                                                    <strong>10</strong>
-                                                </li>
-                                                <li class="impossible">
-                                                    <span>타행불능</span>
-                                                    <strong>10</strong>
-                                                </li>
-                                                <li class="network_err">
-                                                    <span>네트워크 오류</span>
-                                                    <strong>10</strong>
-                                                </li>
-                                                <li class="process_err">
-                                                    <span>처리 오류</span>
-                                                    <strong>10</strong>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="right">
-                                            <div class="scroll">
-                                                <ul class="err_detail_list">
-                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 1건 발생하였습니다.</li>
-                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 2건 발생하였습니다.</li>
-                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타행불능 3건 발생하였습니다.</li>
-                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 1건 발생하였습니다.</li>
-                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다. 처리오류 오류 1건 발생하였습니다.</li>
-                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 2건 발생하였습니다.</li>
-                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 3건 발생하였습니다.</li>
-                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 4건 발생하였습니다.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="btn_extend" @click="viewExtend">확장</p>
-                        </li>
-                        <li>
-                            <div class="box">
-                                <div class="tit">
-                                    <span>한마정보통신</span>
-                                    <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
-                                    <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
-                                </div>
-                                <div class="before">
-                                    <ul class="err_list">
-                                        <li>
-                                            <span>타임아웃</span>
-                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
-                                        </li>
-                                        <li>
-                                            <span>타행불능</span>
-                                            <nuxt-link to="" class="btn_link black">123</nuxt-link>
-                                        </li>
-                                        <li>
-                                            <span>네트워크 오류</span>
-                                            <nuxt-link to="" class="btn_link black">1</nuxt-link>
-                                        </li>
-                                        <li>
-                                            <span>처리 오류</span>
-                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="after">
-                                확장내용 222
-                                </div>
-                            </div>
-                            <p class="btn_extend" @click="viewExtend">확장</p>
-                        </li>
-                        <li>
-                            <div class="box">
-                                <div class="tit">
-                                    <span>신한기관정부</span>
-                                    <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
-                                    <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
-                                </div>
-                                <div class="before">
-                                    <div>
-                                        내용333
-                                    </div>
-                                </div>
-                                <div class="after">
-                                확장내용 333
-                                </div>
-                            </div>
-                            <p class="btn_extend" @click="viewExtend">확장</p>
-                        </li>
-                        <li>
-                            <div class="box">
-                                <div class="tit">
-                                    <span>신한은행2</span>
-                                    <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
-                                    <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
-                                </div>
-                                <div class="before">
-                                    <div>
-                                        내용444
-                                    </div>
-                                </div>
-                                <div class="after">
-                                확장내용 444
-                                </div>
-                            </div>
-                            <p class="btn_extend" @click="viewExtend">확장</p>
-                        </li>
-                        <li>
-                            <div class="box">
-                                <div class="tit">
-                                    <span>신한은행3</span>
-                                    <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
-                                    <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
-                                </div>
-                                <div class="before">
-                                    <div>
-                                        내용555
-                                    </div>
-                                </div>
-                                <div class="after">
-                                확장내용 555
-                                </div>
-                            </div>
-                            <p class="btn_extend" @click="viewExtend">확장</p>
-                        </li>
-                        <li>
-                            <div class="box">
-                                <div class="tit">
-                                    <span>신한기관정부</span>
-                                    <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
-                                    <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
-                                </div>
-                                <div class="before">
-                                    <div>
-                                        내용666
-                                    </div>
-                                </div>
-                                <div class="after">
-                                확장내용 666
-                                </div>
-                            </div>
-                            <p class="btn_extend" @click="viewExtend">확장</p>
-                        </li>
-                        <li>
-                            <div class="box">
-                                <div class="tit">
-                                    <span>신한기관정부2</span>
-                                    <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
-                                    <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
-                                </div>
-                                <div class="before">
-                                    <div>
-                                        내용777
-                                    </div>
-                                </div>
-                                <div class="after">
-                                확장내용 777
-                                </div>
-                            </div>
-                            <p class="btn_extend" @click="viewExtend">확장</p>
-                        </li>
-                    </ul>
+        <!-- 오류 현황 -->
+        <div class="state_org_err_box org">
+            <h3>오류 현황</h3>
+            <div class="error_wrap">
+                <ul class="err_list">
+                    <li>
+                        <span>타임아웃</span>
+                        <nuxt-link to="" class="btn_link" :class="{ 'black': timeOut > 0 }">{{ timeOut }}</nuxt-link>
+                    </li>
+                    <li>
+                        <span>타행불능</span>
+                        <nuxt-link to="" class="btn_link" :class="{ 'black': impossible > 0 }">{{ impossible }}</nuxt-link>
+                    </li>
+                    <li>
+                        <span>네트워크 오류</span>
+                        <nuxt-link to="" class="btn_link" :class="{ 'black': networkErr > 0 }">{{ networkErr }}</nuxt-link>
+                    </li>
+                    <li>
+                        <span>처리 오류</span>
+                        <nuxt-link to="" class="btn_link" :class="{ 'black': processErr > 0 }">{{ processErr }}</nuxt-link>
+                    </li>
+                </ul>
+
+                <div class="err_box">
+                    <div class="left">
+                        <ul class="err_list">
+                            <li class="all">
+                                <span>전체</span>
+                                <strong>999</strong>
+                            </li>
+                            <li class="time_out">
+                                <span>타임아웃</span>
+                                <strong>10</strong>
+                            </li>
+                            <li class="impossible">
+                                <span>타행불능</span>
+                                <strong>10</strong>
+                            </li>
+                            <li class="network_err">
+                                <span>네트워크 오류</span>
+                                <strong>10</strong>
+                            </li>
+                            <li class="process_err">
+                                <span>처리 오류</span>
+                                <strong>10</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div class="scroll">
+                            <ul class="err_detail_list">
+                                <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 1건 발생하였습니다.</li>
+                                <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 2건 발생하였습니다.</li>
+                                <li><b>신한은행기관관리부</b> [02.15 14:12] 타행불능 3건 발생하였습니다.</li>
+                                <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 1건 발생하였습니다.</li>
+                                <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다. 처리오류 오류 1건 발생하였습니다.</li>
+                                <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 2건 발생하였습니다.</li>
+                                <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 3건 발생하였습니다.</li>
+                                <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 4건 발생하였습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <v-btn class="vbtn line btn_next" :class="{ 'off' : btnNextView }" size="small" @click="btnNext">다음</v-btn>
             </div>
         </div>
-        <!-- //기관별 오류 현황 -->
+        <!-- //오류 현황 -->
     </div>
 
     <!-- Today 승인 내역 -->
-    <div class="main_mid">
+    <div class="main_mid org">
         <div class="today">
-            <strong>Today 승인 내역</strong> 사용자 승인 요청 건 이 5건 있습니다.
+            <strong>Today 승인 내역</strong> 사용자 승인 요청 건 이 <strong>5</strong>건 있습니다.
         </div>
     </div>
     <!-- //Today 승인 내역 -->
@@ -308,10 +163,6 @@
         <div class="row">
             <div class="tit_box">
                 <h3> 실시간 진행 상황</h3>
-                <div>
-                    <!-- <ComSelectBox groupCode="01" v-model="org" :items="orgItems" :isDefault="false" class="s_basics none_details" /> -->
-                    <v-btn class="vbtn line btn_orgall" size="small">기관전체</v-btn>
-                </div>
             </div>
             <div class="box">
                 <div class="state_info">
@@ -379,10 +230,6 @@
                         <div class="scroll">
                             <ul class="list">
                                 <li><b>[오류발생]</b>[어플리케이션] 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다.</li>
-                                <li><b>[오류발생]</b>[어플리케이션] 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다.</li>
-                                <li><b>[오류발생]</b>[어플리케이션] 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다. 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다. 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다. 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다.</li>
-                                <li><b>[오류발생]</b>[어플리케이션] 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다.</li>
-                                <li><b>[오류발생]</b>[어플리케이션] 신한은행기관관리부 DB 커넥션 에러가 1건 발생하였습니다.</li>
                             </ul>
                         </div>
                     </div>
@@ -399,42 +246,16 @@
             <div class="box">
                 <div class="chart_box">
                     <p class="tit">당 타행 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
-                    <DoughnutChart :chartData="tranData" class="chart" />
-                    <!-- <BarChart :chartData="tranData" class="chart" /> -->
+                    <div>
+                        <DoughnutChart :chartData="tranData" class="chart" />
+                    </div>
                 </div>
                 <div class="chart_box">
                     <p class="tit">일괄 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
                     <PieChart :chartData="totTranData" class="chart" />
                 </div>
             </div>
-            <!-- chart -->
-
-            <!-- chart img sample 개발 시 삭제 -->
-            <div class="box">
-                <div class="chart_box sample">
-                    <p class="tit">당 타행 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
-                    <div class="mt_23">
-                        <img src="../../../assets/images/chart_4.png" alt="차트 이미지" class="chart_img">
-                        <img src="../../../assets/images/chart_5.png" alt="차트 이미지" class="chart_img ml_126">
-                        <div class="txt">
-                            <span>출금 <b>10,000</b>만원</span>
-                            <span>입금 <b>1,000</b>만원</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="chart_box sample other">
-                    <p class="tit">일괄 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
-                    <div class="chart_img_box">
-                        <img src="../../../assets/images/chart_6.png" alt="차트 이미지" class="chart_img">
-                        <img src="../../../assets/images/chart_7.png" alt="차트 이미지" class="chart_img">
-                        <ul class="remark tot_tran">
-                            <li class="succ">성공 건 수 20건</li>
-                            <li class="fail">실패 건 수 10건</li>
-                        </ul>
-                    </div>                    
-                </div>
-            </div>
-            <!-- //chart img sample -->
+            <!-- chart -->            
         </div>
         <!-- //이체 별 현황 -->
     </div>
@@ -534,19 +355,6 @@ const transferErrorType = () => {
     }, delay)
 };
 
-// 기관 노출
-const btnViewCfgIdx = ref()
-const btnViewCfg = (event) => {
-    const elements = event.target.parentElement.parentElement.parentElement.parentElement.querySelectorAll('.btn_view_cfg')
-    const index = Array.from(elements).indexOf(event.target)
-    btnViewCfgIdx.value = index
-    if(elements[btnViewCfgIdx.value].classList.contains("on")){
-        elements[btnViewCfgIdx.value].classList.remove("on")
-    }else{
-        elements[btnViewCfgIdx.value].classList.add("on")
-    }
-};
-
 // 타임아웃 color
 const timeOut = ref(0)
 // 타행불능
@@ -555,110 +363,6 @@ const impossible = ref(1)
 const networkErr = ref(3)
 // 처리 오류
 const processErr = ref(0)
-
-// 확장 버튼
-const btnIdx = ref()
-let ulTemp
-let liTemp
-const viewExtend = (event) => {
-    const lis = event.target.parentElement.parentElement.querySelectorAll('.btn_extend')
-    const index = Array.from(lis).indexOf(event.target)
-    btnIdx.value = index
-    const liElements = document.querySelectorAll(".slide_list li .btn_extend")
-
-    if (lis[btnIdx.value].parentElement.classList.contains('open')) {
-        lis[btnIdx.value].parentElement.classList.remove('open')
-        lis[btnIdx.value].innerHTML = '확장'
-        
-    } else {
-        liElements.forEach((li) => {
-            li.parentElement.classList.remove('open')
-        });
-        lis[btnIdx.value].parentElement.classList.add("open")
-        lis[btnIdx.value].innerHTML = '축소'
-    }
-};
-// slide li width
-let liMarginLeft = 20 // li margin-left
-let liItem // li
-let liItemWidth // li width
-const liWidth = () => {
-    liItem = document.querySelector('.slide_list > li')
-    liItemWidth = liItem.offsetWidth + liMarginLeft
-}
-// slide ul width
-let liItemAll // li all
-let liItemCnt // li length
-let slidesPerView = 4 // slide view cnt
-const slidesPerViewMove = ref(0)
-const liItemWidthTot = ref(0); // li all width
-const ulWidth = () => {
-    liItemAll =  document.querySelectorAll(".slide_list > li")
-    liItemCnt = liItemAll.length
-    liItemWidthTot.value = liItemCnt * liItemWidth - liMarginLeft
-    slidesPerViewMove.value = liItemCnt - slidesPerView
-    ulTemp = liItemWidthTot.value
-};
-// 이전 다음 버튼
-const btnPrevView = ref(true)
-const btnNextView = ref(true)
-const btnPrevNextView = () => {
-    if(slidesPerViewMove.value < liItemCnt){
-        btnNextView.value = false
-    }
-    if(slidesPerViewMove.value === 0){
-        btnNextView.value = true
-    }
-    if(slidesPerViewMove.value < liItemCnt - slidesPerView){
-        btnPrevView.value = false
-    }else if(slidesPerViewMove.value === liItemCnt - slidesPerView){
-        btnPrevView.value = true
-    }
-    // 확장 닫기
-    const lielements = document.querySelectorAll('.slide_list > li')
-    lielements.forEach(element => {
-        element.classList.remove('open')
-    })
-};
-const move = ref(0);
-const btnPrev = () => {
-    if(slidesPerViewMove.value < liItemCnt - slidesPerView){
-        slidesPerViewMove.value +=1
-        move.value += liItemWidth;
-        slideViewLastLeft -= 1
-        slideViewLastRight -= 1
-    }
-    if(slidesPerViewMove.value === liItemCnt - slidesPerView){
-        console.log('슬라이드 : 처음')
-    }
-    btnPrevNextView()
-    slideView()   
-};
-const btnNext = () => {
-    if(slidesPerViewMove.value > 0){
-        slidesPerViewMove.value -=1
-        move.value -= liItemWidth;
-        slideViewLastLeft += 1
-        slideViewLastRight += 1
-    }
-    if(slidesPerViewMove.value === 0){
-        console.log('슬라이드 : 마지막')
-    }
-    btnPrevNextView()
-    slideView()
-};
-// slideView last li
-let slideViewLastLeft = slidesPerView - 2 // slide view last left li
-let slideViewLastRight = slidesPerView - 1 // slide view last right li
-const slideView = () => {
-    const lielements = document.querySelectorAll('.slide_list > li');
-    lielements.forEach(element => {
-        element.classList.remove('last')
-    })
-
-    lielements[slideViewLastLeft].classList.add('last')
-    lielements[slideViewLastRight].classList.add('last')
-}
 
 // 차트
 import { DoughnutChart } from 'vue-chart-3';
@@ -708,12 +412,6 @@ const diskData = {
 // 실시간 진행 상황
 import ComSelectBox from '@/components/common/ComSelectBox.vue'
 
-const org = ref('001')
-const orgItems = ref([
-  { title: '기관전체', value: '001' },
-  { title: '기관명기관명기관명', value: '002' },
-])
-
 const stateListOver = (event) => {
     const states = document.querySelectorAll('.state_list');
     const index = Array.from(states).indexOf(event.target)
@@ -725,15 +423,15 @@ const stateListOver = (event) => {
 }
 
 // 당 타행 이체 현황 조회
-import { BarChart } from 'vue-chart-3';
 const tranData = {
   labels: ['당행 출금', '당행 입금', '타행 출금', '타행 입금'],
   datasets: [
     {
-      data: [40, 20, 30, 20],      
-      backgroundColor: ['#5D47E5', '#FF6363', '#ECE8FF', '#FEB03D'],
+      label: '당행 출금',
+      data: [40, 20, 30, 20],
+      backgroundColor: ['#5D47E5', '#F7C929', '#797F9A', '#FF6363'],
 
-      indexAxis: 'y',
+      //indexAxis: 'y',
     },
   ],
 };
@@ -758,11 +456,6 @@ onMounted(() => {
     transferTotType() // 이체현황 총
     transferNormalType() // 이체 정상
     transferErrorType() // 이체 오류
-
-    liWidth() //slide li width
-    ulWidth() //slide ul width
-    btnPrevNextView() // 이전 다음 버튼
-    slideView() // slideView last li
 })
 
 onBeforeUnmount(() => {

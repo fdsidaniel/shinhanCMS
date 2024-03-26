@@ -547,7 +547,7 @@
     <!-- Today 승인 내역 -->
     <div class="main_mid">
         <div class="today">
-            <strong>Today 승인 내역</strong> 사용자 승인 요청 건 이 5건 있습니다.
+            <strong>Today 승인 내역</strong> 사용자 승인 요청 건 이 <strong>5</strong>건 있습니다.
         </div>
     </div>
     <!-- //Today 승인 내역 -->
@@ -734,7 +734,7 @@
                             <li class="succ">성공 건 수 20건</li>
                             <li class="fail">실패 건 수 10건</li>
                         </ul>
-                    </div>                    
+                    </div>
                 </div>
             </div>
             <!-- //chart img sample -->
@@ -1035,7 +1035,7 @@ const tranData = {
     {
       label: '당행 출금',
       data: [40, 20, 30, 20],
-      backgroundColor: ['#5D47E5', '#FF6363', '#ECE8FF', '#FEB03D'],
+      backgroundColor: ['#5D47E5', '#F7C929', '#797F9A', '#FF6363'],
 
       //indexAxis: 'y',
     },

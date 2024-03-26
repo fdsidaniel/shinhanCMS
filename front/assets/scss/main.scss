@@ -4300,6 +4300,28 @@ input.i_basics{
     .main_top{
         .state_org_box{
             display: flex;
+            &.org{
+                .left{
+                    h2{
+                        font-size: 40px;
+                        font-weight: 700;
+                        line-height: 50px;
+                        &:after{
+                            display: none;
+                        }
+                    }
+                    .txt{
+                        margin-top:10px;
+                        color:#331CBF;
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 28px;
+                    }
+                }
+                .right{
+                    margin-left:53px;
+                }
+            }
             .left{
                 h2{
                     position: relative;
@@ -4485,7 +4507,7 @@ input.i_basics{
             }
         }
         .state_org_err_box{
-            margin-top:50px;
+            margin-top:50px;            
             h3{
                 display: inline-block;
                 font-size: 24px;
@@ -4872,6 +4894,178 @@ input.i_basics{
                     }
                 }
             }
+            &.org{
+                .error_wrap{                    
+                    display: flex;
+                    height:230px;
+                    margin-top:14px;
+
+                    >.err_list{
+                        width:305px;
+                        padding:36px 30px;
+                        border-radius: 20px;
+                        background-color: #fff;
+
+                        li{
+                            display:flex;
+                            height:32px;
+                            align-items: center;
+                            justify-content: space-between;
+                            color:#565C63;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            &+li{
+                                margin-top:10px;
+                            }
+                            &:hover{
+                                .btn_link{
+                                    color: #331CBF !important;
+                                    text-decoration: underline;
+                                    text-decoration-color: #331CBF;
+                                    text-underline-position: under;
+                                }
+                            }
+                            .btn_link{
+                                font-size: 20px;
+                                font-weight: 700;
+                                line-height: 32px;
+                                color:#B9C1C9;
+                                &.black{
+                                    color:#121619;
+                                }
+                            }
+                        }
+                    }
+                    .err_box{
+                        display: flex;
+                        margin-left:20px;
+                        padding:30px;
+                        border-radius: 20px;
+                        background-color: #fff;
+                        .left{
+                            width:250px;
+                            flex-shrink: 0;
+                            .err_list{
+                                li{
+                                    display:flex;
+                                    height:30px;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    color:#565C63;
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    line-height: 24px;
+                                    cursor: pointer;
+                                    &+li{
+                                        margin-top:5px;
+                                    }
+                                    &:hover{
+                                        >span{
+                                            color:#331CBF;
+                                            font-weight: 700;
+                                        }
+                                    }
+                                    strong{
+                                        display:inline-block;
+                                        min-width:36px;
+                                        padding:0 5px;
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        line-height: 22px;
+                                        text-align: center;
+                                        border-radius: 14px;
+                                    }
+                                    &.all{
+                                        strong{
+                                            color:#fff;
+                                            background: #21272A;
+                                        }
+                                    }
+                                    &.time_out{
+                                        strong{
+                                            color:#331CBF;
+                                            background: #E1DCFF;
+                                        }
+                                    }
+                                    &.impossible{
+                                        strong{
+                                            color:#F63232;
+                                            background: #FFE2E6;
+                                        }
+                                    }
+                                    &.network_err{
+                                        strong{
+                                            color:#009B7C;
+                                            background: #DFF5EB;
+                                        }
+                                    }
+                                    &.process_err{
+                                        strong{
+                                            color:#FF6B00;
+                                            background: #FFF5DD;
+                                        }
+                                    }                                                    
+                                }
+                            }
+                        }
+                        .right{
+                            flex:1;
+                            width:645px;
+                            padding-left:27px;
+                            .scroll{
+                                overflow-y: auto;
+                                height: 170px;
+                                padding-left:30px;
+                                direction: rtl;
+
+                                &::-webkit-scrollbar {
+                                    width: 3px; //스크롤바 너비
+                                }
+
+                                &::-webkit-scrollbar-thumb {
+                                    height: 30%; //스크롤바 길이
+                                    background: #565C63; //스크롤바 색상
+                                    border-radius: 0;
+                                }
+
+                                &::-webkit-scrollbar-track {
+                                    background: #E1E6EC; //스크롤바 배경 색상
+                                }
+                            }
+                            .err_detail_list{
+                                position: relative;
+                                padding:0;
+                                direction: ltr;
+                                li{
+                                    &+li{
+                                        margin-top:12.5px;
+                                    }
+                                    color:#565C63;
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    line-height: 24px;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    word-break: break-all;
+                                    b{
+                                        font-weight: 700;
+                                    }
+                                    &.nothing{
+                                        position: absolute;
+                                        top:66px;
+                                        left:50%;
+                                        transform: translateX(-50%);
+                                        color: #121619;
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -4892,6 +5086,9 @@ input.i_basics{
             background-size: 25px 24px;
             background-position: left center;
             background-repeat: no-repeat;
+        }
+        &.org{
+            margin-top:90px;
         }
     }
 
@@ -5197,14 +5394,14 @@ input.i_basics{
                     }                    
                     .state_list_info{
                         width:1280px;
-                        height:124px;
+                        max-height:124px;
                         margin-top:20px;
                         padding:16px 30px;
                         border-radius: 10px;
                         background: #FFEAED;                        
                         .scroll{
                             overflow-y: auto;
-                            height:92px;
+                            max-height:92px;
                             &::-webkit-scrollbar {
                                 width: 8px; //스크롤바 너비
                             }
