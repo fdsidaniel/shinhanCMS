@@ -83,7 +83,7 @@
         <span>메인</span>
         <span class="ok">O</span>
         <span>2024-03-13</span>
-        <span class="etc"></span>
+        <span class="etc">로그인 페이지는 default.vue 파일 class="container" 에 login class 추가</span>
       </li>
       <li>
         <span></span>
@@ -96,7 +96,7 @@
         <span>메인</span>
         <span class="ok">O</span>
         <span>2024-03-13</span>
-        <span class="etc"></span>
+        <span class="etc">아이디 찾기, 비밀번호 재설정 페이지는 default.vue 파일 class="container" 에 before class 추가</span>
       </li>
       <li>
         <span></span>
@@ -146,9 +146,9 @@
         <span><nuxt-link to="/pub/CMS/CMSHOM001M00" class="vlink blue line">CMSHOM001M00</nuxt-link></span>
         <span>메인<br>(시스템 관리자)</span>
         <span>메인</span>
-        <span class="ok"></span>
-        <span>2024-03-22</span>
-        <span class="etc">작업중</span>
+        <span class="ok">O</span>
+        <span>2024-03-26</span>
+        <span class="etc">메인 페이지는 default.vue 파일 class="container" 에 main class 추가</span>
       </li>
       <li>
         <span></span>
@@ -159,9 +159,9 @@
         <span><nuxt-link to="/pub/CMS/CMSHOM002M00" class="vlink blue line">CMSHOM002M00</nuxt-link></span>
         <span>메인<br>(기관 담당자)</span>
         <span>메인</span>
-        <span class="ok"></span>
-        <span>2024-03-22</span>
-        <span class="etc">작업중</span>
+        <span class="ok">O</span>
+        <span>2024-03-26</span>
+        <span class="etc"></span>
       </li>
       <li>
         <span></span>
