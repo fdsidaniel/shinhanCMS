@@ -44,7 +44,7 @@
                         <li>
                             <div class="box">
                                 <div class="tit">
-                                    <span>신한은행</span>
+                                    <span>신한은행111</span>
                                     <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
                                     <v-btn class="vbtn btn_view_cfg on" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
                                 </div>
@@ -116,7 +116,7 @@
                         <li>
                             <div class="box">
                                 <div class="tit">
-                                    <span>한마정보통신</span>
+                                    <span>한마정보통신222</span>
                                     <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
                                     <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
                                 </div>
@@ -149,7 +149,7 @@
                         <li>
                             <div class="box">
                                 <div class="tit">
-                                    <span>신한기관정부</span>
+                                    <span>신한기관정부333</span>
                                     <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
                                     <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
                                 </div>
@@ -167,7 +167,7 @@
                         <li>
                             <div class="box">
                                 <div class="tit">
-                                    <span>신한은행2</span>
+                                    <span>신한은행444</span>
                                     <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
                                     <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
                                 </div>
@@ -185,7 +185,7 @@
                         <li>
                             <div class="box">
                                 <div class="tit">
-                                    <span>신한은행3</span>
+                                    <span>신한은행555</span>
                                     <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
                                     <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
                                 </div>
@@ -203,7 +203,7 @@
                         <li>
                             <div class="box">
                                 <div class="tit">
-                                    <span>신한기관정부</span>
+                                    <span>신한기관정부666</span>
                                     <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
                                     <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
                                 </div>
@@ -221,7 +221,7 @@
                         <li>
                             <div class="box">
                                 <div class="tit">
-                                    <span>신한기관정부2</span>
+                                    <span>신한기관정부777</span>
                                     <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
                                     <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
                                 </div>
@@ -569,14 +569,15 @@ const viewExtend = (event) => {
     if (lis[btnIdx.value].parentElement.classList.contains('open')) {
         lis[btnIdx.value].parentElement.classList.remove('open')
         lis[btnIdx.value].innerHTML = '확장'
-        
+        document.querySelector('.slide_list').classList.remove('active')
     } else {
         liElements.forEach((li) => {
             li.parentElement.classList.remove('open')
         });
         lis[btnIdx.value].parentElement.classList.add("open")
         lis[btnIdx.value].innerHTML = '축소'
-    }
+        document.querySelector('.slide_list').classList.add('active')
+    }    
 };
 // slide li width
 let liMarginLeft = 20 // li margin-left
@@ -626,6 +627,7 @@ const btnPrev = () => {
     if(slidesPerViewMove.value < liItemCnt - slidesPerView){
         slidesPerViewMove.value +=1
         move.value += liItemWidth;
+        slideViewLastfirst -= 1
         slideViewLastLeft -= 1
         slideViewLastRight -= 1
     }
@@ -639,6 +641,7 @@ const btnNext = () => {
     if(slidesPerViewMove.value > 0){
         slidesPerViewMove.value -=1
         move.value -= liItemWidth;
+        slideViewLastfirst += 1
         slideViewLastLeft += 1
         slideViewLastRight += 1
     }
@@ -649,14 +652,17 @@ const btnNext = () => {
     slideView()
 };
 // slideView last li
+let slideViewLastfirst = slidesPerView - slidesPerView // slide view first li
 let slideViewLastLeft = slidesPerView - 2 // slide view last left li
 let slideViewLastRight = slidesPerView - 1 // slide view last right li
 const slideView = () => {
     const lielements = document.querySelectorAll('.slide_list > li');
     lielements.forEach(element => {
         element.classList.remove('last')
+        element.classList.remove('first')
     })
 
+    lielements[slideViewLastfirst].classList.add('first')
     lielements[slideViewLastLeft].classList.add('last')
     lielements[slideViewLastRight].classList.add('last')
 }

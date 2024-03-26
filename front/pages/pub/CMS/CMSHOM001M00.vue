@@ -17,17 +17,14 @@
                     <li class="tot">
                         <p>이체현황 총</p>
                         <strong class="transfer_tot" :class="{ 'zero': transferTot == 0 }">0</strong>
-                        <v-btn class="vbtn line sample" size="small" @click="transferTotType">카운팅</v-btn>
                     </li>
                     <li class="normal">
                         <p>이체 정상</p>
                         <strong class="transfer_normal" :class="{ 'zero': transferNormal == 0 }">0</strong>
-                        <v-btn class="vbtn line sample" size="small" @click="transferNormalType">카운팅</v-btn>
                     </li>
                     <li class="error">
                         <p>이체 오류</p>
                         <strong class="transfer_error" :class="{ 'zero': transferError == 0 }">0</strong>
-                        <v-btn class="vbtn line sample" size="small" @click="transferErrorType">카운팅</v-btn>
                     </li>
                 </ul>
             </div>
@@ -591,7 +588,6 @@ let liItemAll // li all
 let liItemCnt // li length
 let slidesPerView = 4 // slide view cnt
 const slidesPerViewMove = ref(0)
-//let liItemWidthTot
 const liItemWidthTot = ref(0); // li all width
 const ulWidth = () => {
     liItemAll =  document.querySelectorAll(".slide_list > li")
