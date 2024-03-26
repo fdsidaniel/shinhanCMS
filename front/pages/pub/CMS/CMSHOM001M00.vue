@@ -138,7 +138,43 @@
                                     </ul>
                                 </div>
                                 <div class="after">
-                                확장내용 222
+                                    <div class="err_box">
+                                        <div class="left">
+                                            <ul class="err_list">
+                                                <li class="all">
+                                                    <span>전체</span>
+                                                    <strong>1</strong>
+                                                </li>
+                                                <li class="time_out">
+                                                    <span>타임아웃</span>
+                                                    <strong>1</strong>
+                                                </li>
+                                                <li class="impossible">
+                                                    <span>타행불능</span>
+                                                    <strong>1</strong>
+                                                </li>
+                                                <li class="network_err">
+                                                    <span>네트워크 오류</span>
+                                                    <strong>1</strong>
+                                                </li>
+                                                <li class="process_err">
+                                                    <span>처리 오류</span>
+                                                    <strong>0</strong>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <div class="scroll">
+                                                <ul class="err_detail_list">
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 2건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타행불능 3건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <p class="btn_extend" @click="viewExtend">확장</p>
@@ -151,12 +187,65 @@
                                     <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
                                 </div>
                                 <div class="before">
-                                    <div>
-                                        내용333
-                                    </div>
+                                    <ul class="err_list">
+                                        <li>
+                                            <span>타임아웃</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>타행불능</span>
+                                            <nuxt-link to="" class="btn_link black">1</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>네트워크 오류</span>
+                                            <nuxt-link to="" class="btn_link black">2</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>처리 오류</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <div class="after">
-                                확장내용 333
+                                    <div class="err_box">
+                                        <div class="left">
+                                            <ul class="err_list">
+                                                <li class="all">
+                                                    <span>전체</span>
+                                                    <strong>999</strong>
+                                                </li>
+                                                <li class="time_out">
+                                                    <span>타임아웃</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="impossible">
+                                                    <span>타행불능</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="network_err">
+                                                    <span>네트워크 오류</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="process_err">
+                                                    <span>처리 오류</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <div class="scroll">
+                                                <ul class="err_detail_list">
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 2건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타행불능 3건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <p class="btn_extend" @click="viewExtend">확장</p>
@@ -164,17 +253,66 @@
                         <li>
                             <div class="box">
                                 <div class="tit">
-                                    <span>신한은행2</span>
+                                    <span>그린모아</span>
                                     <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
                                     <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
                                 </div>
                                 <div class="before">
                                     <div>
-                                        내용444
+                                        <ul class="err_list">
+                                        <li>
+                                            <span>타임아웃</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>타행불능</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>네트워크 오류</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>처리 오류</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                    </ul>
                                     </div>
                                 </div>
                                 <div class="after">
-                                확장내용 444
+                                    <div class="err_box">
+                                        <div class="left">
+                                            <ul class="err_list">
+                                                <li class="all">
+                                                    <span>전체</span>
+                                                    <strong>0</strong>
+                                                </li>
+                                                <li class="time_out">
+                                                    <span>타임아웃</span>
+                                                    <strong>0</strong>
+                                                </li>
+                                                <li class="impossible">
+                                                    <span>타행불능</span>
+                                                    <strong>0</strong>
+                                                </li>
+                                                <li class="network_err">
+                                                    <span>네트워크 오류</span>
+                                                    <strong>0</strong>
+                                                </li>
+                                                <li class="process_err">
+                                                    <span>처리 오류</span>
+                                                    <strong>0</strong>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <div class="scroll">
+                                                <ul class="err_detail_list">
+                                                    <li class="nothing">오류 현황이 없습니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <p class="btn_extend" @click="viewExtend">확장</p>
@@ -182,17 +320,72 @@
                         <li>
                             <div class="box">
                                 <div class="tit">
-                                    <span>신한은행3</span>
+                                    <span>그린모아2</span>
                                     <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
                                     <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
                                 </div>
                                 <div class="before">
                                     <div>
-                                        내용555
+                                        <ul class="err_list">
+                                        <li>
+                                            <span>타임아웃</span>
+                                            <nuxt-link to="" class="btn_link black">2</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>타행불능</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>네트워크 오류</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>처리 오류</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                    </ul>
                                     </div>
                                 </div>
                                 <div class="after">
-                                확장내용 555
+                                    <div class="err_box">
+                                        <div class="left">
+                                            <ul class="err_list">
+                                                <li class="all">
+                                                    <span>전체</span>
+                                                    <strong>999</strong>
+                                                </li>
+                                                <li class="time_out">
+                                                    <span>타임아웃</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="impossible">
+                                                    <span>타행불능</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="network_err">
+                                                    <span>네트워크 오류</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="process_err">
+                                                    <span>처리 오류</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <div class="scroll">
+                                                <ul class="err_detail_list">
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 2건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타행불능 3건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <p class="btn_extend" @click="viewExtend">확장</p>
@@ -200,17 +393,72 @@
                         <li>
                             <div class="box">
                                 <div class="tit">
-                                    <span>신한기관정부</span>
+                                    <span>그린모아3</span>
                                     <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
                                     <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
                                 </div>
                                 <div class="before">
                                     <div>
-                                        내용666
+                                        <ul class="err_list">
+                                        <li>
+                                            <span>타임아웃</span>
+                                            <nuxt-link to="" class="btn_link black">3</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>타행불능</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>네트워크 오류</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>처리 오류</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                    </ul>
                                     </div>
                                 </div>
                                 <div class="after">
-                                확장내용 666
+                                    <div class="err_box">
+                                        <div class="left">
+                                            <ul class="err_list">
+                                                <li class="all">
+                                                    <span>전체</span>
+                                                    <strong>999</strong>
+                                                </li>
+                                                <li class="time_out">
+                                                    <span>타임아웃</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="impossible">
+                                                    <span>타행불능</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="network_err">
+                                                    <span>네트워크 오류</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="process_err">
+                                                    <span>처리 오류</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <div class="scroll">
+                                                <ul class="err_detail_list">
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 2건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타행불능 3건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <p class="btn_extend" @click="viewExtend">확장</p>
@@ -218,17 +466,72 @@
                         <li>
                             <div class="box">
                                 <div class="tit">
-                                    <span>신한기관정부2</span>
+                                    <span>그린모아4</span>
                                     <nuxt-link to="" class="btn_org_home">기관 홈 바로가기</nuxt-link>
                                     <v-btn class="vbtn btn_view_cfg" size="small" @click="btnViewCfg">노출 기관 설정</v-btn>
                                 </div>
                                 <div class="before">
                                     <div>
-                                        내용777
+                                        <ul class="err_list">
+                                        <li>
+                                            <span>타임아웃</span>
+                                            <nuxt-link to="" class="btn_link black">4</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>타행불능</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>네트워크 오류</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                        <li>
+                                            <span>처리 오류</span>
+                                            <nuxt-link to="" class="btn_link">0</nuxt-link>
+                                        </li>
+                                    </ul>
                                     </div>
                                 </div>
                                 <div class="after">
-                                확장내용 777
+                                    <div class="err_box">
+                                        <div class="left">
+                                            <ul class="err_list">
+                                                <li class="all">
+                                                    <span>전체</span>
+                                                    <strong>999</strong>
+                                                </li>
+                                                <li class="time_out">
+                                                    <span>타임아웃</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="impossible">
+                                                    <span>타행불능</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="network_err">
+                                                    <span>네트워크 오류</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                                <li class="process_err">
+                                                    <span>처리 오류</span>
+                                                    <strong>10</strong>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <div class="scroll">
+                                                <ul class="err_detail_list">
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타임아웃 2건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 타행불능 3건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 네트워크오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다.</li>
+                                                    <li><b>신한은행기관관리부</b> [02.15 14:12] 처리오류 오류 1건 발생하였습니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <p class="btn_extend" @click="viewExtend">확장</p>
