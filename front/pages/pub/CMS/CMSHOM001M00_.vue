@@ -569,14 +569,12 @@ const viewExtend = (event) => {
     if (lis[btnIdx.value].parentElement.classList.contains('open')) {
         lis[btnIdx.value].parentElement.classList.remove('open')
         lis[btnIdx.value].innerHTML = '확장'
-        //document.querySelector('.slide_list').classList.remove('active')
     } else {
         liElements.forEach((li) => {
             li.parentElement.classList.remove('open')
         });
         lis[btnIdx.value].parentElement.classList.add("open")
         lis[btnIdx.value].innerHTML = '축소'
-        //document.querySelector('.slide_list').classList.add('active')
     }    
 };
 // slide li width
