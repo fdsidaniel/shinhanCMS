@@ -1,6 +1,6 @@
 <template>
   <Header v-if="isShowHeader" />
-  <div class="container"><!-- 로그인 페이지 class login 추가 / 아이디 찾기, 비밀번호 재설정 class before 추가 / 메인 class main 추가 -->
+  <div class="container main"><!-- 로그인 페이지 class login 추가 / 아이디 찾기, 비밀번호 재설정 class before 추가 / 메인 class main 추가 -->
     <!-- <Left v-if="isShowLeft" /> -->
     <div class="content">
       <!-- <template v-if="isShowNavigator"> 메뉴명 및 네이게이터 </template> -->
