@@ -241,6 +241,23 @@
             <!-- chart -->            
         </div>
         <!-- //이체 별 현황 -->
+
+        <!-- util -->
+        <div class="util">
+            <div class="col qna">
+                <nuxt-link to="" class="btn_tit">Q&amp;A</nuxt-link>
+                <div class="txt">궁금한 점을<br>해결해 드리겠습니다.</div>
+            </div>
+            <div class="col app">
+                <nuxt-link to="" class="btn_tit">사용자 가입 신청</nuxt-link>
+                <div class="txt">본인 외 사용자를<br>추가 신청하실 수 있습니다.</div>
+            </div>
+            <div class="col call">
+                <p class="tit">02-2151-8526</p>
+                <div class="txt">관리자 시스템<br>회원정보</div>
+            </div>
+        </div>
+        <!-- //util -->
     </div>
 
   </div>
@@ -282,7 +299,7 @@ const transferTotType = () => {
     }, delay)
 };
 // 이체 정상
-const transferNormal = ref('20')
+const transferNormal = ref('160')
 // 이체 정상 숫자 카운팅 효과
 const transferNormalType = () => {
     const element = document.querySelector('.transfer_normal')
@@ -310,7 +327,7 @@ const transferNormalType = () => {
     }, delay)
 };
 // 이체 오류
-const transferError = ref('0')
+const transferError = ref('160')
 // 이체 오류 숫자 카운팅 효과
 const transferErrorType = () => {
     const element = document.querySelector('.transfer_error')
