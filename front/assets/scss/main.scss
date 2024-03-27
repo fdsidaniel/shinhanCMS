@@ -5412,19 +5412,19 @@ input.i_basics{
                             top: 50%;
                             left:50%;
                             transform: translate(-50%, -50%);
-                            margin: 0;
-                            &:before{
-                                content: '';
-                                position: absolute;
-                                top:50%;
-                                left:50%;
-                                width:194px;
-                                height:194px;
-                                margin-top:24px;
-                                border-radius: 100%;
-                                background-color: rgb(234 236 239 / 68%);
-                                transform: translate(-50%, -50%);
-                            }
+                            margin-top: 10px;
+                            // &:before{
+                            //     content: '';
+                            //     position: absolute;
+                            //     top:50%;
+                            //     left:50%;
+                            //     width:194px;
+                            //     height:194px;
+                            //     margin-top:14px;
+                            //     border-radius: 100%;
+                            //     background-color: rgb(234 236 239 / 68%);
+                            //     transform: translate(-50%, -50%);
+                            // }
                             .line {
                                 width: 8px;
                                 position: absolute;
@@ -5451,29 +5451,62 @@ input.i_basics{
                                     height: 75%;
                                 }
                             }
-                            &.loader1{
+                            &.loader_cpu{
                                 .line {
-                                    //background: linear-gradient(to bottom, #1ee95d, #5714ce);
-                                    //background: linear-gradient(92.38deg, #5350F6 -6.86%, #FEBB38 102.23%);
-                                    //background: linear-gradient(to bottom, #5350F6 , #5350F6);
                                     background: linear-gradient(180deg, #B09FFF 0%, #8D79F6 100%);
 
                                 }
                             }
-                            &.loader2{
+                            &.loader_memory{
                                 .line {
-                                    //background: linear-gradient(to bottom, #1ee95d, #5714ce);
-                                    //background: linear-gradient(92.38deg, #5350F6 -6.86%, #FEBB38 102.23%);
-                                    //background: linear-gradient(to bottom, #29C986 , #29C986);
                                     background: linear-gradient(180deg, #3BDB98 0%, #26C683 100%);
                                 }
                             }
-                            &.loader3{
+                            &.loader_disk{
                                 .line {
-                                    //background: linear-gradient(to bottom, #1ee95d, #5714ce);
-                                    //background: linear-gradient(92.38deg, #5350F6 -6.86%, #FEBB38 102.23%);
-                                    //background: linear-gradient(to bottom, #FACB2C , #FACB2C);
                                     background: linear-gradient(180deg, #FFDE9F 0%, #F9C718 100%);
+                                }
+                            }
+                            &.loader_tran{
+                                // &:before{
+                                //     width:571px;
+                                //     height:254px;
+                                //     margin-top:10px;
+                                //     border-radius: 0;
+                                // }
+                                .line {
+                                    background: linear-gradient(180deg, #B09FFF 0%, #8D79F6 100%);
+                                }
+                            }
+                            &.loader_tottran{
+                                // &:before{
+                                //     width: 232px;
+                                //     height: 234px;
+                                //     margin-top: 9px;
+                                // }
+                                .line {
+                                    background: linear-gradient(180deg, #B09FFF 0%, #8D79F6 100%);
+                                }
+                            }
+                            &.loader_tran2{
+                                // &:before{
+                                //     width:571px;
+                                //     height:254px;
+                                //     margin-top:10px;
+                                //     border-radius: 0;
+                                // }
+                                .line {
+                                    background: linear-gradient(180deg, #B09FFF 0%, #8D79F6 100%);
+                                }
+                            }
+                            &.loader_tottran2{
+                                // &:before{
+                                //     width: 234px;
+                                //     height: 234px;
+                                //     margin-top: 15px;
+                                // }
+                                .line {
+                                    background: linear-gradient(180deg, #B09FFF 0%, #8D79F6 100%);
                                 }
                             }
                         }

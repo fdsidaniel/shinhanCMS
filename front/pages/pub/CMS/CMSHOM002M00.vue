@@ -114,16 +114,43 @@
                     <p class="tit">CPU</p>
                     <DoughnutChart :chartData="cpuData" class="chart" />
                     <span class="use_data">{{ cpuUse }}%</span>
+                    <!-- chart load -->
+                    <div class="chart_loader_box" v-if="cpuVisible" @click="cpuLoadHide"><!-- v-if, @click 퍼블 화면 확인용 개발 시 삭제 -->
+                        <div class="chart_loader loader_cpu">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
+                            <div class="line line3"></div>
+                        </div>
+                    </div>
+                    <!-- //chart load -->
                 </div>
                 <div class="chart_box">
                     <p class="tit">메모리</p>
                     <DoughnutChart :chartData="memoryData" class="chart" />
                     <span class="use_data">{{ memoryUse }}%</span>
+                    <!-- chart load -->
+                    <div class="chart_loader_box" v-if="memoryVisible" @click="memoryLoadHide"><!-- v-if, @click 퍼블 화면 확인용 개발 시 삭제 -->
+                        <div class="chart_loader loader_memory">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
+                            <div class="line line3"></div>
+                        </div>
+                    </div>
+                    <!-- //chart load -->
                 </div>
                 <div class="chart_box">
                     <p class="tit">디스크 현황</p>
                     <DoughnutChart :chartData="diskData" class="chart" />
                     <span class="use_data">{{ diskUse }}%</span>
+                    <!-- chart load -->
+                    <div class="chart_loader_box" v-if="diskVisible" @click="diskLoadHide"><!-- v-if, @click 퍼블 화면 확인용 개발 시 삭제 -->
+                        <div class="chart_loader loader_disk">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
+                            <div class="line line3"></div>
+                        </div>
+                    </div>
+                    <!-- //chart load -->
                 </div>
             </div>
             <!-- chart -->
@@ -231,11 +258,29 @@
                                 <li>타행 <b>60,000</b>만원</li>
                             </ul>
                         </div>
+                        <!-- chart load -->
+                        <div class="chart_loader_box" v-if="tranVisible" @click="tranLoadHide"><!-- v-if, @click 퍼블 화면 확인용 개발 시 삭제 -->
+                            <div class="chart_loader loader_tran2">
+                                <div class="line line1"></div>
+                                <div class="line line2"></div>
+                                <div class="line line3"></div>
+                            </div>
+                        </div>
+                        <!-- //chart load -->
                     </div>
                 </div>
                 <div class="chart_box batch">
                     <p class="tit">일괄 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
                     <PieChart :chartData="totTranData" class="chart" />
+                    <!-- chart load -->
+                    <div class="chart_loader_box" v-if="totTranVisible" @click="totTranLoadHide"><!-- v-if, @click 퍼블 화면 확인용 개발 시 삭제 -->
+                        <div class="chart_loader loader_tottran2">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
+                            <div class="line line3"></div>
+                        </div>
+                    </div>
+                    <!-- //chart load -->
                 </div>
             </div>
             <!-- chart -->            
@@ -451,6 +496,28 @@ const totTranData = {
     },
   ],
 };
+
+// 차트 로딩 확인용 개발 시 삭제
+const cpuVisible = ref(true)
+const memoryVisible = ref(true)
+const diskVisible = ref(true)
+const tranVisible = ref(true)
+const totTranVisible = ref(true)
+const cpuLoadHide = () => {
+    cpuVisible.value = false
+}
+const memoryLoadHide = () => {
+    memoryVisible.value = false
+}
+const diskLoadHide = () => {
+    diskVisible.value = false
+}
+const tranLoadHide = () => {
+    tranVisible.value = false
+}
+const totTranLoadHide = () => {
+    totTranVisible.value = false
+}
 
 onMounted(() => {
     transferTotType() // 이체현황 총

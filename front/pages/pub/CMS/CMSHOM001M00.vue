@@ -563,8 +563,8 @@
                     <DoughnutChart :chartData="cpuData" class="chart" />
                     <span class="use_data">{{ cpuUse }}%</span>
                     <!-- chart load -->
-                    <div class="chart_loader_box">
-                        <div class="chart_loader loader1">
+                    <div class="chart_loader_box" v-if="cpuVisible" @click="cpuLoadHide"><!-- v-if, @click 퍼블 화면 확인용 개발 시 삭제 -->
+                        <div class="chart_loader loader_cpu">
                             <div class="line line1"></div>
                             <div class="line line2"></div>
                             <div class="line line3"></div>
@@ -577,8 +577,8 @@
                     <DoughnutChart :chartData="memoryData" class="chart" />
                     <span class="use_data">{{ memoryUse }}%</span>
                     <!-- chart load -->
-                    <div class="chart_loader_box">
-                        <div class="chart_loader loader2">
+                    <div class="chart_loader_box" v-if="memoryVisible" @click="memoryLoadHide"><!-- v-if, @click 퍼블 화면 확인용 개발 시 삭제 -->
+                        <div class="chart_loader loader_memory">
                             <div class="line line1"></div>
                             <div class="line line2"></div>
                             <div class="line line3"></div>
@@ -591,8 +591,8 @@
                     <DoughnutChart :chartData="diskData" class="chart" />
                     <span class="use_data">{{ diskUse }}%</span>
                     <!-- chart load -->
-                    <div class="chart_loader_box">
-                        <div class="chart_loader loader3">
+                    <div class="chart_loader_box" v-if="diskVisible" @click="diskLoadHide"><!-- v-if, @click 퍼블 화면 확인용 개발 시 삭제 -->
+                        <div class="chart_loader loader_disk">
                             <div class="line line1"></div>
                             <div class="line line2"></div>
                             <div class="line line3"></div>
@@ -735,10 +735,28 @@
                         <span>출금 <b>10,000</b>만원</span>
                         <span>입금 <b>1,000</b>만원</span>
                     </div>
+                    <!-- chart load -->
+                    <div class="chart_loader_box" v-if="tranVisible" @click="tranLoadHide"><!-- v-if, @click 퍼블 화면 확인용 개발 시 삭제 -->
+                        <div class="chart_loader loader_tran">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
+                            <div class="line line3"></div>
+                        </div>
+                    </div>
+                    <!-- //chart load -->
                 </div>
                 <div class="chart_box batch">
                     <p class="tit">일괄 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
                     <PieChart :chartData="totTranData" class="chart" />
+                    <!-- chart load -->
+                    <div class="chart_loader_box" v-if="totTranVisible" @click="totTranLoadHide"><!-- v-if, @click 퍼블 화면 확인용 개발 시 삭제 -->
+                        <div class="chart_loader loader_tottran">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
+                            <div class="line line3"></div>
+                        </div>
+                    </div>
+                    <!-- //chart load -->
                 </div>
             </div>
             <!-- chart -->
@@ -774,6 +792,15 @@
     </div>
 
   </div>
+
+    <!-- 로딩 아이콘 -->
+    <div class="v-progress-circular-loading" v-show="loading" @click="hideLoading">
+        <svg class="hourglass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 206" preserveAspectRatio="none">
+            <path class="middle" d="M120 0H0v206h120V0zM77.1 133.2C87.5 140.9 92 145 92 152.6V178H28v-25.4c0-7.6 4.5-11.7 14.9-19.4 6-4.5 13-9.6 17.1-17 4.1 7.4 11.1 12.6 17.1 17zM60 89.7c-4.1-7.3-11.1-12.5-17.1-17C32.5 65.1 28 61 28 53.4V28h64v25.4c0 7.6-4.5 11.7-14.9 19.4-6 4.4-13 9.6-17.1 16.9z"/>
+            <path class="outer" d="M93.7 95.3c10.5-7.7 26.3-19.4 26.3-41.9V0H0v53.4c0 22.5 15.8 34.2 26.3 41.9 3 2.2 7.9 5.8 9 7.7-1.1 1.9-6 5.5-9 7.7C15.8 118.4 0 130.1 0 152.6V206h120v-53.4c0-22.5-15.8-34.2-26.3-41.9-3-2.2-7.9-5.8-9-7.7 1.1-2 6-5.5 9-7.7zM70.6 103c0 18 35.4 21.8 35.4 49.6V192H14v-39.4c0-27.9 35.4-31.6 35.4-49.6S14 81.2 14 53.4V14h92v39.4C106 81.2 70.6 85 70.6 103z"/>
+        </svg>
+    </div>
+    <!-- //로딩 아이콘 -->
 
 </template>
 
@@ -1089,6 +1116,36 @@ const totTranData = {
   ],
 };
 
+// 차트 로딩 확인용 개발 시 삭제
+const cpuVisible = ref(true)
+const memoryVisible = ref(true)
+const diskVisible = ref(true)
+const tranVisible = ref(true)
+const totTranVisible = ref(true)
+const cpuLoadHide = () => {
+    cpuVisible.value = false
+}
+const memoryLoadHide = () => {
+    memoryVisible.value = false
+}
+const diskLoadHide = () => {
+    diskVisible.value = false
+}
+const tranLoadHide = () => {
+    tranVisible.value = false
+}
+const totTranLoadHide = () => {
+    totTranVisible.value = false
+}
+// 로딩 확인용 개발 시 삭제
+const loading = ref(true)
+const showLoading = setTimeout(() => {
+  loading.value = false;
+}, 5000);
+const hideLoading = () => {
+  loading.value = false;
+};
+
 onMounted(() => {
     transferTotType() // 이체현황 총
     transferNormalType() // 이체 정상
@@ -1098,6 +1155,8 @@ onMounted(() => {
     ulWidth() //slide ul width
     btnPrevNextView() // 이전 다음 버튼
     slideView() // slideView last li
+
+    showLoading() // 로딩 확인용 개발 시 삭제
 })
 
 onBeforeUnmount(() => {
