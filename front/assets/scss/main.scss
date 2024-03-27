@@ -5273,6 +5273,7 @@ input.i_basics{
                         min-width:223px;
                         height:229px;
                         margin:0 auto;
+                        z-index:10;
                     }
 
                     .remark{
@@ -5404,6 +5405,7 @@ input.i_basics{
                         bottom:0;
                         border-radius: 20px;
                         background: #FFFFFFB2;
+                        z-index:20;
                         .chart_loader{
                             position: relative;
                             width: 60px;
