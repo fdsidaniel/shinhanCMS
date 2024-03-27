@@ -562,16 +562,43 @@
                     <p class="tit">CPU</p>
                     <DoughnutChart :chartData="cpuData" class="chart" />
                     <span class="use_data">{{ cpuUse }}%</span>
+                    <!-- chart load -->
+                    <div class="chart_loader_box">
+                        <div class="chart_loader loader1">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
+                            <div class="line line3"></div>
+                        </div>
+                    </div>
+                    <!-- //chart load -->
                 </div>
                 <div class="chart_box">
                     <p class="tit">메모리</p>
                     <DoughnutChart :chartData="memoryData" class="chart" />
                     <span class="use_data">{{ memoryUse }}%</span>
+                    <!-- chart load -->
+                    <div class="chart_loader_box">
+                        <div class="chart_loader loader2">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
+                            <div class="line line3"></div>
+                        </div>
+                    </div>
+                    <!-- //chart load -->
                 </div>
                 <div class="chart_box">
                     <p class="tit">디스크 현황</p>
                     <DoughnutChart :chartData="diskData" class="chart" />
                     <span class="use_data">{{ diskUse }}%</span>
+                    <!-- chart load -->
+                    <div class="chart_loader_box">
+                        <div class="chart_loader loader3">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
+                            <div class="line line3"></div>
+                        </div>
+                    </div>
+                    <!-- //chart load -->
                 </div>
             </div>
             <!-- chart -->

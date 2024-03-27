@@ -5396,6 +5396,83 @@ input.i_basics{
                             height:268px;
                         }
                     }
+                    .chart_loader_box{
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        right:0;
+                        bottom:0;
+                        background: #FFFFFFB2;
+                        .chart_loader{
+                            position: relative;
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            top: 50%;
+                            left:50%;
+                            transform: translate(-50%, -50%);
+                            margin: 0;
+                            &:before{
+                                content: '';
+                                position: absolute;
+                                top:50%;
+                                left:50%;
+                                width:194px;
+                                height:194px;
+                                margin-top:24px;
+                                border-radius: 100%;
+                                background-color: rgb(234 236 239 / 68%);
+                                transform: translate(-50%, -50%);
+                            }
+                            .line {
+                                width: 8px;
+                                position: absolute;
+                                border-radius: 5px;
+                                bottom: 0;
+                            }
+                            .line1 {
+                                left: 0;
+                                animation: line-grow 0.5s ease alternate infinite;
+                            }
+                            .line2 {
+                                left: 20px;
+                                animation: line-grow 0.5s 0.2s ease alternate infinite;
+                            }
+                            .line3 {
+                                left: 40px;
+                                animation: line-grow 0.5s 0.4s ease alternate infinite;
+                            }
+                            @keyframes line-grow {
+                                0% {
+                                    height: 0;
+                                }
+                                100% {
+                                    height: 75%;
+                                }
+                            }
+                            &.loader1{
+                                .line {
+                                    //background: linear-gradient(to bottom, #1ee95d, #5714ce);
+                                    //background: linear-gradient(92.38deg, #5350F6 -6.86%, #FEBB38 102.23%);
+                                    background: linear-gradient(to bottom, #5350F6 , #5350F6);
+                                }
+                            }
+                            &.loader2{
+                                .line {
+                                    //background: linear-gradient(to bottom, #1ee95d, #5714ce);
+                                    //background: linear-gradient(92.38deg, #5350F6 -6.86%, #FEBB38 102.23%);
+                                    background: linear-gradient(to bottom, #29C986 , #29C986);
+                                }
+                            }
+                            &.loader3{
+                                .line {
+                                    //background: linear-gradient(to bottom, #1ee95d, #5714ce);
+                                    //background: linear-gradient(92.38deg, #5350F6 -6.86%, #FEBB38 102.23%);
+                                    background: linear-gradient(to bottom, #FACB2C , #FACB2C);
+                                }
+                            }
+                        }
+                    }                    
                 }
 
                 .state_info{
