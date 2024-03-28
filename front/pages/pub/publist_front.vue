@@ -98,6 +98,19 @@
         <span>2024-03-28</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span>첨부파일 업로드</span>
+        <span></span>
+        <span></span>
+        <span>COM</span>
+        <span><nuxt-link to="/pub/CMS/CMSCOM002P01" class="vlink blue line">CMSCOM002P01</nuxt-link></span>
+        <span>파일 업로드 팝업</span>
+        <span>팝업</span>
+        <span class="ok">O</span>
+        <span>2024-03-28</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span>로그인</span>
