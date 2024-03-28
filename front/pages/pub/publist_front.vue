@@ -127,6 +127,22 @@
         <span>2024-03-28</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span>COM</span>
+        <span>
+          <!-- <nuxt-link to="../error_page.html" class="vlink blue line">error_page.html</nuxt-link> -->
+          <a href="../error_page2.html">error_page2.html</a>
+        </span>
+        <span>서비스 점검</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-03-28</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span>로그인</span>
