@@ -111,6 +111,22 @@
         <span>2024-03-28</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span>에러 페이지</span>
+        <span></span>
+        <span></span>
+        <span>COM</span>
+        <span>
+          <!-- <nuxt-link to="../error_page.html" class="vlink blue line">error_page.html</nuxt-link> -->
+          <a href="../error_page.html">error_page.html</a>
+        </span>
+        <span>에러 페이지</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-03-28</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span>로그인</span>
@@ -2843,6 +2859,7 @@
   .pub_top strong{color:#fc0000;}
   .pub_list li{display:flex;}
   .pub_list li:hover{background-color:#000;}
+  .pub_list li:hover a,
   .pub_list li:hover span{color:#fff;}
   .pub_list li:hover span .vlink{color:#fff;}
   .pub_list li span{min-width:120px;min-height:30px;padding:5px;flex:1;font-size:14px;text-align:center;border:1px solid #000;border-top:0;}
