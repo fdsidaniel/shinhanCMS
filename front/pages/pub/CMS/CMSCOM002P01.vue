@@ -21,18 +21,6 @@
                 <nuxt-link to="" class="vlink basic">TEST.pdf</nuxt-link>
                 <v-btn class="vbtn btn_file_del" size="small">삭제</v-btn>
             </li>
-            <li>
-                <nuxt-link to="" class="vlink basic">TEST.pdf</nuxt-link>
-                <v-btn class="vbtn btn_file_del" size="small">삭제</v-btn>
-            </li>
-            <li>
-                <nuxt-link to="" class="vlink basic">TEST.pdf</nuxt-link>
-                <v-btn class="vbtn btn_file_del" size="small">삭제</v-btn>
-            </li>
-            <li>
-                <nuxt-link to="" class="vlink basic">TEST.pdf</nuxt-link>
-                <v-btn class="vbtn btn_file_del" size="small">삭제</v-btn>
-            </li>
         </ul>
     </div>
 

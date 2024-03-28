@@ -1437,7 +1437,7 @@
             border-radius: 4px;
             opacity: 1;
             &:before{
-                content:"파일찾기";
+                content:"업로드";
                 color:#21272A;
                 font-family: Pretendard;
                 font-size: 14px;
@@ -6575,7 +6575,7 @@
     &::-webkit-scrollbar-track {
         background: #E1E6EC; //스크롤바 배경 색상
     }
-    
+
     .upload_file_list{
         li{
             &+li{
