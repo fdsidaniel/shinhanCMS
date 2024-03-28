@@ -26,7 +26,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-    title: 'AICMS',
+    title: 'CMS Shin',
     link: [
     { rel: 'apple-touch-icon', type: 'image/png', href: '/apple-touch-icon.png' },
     { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png' },
