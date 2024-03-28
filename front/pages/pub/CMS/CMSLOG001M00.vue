@@ -48,6 +48,17 @@
     </div>
   </div>
 
+  <!-- 설치페이지 이동 로딩-->
+  <div class="v-progress-circular-loading" v-show="installLoading" @click="hideInstallLoading"><!-- v-show, @click 퍼블 화면 확인용 개발 시 삭제 -->
+  <div class="install_loading">
+      <div class="txt">
+      <p>CMS Shin</p>
+      안전한 금융거래를 위해 준비중입니다.
+      </div>
+  </div>
+  </div>
+  <!-- //설치페이지 이동 로딩 -->
+
 </template>
 
 <style scoped>
@@ -69,5 +80,22 @@ const passwordRules = [
 ]
 
 const idSave = ref(false)
+
+/* 설치페이지 로딩 확인용 개발 시 삭제 */
+const installLoading = ref(true)
+const showInstallLoading = () => {
+  installLoading.value = true
+};
+const hideInstallLoading = () => {
+  installLoading.value = false
+};
+// 로딩 확인용 개발 시 삭제
+const showLoading = setTimeout(() => {
+  installLoading.value = false;
+}, 5000);
+
+onMounted(() => {
+    showLoading() // 로딩 확인용 개발 시 삭제
+})
 
 </script> 

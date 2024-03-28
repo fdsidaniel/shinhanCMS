@@ -332,7 +332,10 @@
               <!-- 설치페이지 이동 로딩 -->
               <div class="v-progress-circular-loading" v-show="installLoading" @click="hideInstallLoading">
                 <div class="install_loading">
-                  <div class="txt">안전한 금융거래를 위해 준비중입니다.</div>
+                  <div class="txt">
+                    <p>CMS Shin</p>
+                    안전한 금융거래를 위해 준비중입니다.
+                  </div>
                 </div>
               </div>
               <!-- //설치페이지 이동 로딩 -->
