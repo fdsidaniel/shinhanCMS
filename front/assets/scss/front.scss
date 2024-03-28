@@ -1213,6 +1213,19 @@
             top:4px;
         }
     }
+    &.inbtn {
+        &:before{
+            top:50%;
+            transform: translateY(-50%);
+        }
+        .vbtn.line{
+            min-width:auto;
+            height:32px !important;
+            margin-left:5px;
+            padding:0 12px;
+            vertical-align: baseline;
+        }
+    }
 }
 .tip_txt_btn{
     display:flex;

@@ -73,6 +73,33 @@
       </li>
 
       <li>
+        <span>공통</span>
+        <span>본인인증</span>
+        <span></span>
+        <span></span>
+        <span>COM</span>
+        <span><nuxt-link to="/pub/CMS/CMSCOM001M01" class="vlink blue line">CMSCOM001M01</nuxt-link></span>
+        <span>휴대폰 인증</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-03-28</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span>COM</span>
+        <span><nuxt-link to="/pub/CMS/CMSCOM001M02" class="vlink blue line">CMSCOM001M02</nuxt-link></span>
+        <span>이메일 인증</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-03-28</span>
+        <span class="etc"></span>
+      </li>
+
+      <li>
         <span>로그인</span>
         <span>로그인</span>
         <span></span>
