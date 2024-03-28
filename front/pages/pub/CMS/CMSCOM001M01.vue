@@ -20,8 +20,8 @@
             <tr>
                 <th>휴대전화번호</th>
                 <td>
-                    010-12**-****
-                    <v-btn class="vbtn line ml_5" size="small">인증번호 전송</v-btn>
+                    <span>010-12**-****</span>
+                    <v-btn class="vbtn line ml_10" size="small">인증번호 전송</v-btn>
                 </td>
             </tr>
         </tbody>
@@ -41,8 +41,8 @@
             <tr>
                 <th>휴대전화번호</th>
                 <td>
-                    010-12**-****
-                    <v-btn class="vbtn line ml_5" size="small">인증번호 재전송</v-btn>
+                    <span>010-12**-****</span>
+                    <v-btn class="vbtn line ml_10" size="small">인증번호 재전송</v-btn>
                     <span class="time">05:00</span>
 
                     <div class="input_flex mt_10">
