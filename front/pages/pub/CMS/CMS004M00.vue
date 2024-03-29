@@ -1,12 +1,12 @@
 <template>
 
   <div class="title_box">
-    <h2>당,타행 예금주 성명 조회</h2>
+    <h2>예금거래 명세통지</h2>
     <ul class="loc">
       <li>홈</li>
       <li>원화(펌뱅킹)</li>
       <li>이체 정보 관리</li>
-      <li>당,타행 예금주 성명 조회</li>
+      <li>예금거래 명세통지</li>
     </ul>
   </div>
 
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="cell">
                 <div class="col vtop">
-                    <span class="tit req">요청일</span>
+                    <span class="tit">거래일시</span>
                     <div class="con">
                         <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
                         <div class="i_calender mt_10" v-show="calDateValue === '05'">
@@ -36,17 +36,17 @@
         <div class="row">
             <div class="cell">
                 <div class="col">
-                    <span class="tit req">요청 채널</span>
+                    <span class="tit">계좌번호</span>
                     <div class="con">
-                        <ComSelectBox groupCode="01" v-model="comboRequestChannel" :items="itemsRequestChannel" :isAll="true"  class="s_basics none_details" />
+                        <v-text-field label="계좌번호" v-model="accNum" :rules="accNumRules" required placeholder="계좌번호 입력해주세요." class="i_basics none_details"></v-text-field>                        
                     </div>
                 </div>
             </div>
             <div class="cell">
                 <div class="col">
-                    <span class="tit req">요청 번호</span>
+                    <span class="tit">거래구분</span>
                     <div class="con">
-                        <v-text-field label="요청 번호" v-model="requestNum" :rules="requestNumRules" required placeholder="요청번호 모두를 입력해주세요." class="i_basics none_details"></v-text-field>
+                        <ComSelectBox groupCode="01" v-model="comboClass" :items="itemsClass" :isAll="true"  class="s_basics none_details" />
                     </div>
                 </div>
             </div>
@@ -62,9 +62,6 @@
             총 <b>100</b>건,
             <span class="txt">조회 결과 : 2024.02.15 ~ 2024.02.15</span>
         </p>
-        <div>
-            <span class="txt">기준일시 : 2024.02.15 14:12:56</span>
-        </div>
     </div>
     <ComAgGrid
         ref="agrid"
@@ -78,10 +75,6 @@
         :tooltipHideDelay="9000"
     />
     <v-btn class="vbtn btn_grid_more" size="small">더보기(1/10)</v-btn>
-
-    <div class="btn_btm_wrap">
-        <v-btn class="vbtn" size="large">조회</v-btn>
-    </div>
 
   </div>
 
@@ -118,16 +111,14 @@ const formattedToday = new Date(
 const startDate = ref(formattedToday)
 const endDate = ref(formattedToday)
 
-const comboRequestChannel = ref('01')
-const itemsRequestChannel = ref([
-    { title: 'D: DB', value: '01' },
-    { title: 'A: API', value: '02' },
-    { title: 'R: RESERV', value: '03' },
-    { title: 'S: SCHED', value: '04' },
+const comboClass = ref('01')
+const itemsClass = ref([
+    { title: '거래구분', value: '01' },
+    { title: '거래구분', value: '02' },
 ])
 
-const requestNum = ref('')
-const requestNumRules = [
+const accNum = ref('')
+const accNumRules = [
   
 ]
 
@@ -141,88 +132,112 @@ const itemsCnt = ref([
 
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
-  { headerName: '조회일시', field: 'searchDate', width: 220 },
-  { headerName: '조회 계좌은행', field: 'searchAccBank', width: 240 },
-  { headerName: '조회 계좌번호', field: 'searchAccNum', width: 400 },
-  { headerName: '조회 예금주명', field: 'searchAccName', width: 210 },  
+  { headerName: '성명', field: 'name', width: 140, cellClass: 'link' },
+  { headerName: '입지구분', field: 'class', width: 120 },
+  { headerName: '거래구분', field: 'transactionClass', width: 200 },
+  { headerName: '거래금액', field: 'transactionAmount', width: 200, cellClass: 'cell_right' },
+  { headerName: '계좌번호', field: 'accNum', width: 220 },
+  { headerName: '거래일시', field: 'transactionDate', width: 190 },
 ])
 const rowDataReceive = [
   {
     no: '999999',
-    searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
-    searchAccNum: '391-910019-24008',
-    searchAccName: '홀리몰리',
+    name: '최몰리',
+    class: '입금',
+    transactionClass: '보관어음입금',
+    transactionAmount: '900,000,000,000',
+    accNum: '110-019-876043',
+    transactionDate: '2024.02.15',
   },
   {
     no: '2',
-    searchDate: '2024.02.15',
-    searchAccBank: '카카오뱅크',
-    searchAccNum: '391-910019-24008',
-    searchAccName: '홀리몰리',
+    name: '최몰리최몰리',
+    class: '입금',
+    transactionClass: '보관어음입금',
+    transactionAmount: '5,000,000',
+    accNum: '110-019-876043',
+    transactionDate: '2024.02.15',
   },
   {
     no: '3',
-    searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
-    searchAccNum: '391-910019-24008',
-    searchAccName: '홀리몰리',
+    name: '최몰리',
+    class: '입금',
+    transactionClass: '보관어음입금',
+    transactionAmount: '5,000,000',
+    accNum: '110-019-876043',
+    transactionDate: '2024.02.15',
   },
   {
     no: '4',
-    searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
-    searchAccNum: '391-910019-24008',
-    searchAccName: '홀리몰리',
+    name: '최몰리',
+    class: '입금',
+    transactionClass: '보관어음입금',
+    transactionAmount: '5,000,000',
+    accNum: '110-019-876043',
+    transactionDate: '2024.02.15',
   },
   {
     no: '5',
-    searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
-    searchAccNum: '391-910019-24008',
-    searchAccName: '홀리몰리',
+    name: '최몰리',
+    class: '입금',
+    transactionClass: '보관어음입금',
+    transactionAmount: '5,000,000',
+    accNum: '110-019-876043',
+    transactionDate: '2024.02.15',
   },
   {
     no: '6',
-    searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
-    searchAccNum: '391-910019-24008',
-    searchAccName: '홀리몰리',
+    name: '최몰리',
+    class: '입금',
+    transactionClass: '보관어음입금',
+    transactionAmount: '5,000,000',
+    accNum: '110-019-876043',
+    transactionDate: '2024.02.15',
   },
   {
     no: '7',
-    searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
-    searchAccNum: '391-910019-24008',
-    searchAccName: '홀리몰리',
+    name: '최몰리',
+    class: '입금',
+    transactionClass: '보관어음입금',
+    transactionAmount: '5,000,000',
+    accNum: '110-019-876043',
+    transactionDate: '2024.02.15',
   },
   {
     no: '8',
-    searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
-    searchAccNum: '391-910019-24008',
-    searchAccName: '홀리몰리',
+    name: '최몰리',
+    class: '입금',
+    transactionClass: '보관어음입금',
+    transactionAmount: '5,000,000',
+    accNum: '110-019-876043',
+    transactionDate: '2024.02.15',
   },
   {
     no: '9',
-    searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
-    searchAccNum: '391-910019-24008',
-    searchAccName: '홀리몰리',
+    name: '최몰리',
+    class: '입금',
+    transactionClass: '보관어음입금',
+    transactionAmount: '5,000,000',
+    accNum: '110-019-876043',
+    transactionDate: '2024.02.15',
   },
   {
     no: '10',
-    searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
-    searchAccNum: '391-910019-24008',
-    searchAccName: '홀리몰리',
+    name: '최몰리',
+    class: '입금',
+    transactionClass: '보관어음입금',
+    transactionAmount: '5,000,000',
+    accNum: '110-019-876043',
+    transactionDate: '2024.02.15',
   },
   {
     no: '11',
-    searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
-    searchAccNum: '391-910019-24008',
-    searchAccName: '홀리몰리',
+    name: '최몰리',
+    class: '입금',
+    transactionClass: '보관어음입금',
+    transactionAmount: '5,000,000',
+    accNum: '110-019-876043',
+    transactionDate: '2024.02.15',
   },
 ]
 const defaultColDefReceive = {
