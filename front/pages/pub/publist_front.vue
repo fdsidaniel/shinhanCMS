@@ -341,6 +341,32 @@
         <span>2024-03-14</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span>당,타행 예금주 성명 조회</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS003M00" class="vlink blue line">CMS003M00</nuxt-link></span>
+        <span>당,타행 예금주 성명 조회<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-03-29</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS003M01" class="vlink blue line">CMS003M01</nuxt-link></span>
+        <span>예금주 정보<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-03-29</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>
