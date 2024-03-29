@@ -3604,6 +3604,7 @@ class btnModify {
     return false;
   }
 }
+const languages = ["English", "Spanish", "French", "Portuguese", "(other)"];
 const columnDefsReceive2 = ref([
   {
     headerName: '',
@@ -3621,12 +3622,21 @@ const columnDefsReceive2 = ref([
     field: 'chk',
     cellRenderer: 'agCheckboxCellRenderer',
     headerComponent: checkCel,
-    editable: false,
+    editable: true,
     cellRendererParams: {
       disabled: false,
     },
     cellClass: ['custom-center-align'],
     width: 80,
+  },
+  {
+    headerName: 'select',
+    field: 'slt',
+    cellRenderer: 'agSelectCellEditor',
+    cellRendererParams: { values: languages },
+    editable: true,
+    cellClass: ['custom-center-align'],
+    width: 100,
   },
   { headerName: 'NO.', field: 'no', width: 80 },
   { headerName: '사업명', field: 'title', width: 250, cellClass: 'ellipsis cell_left' },
@@ -3662,6 +3672,7 @@ const rowDataReceive2 = [
   {
     chkRadio: false,
     chk: false,
+    slt: '',
     no: '1',
     title: '차세대 이관 작업 대행 업체 선정 공고',
     orgName: '한마정보통신',
