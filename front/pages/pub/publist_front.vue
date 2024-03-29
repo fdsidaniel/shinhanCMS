@@ -393,6 +393,32 @@
         <span>2024-03-29</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span>가상거래 명세통지</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS005M00" class="vlink blue line">CMS005M00</nuxt-link></span>
+        <span>가상거래 명세통지<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-03-29</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS005P01" class="vlink blue line">CMS005P01</nuxt-link></span>
+        <span>가상거래 명세서 팝업<br>(시스템 관리자)</span>
+        <span>팝업</span>
+        <span class="ok">O</span>
+        <span>2024-03-29</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>
