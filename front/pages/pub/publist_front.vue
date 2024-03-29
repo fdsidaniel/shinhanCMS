@@ -248,6 +248,34 @@
         <span>2024-03-26</span>
         <span class="etc"></span>
       </li>
+
+      <li>
+        <span>사용자 관리</span>
+        <span>사용자 가입 신청</span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS002M00" class="vlink blue line">CMS002M00</nuxt-link></span>
+        <span>사용자 가입 신청<br>(기관 담당자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-03-14</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span>사용자 신규/변경</span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS002M01" class="vlink blue line">CMS002M01</nuxt-link></span>
+        <span>사용자 신규/변경<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-03-14</span>
+        <span class="etc"></span>
+      </li>
+
       <li>
         <span>원화(펌뱅킹)</span>
         <span>이체 정보 관리</span>
@@ -309,32 +337,6 @@
         <span><nuxt-link to="/pub/CMS/CMS001P02" class="vlink blue line">CMS001P02</nuxt-link></span>
         <span>타행이체결과 불능분 통지 팝업</span>
         <span>팝업</span>
-        <span class="ok">O</span>
-        <span>2024-03-14</span>
-        <span class="etc"></span>
-      </li>
-      <li>
-        <span>사용자 관리</span>
-        <span>사용자 가입 신청</span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span><nuxt-link to="/pub/CMS/CMS002M00" class="vlink blue line">CMS002M00</nuxt-link></span>
-        <span>사용자 가입 신청<br>(기관 담당자)</span>
-        <span>메인</span>
-        <span class="ok">O</span>
-        <span>2024-03-14</span>
-        <span class="etc"></span>
-      </li>
-      <li>
-        <span></span>
-        <span>사용자 신규/변경</span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span><nuxt-link to="/pub/CMS/CMS002M01" class="vlink blue line">CMS002M01</nuxt-link></span>
-        <span>사용자 신규/변경<br>(시스템 관리자)</span>
-        <span>메인</span>
         <span class="ok">O</span>
         <span>2024-03-14</span>
         <span class="etc"></span>
