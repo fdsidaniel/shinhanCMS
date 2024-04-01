@@ -22,12 +22,12 @@
         <v-window-item value="bank">
             <v-table class="vtable_view bg">
                 <colgroup>
-                    <col style="width:160px;"/>
+                    <col style="width:180px;"/>
                     <col style="width:*;"/>
                 </colgroup>
                 <tbody>
                     <tr>
-                        <th>Tpye of Header</th>
+                        <th>Type of Header</th>
                         <td>1</td>
                     </tr>
                     <tr>
@@ -97,7 +97,7 @@
         <v-window-item value="cms">
             <v-table class="vtable_view bg">
                 <colgroup>
-                    <col style="width:160px;"/>
+                    <col style="width:300px;"/>
                     <col style="width:*;"/>
                 </colgroup>
                 <tbody>
@@ -106,24 +106,24 @@
                         <td>testtest:thin:@192.168.10.22:8639:devcmsdb</td>
                     </tr>
                     <tr>
-                        <th></th>
-                        <td></td>
+                        <th>Data Source User Name</th>
+                        <td>Tmax</td>
                     </tr>
                     <tr>
-                        <th></th>
-                        <td></td>
+                        <th>Data Source Password</th>
+                        <td>Tmax</td>
                     </tr>
                     <tr>
-                        <th></th>
-                        <td></td>
+                        <th>Data Source Max Pool Size</th>
+                        <td>20</td>
                     </tr>
                     <tr>
-                        <th></th>
-                        <td></td>
+                        <th>Data Source Connection Test Query</th>
+                        <td>SELECT 1 FROM DUAL</td>
                     </tr>
                     <tr>
-                        <th></th>
-                        <td></td>
+                        <th>Mybatis Mapper Location</th>
+                        <td>Mapper/*.xml</td>
                     </tr>
                 </tbody>
             </v-table>
@@ -134,15 +134,63 @@
         </v-window-item>
 
         <v-window-item value="api">
-            <v-table class="vtable_view">
+            <v-table class="vtable_view bg">
                 <colgroup>
-                    <col style="width:;"/>
-                    <col style="width:;"/>
+                    <col style="width:300px;"/>
+                    <col style="width:*;"/>
                 </colgroup>
                 <tbody>
                     <tr>
-                        <th></th>
-                        <td></td>
+                        <th>Server API Port</th>
+                        <td>7080</td>
+                    </tr>
+                    <tr>
+                        <th>Server API Timeout</th>
+                        <td>90000</td>
+                    </tr>
+                    <tr>
+                        <th>Scheduled Queue Clean Up</th>
+                        <td>0 59 23 * * *</td>
+                    </tr>
+                    <tr>
+                        <th>Scheduled Message Start Up</th>
+                        <td>0 0,15, 30 0,8, 16, 18 * * MON-SUN</td>
+                    </tr>
+                    <tr>
+                        <th>Scheduled Message Shut Down</th>
+                        <td>0 55, 56 23 * * MON-SUN</td>
+                    </tr>
+                    <tr>
+                        <th>Scheduled Message InterBank</th>
+                        <td>0 55, 56 23 * * MON-SUN</td>
+                    </tr>
+                    <tr>
+                        <th>Scheduled Message IntraBank</th>
+                        <td>0 55, 56 23 * * MON-SUN</td>
+                    </tr>
+                    <tr>
+                        <th>Scheduled Message Payee</th>
+                        <td>0 55, 56 23 * * MON-SUN</td>
+                    </tr>
+                    <tr>
+                        <th>Scheduled Message DepRecpt</th>
+                        <td>0 55, 56 23 * * MON-SUN</td>
+                    </tr>
+                    <tr>
+                        <th>Scheduled Message VirRecpt</th>
+                        <td>0 55, 56 23 * * MON-SUN</td>
+                    </tr>
+                    <tr>
+                        <th>Scheduled Message FailRecpt</th>
+                        <td>0 55, 56 23 * * MON-SUN</td>
+                    </tr>
+                    <tr>
+                        <th>Scheduled Message InterResInq</th>
+                        <td>0 55, 56 23 * * MON-SUN</td>
+                    </tr>
+                    <tr>
+                        <th>Scheduled Message IntraReqInq</th>
+                        <td>0 55, 56 23 * * MON-SUN</td>
                     </tr>
                 </tbody>
             </v-table>

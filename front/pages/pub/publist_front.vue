@@ -485,6 +485,19 @@
         <span>2024-04-01</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span>프로퍼티 값 수정</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS007M01" class="vlink blue line">CMS007M01</nuxt-link></span>
+        <span>현재 프로퍼티 값 수정<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-01</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>
