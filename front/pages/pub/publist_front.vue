@@ -421,6 +421,72 @@
       </li>
 
       <li>
+        <span>시스템 관리</span>
+        <span>사용자 관리</span>
+        <span>사용자 가입 신청 이력(조회)</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS006M00" class="vlink blue line">CMS006M00</nuxt-link></span>
+        <span>사용자 가입 신청 이력(조회)<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-01</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS006P01" class="vlink blue line">CMS006P01</nuxt-link></span>
+        <span>사용자 가입 신청 이력(조회) 팝업<br>(시스템 관리자)</span>
+        <span>팝업</span>
+        <span class="ok">O</span>
+        <span>2024-04-01</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS006M01" class="vlink blue line">CMS006M01</nuxt-link></span>
+        <span>사용자 가입 신청<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-01</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS006M02" class="vlink blue line">CMS006M02</nuxt-link></span>
+        <span>사용자 가입 수정<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-01</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span>프로퍼티 값 변경</span>
+        <span>프로퍼티 값 조회</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS007M00" class="vlink blue line">CMS007M00</nuxt-link></span>
+        <span>현재 프로퍼티 값 조회<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-01</span>
+        <span class="etc"></span>
+      </li>
+
+      <li>
         <span></span>
         <span></span>
         <span></span>
