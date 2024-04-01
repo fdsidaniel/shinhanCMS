@@ -18,7 +18,7 @@
                 <div class="col">
                     <span class="tit">신청일</span>
                     <div class="con">
-                        <div class="i_calender" v-show="calDateValue === '05'">
+                        <div class="i_calender">
                             <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
                             <span>~</span>
                             <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
@@ -30,7 +30,7 @@
                 <div class="col">
                     <span class="tit">신청자</span>
                     <div class="con">
-                        <v-text-field label="신청자" v-model="accNum" :rules="accNumRules" required placeholder="신청자를 입력해주세요." class="i_basics none_details"></v-text-field>                        
+                        <v-text-field label="신청자" v-model="appName" :rules="appNameRules" required placeholder="신청자를 입력해주세요." class="i_basics none_details"></v-text-field>                        
                     </div>
                 </div>
             </div>

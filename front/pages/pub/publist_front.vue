@@ -524,6 +524,32 @@
         <span>2024-04-01</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span>서비스 오류 관리(조회)</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS009M00" class="vlink blue line">CMS009M00</nuxt-link></span>
+        <span>서비스 오류 관리<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-01</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS009P01" class="vlink blue line">CMS009P01</nuxt-link></span>
+        <span>서비스 오류 관리 팝업<br>(시스템 관리자)</span>
+        <span>팝업</span>
+        <span class="ok">O</span>
+        <span>2024-04-01</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>

@@ -529,6 +529,23 @@
                 border:0;
             }
             &.pd_0{padding:0 !important;}
+            
+            .scroll_detail{
+                overflow-y: auto;
+                max-height:200px;
+                min-height:100px;
+
+                &::-webkit-scrollbar {
+                    width: 6px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: #12161980;
+                    border-radius: 20px;
+                }
+                &::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+            }
         }
         .v-input__details{display:none;}
 
@@ -550,7 +567,7 @@
             th{
                 width:100px;
             }
-        }
+        }        
     }
     &.prev_next{
         margin-top:40px;
@@ -2036,7 +2053,7 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         word-break: break-all;
-        line-height: 56px;
+        line-height: 50px;
     }
     .link{
         &:hover {
