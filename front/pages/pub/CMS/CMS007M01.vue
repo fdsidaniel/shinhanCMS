@@ -166,7 +166,7 @@
         </v-window-item>
 
         <v-window-item value="cms">
-            <v-table class="vtable_view bg">
+            <v-table class="vtable_view inbtn bg">
                 <colgroup>
                     <col style="width:300px;"/>
                     <col style="width:*;"/>
@@ -231,7 +231,7 @@
         </v-window-item>
 
         <v-window-item value="api">
-            <v-table class="vtable_view bg">
+            <v-table class="vtable_view inbtn bg">
                 <colgroup>
                     <col style="width:300px;"/>
                     <col style="width:*;"/>

@@ -498,7 +498,46 @@
         <span>2024-04-01</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span>서비스 관리</span>
+        <span>서비스 시간 관리(조회)</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS008M00" class="vlink blue line">CMS008M00</nuxt-link></span>
+        <span>서비스 시간 관리<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-01</span>
+        <span class="etc"></span>
+      </li>
 
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
       <li>
         <span></span>
         <span></span>
