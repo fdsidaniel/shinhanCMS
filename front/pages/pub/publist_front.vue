@@ -615,6 +615,58 @@
         <span>2024-04-02</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS013P01" class="vlink blue line">CMS013P01</nuxt-link></span>
+        <span>사용자 신청 내역 팝업<br>(시스템 관리자)</span>
+        <span>팝업</span>
+        <span class="ok">O</span>
+        <span>2024-04-02</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS013P02" class="vlink blue line">CMS013P02</nuxt-link></span>
+        <span>사용자 계정 팝업<br>(시스템 관리자)</span>
+        <span>팝업</span>
+        <span class="ok">O</span>
+        <span>2024-04-02</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS013P03" class="vlink blue line">CMS013P03</nuxt-link></span>
+        <span>반려 사유 팝업<br>(시스템 관리자)</span>
+        <span>팝업</span>
+        <span class="ok">O</span>
+        <span>2024-04-02</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span>사용자 등록(조회)</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS014M00" class="vlink blue line">CMS014M00</nuxt-link></span>
+        <span>사용자 계정 신규 등록<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-02</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>
