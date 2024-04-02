@@ -1,11 +1,11 @@
 <template>
 
   <div class="title_box">
-    <h2>법인카드 파일관리</h2>
+    <h2>일괄이체 파일관리</h2>
     <ul class="loc">
       <li>시스템 관리</li>
       <li>서비스 관리</li>
-      <li>법인카드 파일관리(조회)</li>
+      <li>일괄이체 파일관리(조회)</li>
     </ul>
   </div>
 
@@ -41,9 +41,9 @@
             </div>
             <div class="cell">
                 <div class="col">
-                    <span class="tit">처리 기관</span>
+                    <span class="tit">요청 기관</span>
                     <div class="con">
-                        <v-text-field label="처리 기관" v-model="search" :rules="searchRules" required placeholder="처리 기관을 입력해주세요." class="i_basics none_details" />
+                        <v-text-field label="요청 기관" v-model="search" :rules="searchRules" required placeholder="요청 기관을 입력해주세요." class="i_basics none_details" />
                     </div>
                 </div>
             </div>
@@ -82,9 +82,9 @@
             </div>
             <div class="cell">
                 <div class="col">
-                    <span class="tit">처리 기관</span>
+                    <span class="tit">요청 기관</span>
                     <div class="con">
-                        <v-text-field label="처리 기관" v-model="search" :rules="searchRules" required placeholder="처리 기관을 입력해주세요." class="i_basics none_details" />
+                        <v-text-field label="요청 기관" v-model="search" :rules="searchRules" required placeholder="요청 기관을 입력해주세요." class="i_basics none_details" />
                     </div>
                 </div>
             </div>
@@ -174,7 +174,7 @@ const itemsCnt = ref([
 
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
-  { headerName: '처리 기관', field: 'org', width: 400, cellClass: 'ellipsis' },
+  { headerName: '요청 기관', field: 'org', width: 400, cellClass: 'ellipsis' },
   { headerName: '처리 주기', field: 'cycle', width: 350 },
   {
     headerName: '처리 결과', field: 'result', width: 175, cellClass: params => {

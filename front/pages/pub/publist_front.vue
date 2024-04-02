@@ -589,6 +589,32 @@
         <span>2024-04-02</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span>일괄이체 파일관리(조회)</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS012M00" class="vlink blue line">CMS012M00</nuxt-link></span>
+        <span>일괄이체 파일관리<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-02</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span>사용자 신청 내역(조회)</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS013M00" class="vlink blue line">CMS013M00</nuxt-link></span>
+        <span>사용자 신청 내역<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-02</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>

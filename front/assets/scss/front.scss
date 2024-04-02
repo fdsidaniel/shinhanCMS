@@ -2308,6 +2308,13 @@
             }
         }
     }
+    &.icon_type{
+        [class*="ico_"]{
+            &:before{
+                min-width:80px !important;
+            }            
+        }
+    }
 }
 
 // 탭 하단 경고 문구 - MEM002M01.vue 참고
