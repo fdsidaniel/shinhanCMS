@@ -65,7 +65,7 @@ const columnDefsReceive = ref([
     field: 'authority',
     cellRenderer: 'agSelectCellEditor',
     cellRendererParams: { values: authorityChange },
-    editable: true,
+    editable: false,
     cellClass: ['custom-center-align ag_select'],
     width: 200,
   },
