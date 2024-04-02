@@ -183,7 +183,7 @@ const columnDefsReceive = ref([
       }
     }
   },
-  { headerName: '처리일', field: 'date', width: 140 },
+  { headerName: '처리일', field: 'date', width: 150 },
 ])
 const rowDataReceive = [
   {

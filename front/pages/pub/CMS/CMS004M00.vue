@@ -132,7 +132,7 @@ const columnDefsReceive = ref([
   { headerName: '성명', field: 'name', width: 140, cellClass: 'link' },
   { headerName: '입지구분', field: 'class', width: 120 },
   { headerName: '거래구분', field: 'transactionClass', width: 200 },
-  { headerName: '거래금액', field: 'transactionAmount', width: 200, cellClass: 'cell_right' },
+  { headerName: '거래금액', field: 'transactionAmount', width: 205, cellClass: 'cell_right' },
   { headerName: '계좌번호', field: 'accNum', width: 220 },
   { headerName: '거래일시', field: 'transactionDate', width: 190 },
 ])

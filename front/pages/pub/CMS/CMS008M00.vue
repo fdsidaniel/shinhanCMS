@@ -78,7 +78,7 @@ const itemsCnt = ref([
 
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
-  { headerName: '기관명', field: 'orgName', width: 560, cellClass: 'link' },
+  { headerName: '기관명', field: 'orgName', width: 575, cellClass: 'link' },
   { headerName: '서비스 시작 시간', field: 'startTime', width: 250 },
   { headerName: '서비스 종료 시간', field: 'endTime', width: 250 },
 ])

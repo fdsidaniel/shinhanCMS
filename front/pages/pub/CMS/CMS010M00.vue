@@ -177,8 +177,8 @@ const columnDefsReceive = ref([
   { headerName: '송/수신', field: 'tranAndrec', width: 100 },
   { headerName: '서비스명', field: 'serviceTitle', width: 330, cellClass: 'ellipsis' },
   { headerName: '생성일시', field: 'creDate', width: 140 },
-  { headerName: '전문내용', field: 'detail', width: 350, cellClass: 'link ellipsis' },
-  { headerName: '등록일', field: 'regDate', width: 140 },
+  { headerName: '전문내용', field: 'detail', width: 355, cellClass: 'link ellipsis' },
+  { headerName: '등록일', field: 'regDate', width: 150 },
 ])
 const rowDataReceive = [
   {

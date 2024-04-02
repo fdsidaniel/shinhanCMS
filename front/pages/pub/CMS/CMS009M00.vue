@@ -173,7 +173,7 @@ const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
   { headerName: '발생 기관', field: 'org', width: 260 },
   { headerName: '발생 채널', field: 'channel', width: 280 },
-  { headerName: '상세내역', field: 'detail', width: 240, cellClass: 'link ellipsis' },
+  { headerName: '상세내역', field: 'detail', width: 250, cellClass: 'link ellipsis' },
   { headerName: '현황', field: 'report', width: 145 },
   { headerName: '발생일', field: 'date', width: 140 },
 ])
