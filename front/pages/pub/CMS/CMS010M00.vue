@@ -1,11 +1,11 @@
 <template>
 
   <div class="title_box">
-    <h2>서비스 오류 관리</h2>
+    <h2>전문 송/수신 이력 관리</h2>
     <ul class="loc">
       <li>시스템 관리</li>
-      <li>서비스 관리</li>      
-      <li>서비스 오류 관리(조회)</li>
+      <li>서비스 관리</li>
+      <li>전문 송/소신 관리(조회)</li>
     </ul>
   </div>
 
@@ -16,7 +16,7 @@
         <div class="row">
             <div class="cell">
                 <div class="col">
-                    <span class="tit">발생일</span>
+                    <span class="tit other">등록일</span>
                     <div class="con">
                         <div class="i_calender">
                             <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
@@ -33,17 +33,17 @@
         <div class="row">
             <div class="cell">
                 <div class="col">
-                    <span class="tit">발생 기관</span>
+                    <span class="tit other">송/수신 여부</span>
                     <div class="con">
-                        <v-text-field label="발생 기관" v-model="occurOrg" :rules="occurOrgRules" required placeholder="발생 기관을 입력해주세요." class="i_basics none_details" />
+                        <ComSelectBox groupCode="01" v-model="comboClass" :items="itemsClass" :isAll="true"  class="s_basics none_details" />
                     </div>
                 </div>
             </div>
             <div class="cell">
                 <div class="col">
-                    <span class="tit">발생 채널</span>
+                    <span class="tit">검색어</span>
                     <div class="con">
-                        <v-text-field label="발생 채널" v-model="occurChannel" :rules="occurChannelRules" required placeholder="발생 채널을 입력해주세요." class="i_basics none_details" />
+                        <v-text-field label="검색어" v-model="search" :rules="searchRules" required placeholder="검색어를 입력해주세요." class="i_basics none_details" />
                     </div>
                 </div>
             </div>
@@ -100,13 +100,15 @@ const formattedToday = new Date(
 const startDate = ref(formattedToday)
 const endDate = ref(formattedToday)
 
-const occurOrg = ref('')
-const occurOrgRules = [
-  
-]
+const comboClass = ref('01')
+const itemsClass = ref([
+    { title: '전체', value: '01' },
+    { title: '송신', value: '02' },
+    { title: '수신', value: '03' },
+])
 
-const occurChannel = ref('')
-const occurChannelRules = [
+const search = ref('')
+const searchRules = [
   
 ]
 
@@ -120,100 +122,100 @@ const itemsCnt = ref([
 
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
-  { headerName: '발생 기관', field: 'org', width: 260 },
-  { headerName: '발생 채널', field: 'channel', width: 280 },
-  { headerName: '상세내역', field: 'detail', width: 240, cellClass: 'link ellipsis' },
-  { headerName: '현황', field: 'report', width: 145 },
-  { headerName: '발생일', field: 'date', width: 140 },
+  { headerName: '송/수신', field: 'tranAndrec', width: 100 },
+  { headerName: '서비스명', field: 'serviceTitle', width: 330, cellClass: 'ellipsis' },
+  { headerName: '생성일시', field: 'creDate', width: 140 },
+  { headerName: '전문내용', field: 'detail', width: 350, cellClass: 'link ellipsis' },
+  { headerName: '등록일', field: 'regDate', width: 140 },
 ])
 const rowDataReceive = [
   {
     no: '999999',
-    org: '대중소기업농어업혁력',
-    channel: '제휴가상계좌 입금 승인내역',
-    detail: '상세보기상세보기상세보기상세보기상세보기상세보기',
-    report: '조치 완료',
-    date: '2024-03-15',
+    tranAndrec: '송신',
+    serviceTitle: '타행이체결과 불능분 통지',
+    creDate: '2024-03-15',
+    detail: '상세보기',
+    regDate: '2024-03-15',
   },
   {
     no: '2',
-    org: '대중소기업농어업혁력',
-    channel: '제휴가상계좌 입금 승인내역',
-    detail: '상세보기',
-    report: '미조치',
-    date: '2024-03-15',
+    tranAndrec: '송신',
+    serviceTitle: '타행이체결과 불능분 통지 타행이체결과 불능분 통지타행이체결과 불능분 통지타행이체결과 불능분 통지',
+    creDate: '2024-03-15',
+    detail: '상세보기 상세보기 상세보기 상세보기 상세보기 상세보기 상세보기 상세보기 상세보기',
+    regDate: '2024-03-15',
   },
   {
     no: '3',
-    org: '대중소기업농어업혁력',
-    channel: '제휴가상계좌 입금 승인내역',
+    tranAndrec: '송신',
+    serviceTitle: '타행이체결과 불능분 통지',
+    creDate: '2024-03-15',
     detail: '상세보기',
-    report: '조치 완료',
-    date: '2024-03-15',
+    regDate: '2024-03-15',
   },
   {
     no: '4',
-    org: '대중소기업농어업혁력',
-    channel: '제휴가상계좌 입금 승인내역',
+    tranAndrec: '송신',
+    serviceTitle: '타행이체결과 불능분 통지',
+    creDate: '2024-03-15',
     detail: '상세보기',
-    report: '조치 완료',
-    date: '2024-03-15',
+    regDate: '2024-03-15',
   },
   {
     no: '5',
-    org: '대중소기업농어업혁력',
-    channel: '제휴가상계좌 입금 승인내역',
+    tranAndrec: '송신',
+    serviceTitle: '타행이체결과 불능분 통지',
+    creDate: '2024-03-15',
     detail: '상세보기',
-    report: '조치 완료',
-    date: '2024-03-15',
+    regDate: '2024-03-15',
   },
   {
     no: '6',
-    org: '대중소기업농어업혁력',
-    channel: '제휴가상계좌 입금 승인내역',
+    tranAndrec: '송신',
+    serviceTitle: '타행이체결과 불능분 통지',
+    creDate: '2024-03-15',
     detail: '상세보기',
-    report: '조치 완료',
-    date: '2024-03-15',
+    regDate: '2024-03-15',
   },
   {
     no: '7',
-    org: '대중소기업농어업혁력',
-    channel: '제휴가상계좌 입금 승인내역',
+    tranAndrec: '송신',
+    serviceTitle: '타행이체결과 불능분 통지',
+    creDate: '2024-03-15',
     detail: '상세보기',
-    report: '조치 완료',
-    date: '2024-03-15',
+    regDate: '2024-03-15',
   },
   {
     no: '8',
-    org: '대중소기업농어업혁력',
-    channel: '제휴가상계좌 입금 승인내역',
+    tranAndrec: '송신',
+    serviceTitle: '타행이체결과 불능분 통지',
+    creDate: '2024-03-15',
     detail: '상세보기',
-    report: '조치 완료',
-    date: '2024-03-15',
+    regDate: '2024-03-15',
   },
   {
     no: '9',
-    org: '대중소기업농어업혁력',
-    channel: '제휴가상계좌 입금 승인내역',
+    tranAndrec: '송신',
+    serviceTitle: '타행이체결과 불능분 통지',
+    creDate: '2024-03-15',
     detail: '상세보기',
-    report: '조치 완료',
-    date: '2024-03-15',
+    regDate: '2024-03-15',
   },
   {
     no: '10',
-    org: '대중소기업농어업혁력',
-    channel: '제휴가상계좌 입금 승인내역',
+    tranAndrec: '송신',
+    serviceTitle: '타행이체결과 불능분 통지',
+    creDate: '2024-03-15',
     detail: '상세보기',
-    report: '조치 완료',
-    date: '2024-03-15',
+    regDate: '2024-03-15',
   },
   {
     no: '11',
-    org: '대중소기업농어업혁력',
-    channel: '제휴가상계좌 입금 승인내역',
+    tranAndrec: '송신',
+    serviceTitle: '타행이체결과 불능분 통지',
+    creDate: '2024-03-15',
     detail: '상세보기',
-    report: '조치 완료',
-    date: '2024-03-15',
+    regDate: '2024-03-15',
   },
 ]
 const defaultColDefReceive = {
