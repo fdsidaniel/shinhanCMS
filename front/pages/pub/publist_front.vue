@@ -563,6 +563,32 @@
         <span>2024-04-02</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS010M01" class="vlink blue line">CMS010M01</nuxt-link></span>
+        <span>전문 송/수신 이력 관리(상세)<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-02</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span>법인카드 파일관리(조회)</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS011M00" class="vlink blue line">CMS011M00</nuxt-link></span>
+        <span>법인카드 파일관리<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-02</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>
