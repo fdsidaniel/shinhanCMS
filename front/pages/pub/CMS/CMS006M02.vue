@@ -50,7 +50,8 @@
     </v-table>
 
     <div class="btn_btm_wrap">
-        <v-btn class="vbtn" size="large">가입 수정</v-btn>
+        <v-btn class="vbtn blue" size="large">취소</v-btn>
+        <v-btn class="vbtn" size="large">수정</v-btn>
     </div>
 
   </div>

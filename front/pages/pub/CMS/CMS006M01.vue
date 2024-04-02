@@ -1,7 +1,7 @@
 <template>
 
   <div class="title_box">
-    <h2>사용자 가입 신청</h2>
+    <h2>사용자 정보 수정</h2>
     <ul class="loc">
       <li>시스템 관리</li>
       <li>사용자 관리</li>      
@@ -50,7 +50,8 @@
     </v-table>
 
     <div class="btn_btm_wrap">
-        <v-btn class="vbtn" size="large">가입 신청</v-btn>
+        <v-btn class="vbtn blue" size="large">취소</v-btn>
+        <v-btn class="vbtn" size="large">수정</v-btn>
     </div>
 
   </div>

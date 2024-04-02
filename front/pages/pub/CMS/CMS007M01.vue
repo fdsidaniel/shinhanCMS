@@ -20,18 +20,19 @@
     <v-window v-model="tab" class="tab_con">
 
         <v-window-item value="bank">
-            <v-table class="vtable_view inbtn bg">
+            <v-table class="vtable_view inipt bg">
                 <colgroup>
-                    <col style="width:180px;"/>
-                    <col style="width:*;"/>
+                    <col style="width:200px;"/>
+                    <col style="width:378px;"/>
+                    <col style="width:200px;"/>
+                    <col style="width:378px;"/>
                 </colgroup>
                 <tbody>
                     <tr>
                         <th>Type of Header</th>
-                        <td>
+                        <td colspan="3">
                             <div class="input_flex a_center between">
                                 <ComRadioButton :options="typeOfHeader" v-model="selectedTypeOfHeader" :isInline="true" />
-                                <v-btn class="vbtn line" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
@@ -40,16 +41,12 @@
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Client Host" v-model="clientHost" :rules="clientHostRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
                         <th>Client Port</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Client Host" v-model="clientPort" :rules="clientPortRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
@@ -58,16 +55,12 @@
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Client Persistent" v-model="clientPersistent" :rules="clientPersistentRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
                         <th>Client Lazy</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Client Lazy" v-model="clientLazy" :rules="clientLazyRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
@@ -76,16 +69,12 @@
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Client Maxidle" v-model="clientMaxidle" :rules="clientMaxidleRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
                         <th>Client Maxreconn</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Client Maxreconn" v-model="clientMaxreconn" :rules="clientMaxreconnRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
@@ -94,16 +83,12 @@
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Client Charset" v-model="clientCharset" :rules="clientCharsetRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
                         <th>Client Chancnt</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Client Chancnt" v-model="clientChancnt" :rules="clientChancntRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
@@ -112,16 +97,12 @@
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Client Delay" v-model="clientDelay" :rules="clientDelayRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
                         <th>Client Initial Delay</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Client Initial Delay" v-model="clientInitialDelay" :rules="clientInitialDelayRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
@@ -130,16 +111,12 @@
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Client Timeout" v-model="clientTimeout" :rules="clientTimeoutRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
                         <th>Client Queue</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Client Queue" v-model="clientQueue" :rules="clientQueueRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
@@ -148,36 +125,38 @@
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Server Port" v-model="serverPort" :rules="serverPortRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
                         <th>Server Timeout</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Server Timeout" v-model="serverTimeout" :rules="serverTimeoutRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
                 </tbody>
             </v-table>
+
+            <div class="btn_btm_wrap">
+                <v-btn class="vbtn blue" size="large">취소</v-btn>
+                <v-btn class="vbtn" size="large">저장</v-btn>
+            </div>
         </v-window-item>
 
         <v-window-item value="cms">
-            <v-table class="vtable_view inbtn bg">
+            <v-table class="vtable_view inipt bg">
                 <colgroup>
-                    <col style="width:300px;"/>
-                    <col style="width:*;"/>
+                    <col style="width:200px;"/>
+                    <col style="width:378px;"/>
+                    <col style="width:200px;"/>
+                    <col style="width:378px;"/>
                 </colgroup>
                 <tbody>
                     <tr>
                         <th>Data Source URL</th>
-                        <td>
+                        <td colspan="3">
                             <div class="input_flex a_center between">
                                 <v-text-field label="Data Source URL" v-model="dataSourceURL" :rules="dataSourceURLRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
@@ -186,55 +165,53 @@
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Data Source User Name" v-model="dataSourceUserName" :rules="dataSourceUserNameRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
                         <th>Data Source Password</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Data Source Password" v-model="dataSourcePassword" :rules="dataSourcePasswordRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <th>Data Source Max Pool Size</th>
+                        <th>Data Source<br>Max Pool Size</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Data Source Max Pool Size" v-model="dataSourceMaxPoolSize" :rules="dataSourceMaxPoolSizeRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
-                        <th>Data Source Connection Test Query</th>
+                        <th>Data Source<br>Connection Test Query</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Data Source Connection Test Query" v-model="dataSourceConnectionTestQuery" :rules="dataSourceConnectionTestQueryRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <th>Mybatis Mapper Location</th>
-                        <td>
+                        <td colspan="3">
                             <div class="input_flex a_center between">
                                 <v-text-field label="Mybatis Mapper Location" v-model="mybatisMapperLocation" :rules="mybatisMapperLocationRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
                 </tbody>
             </v-table>
+
+            <div class="btn_btm_wrap">
+                <v-btn class="vbtn blue" size="large">취소</v-btn>
+                <v-btn class="vbtn" size="large">저장</v-btn>
+            </div>
         </v-window-item>
 
         <v-window-item value="api">
-            <v-table class="vtable_view inbtn bg">
+            <v-table class="vtable_view inipt bg">
                 <colgroup>
-                    <col style="width:300px;"/>
-                    <col style="width:*;"/>
+                    <col style="width:200px;"/>
+                    <col style="width:378px;"/>
+                    <col style="width:200px;"/>
+                    <col style="width:378px;"/>
                 </colgroup>
                 <tbody>
                     <tr>
@@ -242,120 +219,100 @@
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Server API Port" v-model="serverAPIPort" :rules="serverAPIPortRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
                         <th>Server API Timeout</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Server API Timeout" v-model="serverAPITimeout" :rules="serverAPITimeoutRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <th>Scheduled Queue Clean Up</th>
+                        <th>Scheduled Queue<br>Clean Up</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Scheduled Queue Clean Up" v-model="scheduledQueueCleanUp" :rules="scheduledQueueCleanUpRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
-                        <th>Scheduled Message Start Up</th>
+                        <th>Scheduled Message<br>Start Up</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Scheduled Message Start Up" v-model="scheduledMessageStartUp" :rules="scheduledMessageStartUpRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <th>Scheduled Message Shut Down</th>
+                        <th>Scheduled Message<br>Shut Down</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Scheduled Message Shut Down" v-model="scheduledMessageShutDown" :rules="scheduledMessageShutDownRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
-                        <th>Scheduled Message InterBank</th>
+                        <th>Scheduled Message<br>InterBank</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Scheduled Message InterBank" v-model="scheduledMessageInterBank" :rules="scheduledMessageInterBankRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <th>Scheduled Message IntraBank</th>
+                        <th>Scheduled Message<br>IntraBank</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Scheduled Message IntraBank" v-model="scheduledMessageIntraBank" :rules="scheduledMessageIntraBankRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
-                        <th>Scheduled Message Payee</th>
+                        <th>Scheduled Message<br>Payee</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Scheduled Message Payee" v-model="scheduledMessagePayee" :rules="scheduledMessagePayeeRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <th>Scheduled Message DepRecpt</th>
+                        <th>Scheduled Message<br>DepRecpt</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Scheduled Message DepRecpt" v-model="scheduledMessageDepRecpt" :rules="scheduledMessageDepRecptRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
-                        <th>Scheduled Message VirRecpt</th>
+                        <th>Scheduled Message<br>VirRecpt</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Scheduled Message VirRecpt" v-model="scheduledMessageVirRecpt" :rules="scheduledMessageVirRecptRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <th>Scheduled Message FailRecpt</th>
+                        <th>Scheduled Message<br>FailRecpt</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Scheduled Message FailRecpt" v-model="scheduledMessageFailRecpt" :rules="scheduledMessageFailRecptRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
-                    </tr>
-                    <tr>
-                        <th>Scheduled Message InterResInq</th>
+                        <th>Scheduled Message<br>InterResInq</th>
                         <td>
                             <div class="input_flex a_center between">
                                 <v-text-field label="Scheduled Message InterResInq" v-model="scheduledMessageInterResInq" :rules="scheduledMessageInterResInqRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <th>Scheduled Message IntraReqInq</th>
-                        <td>
+                        <th>Scheduled Message<br>IntraReqInq</th>
+                        <td colspan="3">
                             <div class="input_flex a_center between">
                                 <v-text-field label="Scheduled Message IntraReqInq" v-model="scheduledMessageIntraReqInq" :rules="scheduledMessageIntraReqInqRules" required placeholder="" class="i_basics flex1 none_details" />
-                                <v-btn class="vbtn line ml_20" size="small">저장</v-btn>
                             </div>
                         </td>
                     </tr>
                 </tbody>
             </v-table>
+
+            <div class="btn_btm_wrap">
+                <v-btn class="vbtn blue" size="large">취소</v-btn>
+                <v-btn class="vbtn" size="large">저장</v-btn>
+            </div>
         </v-window-item>
 
     </v-window>

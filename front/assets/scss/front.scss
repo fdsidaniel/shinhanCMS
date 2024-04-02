@@ -567,7 +567,15 @@
             th{
                 width:100px;
             }
-        }        
+        }
+        &.inipt{
+            td {
+                padding: 5px 10px !important;
+                .vbtn{
+                    min-width:60px;
+                }
+            }
+        }
     }
     &.prev_next{
         margin-top:40px;
