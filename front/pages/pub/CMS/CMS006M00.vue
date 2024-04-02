@@ -12,7 +12,7 @@
   <div class="conbody">
 
     <!-- 검색 -->
-    <div class="search_table">
+    <!-- <div class="search_table">
         <div class="row">
             <div class="cell">
                 <div class="col">
@@ -26,6 +26,39 @@
                     </div>
                 </div>
             </div>
+            <div class="cell">
+                <div class="col">
+                    <span class="tit">신청자</span>
+                    <div class="con">
+                        <v-text-field label="신청자" v-model="appName" :rules="appNameRules" required placeholder="신청자를 입력해주세요." class="i_basics none_details"></v-text-field>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <v-btn class="vbtn line search" size="small">조회</v-btn>
+        </div>
+    </div> -->
+    <!-- //검색 -->
+
+    <!-- 검색 -->
+    <div class="search_table">
+        <div class="row">
+            <div class="cell">
+                <div class="col">
+                    <span class="tit">신청일</span>
+                    <div class="con i_calender">
+                        <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
+                        <div class="i_calender ml_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
+                            <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
+                            <span>~</span>
+                            <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="cell">
                 <div class="col">
                     <span class="tit">신청자</span>
@@ -73,6 +106,8 @@
 
 <script setup >
 
+import ComRadioButton from '@/components/common/ComRadioButton.vue'
+import ComSelectBox from '@/components/common/ComSelectBox.vue'
 import ComAgGrid from '~/components/common/ComAgGrid.vue'
 import ComDatePicker from '@/components/common/ComDatePicker.vue'
 

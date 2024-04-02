@@ -12,7 +12,7 @@
   <div class="conbody">
 
     <!-- 검색 -->
-    <div class="search_table">
+    <!-- <div class="search_table">
         <div class="row">
             <div class="cell">
                 <div class="col">
@@ -28,6 +28,47 @@
             </div>
             <div class="cell">
                 &nbsp;
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell">
+                <div class="col">
+                    <span class="tit other">송/수신 여부</span>
+                    <div class="con">
+                        <ComSelectBox groupCode="01" v-model="comboClass" :items="itemsClass" :isAll="true"  class="s_basics none_details" />
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
+                <div class="col">
+                    <span class="tit">검색어</span>
+                    <div class="con">
+                        <v-text-field label="검색어" v-model="search" :rules="searchRules" required placeholder="검색어를 입력해주세요." class="i_basics none_details" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <v-btn class="vbtn line search" size="small">조회</v-btn>
+        </div>
+    </div> -->
+    <!-- //검색 -->
+
+    <!-- 검색 -->
+    <div class="search_table">
+        <div class="row">
+            <div class="cell">
+                <div class="col">
+                    <span class="tit other">등록일</span>
+                    <div class="con i_calender">
+                        <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
+                        <div class="i_calender ml_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
+                            <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
+                            <span>~</span>
+                            <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -85,9 +126,20 @@
 
 <script setup >
 
+import ComRadioButton from '@/components/common/ComRadioButton.vue'
 import ComDatePicker from '@/components/common/ComDatePicker.vue'
 import ComSelectBox from '@/components/common/ComSelectBox.vue'
 import ComAgGrid from '~/components/common/ComAgGrid.vue'
+
+const calDateValue = ref('05')
+const calDate = [
+  { label: '당일', value: '01' },
+  { label: '1개월', value: '02' },
+  { label: '3개월', value: '03' },
+  { label: '6개월', value: '04' },
+  { label: '직접입력', value: '05' },
+]
+
 
 /* 달력 */
 const today = new Date() // 현재 날짜와 시간을 포함하는 Date 객체 생성
