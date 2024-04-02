@@ -2332,6 +2332,15 @@
         flex-shrink: 0;
         text-align: center;
     }
+    &.inactive{
+        .i_date{            
+            pointer-events: none;
+            .dp__input_wrap .dp__input_reg{
+                color: #808892;
+                background-color: #EBEFF5;
+            }
+        }
+    }
 }
 
 // 체크박스 정렬

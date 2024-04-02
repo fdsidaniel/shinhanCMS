@@ -550,6 +550,19 @@
         <span>2024-04-01</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span>전문 송/수신 관리(조회)</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS010M00" class="vlink blue line">CMS010M00</nuxt-link></span>
+        <span>전문 송/수신 이력 관리<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-02</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>

@@ -19,18 +19,15 @@
             <div class="cell">
                 <div class="col vtop">
                     <span class="tit req">요청일</span>
-                    <div class="con">
+                    <div class="con i_calender">
                         <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
-                        <div class="i_calender mt_10" v-show="calDateValue === '05'">
+                          <div class="i_calender ml_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
                             <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
                             <span>~</span>
                             <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="cell">
-                &nbsp;
             </div>
         </div>
         <div class="row">
@@ -106,6 +103,8 @@ const calDate = [
   { label: '6개월', value: '04' },
   { label: '직접입력', value: '05' },
 ]
+
+const isActive = ref(true);
 
 /* 달력 */
 const today = new Date() // 현재 날짜와 시간을 포함하는 Date 객체 생성

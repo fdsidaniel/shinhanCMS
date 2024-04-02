@@ -19,18 +19,15 @@
             <div class="cell">
                 <div class="col vtop">
                     <span class="tit">거래일시</span>
-                    <div class="con">
+                    <div class="con i_calender">
                         <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
-                        <div class="i_calender mt_10" v-show="calDateValue === '05'">
+                          <div class="i_calender ml_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
                             <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
                             <span>~</span>
                             <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="cell">
-                &nbsp;
             </div>
         </div>
         <div class="row">
