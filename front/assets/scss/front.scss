@@ -2023,6 +2023,19 @@
         }
     }
 
+    // 그리드 셀렉트
+    .ag_select{
+        .ag-select .ag-picker-field-wrapper {
+            padding-right: 10px;
+            border-radius: 4px;
+            border-color:#B9C1C9;
+
+            &:hover {
+                border-color:#5D47E5;
+            }
+        }
+    }
+
     // 그리드 아이콘
     .ico_file{
         position: relative;

@@ -667,6 +667,19 @@
         <span>2024-04-02</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span>사용자 권한 제어</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS015M00" class="vlink blue line">CMS015M00</nuxt-link></span>
+        <span>사용자 권한 제어<br>(시스템 관리자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-02</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>
