@@ -107,7 +107,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid vline"
+        class="grid none_head_line vline"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"
@@ -192,9 +192,9 @@ const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
   { headerName: '송/수신', field: 'tranAndrec', width: 100 },
   { headerName: '서비스명', field: 'serviceTitle', width: 485, cellClass: 'ellipsis' },
-  { headerName: '생성일시', field: 'creDate', width: 140 },
-  { headerName: '전문내용', field: 'detail', width: 200, cellRenderer: CustomCellRendererBtn },
+  { headerName: '생성일시', field: 'creDate', width: 140 },  
   { headerName: '등록일', field: 'regDate', width: 150 },
+  { headerName: '전문내용', field: 'detail', width: 201, cellRenderer: CustomCellRendererBtn },
 ])
 const rowDataReceive = [
   {

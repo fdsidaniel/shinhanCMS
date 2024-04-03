@@ -163,9 +163,9 @@ class CustomCellRendererBtn {
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
   { headerName: '신청자', field: 'appName', width: 269 },
-  { headerName: '대상자', field: 'subjectName', width: 269 },
-  { headerName: '상세내역', field: 'detail', width: 269, cellRenderer: CustomCellRendererBtn },
+  { headerName: '대상자', field: 'subjectName', width: 269 },  
   { headerName: '신청일', field: 'appDate', width: 269 },
+  { headerName: '상세내역', field: 'detail', width: 269, cellRenderer: CustomCellRendererBtn },
 ])
 const rowDataReceive = [
   {

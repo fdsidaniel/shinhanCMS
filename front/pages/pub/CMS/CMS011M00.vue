@@ -107,7 +107,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid vline"
+        class="grid none_head_line vline"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"
@@ -177,7 +177,7 @@ const columnDefsReceive = ref([
   { headerName: '처리 기관', field: 'org', width: 400, cellClass: 'ellipsis' },
   { headerName: '처리 주기', field: 'cycle', width: 350 },
   {
-    headerName: '처리 결과', field: 'result', width: 175, cellClass: params => {
+    headerName: '처리 결과', field: 'result', width: 176, cellClass: params => {
       if (params.value === '처리 실패') {
           return 'c_red'
       }

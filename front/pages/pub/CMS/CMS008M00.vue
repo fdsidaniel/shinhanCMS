@@ -41,7 +41,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid vline"
+        class="grid none_head_line vline"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"
@@ -76,11 +76,28 @@ const itemsCnt = ref([
   { title: '100개씩', value: '003' },
 ])
 
+class CustomCellRendererBtn {
+  eGui;
+  init(params) {
+    this.eGui = document.createElement('div');
+    this.eGui.classList.add('my-custom-cell-renderer');
+    this.eGui.innerHTML =
+      /* html */
+      `<button type="button" class="btn_vbtn btn_modify">서비스 시간 수정</button>`;
+  }
+  getGui() {
+    return this.eGui;
+  }
+  refresh(params) {
+    return false;
+  }
+}
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
-  { headerName: '기관명', field: 'orgName', width: 575, cellClass: 'link' },
-  { headerName: '서비스 시작 시간', field: 'startTime', width: 250 },
-  { headerName: '서비스 종료 시간', field: 'endTime', width: 250 },
+  { headerName: '기관명', field: 'orgName', width: 269},
+  { headerName: '서비스 시작 시간', field: 'startTime', width: 269 },
+  { headerName: '서비스 종료 시간', field: 'endTime', width: 269 },
+  { headerName: '시간 변경', field: 'timeMod', width: 269, cellRenderer: CustomCellRendererBtn },
 ])
 const rowDataReceive = [
   {
@@ -88,66 +105,77 @@ const rowDataReceive = [
     orgName: '대중소기업농어업혁력',
     startTime: '08:00',
     endTime: '23:00',
+    timeMod: '서비스 시간 수정',
   },
   {
     no: '2',
     orgName: '대중소기업농어업혁력',
     startTime: '08:00',
     endTime: '23:00',
+    timeMod: '서비스 시간 수정',
   },
   {
     no: '3',
     orgName: '대중소기업농어업혁력',
     startTime: '08:00',
     endTime: '23:00',
+    timeMod: '서비스 시간 수정',
   },
   {
     no: '4',
     orgName: '대중소기업농어업혁력',
     startTime: '08:00',
     endTime: '23:00',
+    timeMod: '서비스 시간 수정',
   },
   {
     no: '5',
     orgName: '대중소기업농어업혁력',
     startTime: '08:00',
     endTime: '23:00',
+    timeMod: '서비스 시간 수정',
   },
   {
     no: '6',
     orgName: '대중소기업농어업혁력',
     startTime: '08:00',
     endTime: '23:00',
+    timeMod: '서비스 시간 수정',
   },
   {
     no: '7',
     orgName: '대중소기업농어업혁력',
     startTime: '08:00',
     endTime: '23:00',
+    timeMod: '서비스 시간 수정',
   },
   {
     no: '8',
     orgName: '대중소기업농어업혁력',
     startTime: '08:00',
     endTime: '23:00',
+    timeMod: '서비스 시간 수정',
   },
   {
     no: '9',
     orgName: '대중소기업농어업혁력',
     startTime: '08:00',
     endTime: '23:00',
+    timeMod: '서비스 시간 수정',
   },
   {
     no: '10',
     orgName: '대중소기업농어업혁력',
     startTime: '08:00',
     endTime: '23:00',
+    timeMod: '서비스 시간 수정',
   },
   {
     no: '11',
     orgName: '대중소기업농어업혁력',
     startTime: '08:00',
     endTime: '23:00',
+    timeMod: '서비스 시간 수정',
   },
 ]
 const defaultColDefReceive = {

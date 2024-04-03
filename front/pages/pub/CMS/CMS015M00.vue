@@ -23,7 +23,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid vline"
+        class="grid none_head_line vline"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"
@@ -69,7 +69,7 @@ const columnDefsReceive = ref([
     cellClass: ['custom-center-align ag_select'],
     width: 200,
   },
-  { headerName: '등록일', field: 'regDate', width: 140 },
+  { headerName: '등록일', field: 'regDate', width: 141 },
 ])
 const rowDataReceive = [
   {

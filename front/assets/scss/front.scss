@@ -1879,6 +1879,7 @@
             }
             &.ico_ing,
             &.ico_success,
+            &.ico_success2,
             &.ico_suc,
             &.ico_fail,
             &.ico_calculate,
@@ -1916,6 +1917,13 @@
             &.ico_success{
                 color:#1150C5;
                 &:before{
+                    background:#D7E8FB;
+                }
+            }
+            &.ico_success2{                
+                color:#1150C5;
+                &:before{
+                    min-width:76px;
                     background:#D7E8FB;
                 }
             }

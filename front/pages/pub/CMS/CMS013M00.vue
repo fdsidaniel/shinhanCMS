@@ -107,7 +107,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid vline icon_type"
+        class="grid none_head_line vline icon_type"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"
@@ -196,8 +196,7 @@ class CustomCellRendererBtn {
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
   { headerName: '신청 기관', field: 'org', width: 350, cellClass: 'ellipsis' },
-  { headerName: '신청 권한', field: 'authority', width: 200 },
-  { headerName: '신청 정보', field: 'info', width: 200, cellRenderer: CustomCellRendererBtn },
+  { headerName: '신청 권한', field: 'authority', width: 200 },  
   { headerName: '신청 결과', field: 'result', width: 175 },
 //   {
 //     headerName: '신청 결과', field: 'result', width: 175, cellClass: params => {
@@ -211,6 +210,7 @@ const columnDefsReceive = ref([
 //     }
 //   },
   { headerName: '신청일', field: 'date', width: 150 },
+  { headerName: '신청 정보', field: 'info', width: 201, cellRenderer: CustomCellRendererBtn },
 ])
 const rowDataReceive = [
   {

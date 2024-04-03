@@ -67,7 +67,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid vline"
+        class="grid none_head_line vline"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"
@@ -143,7 +143,7 @@ const columnDefsReceive = ref([
   { headerName: '조회일시', field: 'searchDate', width: 220 },
   { headerName: '조회 계좌은행', field: 'searchAccBank', width: 245 },
   { headerName: '조회 계좌번호', field: 'searchAccNum', width: 400 },
-  { headerName: '조회 예금주명', field: 'searchAccName', width: 210 },  
+  { headerName: '조회 예금주명', field: 'searchAccName', width: 211 },  
 ])
 const rowDataReceive = [
   {

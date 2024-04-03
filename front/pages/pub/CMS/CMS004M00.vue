@@ -64,7 +64,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid vline"
+        class="grid none_head_line vline"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"
@@ -134,7 +134,7 @@ const columnDefsReceive = ref([
   { headerName: '거래구분', field: 'transactionClass', width: 200 },
   { headerName: '거래금액', field: 'transactionAmount', width: 205, cellClass: 'cell_right' },
   { headerName: '계좌번호', field: 'accNum', width: 220 },
-  { headerName: '거래일시', field: 'transactionDate', width: 190 },
+  { headerName: '거래일시', field: 'transactionDate', width: 191 },
 ])
 const rowDataReceive = [
   {

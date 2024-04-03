@@ -107,7 +107,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid vline"
+        class="grid none_head_line vline"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"
@@ -183,7 +183,7 @@ const columnDefsReceive = ref([
       }
     }
   },
-  { headerName: '처리일', field: 'date', width: 150 },
+  { headerName: '처리일', field: 'date', width: 151 },
 ])
 const rowDataReceive = [
   {

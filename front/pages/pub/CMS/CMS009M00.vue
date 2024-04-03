@@ -107,7 +107,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid vline"
+        class="grid none_head_line vline"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"
@@ -187,11 +187,19 @@ class CustomCellRendererBtn {
 }
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
-  { headerName: '발생 기관', field: 'org', width: 260 },
-  { headerName: '발생 채널', field: 'channel', width: 280 },
-  { headerName: '상세내역', field: 'detail', width: 250, cellRenderer: CustomCellRendererBtn },
-  { headerName: '현황', field: 'report', width: 145 },
-  { headerName: '발생일', field: 'date', width: 140 },
+  { headerName: '발생 기관', field: 'org', width: 215 },
+  { headerName: '발생 채널', field: 'channel', width: 215 },
+  {
+    headerName: '현황', field: 'report', width: 215, cellClass: params => {
+      if (params.value === '조치 완료') {
+          return 'ico_success2'
+      }else if (params.value === '미조치') {
+          return 'ico_fail'
+      }
+    }
+  },
+  { headerName: '발생일', field: 'date', width: 215 },
+  { headerName: '상세내역', field: 'detail', width: 216, cellRenderer: CustomCellRendererBtn },
 ])
 const rowDataReceive = [
   {
