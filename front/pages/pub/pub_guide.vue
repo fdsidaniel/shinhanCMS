@@ -381,6 +381,7 @@
             />
             <div class="grid_extend"></div>
             <v-btn class="vbtn btn_grid_more" size="small">더보기</v-btn>
+            <pagination pages="50" class=""></pagination>
           </div>
 
           <h3>ComAgGridBasic - ComAgGridBasic은 그리드, 더보기 버튼만 나옵니다.</h3>
@@ -3026,6 +3027,7 @@
 import ComSelectBox from '@/components/common/ComSelectBox.vue'
 import ComRadioButton from '@/components/common/ComRadioButton.vue'
 import ComAgGrid from '~/components/common/ComAgGrid.vue'
+import pagination from '@/components/common/pdf/pagination.vue'
 import ComAgGridBasic from '~/components/common/ComAgGridBasic.vue'
 import ComDatePicker from '@/components/common/ComDatePicker.vue'
 
