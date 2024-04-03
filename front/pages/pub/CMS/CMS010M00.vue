@@ -107,7 +107,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid"
+        class="grid vline"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"
@@ -172,12 +172,28 @@ const itemsCnt = ref([
   { title: '100개씩', value: '003' },
 ])
 
+class CustomCellRendererBtn {
+  eGui;
+  init(params) {
+    this.eGui = document.createElement('div');
+    this.eGui.classList.add('my-custom-cell-renderer');
+    this.eGui.innerHTML =
+      /* html */
+      `<button type="button" class="btn_vbtn btn_detail">상세보기</button>`;
+  }
+  getGui() {
+    return this.eGui;
+  }
+  refresh(params) {
+    return false;
+  }
+}
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
   { headerName: '송/수신', field: 'tranAndrec', width: 100 },
-  { headerName: '서비스명', field: 'serviceTitle', width: 330, cellClass: 'ellipsis' },
+  { headerName: '서비스명', field: 'serviceTitle', width: 485, cellClass: 'ellipsis' },
   { headerName: '생성일시', field: 'creDate', width: 140 },
-  { headerName: '전문내용', field: 'detail', width: 355, cellClass: 'link ellipsis' },
+  { headerName: '전문내용', field: 'detail', width: 200, cellRenderer: CustomCellRendererBtn },
   { headerName: '등록일', field: 'regDate', width: 150 },
 ])
 const rowDataReceive = [

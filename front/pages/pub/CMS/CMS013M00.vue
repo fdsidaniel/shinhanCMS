@@ -107,7 +107,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid icon_type"
+        class="grid vline icon_type"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"
@@ -177,11 +177,27 @@ const itemsCnt = ref([
   { title: '100개씩', value: '003' },
 ])
 
+class CustomCellRendererBtn {
+  eGui;
+  init(params) {
+    this.eGui = document.createElement('div');
+    this.eGui.classList.add('my-custom-cell-renderer');
+    this.eGui.innerHTML =
+      /* html */
+      `<button type="button" class="btn_vbtn btn_detail">상세보기</button>`;
+  }
+  getGui() {
+    return this.eGui;
+  }
+  refresh(params) {
+    return false;
+  }
+}
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
   { headerName: '신청 기관', field: 'org', width: 350, cellClass: 'ellipsis' },
   { headerName: '신청 권한', field: 'authority', width: 200 },
-  { headerName: '신청 정보', field: 'info', width: 200, cellClass: 'link ellipsis' },
+  { headerName: '신청 정보', field: 'info', width: 200, cellRenderer: CustomCellRendererBtn },
   { headerName: '신청 결과', field: 'result', width: 175 },
 //   {
 //     headerName: '신청 결과', field: 'result', width: 175, cellClass: params => {

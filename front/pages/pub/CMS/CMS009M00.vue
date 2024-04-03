@@ -107,7 +107,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid"
+        class="grid vline"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"
@@ -169,11 +169,27 @@ const itemsCnt = ref([
   { title: '100개씩', value: '003' },
 ])
 
+class CustomCellRendererBtn {
+  eGui;
+  init(params) {
+    this.eGui = document.createElement('div');
+    this.eGui.classList.add('my-custom-cell-renderer');
+    this.eGui.innerHTML =
+      /* html */
+      `<button type="button" class="btn_vbtn btn_detail">상세보기</button>`;
+  }
+  getGui() {
+    return this.eGui;
+  }
+  refresh(params) {
+    return false;
+  }
+}
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
   { headerName: '발생 기관', field: 'org', width: 260 },
   { headerName: '발생 채널', field: 'channel', width: 280 },
-  { headerName: '상세내역', field: 'detail', width: 250, cellClass: 'link ellipsis' },
+  { headerName: '상세내역', field: 'detail', width: 250, cellRenderer: CustomCellRendererBtn },
   { headerName: '현황', field: 'report', width: 145 },
   { headerName: '발생일', field: 'date', width: 140 },
 ])

@@ -107,7 +107,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid"
+        class="grid vline"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"

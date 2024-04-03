@@ -1639,6 +1639,19 @@ html{
         background-position: center center;
         background-repeat: no-repeat;
     }
+    &.btn_detail {
+        min-width: 32px;
+        width: 32px;
+        height: 32px !important;
+        vertical-align: middle;
+        font-size: 0;
+        background-color: #fff !important;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none'%3E%3Crect width='31' height='31' x='.5' y='.5' fill='%23fff' rx='3.5'/%3E%3Cpath fill='%23808892' d='M23 12.41V24a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h7.59a1 1 0 0 1 .7.29l4.42 4.42a1 1 0 0 1 .29.7Z'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-width='1.5' d='M13 13h3M13 16h3'/%3E%3Crect width='31' height='31' x='.5' y='.5' stroke='%23E1E6EC' rx='3.5'/%3E%3C/svg%3E") !important;
+        background-size: 32px 32px;
+        background-position: left top;
+        background-repeat: no-repeat;
+        border:0;
+    }
 }
 .btn_vbtn_ico{
     display:block;

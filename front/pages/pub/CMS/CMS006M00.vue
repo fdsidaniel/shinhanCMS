@@ -83,7 +83,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid"
+        class="grid vline"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"
@@ -144,12 +144,28 @@ const itemsCnt = ref([
   { title: '100개씩', value: '003' },
 ])
 
+class CustomCellRendererBtn {
+  eGui;
+  init(params) {
+    this.eGui = document.createElement('div');
+    this.eGui.classList.add('my-custom-cell-renderer');
+    this.eGui.innerHTML =
+      /* html */
+      `<button type="button" class="btn_vbtn btn_detail">상세보기</button>`;
+  }
+  getGui() {
+    return this.eGui;
+  }
+  refresh(params) {
+    return false;
+  }
+}
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
-  { headerName: '신청자', field: 'appName', width: 220 },
-  { headerName: '대상자', field: 'subjectName', width: 220 },
-  { headerName: '상세내역', field: 'detail', width: 475, cellClass: 'link ellipsis' },
-  { headerName: '신청일', field: 'appDate', width: 160 },
+  { headerName: '신청자', field: 'appName', width: 269 },
+  { headerName: '대상자', field: 'subjectName', width: 269 },
+  { headerName: '상세내역', field: 'detail', width: 269, cellRenderer: CustomCellRendererBtn },
+  { headerName: '신청일', field: 'appDate', width: 269 },
 ])
 const rowDataReceive = [
   {
