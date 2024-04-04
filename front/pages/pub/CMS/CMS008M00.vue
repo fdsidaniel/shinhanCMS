@@ -13,19 +13,19 @@
 
     <!-- 검색 -->
     <div class="search_table">
-        <div class="row">
-            <div class="cell">
+        <div class="row j_center">
+            <div class="cell flexn">
                 <div class="col">
                     <span class="tit">기관명</span>
                     <div class="con">
-                        <v-text-field label="기관명" v-model="orgName" :rules="orgNameRules" required placeholder="기관명을 입력해주세요." class="i_basics none_details" />
-                    </div>
+                        <div class="input_flex">
+                          <v-text-field label="기관명" v-model="orgName" :rules="orgNameRules" required placeholder="기관명을 입력해주세요." class="i_basics w_468 none_details" />
+                          <v-btn class="vbtn line search ml_20" size="small">조회</v-btn>
+                        </div>
+                    </div>                    
                 </div>
             </div>
-        </div>
-        <div class="btn">
-            <v-btn class="vbtn line search" size="small">조회</v-btn>
-        </div>
+        </div>        
     </div>
     <!-- //검색 -->
 

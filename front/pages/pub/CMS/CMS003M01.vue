@@ -32,10 +32,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="btn">
-            <v-btn class="vbtn line search" size="small">조회</v-btn>
-        </div>
+            <div class="cell btn">
+                <v-btn class="vbtn line search" size="small">조회</v-btn>
+            </div>
+        </div>        
     </div>
     <!-- //검색 -->
 

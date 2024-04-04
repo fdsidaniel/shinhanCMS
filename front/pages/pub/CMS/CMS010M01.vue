@@ -11,36 +11,36 @@
 
   <div class="conbody">
 
-    <v-table class="vtable_view">
+    <v-table class="vtable_view bg">
         <colgroup>
+            <col style="width:;"/>
+            <col style="width:;"/>
             <col style="width:;"/>
             <col style="width:;"/>
         </colgroup>
         <tbody>
             <tr>
                 <th>서비스명</th>
-                <td>당행 입금이체</td>
+                <td colspan="3">당행 입금이체</td>
             </tr>
             <tr>
                 <th>송신/수신 구분</th>
-                <td>송신</td>
+                <td colspan="3">송신</td>
             </tr>
             <tr>
                 <th>생성일시</th>
                 <td>2024-03-15</td>
+                <th>등록일</th>
+                <td>2024-03-15</td>
             </tr>
             <tr>
                 <th>전문내용</th>
-                <td>
+                <td colspan="3">
                     상세전문내용<br>
                     상세전문내용<br>
                     상세전문내용<br>
                     상세전문내용<br>
                 </td>
-            </tr>
-            <tr>
-                <th>등록일</th>
-                <td>2024-03-15</td>
             </tr>
         </tbody>
     </v-table>
