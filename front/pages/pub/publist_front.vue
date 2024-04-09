@@ -748,7 +748,7 @@
       </li>
 
       <li>
-        <span>AICMS 프로젝트 - 참고용 퍼블 목록(삭제 예정) </span>
+        <span>AICMS 프로젝트 - 참고용 퍼블 목록(삭제 예정)</span>
       </li>
       
       <li>
