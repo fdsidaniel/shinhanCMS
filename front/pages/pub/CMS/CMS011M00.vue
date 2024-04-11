@@ -107,7 +107,7 @@
         ref="agrid"
         :columnDefs="columnDefsReceive"
         style="height: 570px"
-        class="grid none_head_line vline"
+        class="grid none_head_line vline icon_type"
         :rowData="rowDataReceive"
         :defaultColDef="defaultColDefReceive"
         :rowHeight="51"
@@ -178,8 +178,13 @@ const columnDefsReceive = ref([
   { headerName: '처리 주기', field: 'cycle', width: 350 },
   {
     headerName: '처리 결과', field: 'result', width: 176, cellClass: params => {
-      if (params.value === '처리 실패') {
-          return 'c_red'
+      // if (params.value === '처리 실패') {
+      //     return 'c_red'
+      // }
+      if (params.value === '정상 처리') {
+          return 'ico_success'
+      }else if (params.value === '처리 실패') {
+          return 'ico_err'
       }
     }
   },
