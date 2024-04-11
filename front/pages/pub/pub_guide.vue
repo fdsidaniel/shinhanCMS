@@ -4041,8 +4041,10 @@ const layerPopView = () => {
   layerPop.value = !layerPop.value
 };
 
-const consoleClear = () => {
-  console.clear()
+const consoleClear = () => {  
+  setTimeout(() => {
+    console.clear()
+  }, 1000)
 };
 
 import { defineComponent } from 'vue';
@@ -4081,5 +4083,14 @@ const btnSort = () => {
     message.value = '최신순';
   }
 };
+  
+onMounted(() => {
+  consoleClear()
+})
+
+onBeforeUnmount(() => {
+  consoleClear()
+})
+
 
 </script> 
