@@ -62,7 +62,24 @@
             <div><ComRadioButton :options="radioOptions" v-model="selectedValue" :isInline="true" /></div>
             <div><ComRadioButton :options="radioOptions" v-model="selectedValue" disabled /></div>
             <div><ComRadioButton :options="transfer" v-model="transferValue" :isInline="true" class="type_chk_big" /></div>
-            <div><ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" /></div>
+            <div>
+              <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
+              <div class="i_calender mt_10" v-show="calDateValue === '05'">
+                  <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
+                  <span>~</span>
+                  <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
+              </div>
+            </div>
+            <div>
+              <div class="d_flex">
+                <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
+                <div class="i_calender ml_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
+                    <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
+                    <span>~</span>
+                    <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
+                </div>
+              </div>
+            </div>
           </div>
 
           <h3>체크박스</h3>
@@ -1128,7 +1145,195 @@
       <v-window-item value="search">
         <div class="pub_guide_con">
           
-          <h3>검색</h3>
+          <h3>검색 - CMS SHIN</h3>
+          <div class="component">
+            <!-- 검색 -->
+            <div class="search_table">
+                <div class="row">
+                    <div class="cell">
+                        <div class="col vtop">
+                            <span class="tit req">거래일시</span>
+                            <div class="con">
+                                <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
+                                <div class="i_calender mt_10" v-show="calDateValue === '05'">
+                                    <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
+                                    <span>~</span>
+                                    <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="col">
+                            <span class="tit">처리 결과</span>
+                            <div class="con">
+                                <ComSelectBox groupCode="01" v-model="comboProcessResult" :items="itemsProcessResult" :isAll="true"  class="s_basics none_details" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <div class="col">
+                            <span class="tit req">요청 채널</span>
+                            <div class="con">
+                                <ComSelectBox groupCode="01" v-model="comboRequestChannel" :items="itemsRequestChannel" :isAll="true"  class="s_basics none_details" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="col">
+                            <span class="tit req">요청 번호</span>
+                            <div class="con">
+                                <v-text-field label="요청 번호" v-model="requestNum" :rules="requestNumRules" required placeholder="요청번호 모두를 입력해주세요." class="i_basics none_details"></v-text-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <div class="col">
+                            <span class="tit">계좌번호</span>
+                            <div class="con">
+                                <v-text-field label="계좌번호" v-model="accNum" :rules="accNumRules" required placeholder="“-”없이, 계좌번호 모두를 입력해주세요." class="i_basics none_details"></v-text-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="col">
+                            <span class="tit">통장 메모</span>
+                            <div class="con">
+                                <v-text-field label="통장 메모" v-model="bankBookMemo" :rules="bankBookMemoRules" required placeholder="두 글자 이상 입력해주세요." class="i_basics none_details"></v-text-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <v-btn class="vbtn line search" size="small">조회</v-btn>
+                </div>
+            </div>
+            <!-- //검색 -->
+
+            <!-- 검색 -->
+            <div class="search_table">
+                <div class="row">
+                    <div class="cell">
+                        <div class="col vtop">
+                            <span class="tit req">요청일</span>
+                            <div class="con i_calender">
+                                <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
+                                  <div class="i_calender ml_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
+                                    <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
+                                    <span>~</span>
+                                    <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <div class="col">
+                            <span class="tit req">요청 채널</span>
+                            <div class="con">
+                                <ComSelectBox groupCode="01" v-model="comboRequestChannel" :items="itemsRequestChannel" :isAll="true"  class="s_basics none_details" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="col">
+                            <span class="tit req">요청 번호</span>
+                            <div class="con">
+                                <v-text-field label="요청 번호" v-model="requestNum" :rules="requestNumRules" required placeholder="요청번호 모두를 입력해주세요." class="i_basics none_details"></v-text-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <v-btn class="vbtn line search" size="small">조회</v-btn>
+                </div>
+            </div>
+            <!-- //검색 -->
+
+            <!-- 검색 -->
+            <div class="search_table">
+                <div class="row">
+                    <div class="cell">
+                        <div class="col vtop">
+                            <span class="tit req">은행</span>
+                            <div class="con">
+                                <ComSelectBox groupCode="01" v-model="comboBank" :items="itemsBank" :isAll="true"  class="s_basics none_details" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="col">
+                            <span class="tit req">계좌번호</span>
+                            <div class="con">
+                                <v-text-field label="계좌번호" v-model="accNum" :rules="accNumRules" required placeholder="계좌번호를 입력해주세요." class="i_basics none_details"></v-text-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell btn">
+                        <v-btn class="vbtn line search" size="small">조회</v-btn>
+                    </div>
+                </div>
+            </div>
+            <!-- //검색 -->
+
+            <!-- 검색 -->
+            <div class="search_table">
+                <div class="row">
+                    <div class="cell">
+                        <div class="col">
+                            <span class="tit">신청일</span>
+                            <div class="con i_calender">
+                                <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
+                                <div class="i_calender ml_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
+                                    <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
+                                    <span>~</span>
+                                    <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <div class="col">
+                            <span class="tit">신청자</span>
+                            <div class="con">
+                                <v-text-field label="신청자" v-model="appName" :rules="appNameRules" required placeholder="신청자를 입력해주세요." class="i_basics none_details"></v-text-field>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <v-btn class="vbtn line search" size="small">조회</v-btn>
+                </div>
+            </div>
+            <!-- //검색 -->
+
+            <!-- 검색 -->
+            <div class="search_table">
+                <div class="row j_center">
+                    <div class="cell flexn">
+                        <div class="col">
+                            <span class="tit">기관명</span>
+                            <div class="con">
+                                <div class="input_flex">
+                                  <v-text-field label="기관명" v-model="orgName" :rules="orgNameRules" required placeholder="기관명을 입력해주세요." class="i_basics w_468 none_details" />
+                                  <v-btn class="vbtn line search ml_20" size="small">조회</v-btn>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //검색 -->
+          </div>
+
+          <h3>검색 - AICMS</h3>
           <div class="component">
 
             <!-- 검색영역 -->
@@ -2848,7 +3053,7 @@
             </div>
           </div>
 
-          <h3>skin css</h3>
+          <!-- <h3>skin css</h3>
           <div class="component">
             <div>
               <p>// SKIN 적용 css 주석 부분 참고하여 추가</p>
@@ -2864,7 +3069,7 @@
                 // END - SKIN - 스킨명
               </pre>
             </div>
-          </div>
+          </div> -->
 
         </div>
       </v-window-item>
