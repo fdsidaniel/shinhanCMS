@@ -275,6 +275,45 @@ html{
     display: flex;
     flex-direction: column;
     height: 100%;
+
+    // 메인페이지
+    &:has(.cms_main_wrap){
+        .container{
+            padding-top:160px;
+            color:#121619;
+            background: url("../images/bg_main.svg") center top no-repeat;
+            &:before{
+                content: '';
+                position: absolute;
+                top:718px;
+                left:0;
+                right:0;
+                height:54px;
+                background: linear-gradient(92.27deg, #5350F6 19.43%, #A35BFF 81.51%);
+            }
+            &:after{
+                content: '';
+                position: fixed;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                background-color: #F3F6FB;
+                z-index:-1;
+            }
+        }        
+    }
+    // 로그인
+    &:has(.login_wrap){
+        .header,
+        .footer,
+        .quick_menu{
+            display:none;
+        }
+        .container{
+            background: url("../images/bg_login.png") center center no-repeat;
+        }        
+    }
 }
 
 // CMS
