@@ -620,11 +620,13 @@ html{
     width:300px;
     background-color: #fff;
     border-left:1px solid #000;
-    transition: 0.3s;
+    transition: 0.3s;    
     z-index:2010;
     //opacity: 0.5;
     &.active{
-        right:0;        
+        right:0;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;   
     }
     &:hover{
         opacity: 1;
