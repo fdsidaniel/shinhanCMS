@@ -85,7 +85,7 @@
         </div>
       </div>
 
-      <div class="gnb_right">        
+      <div class="gnb_right">
         <div class="btn_util">
           <div class="last_login">
             <p>최종접속</p>
@@ -93,11 +93,57 @@
               2024.02.15 14:12:56 김기관 <span>(기관관리자)</span>
             </div>
           </div>
-          <v-btn class="vbtn btn_logout" size="small">로그아웃</v-btn>          
+          <v-btn class="vbtn btn_logout" size="small">로그아웃</v-btn>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- 퀵메뉴 -->
+  <div class="quick_menu" :class="{ 'active': quickView }">
+    <div class="qmenu_box">
+      <v-btn class="vbtn btn_qmenu" size="small" @click="quickMenu">{{ message }}</v-btn>
+      <div class="qmenu_con">
+        <div class="qmenu_list_box">
+          <p class="tit">최근 방문 기록</p>
+          <div class="qmenu_list visit">
+            <ul class="list">
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="qmenu_list_box">
+          <p class="tit">즐겨찾기 메뉴</p>
+          <div class="qmenu_list book_mark">
+            <ul class="list">
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //퀵메뉴 -->
 </template>
 
 <script setup>
@@ -105,13 +151,26 @@
 // 메뉴 클릭 시 GNB 하위 메뉴 hide
 const gnbView = ref(false)
 const handleClick = (event) => {
-  if(event.target.tagName === 'A') {    
+  if(event.target.tagName === 'A') {
     gnbView.value = true
     console.log('gnb sub menu close')
   }  
 }
 const gnbMouseOver = () => {
   gnbView.value = false
+}
+
+// 퀵메뉴
+const message = ref('메뉴 펼치기')
+const quickView = ref(false)
+const quickMenu = () => {
+  if(!quickView.value){
+    quickView.value = true
+    message.value = '메뉴 접기'
+  }else{
+    quickView.value = false
+    message.value = '메뉴 펼치기'
+  }
 }
 
 </script>

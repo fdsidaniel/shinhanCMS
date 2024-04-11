@@ -573,6 +573,94 @@ html{
         }
     }
 }
+.quick_menu{
+    position: fixed;
+    top:0;
+    right:-300px;
+    bottom:0;
+    width:300px;
+    background-color: #fff;
+    border-left:1px solid #000;
+    transition: 0.3s;
+    z-index:2010;
+    //opacity: 0.5;
+    &.active{
+        right:0;        
+    }
+    &:hover{
+        opacity: 1;
+    }
+
+    .qmenu_box{
+        position: relative;
+        height:100%;
+        padding:20px;
+
+        .btn_qmenu{
+            position: absolute;
+            top:50%;
+            right:300px;
+            transform: translateY(-50%);
+        }
+
+        .qmenu_con{
+            display: flex;
+            height:100%;
+            flex-direction: column;
+            .qmenu_list_box{
+                position: relative;
+                flex:1;
+                &+.qmenu_list_box{
+                    margin-top:20px;
+                }
+                .tit{
+                    color:#121619;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 30px;
+                    letter-spacing: 0em;
+                }
+                .qmenu_list{
+                    overflow-y: auto;
+                    margin-top:10px;                    
+                    &.visit{
+                        min-height:300px;
+                        max-height:300px;
+                    }
+                    &.book_mark{
+                        max-height:300px;
+                    }
+                    &::-webkit-scrollbar {
+                        width: 6px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background: #12161980;
+                        border-radius: 20px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background: transparent;
+                    }
+                    
+                    .list{
+                        li{
+                            &+li{
+                                margin-top:10px;
+                            }
+                            a{
+                                &:hover{
+                                    color: #331CBF;
+                                    text-decoration: underline;
+                                    text-decoration-color: #1150C5;
+                                    text-underline-position: under;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
 
 // CMS
 .container {
