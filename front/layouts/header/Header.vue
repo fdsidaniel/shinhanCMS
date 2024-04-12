@@ -193,7 +193,7 @@ const quickMenu = () => {
 // 퀵메뉴 활성화
 const toggleActive = (event) => {
   const target = event.target
-  const aElements = document.querySelectorAll(".list li a")
+  const aElements = document.querySelectorAll(".book_mark .list li a")
   aElements.forEach((a) => {
       a.classList.remove('on')
   })
