@@ -198,7 +198,7 @@ const toggleActive = (event) => {
       a.classList.remove('on')
   })
   target.classList.add('on')
-  console.log('menu active')
+  console.log('menu active - ' + target.text)
 }
 // 버튼 확인용 - 개발시 삭제
 const menuDel = () => {
