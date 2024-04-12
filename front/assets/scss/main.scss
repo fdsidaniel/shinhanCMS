@@ -630,6 +630,16 @@ html{
 
         .qmenu_box{
             .vbtn.btn_qmenu{
+                &:before{
+                    content: '';
+                    position: absolute;
+                    left:5px;
+                    width:30px;
+                    height:60px;
+                    border-radius: 30px 0 0 30px;
+                    box-shadow: -6px 0px 20px -8px #0000001A;
+                    z-index:-1;
+                }
                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='84' fill='none'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M30 84V0c-2.4 9.6-8.325 12.89-12 14.496C7.405 19.126 0 29.698 0 42c0 12.301 7.405 22.874 18 27.504C21.675 71.109 27.6 75.6 30 84Z' clip-rule='evenodd'/%3E%3Cpath stroke='%23808892' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m20 47 5-5-5-5M14 47l5-5-5-5'/%3E%3C/svg%3E");
                 background-size: 30px 84px;
                 background-position: right center;
@@ -679,6 +689,7 @@ html{
             background-repeat: no-repeat;
             background-color: transparent;
             transition: 0.3s;
+            z-index:0;
             &:hover{
                 box-shadow: none;
                 .v-btn__content{
