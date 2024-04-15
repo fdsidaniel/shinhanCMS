@@ -672,7 +672,7 @@ html{
     .qmenu_box{
         position: relative;
         height:100%;
-        padding:90px 5px 0 15px;
+        padding:90px 0 0 15px;
 
         .logo{
             position: absolute;
@@ -757,7 +757,15 @@ html{
                 height:50%;
                 min-height:150px;
                 &+.qmenu_list_box{
-                    border-top: 1px solid #E1E6EC;
+                    &:before{
+                        content:'';
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        right:15px;
+                        height:1px;
+                        background-color: #E1E6EC;
+                    }                    
                 }
                 .tit{
                     padding:15px 15px 0 21px;
@@ -773,10 +781,9 @@ html{
                         background-position: left top 18px;
                         background-repeat: no-repeat;
                     }
-                    // .qmenu_list{
-                    //     min-height:100px;
-                    //     max-height:300px;
-                    // }
+                    .qmenu_list{
+                        bottom:5px;
+                    }
                 }
                 &.book_mark{
                     .tit{
@@ -785,17 +792,18 @@ html{
                         background-position: left top 18px;
                         background-repeat: no-repeat;
                     }
-                    // .qmenu_list{
-                    //     min-height:100px;
-                    //     max-height:338px;
-                    // }
+                    .qmenu_list{
+                        bottom:7px;
+                    }
                 }
                 .qmenu_list{
                     overflow-y: auto;
                     position: absolute;
                     top:42px;
                     bottom:0;
-                    min-height:100px;                    
+                    left:0;
+                    right:3px;
+                    min-height:100px;
                     
                     &::-webkit-scrollbar {
                         width: 6px;

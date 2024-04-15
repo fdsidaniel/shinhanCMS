@@ -121,6 +121,18 @@
                 <nuxt-link to="" @click="toggleActive($event)">제휴가상계좌 입금 승인처리내역</nuxt-link>
                 <v-btn class="btn_del" size="small">삭제</v-btn>
               </li>
+              <li>
+                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체</nuxt-link>
+                <v-btn class="btn_del" size="small">삭제</v-btn>
+              </li>
+              <li>
+                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체</nuxt-link>
+                <v-btn class="btn_del" size="small">삭제</v-btn>
+              </li>
+              <li>
+                <nuxt-link to="" @click="toggleActive($event)">제휴가상계좌 입금 승인처리내역</nuxt-link>
+                <v-btn class="btn_del" size="small">삭제</v-btn>
+              </li>
             </ul>
           </div>
         </div>
