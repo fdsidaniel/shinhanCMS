@@ -105,20 +105,9 @@
       <p class="logo">CMS Shin</p>
       <v-btn class="vbtn btn_qmenu" size="small" @click="quickMenu">{{ message }}</v-btn>
       <div class="qmenu_con">
-        <div class="qmenu_list_box">
-          <p class="tit">최근 방문 기록</p>
-          <div class="qmenu_list visit">
-            <ul class="list">
-              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
-              <li><nuxt-link to="">당행 입금 이체</nuxt-link></li>
-              <li><nuxt-link to="">메뉴명 길면 말줄임으로</nuxt-link></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="qmenu_list_box">
-          <p class="tit">즐겨찾기 메뉴</p>
-          <div class="qmenu_list book_mark">
+        <div class="qmenu_list_box visit">
+          <p class="tit">최근 탭</p>
+          <div class="qmenu_list">
             <ul class="list">
               <li>
                 <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체</nuxt-link>
@@ -132,28 +121,48 @@
                 <nuxt-link to="" @click="toggleActive($event)">제휴가상계좌 입금 승인처리내역</nuxt-link>
                 <v-btn class="btn_del" size="small">삭제</v-btn>
               </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="qmenu_list_box book_mark">
+          <p class="tit">즐겨찾기</p>
+          <div class="qmenu_list">
+            <ul class="list">
               <li>
-                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체</nuxt-link>
+                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체1</nuxt-link>
                 <v-btn class="btn_del" size="small">삭제</v-btn>
               </li>
               <li>
-                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체</nuxt-link>
+                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체2</nuxt-link>
                 <v-btn class="btn_del" size="small">삭제</v-btn>
               </li>
               <li>
-                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체</nuxt-link>
+                <nuxt-link to="" @click="toggleActive($event)">제휴가상계좌 입금 승인처리내역3</nuxt-link>
                 <v-btn class="btn_del" size="small">삭제</v-btn>
               </li>
               <li>
-                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체</nuxt-link>
+                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체4</nuxt-link>
                 <v-btn class="btn_del" size="small">삭제</v-btn>
               </li>
               <li>
-                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체</nuxt-link>
+                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체5</nuxt-link>
                 <v-btn class="btn_del" size="small">삭제</v-btn>
               </li>
               <li>
-                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체</nuxt-link>
+                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체6</nuxt-link>
+                <v-btn class="btn_del" size="small">삭제</v-btn>
+              </li>
+              <li>
+                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체7</nuxt-link>
+                <v-btn class="btn_del" size="small">삭제</v-btn>
+              </li>
+              <li>
+                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체8</nuxt-link>
+                <v-btn class="btn_del" size="small">삭제</v-btn>
+              </li>
+              <li>
+                <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체9</nuxt-link>
                 <v-btn class="btn_del" size="small">삭제</v-btn>
               </li>
             </ul>
@@ -193,7 +202,7 @@ const quickMenu = () => {
 // 퀵메뉴 활성화
 const toggleActive = (event) => {
   const target = event.target
-  const aElements = document.querySelectorAll(".book_mark .list li a")
+  const aElements = document.querySelectorAll(".qmenu_list_box .list li a")
   aElements.forEach((a) => {
       a.classList.remove('on')
   })
