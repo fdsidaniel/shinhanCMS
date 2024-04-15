@@ -171,7 +171,6 @@ const gnbView = ref(false)
 const handleClick = (event) => {
   if(event.target.tagName === 'A') {
     gnbView.value = true
-    console.log('gnb sub menu close')
   }  
 }
 const gnbMouseOver = () => {
@@ -198,8 +197,8 @@ const toggleActive = (event) => {
       a.classList.remove('on')
   })
   target.classList.add('on')
-  console.log('menu active - ' + target.text)
 }
+
 // 버튼 확인용 - 개발시 삭제
 const menuDel = () => {
   console.log('menu delete')
