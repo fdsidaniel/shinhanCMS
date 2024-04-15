@@ -970,6 +970,9 @@ const btnPrevNextView = () => {
     if(slidesPerViewMove.value === 0){
         btnNextView.value = true
     }
+    if(liItemCnt < slidesPerView){
+        btnNextView.value = true
+    }
     if(slidesPerViewMove.value < liItemCnt - slidesPerView){
         btnPrevView.value = false
     }else if(slidesPerViewMove.value === liItemCnt - slidesPerView){
@@ -980,6 +983,7 @@ const btnPrevNextView = () => {
     lielements.forEach(element => {
         element.classList.remove('open')
     })
+    console.log(liItemCnt + "/" + slidesPerView)
 };
 const move = ref(0);
 const btnPrev = () => {
