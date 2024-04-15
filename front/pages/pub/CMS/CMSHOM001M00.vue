@@ -983,7 +983,6 @@ const btnPrevNextView = () => {
     lielements.forEach(element => {
         element.classList.remove('open')
     })
-    console.log(liItemCnt + "/" + slidesPerView)
 };
 const move = ref(0);
 const btnPrev = () => {
