@@ -102,6 +102,7 @@
   <!-- 퀵메뉴 -->
   <div class="quick_menu" :class="{ 'active': quickView }">
     <div class="qmenu_box">
+      <p class="logo">CMS Shin</p>
       <v-btn class="vbtn btn_qmenu" size="small" @click="quickMenu">{{ message }}</v-btn>
       <div class="qmenu_con">
         <div class="qmenu_list_box">
