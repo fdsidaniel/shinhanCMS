@@ -4,7 +4,7 @@
     <h2>
       당행 입금 이체
       <v-btn class="btn_bookmark" size="small" :class="{ 'on': bookMark }" @click="btnBookmark">즐겨찾기 설정</v-btn>
-      <span class="msg">{{ bookMarkMsg }}</span>
+      <span class="msg" :class="{ 'clear': bookMarkMsg }">{{ bookMarkTxt }}</span>
     </h2>
     <ul class="loc">
       <li>홈</li>
@@ -166,14 +166,17 @@ import ComDatePicker from '@/components/common/ComDatePicker.vue'
 
 // 즐겨찾기
 const bookMark = ref(false)
-const bookMarkMsg = ref('즐겨찾기 설정')
+const bookMarkMsg = ref(false)
+const bookMarkTxt = ref('즐겨찾기 설정')
 const btnBookmark = () => {
     if(!bookMark.value){
     bookMark.value = true
-    bookMarkMsg.value = '즐겨찾기 추가'
+    bookMarkMsg.value = false
+    bookMarkTxt.value = '즐겨찾기 추가'
   }else{
     bookMark.value = false
-    bookMarkMsg.value = '즐겨찾기 해제'
+    bookMarkMsg.value = true
+    bookMarkTxt.value = '즐겨찾기 해제'
   }
 }
 
