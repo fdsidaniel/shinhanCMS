@@ -1,7 +1,11 @@
 <template>
 
   <div class="title_box">
-    <h2>당행 입금 이체</h2>
+    <h2>
+      당행 입금 이체
+      <v-btn class="btn_bookmark" size="small" :class="{ 'on': bookMark }" @click="btnBookmark">즐겨찾기 설정</v-btn>
+      <span class="msg">{{ bookMarkMsg }}</span>
+    </h2>
     <ul class="loc">
       <li>홈</li>
       <li>원화(펌뱅킹)</li>
@@ -159,6 +163,19 @@ import ComRadioButton from '@/components/common/ComRadioButton.vue'
 import ComSelectBox from '@/components/common/ComSelectBox.vue'
 import ComAgGrid from '~/components/common/ComAgGrid.vue'
 import ComDatePicker from '@/components/common/ComDatePicker.vue'
+
+// 즐겨찾기
+const bookMark = ref(false)
+const bookMarkMsg = ref('즐겨찾기 설정')
+const btnBookmark = () => {
+    if(!bookMark.value){
+    bookMark.value = true
+    bookMarkMsg.value = '즐겨찾기 추가'
+  }else{
+    bookMark.value = false
+    bookMarkMsg.value = '즐겨찾기 해제'
+  }
+}
 
 const tab = ref('')
 
