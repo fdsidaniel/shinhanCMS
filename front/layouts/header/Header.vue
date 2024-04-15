@@ -121,7 +121,7 @@
             <ul class="list">
               <li>
                 <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체</nuxt-link>
-                <v-btn class="btn_del" size="small" @click="menuDel">삭제</v-btn>
+                <v-btn class="btn_del" size="small">삭제</v-btn>
               </li>
               <li>
                 <nuxt-link to="" @click="toggleActive($event)">당행 입금 이체</nuxt-link>
@@ -177,7 +177,7 @@ const gnbMouseOver = () => {
   gnbView.value = false
 }
 
-// 퀵메뉴
+// 퀵메뉴 접기 펼치기
 const message = ref('메뉴 펼치기')
 const quickView = ref(false)
 const quickMenu = () => {
@@ -197,11 +197,6 @@ const toggleActive = (event) => {
       a.classList.remove('on')
   })
   target.classList.add('on')
-}
-
-// 버튼 확인용 - 개발시 삭제
-const menuDel = () => {
-  console.log('menu delete')
 }
 
 </script>
