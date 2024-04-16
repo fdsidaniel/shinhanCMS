@@ -967,10 +967,7 @@ const btnPrevNextView = () => {
     if(slidesPerViewMove.value < liItemCnt){
         btnNextView.value = false
     }
-    if(slidesPerViewMove.value === 0){
-        btnNextView.value = true
-    }
-    if(liItemCnt < slidesPerView){
+    if(slidesPerViewMove.value === 0 || slidesPerView > liItemCnt){
         btnNextView.value = true
     }
     if(slidesPerViewMove.value < liItemCnt - slidesPerView){
