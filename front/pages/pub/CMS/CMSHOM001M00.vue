@@ -604,7 +604,7 @@
             <!-- chart -->
 
             <!-- chart img sample 개발 시 삭제 -->
-            <div class="box mt_22">                
+            <div class="box mt_22" v-if="false">
                 <div class="chart_box sample">
                     <p class="tit">CPU</p>
                     <img src="../../../assets/images/chart_1.png" alt="차트 이미지" class="chart_img">
@@ -762,7 +762,7 @@
             <!-- chart -->
 
             <!-- chart img sample 개발 시 삭제 -->
-            <div class="box">
+            <div class="box" v-if="false">
                 <div class="chart_box sample">
                     <p class="tit">당 타행 이체 현황 조회<nuxt-link to="" class="vlink btn_more">더보기</nuxt-link></p>
                     <div class="mt_23">
