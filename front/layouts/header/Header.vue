@@ -2,7 +2,7 @@
   <div class="header">
     <div class="gnb_box">
       <h1 class=""><!-- logo class logo_발주기관코드 -->
-        <nuxt-link to="../MEM/MEM001M00">로고 이미지</nuxt-link>
+        <nuxt-link to="">로고 이미지</nuxt-link>
       </h1>
 
       <div class="gnb" :class="{ 'close': gnbView }" @click="handleClick" @mouseenter="gnbMouseOver">
