@@ -639,8 +639,8 @@
             <div class="tit_box">
                 <h3> 실시간 진행 상황</h3>
                 <div>
-                    <!-- <ComSelectBox groupCode="01" v-model="org" :items="orgItems" :isDefault="false" class="s_basics none_details" /> -->
-                    <v-btn class="vbtn line btn_orgall" size="small">기관전체</v-btn>
+                    <ComSelectBox groupCode="01" v-model="org" :items="orgItems" :isDefault="false" class="s_basics none_details" />
+                    <!-- <v-btn class="vbtn line btn_orgall" size="small">기관전체</v-btn> -->
                 </div>
             </div>
             <div class="box">
