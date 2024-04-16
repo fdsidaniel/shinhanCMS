@@ -1598,7 +1598,7 @@
         text-align: left;
         opacity: 1;
     }
-    .v-label{display:none;}
+    .v-label.v-field-label{display:none;}
     &.v-input--error {
         .v-field__input {
             color: #F63232;
