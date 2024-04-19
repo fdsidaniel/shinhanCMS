@@ -138,10 +138,33 @@ const itemsCnt = ref([
   { title: '100개씩', value: '003' },
 ])
 
+class bankLogo {
+  eGui;
+  init(params) {
+    this.eGui = document.createElement('div');
+    this.eGui.classList.add('my-custom-cell-renderer');   
+    if (params.value === '신한은행') {
+      this.eGui.innerHTML =        
+        `<img src="/_nuxt/assets/images/bank/logo_shin.svg" alt="신한은행" class="bank_logo">신한은행`;
+    } else if (params.value === '국민은행') {
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_kb.svg" alt="국민은행" class="bank_logo">국민은행`;
+    } else if (params.value === '카카오뱅크') {
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_kkb.svg" alt="카카오뱅크" class="bank_logo">카카오뱅크`;
+    }
+  }
+  getGui() {
+    return this.eGui;
+  }
+  refresh(params) {
+    return false;
+  }
+}
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
   { headerName: '조회일시', field: 'searchDate', width: 220 },
-  { headerName: '조회 계좌은행', field: 'searchAccBank', width: 245 },
+  { headerName: '조회 계좌은행', field: 'searchAccBank', width: 245, cellRenderer: bankLogo },
   { headerName: '조회 계좌번호', field: 'searchAccNum', width: 400 },
   { headerName: '조회 예금주명', field: 'searchAccName', width: 211 },  
 ])
@@ -156,14 +179,14 @@ const rowDataReceive = [
   {
     no: '2',
     searchDate: '2024.02.15',
-    searchAccBank: '카카오뱅크',
+    searchAccBank: '국민은행',
     searchAccNum: '391-910019-24008',
     searchAccName: '홀리몰리',
   },
   {
     no: '3',
     searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
+    searchAccBank: '카카오뱅크',
     searchAccNum: '391-910019-24008',
     searchAccName: '홀리몰리',
   },

@@ -135,7 +135,9 @@
             font-weight: 400;
             line-height: 22px;
             letter-spacing: 0em;
-
+            &:last-child{
+                font-weight: 700;
+            }
             &:before{
                 content:"";
                 position: absolute;
@@ -2488,6 +2490,10 @@
                 min-width:80px !important;
             }            
         }
+    }
+    .bank_logo{
+        margin-right:5px;
+        vertical-align: middle;
     }
 }
 
