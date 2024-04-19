@@ -9,7 +9,10 @@
     <ul class="loc">
       <li>홈</li>
       <li>원화(펌뱅킹)</li>
-      <li>당행 이체 내역 조회</li>
+      <li>
+        당행 이체 내역 조회
+        <v-btn class="ico_bookmark" size="small" :class="{ 'on': bookMark }" @click="btnBookmark">즐겨찾기</v-btn>
+      </li>
     </ul>
     <v-btn class="btn_bookmark" size="small" :class="{ 'on': bookMark }" @click="btnBookmark">즐겨찾기</v-btn>
   </div>
