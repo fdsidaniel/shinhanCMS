@@ -164,7 +164,7 @@ class bankLogo {
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
   { headerName: '조회일시', field: 'searchDate', width: 220 },
-  { headerName: '조회 계좌은행', field: 'searchAccBank', width: 245, cellRenderer: bankLogo },
+  { headerName: '조회 계좌은행', field: 'searchAccBank', width: 245, cellClass: 'cell_left', cellRenderer: bankLogo },
   { headerName: '조회 계좌번호', field: 'searchAccNum', width: 400 },
   { headerName: '조회 예금주명', field: 'searchAccName', width: 211 },  
 ])
