@@ -287,7 +287,7 @@
         <span>메인</span>
         <span class="ok">O</span>
         <span>2024-03-14</span>
-        <span class="etc"></span>
+        <span class="etc">즐겨찾기 적용</span>
       </li>
       <li>
         <span></span>
