@@ -1,0 +1,21 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="12" fill="url(#paint0_linear_5674_37271)"/>
+<mask id="mask0_5674_37271" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<circle cx="12" cy="12" r="12" fill="white"/>
+</mask>
+<g mask="url(#mask0_5674_37271)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.0001 4L20.4001 8.8H3.6001L12.0001 4Z" fill="white"/>
+<rect x="3.6001" y="16.6016" width="16.8" height="1.2" fill="white"/>
+<rect opacity="0.5" x="4.7998" y="15.3984" width="14.4" height="1.2" fill="white"/>
+<rect opacity="0.5" x="4.7998" y="8.80078" width="14.4" height="1.2" fill="white"/>
+<rect x="7.2002" y="10" width="2.4" height="5.5" fill="white"/>
+<rect x="14.3999" y="10" width="2.4" height="5.5" fill="white"/>
+<ellipse cx="11.9998" cy="7.00078" rx="1.2" ry="1.2" fill="#5E8FFF"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_5674_37271" x1="-11.1193" y1="11.5597" x2="12" y2="35.5597" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8DB9FF"/>
+<stop offset="1" stop-color="#5E8FFF"/>
+</linearGradient>
+</defs>
+</svg>

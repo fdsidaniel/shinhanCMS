@@ -145,13 +145,13 @@ class bankLogo {
     this.eGui.classList.add('my-custom-cell-renderer');   
     if (params.value === '신한은행') {
       this.eGui.innerHTML =        
-        `<img src="/_nuxt/assets/images/bank/logo_shin.svg" alt="신한은행" class="bank_logo">신한은행`;
+        `<img src="/_nuxt/assets/images/bank/logo_shinhan.svg" alt="신한은행" class="bank_logo">신한은행`;
     } else if (params.value === '국민은행') {
       this.eGui.innerHTML =
         `<img src="/_nuxt/assets/images/bank/logo_kb.svg" alt="국민은행" class="bank_logo">국민은행`;
     } else if (params.value === '카카오뱅크') {
       this.eGui.innerHTML =
-        `<img src="/_nuxt/assets/images/bank/logo_kkb.svg" alt="카카오뱅크" class="bank_logo">카카오뱅크`;
+        `<img src="/_nuxt/assets/images/bank/logo_kko.svg" alt="카카오뱅크" class="bank_logo">카카오뱅크`;
     }
   }
   getGui() {
