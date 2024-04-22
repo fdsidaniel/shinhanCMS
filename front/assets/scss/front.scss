@@ -1905,6 +1905,20 @@
             border-bottom:0 !important;
         }
     }
+    &.groups{
+        .ag-root-wrapper{
+            .ag-header{
+                //min-height:auto !important;
+                //height:auto !important;
+                .ag-header-group-cell{
+                    justify-content: center;
+                }
+            }
+            .ag-header-cell-label{
+                height:100%;
+            }
+        }
+    }
     .ag-row-odd{background: #fff;}
     .ag-root-wrapper {
         border: 0;
@@ -1912,7 +1926,7 @@
 
         .ag-header {
             min-height:42px !important;
-            height: 42px !important;
+            //height: 42px !important;
             background: #F8F9FC;
             border-bottom: 1px solid #E1E6EC;
         }
@@ -1920,6 +1934,20 @@
         .ag-header-cell,
         .ag-header-group-cell {
             padding: 0;
+        }
+        .ag-header-group-cell{
+            &.cell_left {
+                justify-content: left;
+                text-align: left !important;
+            }
+            &.cell_right {
+                justify-content: flex-end;
+                text-align: right !important;
+            }
+            &.cell_center {
+                justify-content: center;
+                //text-align: left !important;
+            }
         }
 
         .ag-cell-label-container {
@@ -1967,6 +1995,10 @@
             &.cell_right {
                 justify-content: flex-end;
                 text-align: right !important;
+            }
+            &.cell_center {
+                justify-content: center;
+                //text-align: left !important;
             }
             &.ico_new{
                 padding-left:34px;
