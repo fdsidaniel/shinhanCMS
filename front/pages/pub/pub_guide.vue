@@ -3077,6 +3077,59 @@
       <v-window-item value="svg">
         <div class="pub_guide_con">
           
+          <h3>은행 로고</h3>
+          <div class="component">
+            <ul class="bank_logo">
+              <li><img src="../../assets/images/bank/logo_error.svg" alt="통신오류"><span>통신오류</span></li>
+              <li><img src="../../assets/images/bank/logo_shinhan.svg" alt="신한은행"><span>신한</span></li>
+              <li><img src="../../assets/images/bank/logo_jejubank.svg" alt="제주은행"><span>제주</span></li>
+              <li><img src="../../assets/images/bank/logo_kb.svg" alt="국민은행"><span>국민</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="농협"><span>농협</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="지역농협"><span>지역농협</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="기업은행"><span>기업</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="하나은행"><span>하나</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="우리"><span>우리</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="새마을"><span>새마을</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="씨티"><span>씨티</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="SC"><span>SC</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="우체국"><span>우체국</span></li>
+
+              <li><img src="../../assets/images/bank/logo_.svg" alt="신협"><span>신협</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="산업"><span>산업</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="카카오"><span>카카오</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="토스"><span>토스</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="광주"><span>전북</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="부산"><span>부산</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="경남"><span>경남</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="대구"><span>대구</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="수협"><span>수협</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="산림조합"><span>산림조함</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="케이뱅크"><span>케이뱅크</span></li>
+
+              <li><img src="../../assets/images/bank/logo_.svg" alt="OK저축은행"><span>OK<br>저축은행</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="KB저축은행"><span>KB<br>저축은행</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="미래에셋생명보험"><span>미래에셋<br>생명보험</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="DB저축은행"><span>DB<br>저축은행</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="하나저축은행"><span>하나<br>저축은행</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="신한저축은행"><span>신한<br>저축은행</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="상상인저축은행"><span>상상인<br>저축은행</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="수산업협동조합중앙회"><span>수산업협동조합<br>중앙회</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="저축은행"><span>저축은행</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="중국건설"><span>중국건설</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="중국공상"><span>중국공상</span></li>
+
+              <li><img src="../../assets/images/bank/logo_.svg" alt="BOA"><span>BOA</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="도이치"><span>도이치</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="HSBC"><span>HSBC</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="JP모간"><span>JP모간</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="중국"><span>중국</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="BNP파리바"><span>BNP파리바</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="국세"><span>국세</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="지방세입"><span>지방세입</span></li>
+              <li><img src="../../assets/images/bank/logo_.svg" alt="국고금"><span>국고금</span></li>
+            </ul>
+          </div>
+
           <h3>svg icon</h3>
           <div class="component">
             <div class="icon_list">
@@ -3225,6 +3278,9 @@
   .v-window{padding-bottom:100px;}
   .fs_18{font-size:18px;}
   .mt_20{margin-top:20px;}
+  .bank_logo{display:flex;flex-wrap: wrap;}
+  .bank_logo li{width:70px;margin:40px 8px 0;text-align: center;}
+  .bank_logo li span{display: block;margin-top:8px;}
 </style>
 
 <script setup >
