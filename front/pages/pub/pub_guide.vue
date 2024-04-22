@@ -3286,8 +3286,8 @@
   .fs_18{font-size:18px;}
   .mt_20{margin-top:20px;}
   .bank_logo{display:flex;flex-wrap: wrap;}
-  .bank_logo li{width:70px;margin:40px 8px 0;text-align: center;}
-  .bank_logo li span{display: block;margin-top:8px;}
+  .bank_logo li{width:88px;padding:20px 0;text-align: center;}
+  .bank_logo li span{display: block;margin-top:8px;font-weight: 500;}
 </style>
 
 <script setup >
