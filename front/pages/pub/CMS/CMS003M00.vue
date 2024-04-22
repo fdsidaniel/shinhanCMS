@@ -143,15 +143,144 @@ class bankLogo {
   init(params) {
     this.eGui = document.createElement('div');
     this.eGui.classList.add('my-custom-cell-renderer');   
-    if (params.value === '신한은행') {
+    if(params.value === '신한은행'){
       this.eGui.innerHTML =        
-        `<img src="/_nuxt/assets/images/bank/logo_shinhan.svg" alt="신한은행" class="bank_logo">신한은행`;
-    } else if (params.value === '국민은행') {
+        `<img src="/_nuxt/assets/images/bank/logo_shinhan.svg" alt="신한은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '제주은행'){
       this.eGui.innerHTML =
-        `<img src="/_nuxt/assets/images/bank/logo_kb.svg" alt="국민은행" class="bank_logo">국민은행`;
-    } else if (params.value === '카카오뱅크') {
+        `<img src="/_nuxt/assets/images/bank/logo_jejubank.svg" alt="제주은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '국민은행'){
       this.eGui.innerHTML =
-        `<img src="/_nuxt/assets/images/bank/logo_kko.svg" alt="카카오뱅크" class="bank_logo">카카오뱅크`;
+        `<img src="/_nuxt/assets/images/bank/logo_kb.svg" alt="국민은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '농협'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_nh.svg" alt="농협" class="bank_logo">${params.value}`;
+    }else if (params.value === '지역농협'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_nonghyup.svg" alt="지역농협" class="bank_logo">${params.value}`;
+    }else if (params.value === '기업은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_ibk.svg" alt="기업은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '하나은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_kebhana.svg" alt="하나은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '우리은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_wooribank.svg" alt="우리은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '새마을금고'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_kfcc.svg" alt="새마을금고" class="bank_logo">${params.value}`;
+    }else if (params.value === '씨티은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_citibank.svg" alt="씨티은행" class="bank_logo">${params.value}`;
+    }else if (params.value === 'SC제일은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_sc.svg" alt="SC제일은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '우체국'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_epost.svg" alt="우체국" class="bank_logo">${params.value}`;
+    }else if (params.value === '신협'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_cu.svg" alt="신협" class="bank_logo">${params.value}`;
+    }else if (params.value === '산업은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_kdb.svg" alt="산업은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '카카오뱅크'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_kko.svg" alt="카카오뱅크" class="bank_logo">${params.value}`;
+    }else if (params.value === '토스뱅크'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_toss.svg" alt="토스뱅크" class="bank_logo">${params.value}`;
+    }else if (params.value === '광주은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_kjbank.svg" alt="광주은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '전북은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_jbbank.svg" alt="전북은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '부산은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_busanbank.svg" alt="부산은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '경남은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_knbank.svg" alt="경남은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '대구은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_dgb.svg" alt="대구은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '수협'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_shbank.svg" alt="수협" class="bank_logo">${params.value}`;
+    }else if (params.value === '산림조합'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_nfcf.svg" alt="산림조합" class="bank_logo">${params.value}`;
+    }else if (params.value === '케이뱅크'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_kbanknow.svg" alt="케이뱅크" class="bank_logo">${params.value}`;
+    }else if (params.value === 'OK저축은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_oksavings.svg" alt="OK저축은행" class="bank_logo">${params.value}`;
+    }else if (params.value === 'KB저축은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_kbsavings.svg" alt="KB저축은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '미래에셋생명보험'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_miraeasset.svg" alt="미래에셋생명보험" class="bank_logo">${params.value}`;
+    }else if (params.value === 'DB저축은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_idbsb.svg" alt="DB저축은행" class="bank_logo">${params.value}`;
+    }else if (params.value === 'SBI저축은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_sbisb.svg" alt="SBI저축은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '하나저축은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_hanasavings.svg" alt="하나저축은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '신한저축은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_shinhansavings.svg" alt="신한저축은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '상상인저축은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_sangsanginsb.svg" alt="상상인저축은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '수산업협동조합중앙회'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_suhyup.svg" alt="수산업협동조합중앙회" class="bank_logo">${params.value}`;
+    }else if (params.value === '저축은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_fsb.svg" alt="저축은행" class="bank_logo">${params.value}`;
+    }else if (params.value === '중국건설'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_ccb.svg" alt="중국건설" class="bank_logo">${params.value}`;
+    }else if (params.value === '중국공상'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_icbc.svg" alt="중국공상" class="bank_logo">${params.value}`;
+    }else if (params.value === 'BOA'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_boa.svg" alt="BOA" class="bank_logo">${params.value}`;
+    }else if (params.value === '도이치뱅크'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_db.svg" alt="도이치뱅크" class="bank_logo">${params.value}`;
+    }else if (params.value === 'HSBC'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_hsbc.svg" alt="HSBC" class="bank_logo">${params.value}`;
+    }else if (params.value === 'JP모간'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_jpmorgan.svg" alt="JP모간" class="bank_logo">${params.value}`;
+    }else if (params.value === '중국은행'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_bankofchina.svg" alt="중국은행" class="bank_logo">${params.value}`;
+    }else if (params.value === 'BNP파리바'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_bnpp.svg" alt="BNP파리바" class="bank_logo">${params.value}`;
+    }else if (params.value === '국세'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_nts.svg" alt="국세" class="bank_logo">${params.value}`;
+    }else if (params.value === '지방세입'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_lr.svg" alt="지방세입" class="bank_logo">${params.value}`;
+    }else if (params.value === '국고금'){
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_cf.svg" alt="국고금" class="bank_logo">${params.value}`;
+    }else{
+      this.eGui.innerHTML =
+        `<img src="/_nuxt/assets/images/bank/logo_error.svg" alt="통신오류" class="bank_logo">${params.value}`;
     }
   }
   getGui() {
@@ -164,7 +293,8 @@ class bankLogo {
 const columnDefsReceive = ref([
   { headerName: '번호', field: 'no', width: 80 },
   { headerName: '조회일시', field: 'searchDate', width: 220 },
-  { headerName: '조회 계좌은행', field: 'searchAccBank', width: 245, cellClass: 'cell_left', cellRenderer: bankLogo },
+  // { headerName: '조회 계좌은행', field: 'searchAccBank', width: 245, cellClass: 'cell_left', cellRenderer: bankLogo },
+  { headerName: '조회 계좌은행', field: 'searchAccBank', width: 245, cellRenderer: bankLogo },
   { headerName: '조회 계좌번호', field: 'searchAccNum', width: 400 },
   { headerName: '조회 예금주명', field: 'searchAccName', width: 211 },  
 ])
@@ -172,80 +302,312 @@ const rowDataReceive = [
   {
     no: '999999',
     searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
+    searchAccBank: '통신오류111',
     searchAccNum: '391-910019-24008',
     searchAccName: '홀리몰리',
   },
   {
     no: '2',
     searchDate: '2024.02.15',
-    searchAccBank: '국민은행',
+    searchAccBank: '신한은행',
     searchAccNum: '391-910019-24008',
     searchAccName: '홀리몰리',
   },
   {
     no: '3',
     searchDate: '2024.02.15',
-    searchAccBank: '카카오뱅크',
+    searchAccBank: '제주은행',
     searchAccNum: '391-910019-24008',
     searchAccName: '홀리몰리',
   },
   {
     no: '4',
     searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
+    searchAccBank: '국민은행',
     searchAccNum: '391-910019-24008',
     searchAccName: '홀리몰리',
   },
   {
     no: '5',
     searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
+    searchAccBank: '농협',
     searchAccNum: '391-910019-24008',
     searchAccName: '홀리몰리',
   },
   {
     no: '6',
     searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
+    searchAccBank: '지역농협',
     searchAccNum: '391-910019-24008',
     searchAccName: '홀리몰리',
   },
   {
     no: '7',
     searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
+    searchAccBank: '기업은행',
     searchAccNum: '391-910019-24008',
     searchAccName: '홀리몰리',
   },
   {
     no: '8',
     searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
+    searchAccBank: '하나은행',
     searchAccNum: '391-910019-24008',
     searchAccName: '홀리몰리',
   },
   {
     no: '9',
     searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
+    searchAccBank: '우리은행',
     searchAccNum: '391-910019-24008',
     searchAccName: '홀리몰리',
   },
   {
     no: '10',
     searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
+    searchAccBank: '새마을금고',
     searchAccNum: '391-910019-24008',
     searchAccName: '홀리몰리',
   },
   {
     no: '11',
     searchDate: '2024.02.15',
-    searchAccBank: '신한은행',
+    searchAccBank: '씨티은행',
     searchAccNum: '391-910019-24008',
     searchAccName: '홀리몰리',
   },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: 'SC제일은행',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '우체국',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '신협',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '산업은행',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '카카오뱅크',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '토스뱅크',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '광주은행',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '전북은행',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '부산은행',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '경남은행',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '대구은행',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '수협',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '산림조합',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '케이뱅크',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: 'KB저축은행',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '미래에셋생명보험',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: 'SBI저축은행',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '하나저축은행',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '신한저축은행',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '상상인저축은행',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '수산업협동보합중앙회',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '저축은행',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '중국건설',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '중국공상',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: 'BOA',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '도이치뱅크',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: 'HSBC',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: 'JP모간',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '중국은행',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: 'BNP파리바',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '국세',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '지방세입',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+  {
+    no: '11',
+    searchDate: '2024.02.15',
+    searchAccBank: '국고금',
+    searchAccNum: '391-910019-24008',
+    searchAccName: '홀리몰리',
+  },
+
 ]
 const defaultColDefReceive = {
   sortable: true,
