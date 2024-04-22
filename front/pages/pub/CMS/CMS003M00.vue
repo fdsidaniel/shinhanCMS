@@ -302,7 +302,7 @@ const rowDataReceive = [
   {
     no: '999999',
     searchDate: '2024.02.15',
-    searchAccBank: '통신오류111',
+    searchAccBank: '통신오류-서버점검',
     searchAccNum: '391-910019-24008',
     searchAccName: '홀리몰리',
   },
