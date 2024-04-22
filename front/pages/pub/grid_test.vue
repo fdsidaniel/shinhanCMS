@@ -68,6 +68,24 @@ const rowDataReceive = [
     silver: 'silver',
     bronze: 'bronze',
   },
+  {
+    athlete: 'athlete2',
+    country: 'country2',
+    age: 'age2',
+    total: 'total2',
+    gold: 'gold2',
+    silver: 'silver2',
+    bronze: 'bronze2',
+  },
+  {
+    athlete: 'athlete3',
+    country: 'country3',
+    age: 'age3',
+    total: 'total3',
+    gold: 'gold3',
+    silver: 'silver3',
+    bronze: 'bronze3',
+  },
 ]
 const defaultColDefReceive = {
   sortable: true,
