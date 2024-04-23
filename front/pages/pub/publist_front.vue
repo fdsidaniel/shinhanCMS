@@ -146,11 +146,24 @@
 
       <li>
         <span>로그인</span>
-        <span>로그인</span>
+        <span>로그인 type1</span>
         <span></span>
         <span></span>
         <span>LOG</span>
         <span><nuxt-link to="/pub/CMS/CMSLOG001M00" class="vlink blue line">CMSLOG001M00</nuxt-link></span>
+        <span>로그인</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-03-13</span>
+        <span class="etc">로그인 페이지는 default.vue 파일 class="container" 에 login class 추가</span>
+      </li>
+      <li>
+        <span></span>
+        <span>로그인 type2</span>
+        <span></span>
+        <span></span>
+        <span>LOG</span>
+        <span><nuxt-link to="/pub/CMS/CMSLOG002M00" class="vlink blue line">CMSLOG002M00</nuxt-link></span>
         <span>로그인</span>
         <span>메인</span>
         <span class="ok">O</span>
