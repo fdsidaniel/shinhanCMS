@@ -13,12 +13,12 @@
                 <v-text-field label="아이디" v-model="userId" :rules="userIdRules" placeholder="아이디를 입력해주세요." class="i_basics id"></v-text-field>
 
                 <!-- 보안툴 때문에 컴포넌트 말고 iframe 으로 변경 -->
-                <!-- <div class="ifm_keysec login">
-                    <iframe src="/keyboard_security_pwd.html" frameborder="0" width="100%" height="100%"></iframe>
-                </div> -->
+                <div class="ifm_keysec login">
+                    <iframe src="/keyboard_security_pwd_type2.html" frameborder="0" width="100%" height="100%"></iframe>
+                </div>
 
                 <!-- 보안툴 사용 안 할 경우 컴포넌트 사용  -->
-                <v-text-field label="비밀번호" v-model="password" :rules="passwordRules" type="password" placeholder="비밀번호를 입력해주세요." class="i_basics pwd mt_10"></v-text-field>
+                <!-- <v-text-field label="비밀번호" v-model="password" :rules="passwordRules" type="password" placeholder="비밀번호를 입력해주세요." class="i_basics pwd mt_10"></v-text-field> -->
                 
                 <div class="pwd_messages">
                     비밀번호 5회 초과 되었습니다.
@@ -26,11 +26,11 @@
                 </div>
 
                 <div class="btn_util">
-                    <v-checkbox v-model="idSave" label="아이디 기억하기" class="idsave" />  
+                    <v-checkbox v-model="idSave" label="아이디 저장" class="idsave" />  
                     <div>
                         <!-- <nuxt-link to="" class="vlink basic pr_3">회원가입</nuxt-link>
                         <span>/</span> -->
-                        <nuxt-link to="" class="vlink basic pl_3 pr_3">아이디 저장</nuxt-link>
+                        <nuxt-link to="" class="vlink basic pl_3 pr_3">아이디 찾기</nuxt-link>
                         <span>/</span>
                         <nuxt-link to="" class="vlink basic pl_3">비밀번호 재설정</nuxt-link>
                     </div>
