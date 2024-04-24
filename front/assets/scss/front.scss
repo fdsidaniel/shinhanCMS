@@ -6865,6 +6865,32 @@
     }
 }
 
+.swiper_wrap{
+    overflow: hidden;
+    display: flex;
+    width:1000px;
+    .slide{
+        display:flex;
+        align-items: center;
+        
+        li{
+            width:200px;
+            height:100px;            
+            text-align: center;
+            border:1px solid #000;
+        }
+
+        animation: slider 10s infinite linear;
+        @keyframes slider {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    }
+}
 
 // svg 아이콘 모음
 .icon_list{
