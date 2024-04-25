@@ -12,15 +12,32 @@
 
         <div class="conbody">
             
-            <div class="swiper_wrap">
-                <ul class="slide slide1">
+            <div class="swiper_wrap horizon">
+                <ul class="slide slide_h_1">
                     <li>1</li>
                     <li>2</li>
                     <li>3</li>
                     <li>4</li>
                     <li>5</li>
                 </ul>
-                <ul class="slide slide2">
+                <ul class="slide slide_h_2">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </div>
+
+            <div class="swiper_wrap vertical mt_20">
+                <ul class="slide slide_v_1">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+                <ul class="slide slide_v_2">
                     <li>1</li>
                     <li>2</li>
                     <li>3</li>
