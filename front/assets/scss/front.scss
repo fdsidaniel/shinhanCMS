@@ -6879,7 +6879,12 @@
                 height:288px;            
                 text-align: center;
             }
-            
+            &:hover{
+                &.slide_h_1,
+                &.slide_h_2{
+                    animation-play-state:paused;
+                }                
+            }
             &.slide_h_1{
                 animation: slide_h_1 15s infinite linear;
                 // &:hover{
