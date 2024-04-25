@@ -14,35 +14,39 @@
             
             <div class="swiper_wrap horizon">
                 <ul class="slide slide_h_1">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
+                    <li><img src="../../assets/images/about_slide_01.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_02.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_03.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_04.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_05.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_06.png" alt="" class=""></li>
                 </ul>
                 <ul class="slide slide_h_2">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
+                    <li><img src="../../assets/images/about_slide_01.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_02.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_03.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_04.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_05.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_06.png" alt="" class=""></li>
                 </ul>
             </div>
 
             <div class="swiper_wrap vertical mt_20">
                 <ul class="slide slide_v_1">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
+                    <li><img src="../../assets/images/about_slide_01.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_02.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_03.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_04.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_05.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_06.png" alt="" class=""></li>
                 </ul>
                 <ul class="slide slide_v_2">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
+                    <li><img src="../../assets/images/about_slide_01.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_02.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_03.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_04.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_05.png" alt="" class=""></li>
+                    <li><img src="../../assets/images/about_slide_06.png" alt="" class=""></li>
                 </ul>
             </div>
 
