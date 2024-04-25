@@ -38,7 +38,7 @@ import ComAgGrid from '~/components/common/ComAgGrid.vue'
 
 const columnDefsReceive = ref([
     {
-        field: "age", width: 160 
+        headerName: 'age111', field: "age", width: 160 
     },
     {
         headerName: 'Name & Country', cellClass: 'cell_center',
