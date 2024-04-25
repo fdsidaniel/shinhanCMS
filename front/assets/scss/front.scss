@@ -6872,7 +6872,7 @@
     .slide{
         display:flex;
         align-items: center;
-        
+        flex:1;
         li{
             width:200px;
             height:100px;            
@@ -6880,13 +6880,41 @@
             border:1px solid #000;
         }
 
-        animation: slider 10s infinite linear;
-        @keyframes slider {
+        &.slide1{
+            animation: slider1 20s infinite linear;
+        }
+        &.slide2{
+            animation: slider2 20s infinite linear;
+        }
+        // animation: slider 20s infinite linear;
+        // @keyframes slider {
+        //     0% {
+        //         //transform: translateX(0);
+        //         margin-left:0;
+        //     }
+        //     100% {
+        //         //transform: translateX(-100%);
+        //         margin-left:-100%;
+        //     }
+        // }
+        @keyframes slider1 {
             0% {
-                transform: translateX(0);
+                //transform: translateX(0);
+                margin-left:0;
             }
             100% {
-                transform: translateX(-100%);
+                //transform: translateX(-100%);
+                margin-left:-100%;
+            }
+        }
+        @keyframes slider2 {
+            0% {
+                //transform: translateX(0);
+                margin-left:0;
+            }
+            100% {
+                //transform: translateX(-100%);
+                margin-left:-100;
             }
         }
     }
