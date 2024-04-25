@@ -6952,6 +6952,50 @@
         }
     }
 }
+.box_wrap{
+    padding:100px;
+    .box{
+        position: relative;
+        width:100px;
+        height:100px;
+        margin:0 auto;
+        background-color: #006DE6;
+        .w:before,
+        .w:after,
+        .v:before,
+        .v:after{
+            content: '';
+            position: absolute;
+            width:100px;
+            height:100px;
+            background-color: #006DE6;
+            transition: 0.3s;
+        }
+        &:hover{
+            border-radius: 100px;
+            .w:before{
+                margin-left:-50px;
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+            }
+            .w:after{
+                margin-left:50px;
+                border-top-right-radius: 100px;
+                border-bottom-right-radius: 100px;
+            }
+            .v:before{
+                margin-top:-50px;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+            }
+            .v:after{
+                margin-top:50px;
+                border-bottom-left-radius: 100px;
+                border-bottom-right-radius: 100px;
+            }
+        }        
+    }
+}
 
 // svg 아이콘 모음
 .icon_list{

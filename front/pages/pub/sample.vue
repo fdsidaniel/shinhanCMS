@@ -12,6 +12,13 @@
 
         <div class="conbody">
             
+            <div class="box_wrap">
+                <div class="box">
+                    <i class="w"></i>
+                    <i class="v"></i>
+                </div>
+            </div>
+            <br><br><br>
             <div class="swiper_wrap horizon">
                 <ul class="slide slide_h_1">
                     <li><img src="../../assets/images/about_slide_01.png" alt="" class=""></li>
