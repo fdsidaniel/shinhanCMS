@@ -43,6 +43,19 @@
         <span></span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span>그리드</span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/grid_test" class="vlink blue line">grid column merge</nuxt-link></span>
+        <span></span>
+        <span></span>
+        <span class="ok">O</span>
+        <span></span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>
