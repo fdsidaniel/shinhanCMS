@@ -759,6 +759,32 @@
         <span>2024-04-29</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span>수취인 조회(조회)</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/VAS30010" class="vlink blue line">VAS30010</nuxt-link></span>
+        <span>수취인 조회(조회)<br>(기관,시스템 담당자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-29</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/VAS30010P01" class="vlink blue line">VAS30010P01</nuxt-link></span>
+        <span>수취인 정보 입력 팝업</span>
+        <span>팝업</span>
+        <span class="ok">O</span>
+        <span>2024-04-29</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>
