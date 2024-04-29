@@ -746,6 +746,19 @@
         <span>2024-04-29</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span>입금 승인처리내역(조회)</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/VAS20010" class="vlink blue line">VAS20010</nuxt-link></span>
+        <span>입금 승인처리내역(조회)<br>(기관,시스템 담당자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-29</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>
