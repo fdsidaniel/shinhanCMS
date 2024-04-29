@@ -31,7 +31,7 @@
                 <div class="col">
                     <span class="tit other">거래일련번호</span>
                     <div class="con">
-                        <v-text-field label="거래일련번호" v-model="dealNum" :rules="dealNumRules" required placeholder="거래일련번호를 입력해주세요." class="i_basics none_details" />
+                        <v-text-field label="거래일련번호" v-model="dealNum" :rules="dealNumRules" required placeholder="거래일련번호 10자리를 입력해주세요." class="i_basics none_details" />
                     </div>
                 </div>
             </div>
