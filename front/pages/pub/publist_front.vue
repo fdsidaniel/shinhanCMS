@@ -795,7 +795,7 @@
         <span>수취인 조회 내역<br>(기관,시스템 담당자)</span>
         <span>메인</span>
         <span class="ok">O</span>
-        <span>2024-04-30</span>
+        <span>2024-04-29</span>
         <span class="etc"></span>
       </li>
 
