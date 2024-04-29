@@ -708,6 +708,46 @@
       </li>
 
       <li>
+        <span>제휴가상계좌</span>
+        <span>제휴가상계좌 관리</span>
+        <span>입금 승인정보(조회)</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/VAS10010" class="vlink blue line">VAS10010</nuxt-link></span>
+        <span>입금 승인정보(조회)<br>(기관,시스템 담당자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-29</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/VAS10010P01" class="vlink blue line">VAS10010P01</nuxt-link></span>
+        <span>입금 승인정보 팝업</span>
+        <span>팝업</span>
+        <span class="ok">O</span>
+        <span>2024-04-29</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/VAS10010P02" class="vlink blue line">VAS10010P02</nuxt-link></span>
+        <span>엑셀 업로드 팝업</span>
+        <span>팝업</span>
+        <span class="ok">O</span>
+        <span>2024-04-29</span>
+        <span class="etc"></span>
+      </li>
+
+      <li>
         <span></span>
         <span></span>
         <span></span>
