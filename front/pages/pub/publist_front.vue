@@ -798,6 +798,19 @@
         <span>2024-04-29</span>
         <span class="etc"></span>
       </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span>제휴가상계좌 집계대사</span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/VAS50010" class="vlink blue line">VAS50010</nuxt-link></span>
+        <span>제휴가상계좌 집계대사<br>(기관,시스템 담당자)</span>
+        <span>메인</span>
+        <span class="ok">O</span>
+        <span>2024-04-29</span>
+        <span class="etc"></span>
+      </li>
 
       <li>
         <span></span>
