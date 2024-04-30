@@ -45,7 +45,7 @@
         </tbody>
     </v-table>
 
-    <p class="tip_txt mt_10">3개 기관까지 동시 선택이 가능합니다.</p>
+    <!-- <p class="tip_txt mt_10">3개 기관까지 동시 선택이 가능합니다.</p> -->
 
     <div class="btm_btn_wrap">
       <v-btn class="vbtn">선택</v-btn>
