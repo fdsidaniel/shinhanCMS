@@ -322,7 +322,20 @@
         <span></span>
         <span></span>
         <span><nuxt-link to="/pub/CMS/CMS001P01" class="vlink blue line">CMS001P01</nuxt-link></span>
-        <span>기관 추가 팝업<br>(시스템 관리자)</span>
+        <span>기관 추가 팝업(다건 선택)<br>(시스템 관리자)</span>
+        <span>팝업</span>
+        <span class="ok">O</span>
+        <span>2024-03-14</span>
+        <span class="etc"></span>
+      </li>
+      <li>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span><nuxt-link to="/pub/CMS/CMS001P03" class="vlink blue line">CMS001P03</nuxt-link></span>
+        <span>기관 추가 팝업(단건 선택)<br>(시스템 관리자)</span>
         <span>팝업</span>
         <span class="ok">O</span>
         <span>2024-03-14</span>
