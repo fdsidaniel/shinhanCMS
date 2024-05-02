@@ -1260,6 +1260,9 @@
                         padding-top:10px;
                     }
                 }
+                &+.col{
+                    margin-top:15px;
+                }
             }
             &.btn{
                 flex:0;
