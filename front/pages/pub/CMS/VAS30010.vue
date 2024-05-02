@@ -19,7 +19,7 @@
                     <span class="tit other">요청일</span>
                     <div class="con">
                         <ComRadioButton :options="callDate" v-model="callDateValue" :isInline="true" class="type_btn" />
-                        <div class="i_calender mt_10" v-show="callDateValue === '05'">
+                        <div class="i_calender mt_10" :class="[ callDateValue === '05' ? 'active' : 'inactive' ]">
                             <ComDatePicker v-model="callstartDate" class="i_date" placeholder="날짜선택" />
                             <span>~</span>
                             <ComDatePicker v-model="callendDate" class="i_date" placeholder="날짜선택" />
@@ -28,31 +28,34 @@
                 </div>
             </div>
             <div class="cell">
-                <div class="col">
-                    <span class="tit other">취소요청</span>
-                    <div class="con">
-                        <ComSelectBox groupCode="01" v-model="comboCancel" :items="itemsCancel" :isAll="true"  class="s_basics none_details" />
-                    </div>
+              <div class="d_flex">
+                <div class="cell">
+                  <div class="col">
+                      <span class="tit other">입금계좌성명</span>
+                      <div class="con">
+                          <v-text-field label="입금계좌성명" v-model="depositAccName" :rules="depositAccNameRules" required placeholder="입금계좌성명을 입력해주세요." class="i_basics none_details" />
+                      </div>
+                  </div>
+                  <div class="col">
+                      <span class="tit other">입금계좌번호</span>
+                      <div class="con">
+                          <v-text-field label="입금계좌번호" v-model="depositAccNum" :rules="depositAccNumRules" required placeholder="입금계좌번호를 입력해주세요." class="i_basics none_details" />
+                      </div>
+                  </div>
                 </div>
+              </div>
             </div>
         </div>
         <div class="row">
             <div class="cell">
                 <div class="col">
-                    <span class="tit other">입금계좌성명</span>
-                    <div class="con">
-                        <v-text-field label="입금계좌성명" v-model="depositAccName" :rules="depositAccNameRules" required placeholder="입금계좌성명을 입력해주세요." class="i_basics none_details" />
-                    </div>
-                </div>
+                  <span class="tit other">취소요청</span>
+                  <div class="con">
+                      <ComSelectBox groupCode="01" v-model="comboCancel" :items="itemsCancel" :isAll="true"  class="s_basics none_details" />
+                  </div>
+              </div>
             </div>
-            <div class="cell">
-                <div class="col">
-                    <span class="tit other">입금계좌번호</span>
-                    <div class="con">
-                        <v-text-field label="입금계좌번호" v-model="depositAccNum" :rules="depositAccNumRules" required placeholder="입금계좌번호를 입력해주세요." class="i_basics none_details" />
-                    </div>
-                </div>
-            </div>
+            <div class="cell">&nbsp;</div>
         </div>
         
         <div class="btn">

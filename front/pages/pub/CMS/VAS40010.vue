@@ -19,7 +19,7 @@
                     <span class="tit other">거래일</span>
                     <div class="con">
                         <ComRadioButton :options="dealDate" v-model="dealDateValue" :isInline="true" class="type_btn" />
-                        <div class="i_calender mt_10" v-show="dealDateValue === '05'">
+                        <div class="i_calender mt_10" :class="[ dealDateValue === '05' ? 'active' : 'inactive' ]">
                             <ComDatePicker v-model="dealstartDate" class="i_date" placeholder="날짜선택" />
                             <span>~</span>
                             <ComDatePicker v-model="dealendDate" class="i_date" placeholder="날짜선택" />
@@ -28,38 +28,42 @@
                 </div>
             </div>
             <div class="cell">
+                <div class="d_flex a_start">
+                  <div class="cell">
+                    <div class="col">
+                        <span class="tit other">출금계좌성명</span>
+                        <div class="con">
+                            <v-text-field label="출금계좌성명" v-model="withdrawAccName" :rules="withdrawAccNameRules" required placeholder="성명을 입력해주세요." class="i_basics none_details" />
+                        </div>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="col">
+                        <span class="tit">거래금액</span>
+                        <div class="con">
+                            <v-text-field label="거래금액" v-model="amount" :rules="amountRules" required placeholder="거래금액을 입력해주세요." class="i_basics none_details" />
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d_flex mt_15">
+                  <div class="cell">
+                    <div class="col">
+                        <span class="tit other">입금계좌번호</span>
+                        <div class="con">
+                            <v-text-field label="입금계좌번호" v-model="depositAccNum" :rules="depositAccNumRules" required placeholder="입금계좌번호를 입력해주세요." class="i_basics none_details" />
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell">
                 <div class="col">
                     <span class="tit other">거래일련번호</span>
                     <div class="con">
                         <v-text-field label="거래일련번호" v-model="dealNum" :rules="dealNumRules" required placeholder="거래일련번호 10자리를 입력해주세요." class="i_basics none_details" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="cell">
-                <div class="col">
-                    <span class="tit other">출금계좌성명</span>
-                    <div class="con">
-                        <v-text-field label="출금계좌성명" v-model="withdrawAccName" :rules="withdrawAccNameRules" required placeholder="출금계좌성명을 입력해주세요." class="i_basics none_details" />
-                    </div>
-                </div>
-            </div>
-            <div class="cell">
-                <div class="col">
-                    <span class="tit other">거래금액</span>
-                    <div class="con">
-                        <v-text-field label="거래금액" v-model="amount" :rules="amountRules" required placeholder="거래금액을 입력해주세요." class="i_basics none_details" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="cell">
-                <div class="col">
-                    <span class="tit other">입금계좌번호</span>
-                    <div class="con">
-                        <v-text-field label="입금계좌번호" v-model="depositAccNum" :rules="depositAccNumRules" required placeholder="입금계좌번호를 입력해주세요." class="i_basics none_details" />
                     </div>
                 </div>
             </div>

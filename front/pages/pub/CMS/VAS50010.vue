@@ -15,11 +15,11 @@
     <div class="search_table">
         <div class="row">
             <div class="cell">
-                <div class="col">
+                <div class="col vtop">
                     <span class="tit other">요청일</span>
-                    <div class="con i_calender">
+                    <div class="con">
                         <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
-                        <div class="i_calender ml_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
+                        <div class="i_calender mt_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
                             <ComDatePicker v-model="callstartDate" class="i_date" placeholder="날짜선택" />
                             <span>~</span>
                             <ComDatePicker v-model="callendDate" class="i_date" placeholder="날짜선택" />
@@ -27,33 +27,14 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
             <div class="cell">
-                <div class="col vtop">
-                    <span class="tit other">거래일</span>
-                    <div class="con i_calender">
-                        <ComRadioButton :options="dealDate" v-model="dealDateValue" :isInline="true" class="type_btn" />
-                        <div class="i_calender ml_10" :class="[ dealDateValue === '05' ? 'active' : 'inactive' ]">
-                            <ComDatePicker v-model="dealstartDate" class="i_date" placeholder="날짜선택" />
-                            <span>~</span>
-                            <ComDatePicker v-model="dealendDate" class="i_date" placeholder="날짜선택" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="cell">
-                <div class="col">
-                    <span class="tit other">거래일련번호</span>
-                    <div class="con">
-                        <v-text-field label="거래일련번호" v-model="dealNum" :rules="dealNumRules" required placeholder="거래일련번호 10자리를 입력해주세요." class="i_basics none_details" />
-                    </div>
-                </div>
-            </div>
-            <div class="cell">
-                <div class="col">
+              <div class="col">
+                  <span class="tit other">거래일련번호</span>
+                  <div class="con">
+                      <v-text-field label="거래일련번호" v-model="dealNum" :rules="dealNumRules" required placeholder="거래일련번호 10자리를 입력해주세요." class="i_basics none_details" />
+                  </div>
+              </div>
+              <div class="col">
                     <span class="tit other">요청채널</span>
                     <div class="con">
                         <ComSelectBox groupCode="01" v-model="comboChannel" :items="itemsChannel" :isAll="true"  class="s_basics none_details" />
@@ -63,6 +44,19 @@
         </div>
         <div class="row">
             <div class="cell">
+                <div class="col vtop">
+                    <span class="tit other">거래일</span>
+                    <div class="con">
+                        <ComRadioButton :options="dealDate" v-model="dealDateValue" :isInline="true" class="type_btn" />
+                        <div class="i_calender mt_10" :class="[ dealDateValue === '05' ? 'active' : 'inactive' ]">
+                            <ComDatePicker v-model="dealstartDate" class="i_date" placeholder="날짜선택" />
+                            <span>~</span>
+                            <ComDatePicker v-model="dealendDate" class="i_date" placeholder="날짜선택" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
                 <div class="col">
                     <span class="tit other">기관코드</span>
                     <div class="con">
@@ -71,6 +65,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="btn">
             <v-btn class="vbtn line search" size="small">조회</v-btn>
         </div>
