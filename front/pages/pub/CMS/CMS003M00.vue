@@ -13,8 +13,8 @@
   <div class="conbody">
 
     <p class="req_txt mb_10 t_right">표시는 필수 입력 항목 입니다.</p>
-    <!-- 검색 -->
-    <div class="search_table">
+
+    <!-- <div class="search_table">
         <div class="row">
             <div class="cell">
                 <div class="col vtop">
@@ -45,6 +45,45 @@
                     <div class="con">
                         <v-text-field label="요청 번호" v-model="requestNum" :rules="requestNumRules" required placeholder="요청번호 모두를 입력해주세요." class="i_basics none_details"></v-text-field>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <v-btn class="vbtn line search" size="small">조회</v-btn>
+        </div>
+    </div> -->
+    <!-- 검색 -->
+    <div class="search_table">
+        <div class="row">
+            <div class="cell">
+                <div class="col vtop">
+                    <span class="tit req">요청일</span>
+                    <div class="con">
+                        <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
+                          <div class="i_calender mt_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
+                            <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
+                            <span>~</span>
+                            <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
+                <div class="d_flex a_start">
+                  <div class="cell">
+                      <div class="col">
+                          <span class="tit req">요청 번호</span>
+                          <div class="con">
+                              <v-text-field label="요청 번호" v-model="requestNum" :rules="requestNumRules" required placeholder="요청번호 모두를 입력해주세요." class="i_basics none_details"></v-text-field>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <span class="tit req">요청 채널</span>
+                          <div class="con">
+                              <ComSelectBox groupCode="01" v-model="comboRequestChannel" :items="itemsRequestChannel" :isAll="true"  class="s_basics none_details" />
+                          </div>
+                      </div>
+                  </div>
                 </div>
             </div>
         </div>
