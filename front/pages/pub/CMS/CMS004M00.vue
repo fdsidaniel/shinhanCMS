@@ -19,9 +19,9 @@
             <div class="cell">
                 <div class="col vtop">
                     <span class="tit">거래일시</span>
-                    <div class="con i_calender">
+                    <div class="con">
                         <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
-                          <div class="i_calender ml_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
+                          <div class="i_calender mt_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
                             <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
                             <span>~</span>
                             <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
@@ -29,23 +29,23 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
             <div class="cell">
-                <div class="col">
-                    <span class="tit">계좌번호</span>
-                    <div class="con">
-                        <v-text-field label="계좌번호" v-model="accNum" :rules="accNumRules" required placeholder="계좌번호 입력해주세요." class="i_basics none_details"></v-text-field>                        
+              <div class="d_flex a_a_start">
+                <div class="cell">
+                    <div class="col">
+                        <span class="tit">계좌번호</span>
+                        <div class="con">
+                            <v-text-field label="계좌번호" v-model="accNum" :rules="accNumRules" required placeholder="계좌번호 입력해주세요." class="i_basics none_details"></v-text-field>                        
+                        </div>
+                    </div>
+                    <div class="col">
+                        <span class="tit">거래구분</span>
+                        <div class="con">
+                            <ComSelectBox groupCode="01" v-model="comboClass" :items="itemsClass" :isAll="true"  class="s_basics none_details" />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="cell">
-                <div class="col">
-                    <span class="tit">거래구분</span>
-                    <div class="con">
-                        <ComSelectBox groupCode="01" v-model="comboClass" :items="itemsClass" :isAll="true"  class="s_basics none_details" />
-                    </div>
-                </div>
+              </div>
             </div>
         </div>
         <div class="btn">
