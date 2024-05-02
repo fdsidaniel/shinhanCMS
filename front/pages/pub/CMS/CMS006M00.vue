@@ -45,11 +45,11 @@
     <div class="search_table">
         <div class="row">
             <div class="cell">
-                <div class="col">
+                <div class="col vtop">
                     <span class="tit">신청일</span>
-                    <div class="con i_calender">
+                    <div class="con">
                         <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
-                        <div class="i_calender ml_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
+                        <div class="i_calender mt_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
                             <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
                             <span>~</span>
                             <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
@@ -57,14 +57,16 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
             <div class="cell">
-                <div class="col">
-                    <span class="tit">신청자</span>
-                    <div class="con">
-                        <v-text-field label="신청자" v-model="appName" :rules="appNameRules" required placeholder="신청자를 입력해주세요." class="i_basics none_details"></v-text-field>                        
-                    </div>
+                <div class="d_flex a_a_start">
+                  <div class="cell">
+                      <div class="col">
+                          <span class="tit">신청자</span>
+                          <div class="con">
+                              <v-text-field label="신청자" v-model="appName" :rules="appNameRules" required placeholder="신청자를 입력해주세요." class="i_basics none_details"></v-text-field>                        
+                          </div>
+                      </div>
+                  </div>
                 </div>
             </div>
         </div>

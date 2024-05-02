@@ -58,11 +58,11 @@
     <div class="search_table">
         <div class="row">
             <div class="cell">
-                <div class="col">
+                <div class="col vtop">
                     <span class="tit">발생일</span>
-                    <div class="con i_calender">
+                    <div class="con">
                         <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
-                        <div class="i_calender ml_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
+                        <div class="i_calender mt_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
                             <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
                             <span>~</span>
                             <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
@@ -70,23 +70,23 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
             <div class="cell">
-                <div class="col">
-                    <span class="tit">발생 기관</span>
-                    <div class="con">
-                        <v-text-field label="발생 기관" v-model="occurOrg" :rules="occurOrgRules" required placeholder="발생 기관을 입력해주세요." class="i_basics none_details" />
-                    </div>
+              <div class="d_flex a_a_start">
+                <div class="cell">
+                  <div class="col">
+                      <span class="tit">발생 기관</span>
+                      <div class="con">
+                          <v-text-field label="발생 기관" v-model="occurOrg" :rules="occurOrgRules" required placeholder="발생 기관을 입력해주세요." class="i_basics none_details" />
+                      </div>
+                  </div>
+                  <div class="col">
+                      <span class="tit">발생 채널</span>
+                      <div class="con">
+                          <v-text-field label="발생 채널" v-model="occurChannel" :rules="occurChannelRules" required placeholder="발생 채널을 입력해주세요." class="i_basics none_details" />
+                      </div>
+                  </div>
                 </div>
-            </div>
-            <div class="cell">
-                <div class="col">
-                    <span class="tit">발생 채널</span>
-                    <div class="con">
-                        <v-text-field label="발생 채널" v-model="occurChannel" :rules="occurChannelRules" required placeholder="발생 채널을 입력해주세요." class="i_basics none_details" />
-                    </div>
-                </div>
+              </div>
             </div>
         </div>
         <div class="btn">

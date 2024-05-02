@@ -58,11 +58,11 @@
     <div class="search_table">
         <div class="row">
             <div class="cell">
-                <div class="col">
+                <div class="col vtop">
                     <span class="tit other">등록일</span>
-                    <div class="con i_calender">
+                    <div class="con">
                         <ComRadioButton :options="calDate" v-model="calDateValue" :isInline="true" class="type_btn" />
-                        <div class="i_calender ml_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
+                        <div class="i_calender mt_10" :class="[ calDateValue === '05' ? 'active' : 'inactive' ]">
                             <ComDatePicker v-model="startDate" class="i_date" placeholder="날짜선택" />
                             <span>~</span>
                             <ComDatePicker v-model="endDate" class="i_date" placeholder="날짜선택" />
@@ -70,23 +70,23 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
             <div class="cell">
-                <div class="col">
-                    <span class="tit other">송/수신 여부</span>
-                    <div class="con">
-                        <ComSelectBox groupCode="01" v-model="comboClass" :items="itemsClass" :isAll="true"  class="s_basics none_details" />
+              <div class="d_flex a_a_start">
+                <div class="cell">
+                    <div class="col">
+                        <span class="tit other">송/수신 여부</span>
+                        <div class="con">
+                            <ComSelectBox groupCode="01" v-model="comboClass" :items="itemsClass" :isAll="true"  class="s_basics none_details" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <span class="tit other">검색어</span>
+                        <div class="con">
+                            <v-text-field label="검색어" v-model="search" :rules="searchRules" required placeholder="검색어를 입력해주세요." class="i_basics none_details" />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="cell">
-                <div class="col">
-                    <span class="tit">검색어</span>
-                    <div class="con">
-                        <v-text-field label="검색어" v-model="search" :rules="searchRules" required placeholder="검색어를 입력해주세요." class="i_basics none_details" />
-                    </div>
-                </div>
+              </div>
             </div>
         </div>
         <div class="btn">
