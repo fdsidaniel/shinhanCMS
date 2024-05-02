@@ -580,6 +580,11 @@
         cursor: auto;
     }
     &.vtable_view {
+        &.none_scroll{
+            .v-table__wrapper{
+                overflow: inherit;
+            }
+        }
         &.bg{
             th,
             td{

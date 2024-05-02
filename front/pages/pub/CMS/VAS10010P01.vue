@@ -4,7 +4,7 @@
   <div class="popup_body">
     <h2 class="poptit">입금 승인정보 <span>타이틀 화면 확인용-실제 팝업 구동시 타이틀 display:none 처리됨</span></h2>
     
-    <v-table class="vtable_view inbtn bg">
+    <v-table class="vtable_view inbtn bg none_scroll">
         <colgroup>
             <col style="width:;"/>
             <col style="width:;"/>
@@ -20,11 +20,19 @@
             </tr>
             <tr>
                 <th>승인시작일시</th>
-                <td><v-text-field label="승인시작일시" v-model="startDate" :rules="startDateRules" required placeholder="승인시작일시를 입력해주세요." class="i_basics none_details" /></td>
+                <td>
+                    <div class="i_calender">
+                        <ComDatePicker v-model="callstartDate" class="i_date" placeholder="날짜선택" />
+                    </div>
+                </td>
             </tr>
             <tr>
                 <th>승인종료일시</th>
-                <td><v-text-field label="승인종료일시" v-model="endDate" :rules="endDateRules" required placeholder="승인종료일시를 입력해주세요." class="i_basics none_details" /></td>
+                <td>
+                    <div class="i_calender">
+                        <ComDatePicker v-model="endstartDate" class="i_date" placeholder="날짜선택" />
+                    </div>
+                </td>
             </tr>
             <tr>
                 <th>입금계좌번호</th>
@@ -54,6 +62,19 @@
 </style>
 
 <script setup >
+
+import ComDatePicker from '@/components/common/ComDatePicker.vue'
+
+/* 달력 */
+const today = new Date() // 현재 날짜와 시간을 포함하는 Date 객체 생성
+const year = today.getFullYear() // 년도 가져오기
+const month = today.getMonth() + 1 // 월 가져오기 (0부터 시작하므로 1 더하기)
+const day = today.getDate() // 일 가져오기
+const formattedToday = new Date(
+  `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`,
+)
+const callstartDate = ref(formattedToday)
+const endstartDate = ref(formattedToday)
 
 const withdrawAccName = ref('')
 const withdrawAccNameRules = [
